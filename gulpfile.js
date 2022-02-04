@@ -29,7 +29,9 @@ global.app = {
     plugins: plugins
 };
 
-// TODO: добавить оптимизацию (проверку) на режим разработки или продакшна
+// Последовательная обработка шрифтов
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+const fontsWatcher = gulp.series(otfToTtf, ttfToWoff, fontsStyle, scss);
 
 // Создаем наблюдатель за изменениями в файлах
 const watcher = () => {
@@ -39,11 +41,10 @@ const watcher = () => {
     gulp.watch(path.watch.js, js);
     gulp.watch(path.watch.images, images);
     gulp.watch(path.watch.svgicons, svgSprites);
+    gulp.watch(path.watch.fonts, fontsWatcher);
 }
 
 
-// Последовательная обработка шрифтов
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основные задачи
 const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSprites));

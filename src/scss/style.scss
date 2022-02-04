@@ -1,10 +1,8 @@
-@import 'fonts';
-
-body {
-    background: #000;
-    font-family: CormorantUpright;
-    font-size: 30px;
-    span {
-        color: red;
-    }
-}
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/components/components";
+@import "../blocks/modules/modules";

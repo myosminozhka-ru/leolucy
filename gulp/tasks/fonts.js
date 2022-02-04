@@ -47,12 +47,12 @@ export const ttfToWoff = () =>  {
 
 export const fontsStyle = () => {
     // Файл стилей подключения шрифтов
-    let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;
+    let fontsFile = `${app.path.srcFolder}/scss/base/_fonts.scss`;
     // Проверяем, существуют ли файлы шрифтов
     fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
         if (fontsFiles) {
             // Проверяем существует ли файл стилей для подключения шрифтов
-            if (!fs.existsSync(fontsFile)) {
+            // if (!fs.existsSync(fontsFile)) {
                 // Если файла нет - создаем его
                 fs.writeFile(fontsFile, '', cb);
                 let newFileOnly;
@@ -86,9 +86,9 @@ export const fontsStyle = () => {
                         newFileOnly = fontFileName;
                     }
                 }
-            } else {
-                console.log("Файл scss/fonts.scss уже существует. Для того чтобы сгенерировать его заново - удалите его.")
-            }
+            // } else {
+            //     console.log("Файл scss/fonts.scss уже существует. Для того чтобы сгенерировать его заново - удалите его.")
+            // }
         }
     });
     return app.gulp.src(`${app.path.srcFolder}`);

@@ -1,29 +1,101 @@
-# README #
+# gulp-builder
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## :hammer_and_wrench: Установка
+* установите [NodeJS](https://nodejs.org/en/) ***lts*** (на момент создания сборщика v16.13.2)
+* скачайте сборку в консоли с помощью [Git](https://git-scm.com/downloads): ```git clone git@bitbucket.org:osminozhka/gulp-builder.git #имя_проекта```
+* установите ```gulp``` глобально: ```npm install gulp-cli --global```
+* перейдите в скачанную папку со сборкой: ```cd #имя_проекта```
+* скачайте необходимые зависимости: ```npm install```
+* чтобы начать работу, введите команду: ```npm run dev``` (режим разработки)
+* чтобы собрать проект, введите команду ```npm run build``` (режим сборки)
 
-### What is this repository for? ###
+Если вы всё сделали правильно, у вас должен открыться браузер с локальным сервером.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## :open_file_folder: Файловая структура
 
-### How do I get set up? ###
+```
+gulp-html-starter
+├── dist
+├── src
+│   ├── blocks
+│   ├── files
+│   ├── fonts
+│   ├── img
+│   ├── js
+│   ├── scss
+├── .env_example
+├── package.json
+├── gulpfile.js
+└── .gitignore
+```
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Корень папки:
+    * ```.gitignore``` – запрет на отслеживание файлов Git'ом
+    * ```.env_example``` – стартовый шаблон для переменных среды
+    * ```gulpfile.js``` — настройки Gulp
+    * ```package.json``` — список зависимостей
+* Папка ```src``` - используется во время разработки:
+    * БЭМ-блоки и компоненты: ```src/blocks```
+    * Остальные файлы: ```src/files```
+    * шрифты: ```src/fonts```
+    * изображения: ```src/img```
+    * JS-файлы: ```src/js```
+    * SCSS-файлы: ```src/scss```
+    * SVG иконки для генерации спрайта: ```src/svgicons```
+* Папка ```dist``` - папка, из которой запускается локальный сервер для разработки (при запуске ```npm run dev```)
+* Папка ```gulp``` - папка с Gulp-тасками и настройками
 
-### Contribution guidelines ###
+## :keyboard: Команды
+* ```npm run dev``` - запуск сервера для разработки проекта
+* ```npm run build``` - собрать проект с оптимизацией без запуска сервера
 
-* Writing tests
-* Code review
-* Other guidelines
+## :bulb: Рекомендации по использованию
+### Компонентный подход к разработке сайтов
+* каждый БЭМ-блок имеет свою папку внутри ```src/blocks/modules```
+* папка одного БЭМ-блока содержит в себе один html-файл, один SCSS-файл и один JS-файл (если у блока используется скрипт)
+    * html-файл блока импортируется в файл ```src/views/index.html``` (или в необходимый файл страницы, откуда будет вызываться блок)
+    * SCSS-файл блока импортируется в файл ```src/blocks/modules/_modules.scss```
+    * JS-файл блока импортируется в ```src/js/import/modules.js```
 
-### Who do I talk to? ###
+Пример структуры папки с БЭМ-блоком:
+```
+blocks
+├── modules
+│   ├── header
+│   │   ├── header.html
+│   │   ├── header.js
+│   │   ├── header.scss
+```
 
-* Repo owner or admin
-* Other community or team contact
+### Компоненты
+* компоненты (например, иконки, кнопки) оформляются в html с помощью примесей
+* каждый компонент имеет свою папку внутри ```src/blocks/components```
+* папка одного компонента содержит в себе один html-файл, один SCSS-файл и один JS-файл (если у компонента используется скрипт)
+    * html-файл компонента импортируется в файл главной страницы ```src/views/index.html``` (или в необходимый файл страницы, откуда будет вызываться компонент)
+    * SCSS-файл компонента импортируется в файл ```src/blocks/components/_components.scss```
+    * JS-файл компонента импортируется в файл ```src/js/import/components.js```
+
+### Страницы проекта
+* страницы проекта находятся в корне папки ```src/```
+    * главная страница: ```src/views/index.html```
+
+### Шрифты
+* шрифты находятся в папке ```src/fonts```
+    * шрифты автоматически подключаются в файл ```src/styles/base/_fonts.scss```
+    * шрифты форматов ```{*.otf}``` автоматически конвертируются в формат ```{*.ttf}``` в папку с шрифтами ```src/fonts```
+    * шрифты форматов ```{*.ttf}``` автоматически конвертируются в формат ```{*.woff, *.woff2}``` в папку с шрифтами в сборке ```dist/fonts```
+
+### Изображения
+* изображения находятся в папке ```src/img```
+    * изображения автоматически конвертируются в формат ```.webp```.
+    * изображения подключенные как ```<img src="@img/download.png" width="100" alt="">``` автоматически превращаются в ```<picture><source srcset="img/download.webp" type="image/webp"><img src="img/download.png" width="100" alt=""></picture>```.
+
+### Сторонние библиотеки
+* все сторонние библиотеки устанавливаются в папку ```node_modules```
+* для их загрузки воспользуйтеcь командой ```npm install package_name```
+* для подключения JS-файлов библиотек импортируйте их в самом начале JS-файла БЭМ-блока (то есть тот БЭМ-блок, который использует скрипт), например:
+```javascript
+import $ from "jquery";
+```
+* для подключения стилевых файлов библиотек импортируйте их в файл ```src/styles/vendor/_libs.scss```
+* JS-файлы и стилевые файлы библиотек самостоятельно изменять нельзя
