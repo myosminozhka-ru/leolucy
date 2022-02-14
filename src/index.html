@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    @@include('blocks/modules/header/header.html', {})
-    <main>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, soluta.</span>
-        <img src="@img/icons/icons.svg#benefit_1" alt="benefit_1"/>
-        <img src="@img/download.png" width="100" alt="">
-    </main>
+    <div class="wrapper" id="app">
+        @@include('blocks/modules/header/header.html', {})
+        <main>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, soluta.</span>
+            <img src="@img/icons/icons.svg#benefit_1" alt="benefit_1"/>
+            <img src="@img/download.png" width="100" alt="">
+            {{ isMounted }}
+        </main>
+        @@include('blocks/modules/footer/footer.html', {})
+    </div>
     <script src="js/app.min.js"></script>
-    @@include('blocks/modules/footer/footer.html', {})
 </body>
 </html>
