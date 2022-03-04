@@ -19,3 +19,10 @@
 
 ## :zap: Переменные
 * Все цвета должны быть вынесены в переменные, оттенки цветов должны быть вычислены с помощью [Специальных функций](https://sass-lang.com/documentation/modules/color)
+
+
+
+## :zap: Префиксы
+* Все классы для стилей должны иметь префикс osm
+* Например (HTML): ``` <span class="osm-span__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, soluta.</span> ```
+* Например (SCSS): ``` .osm-span { &__text { color: #000; } } ```
