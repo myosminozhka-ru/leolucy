@@ -103,3 +103,29 @@ import $ from "jquery";
 ```
 * для подключения стилевых файлов библиотек импортируйте их в файл ```src/styles/vendor/_libs.scss```
 * JS-файлы и стилевые файлы библиотек самостоятельно изменять нельзя
+
+
+### Подсказки путей в VSCode
+* Установить расширение Path Autocomplete
+* Нажать ctrl+shift+p и набрать Preferences: Open Settings (JSON)
+* Добавить к настройкам:
+```
+"path-autocomplete.pathMappings": {
+    "@img": "${folder}/src/img",
+    "@js": "${folder}/dist/js",
+    "@scss": "${folder}/src/scss",
+    "@css": "${folder}/dist/css",
+}
+```
+* Должно быть что то вроде:
+```
+{
+    "path-autocomplete.pathMappings": {
+        "@img": "${folder}/src/img",
+        "@js": "${folder}/dist/js",
+        "@scss": "${folder}/src/scss",
+        "@css": "${folder}/dist/css",
+    },
+    "window.zoomLevel": -1
+}
+```
