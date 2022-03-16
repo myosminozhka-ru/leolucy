@@ -106,8 +106,8 @@ import $ from "jquery";
 
 
 ### Подсказки путей в VSCode
-* Установить расширение Path Autocomplete
-* Нажать ctrl+shift+p и набрать:
+* Установить расширение ``` Path Autocomplete ``` 
+* Нажать ``` ctrl+shift+p ``` и набрать:
 * Анг: ``` Preferences: Open Settings (JSON) ``` Рус: ``` Параметры: Открыть параметры (JSON) ```
 * Добавить к настройкам:
 ```
