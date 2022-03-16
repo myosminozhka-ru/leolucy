@@ -121,12 +121,16 @@ import $ from "jquery";
 * Должно быть что то вроде:
 ```
 {
+    // ВАШИ НАСТРОЙКИ,
+    // ВАШИ НАСТРОЙКИ,
+    // ВАШИ НАСТРОЙКИ,
+    // ВАШИ НАСТРОЙКИ,
+    // ВАШИ НАСТРОЙКИ,
     "path-autocomplete.pathMappings": {
         "@img": "${folder}/src/img",
         "@js": "${folder}/dist/js",
         "@scss": "${folder}/src/scss",
         "@css": "${folder}/dist/css",
-    },
-    "window.zoomLevel": -1
+    }
 }
 ```
