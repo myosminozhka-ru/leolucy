@@ -1,4 +1,4 @@
-# JavaScript codeguide
+# SCSS codeguide
 
 ## :zap: Блоки
 * Для каждого блока стили должны находиться в  ``` src/blocks/modules/***/***.scss ``` например ``` src/blocks/modules/header/header.scss ```.
