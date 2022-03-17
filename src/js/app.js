@@ -6,7 +6,6 @@ import $ from 'jquery';
 
 import Header from '../blocks/modules/header/header.js';
 
-
 window.app = new Vue({
     el: '#app',
     data: () => ({
