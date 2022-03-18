@@ -12,11 +12,13 @@
         @@include('blocks/modules/header/header.html', {})
         <main>
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, soluta.</span>
+            <button data-modal-id="1">Modal Opener</button>
             <img src="@img/icons/icons.svg#benefit_1" alt="benefit_1"/>
             <img src="@img/download.png" width="100" alt="">
             {{ isMounted }}
         </main>
         @@include('blocks/modules/footer/footer.html', {})
+        @@include('blocks/modules/modals/main.modal.html', {})
     </div>
     <script src="js/app.min.js"></script>
 </body>
