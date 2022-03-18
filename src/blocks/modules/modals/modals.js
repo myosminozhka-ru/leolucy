@@ -5,9 +5,11 @@ const Modals = class Modals {
         this.openedClass = openedClass;
     }
     openModal(id) {
+        if (!document.querySelector(`[${this.modalsSelector}="${id}"]`)) return;
         document.querySelector(`[${this.modalsSelector}="${id}"]`).classList.add(this.openedClass);
     }
     closeModal(id) {
+        if (!document.querySelector(`[${this.modalsSelector}="${id}"]`)) return;
         document.querySelector(`[${this.modalsSelector}="${id}"]`).classList.remove(this.openedClass);
     }
     addClickListener() {
