@@ -37,6 +37,6 @@ export const path = {
     clean: buildFolder,
     buildFolder: buildFolder,
     srcFolder: srcFolder,
-    rootlder: rootFolder,
+    rootFolder: rootFolder,
     ftp: ''
 }
