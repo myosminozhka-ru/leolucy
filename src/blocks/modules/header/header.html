@@ -1,1 +1,20 @@
-<header class="header"></header>
+<header class="header">
+    <div class="container">
+        <div class="header__content">
+            <button class="btn btn--burger">
+                <span class="btn__icon">
+                    <span class="btn__icon-child btn__icon-child--1"></span>
+                    <span class="btn__icon-child btn__icon-child--2"></span>
+                    <span class="btn__icon-child btn__icon-child--3"></span>
+                </span>
+            </button>
+        </div>
+
+        <!-- /.logo header__logo -->
+
+        <!-- /.s header__s -->
+        @@include('../../components/s/s.html', {
+            "customClass" : " header__s"
+        });
+    </div>
+</header>
