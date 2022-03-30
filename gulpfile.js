@@ -14,6 +14,7 @@ import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { svgSprites } from './gulp/tasks/svgSprites.js';
 import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js';
+import { buildPug } from './gulp/tasks/pug.js'
 
 // Импорт плагинов
 import { plugins } from './gulp/config/plugins.js';
@@ -36,18 +37,19 @@ const fontsWatcher = gulp.series(otfToTtf, ttfToWoff, fontsStyle, scss);
 // Создаем наблюдатель за изменениями в файлах
 const watcher = () => {
     gulp.watch(path.watch.files, copy);
-    gulp.watch(path.watch.html, html);
+    // gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.js, js);
     gulp.watch(path.watch.images, images);
     gulp.watch(path.watch.svgicons, svgSprites);
     gulp.watch(path.watch.fonts, fontsWatcher);
+    gulp.watch(path.watch.pug, buildPug);
 }
 
 
 
 // Основные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSprites));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, buildPug, scss, js, images, svgSprites));
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
