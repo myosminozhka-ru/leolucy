@@ -4,8 +4,7 @@ globalFunctions.isWebp();
 import Vue from 'vue/dist/vue.js';
 import $ from 'jquery';
 
-import Header from '../blocks/modules/header/header.js';
-import Modals from '../blocks/modules/modals/modals.js';
+import Header from '../pug/modules/header/header.js';
 
 window.app = new Vue({
     el: '#app',
@@ -14,15 +13,11 @@ window.app = new Vue({
         sizes: {
             tablet: 1024,
             mobile: 768,
+            laptop: 1366,
             window: window.innerWidth
         },
         header: new Header({
             someVareible: 'someVareible'
-        }),
-        modals: new Modals({
-            modalsSelector: "data-modal",
-            modalsOpenerSelector: "data-modal-id",
-            openedClass: "isOpened"
         })
     }),
     beforeCreate() {        
@@ -33,14 +28,16 @@ window.app = new Vue({
     beforeMount() {
         this.isMounted = true;
         this.header.init();
-        this.modals.init();
     },
     computed: {
-        isMobile: function () {
-            return this.sizes.window < this.sizes.mobile;
+        isDesctop: function () {
+            return this.sizes.window > this.sizes.laptop;
         },
         isTablet: function () {
             return this.sizes.window < this.sizes.tablet && this.sizes.window > this.sizes.mobile;
+        },
+        isLaptop: function () {
+            return this.sizes.window < this.sizes.laptop && this.sizes.window > this.sizes.tablet;
         }
     },
 });
