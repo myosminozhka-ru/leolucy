@@ -1,0 +1,5 @@
+mixin s(...items)
+    .s&attributes(attributes)
+        .s__content 
+            each item in items
+                +btn(null, item[0])(href=item[1]).btn--gold-fill-circle.s__item

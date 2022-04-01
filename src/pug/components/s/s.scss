@@ -1,0 +1,14 @@
+.s {
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: -7px;
+    }
+
+    &__item {
+        margin: 7px;
+    }
+}
