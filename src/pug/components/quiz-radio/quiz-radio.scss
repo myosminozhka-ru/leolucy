@@ -1,0 +1,160 @@
+.quiz-radio {
+    font-family: $century;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: $black;
+    text-transform: uppercase;
+    min-width: 0;
+    text-align: center;
+    $radio: &;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__border {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: calc(100% - 6px);
+        border: 3px solid $pesto;
+        border-radius: 100%;
+        margin-bottom: 20px;
+
+        &.isLaptop {
+            border-width: 3px;
+        }
+
+        &.isDesctop {
+            padding-bottom: calc(100% - #{vw(6)});
+            border-width: vw(3px);
+        }
+    }
+
+    &__inner-circle {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 25%;
+        border-radius: 100%;
+    }
+
+    &__result {
+        width: 100%;
+        padding-bottom: calc(100% - 6px);
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        border-width: 3px;
+        border-style: solid;
+        background-clip: padding-box;
+        opacity: 0;
+        transition: opacity $ease05;
+
+        &--success {
+            background-color: $pesto;
+            border-color: rgba($pesto, .3);
+        }
+
+        &--failed {
+            background-color: $roofTerracotta;
+            border-color: rgba($roofTerracotta, .3);
+        }
+    }
+
+    &__wrapper-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        transform: translate(-50%, -50%);
+    }
+
+    &__icon {
+        &--success {
+            width: 9px;
+            height: 12px;
+
+            &.isLaptop {
+                width: 17px;
+                height: 23px;
+            }
+
+            &.isDesctop {
+                width: vw(17px);
+                height: vh(23px);
+            }
+        }
+
+        &--failed {
+            width: 9px;
+            height: 9px;
+
+            &.isLaptop {
+                width: 17px;
+                height: 17px;
+            }
+
+            &.isDesctop {
+                width: vw(17px);
+                height: vh(17px);
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 74.5%;
+        object-fit: cover;
+    }
+
+    &--success {
+        #{$radio}__result {
+            &--success {
+                opacity: 1;
+            }
+
+            &--failed {
+                opacity: 0;
+            }
+        }
+    }
+
+    &--falied {
+        #{$radio}__border {
+            border-color: $darkTan;
+            border-width: 4px;
+            padding-bottom: calc(100% - 8px);
+
+            &.isLaptop {
+                border-width: 9px;
+                padding-bottom: calc(100% - 18px);
+            }
+
+            &.isDesctop {
+                padding-bottom: calc(100% - #{vw(18)});
+                border-width: vw(9px);
+            }
+        }
+
+        #{$radio}__result {
+            &--success {
+                opacity: 0;
+            }
+
+            &--failed {
+                opacity: 1;
+            }
+        }
+    }
+}
