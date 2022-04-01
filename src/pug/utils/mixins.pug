@@ -1,3 +1,9 @@
+include ../components/container/container
+include ../components/btn/btn
+include ../components/s/s
+include ../components/checkbox/checkbox
+include ../components/quiz-radio/quiz-radio
+
 mixin svg(name)
-        svg(class="Icon Icon--" + name)&attributes(attributes)
-            use(xlink:href="/icons/icons.svg#" + name)
+        svg(class="icon icon--" + name)&attributes(attributes)
+            use(xlink:href="/img/icons/icons.svg#" + name)
