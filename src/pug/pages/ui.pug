@@ -1,0 +1,32 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Ui"
+
+block content
+    +container
+        .ui
+            .ui__mb-60(:class='{isDesctop, isTablet, isLaptop}')
+                +s(["vk", "#"], ["telegram", "#"])
+            .ui__mb-60.no-grid(:class='{isDesctop, isTablet, isLaptop}')
+                +btn("подобрать").btn--gold-border-rounded
+            .ui__mb-60(:class='{isDesctop, isTablet, isLaptop}')
+                .ui__column-group
+                    +btn(null, "triangle-arrow-left").btn--gold-border-while-fill-circle
+                    +btn(null, "triangle-arrow-left")(disabled).btn--gold-border-while-fill-circle
+                .ui__column-group
+                    +btn(null, "triangle-arrow-right").btn--gold-border-mine-shaft-fill-circle
+                    +btn(null, "triangle-arrow-right")(disabled).btn--gold-border-mine-shaft-fill-circle
+                .ui__column-group
+                    +checkbox("Сухой")#radio-2
+                    +checkbox("Сухой")(checked)#radio-3
+                .ui__column-group
+                    +checkbox("Сухой")#radio-0.checkbox--row
+                    +checkbox("Сухой")(checked)#radio-1.checkbox--row
+            .ui__mb-60(:class='{isDesctop, isTablet, isLaptop}')
+                .ui__row-group(:class='{isDesctop, isTablet, isLaptop}')
+                    +quizRadion("Выбран правильный", "/img/quiz/1.png").quiz-radio--success
+                    +quizRadion("Не выбран", "/img/quiz/2.png")
+                    +quizRadion("Выбран не верно", "/img/quiz/3.png").quiz-radio--falied
+            .ui__mb-60.no-grid
+                include ../modules/filter-reviews/filter-reviews
