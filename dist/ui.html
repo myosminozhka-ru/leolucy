@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ui</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper" id="app" :class="{isDesctop, isTablet, isLaptop}">
+    <main class="main">
+      <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="ui">
+          <div class="ui__mb-60" :class="{isDesctop, isTablet, isLaptop}">
+            <div class="s">
+              <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+                  <svg class="icon icon--vk btn__icon btn__icon--vk">
+                    <use xlink:href="/img/icons/icons.svg#vk"></use>
+                  </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+                  <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                    <use xlink:href="/img/icons/icons.svg#telegram"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="ui__mb-60 no-grid" :class="{isDesctop, isTablet, isLaptop}">
+            <button class="btn btn--gold-border-rounded" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">подобрать</span>
+            </button>
+          </div>
+          <div class="ui__mb-60" :class="{isDesctop, isTablet, isLaptop}">
+            <div class="ui__column-group">
+              <button class="btn btn--gold-border-while-fill-circle" :class="{isDesctop, isTablet, isLaptop}">
+                <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
+                  <use xlink:href="/img/icons/icons.svg#triangle-arrow-left"></use>
+                </svg>
+              </button>
+              <button class="btn btn--gold-border-while-fill-circle" :class="{isDesctop, isTablet, isLaptop}" disabled="disabled">
+                <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
+                  <use xlink:href="/img/icons/icons.svg#triangle-arrow-left"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="ui__column-group">
+              <button class="btn btn--gold-border-mine-shaft-fill-circle" :class="{isDesctop, isTablet, isLaptop}">
+                <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
+                  <use xlink:href="/img/icons/icons.svg#triangle-arrow-right"></use>
+                </svg>
+              </button>
+              <button class="btn btn--gold-border-mine-shaft-fill-circle" :class="{isDesctop, isTablet, isLaptop}" disabled="disabled">
+                <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
+                  <use xlink:href="/img/icons/icons.svg#triangle-arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="ui__column-group">
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="radio-2"/>
+                <label class="checkbox__label" for="radio-2"><span class="checkbox__decoration">
+                    <svg class="icon icon--check checkbox__check">
+                      <use xlink:href="/img/icons/icons.svg#check"></use>
+                    </svg></span><span class="checkbox__text">Сухой</span>
+                </label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="radio-3" checked="checked"/>
+                <label class="checkbox__label" for="radio-3"><span class="checkbox__decoration">
+                    <svg class="icon icon--check checkbox__check">
+                      <use xlink:href="/img/icons/icons.svg#check"></use>
+                    </svg></span><span class="checkbox__text">Сухой</span>
+                </label>
+              </div>
+            </div>
+            <div class="ui__column-group">
+              <div class="checkbox checkbox--row">
+                <input class="checkbox__input" type="checkbox" id="radio-0"/>
+                <label class="checkbox__label" for="radio-0"><span class="checkbox__decoration">
+                    <svg class="icon icon--check checkbox__check">
+                      <use xlink:href="/img/icons/icons.svg#check"></use>
+                    </svg></span><span class="checkbox__text">Сухой</span>
+                </label>
+              </div>
+              <div class="checkbox checkbox--row">
+                <input class="checkbox__input" type="checkbox" id="radio-1" checked="checked"/>
+                <label class="checkbox__label" for="radio-1"><span class="checkbox__decoration">
+                    <svg class="icon icon--check checkbox__check">
+                      <use xlink:href="/img/icons/icons.svg#check"></use>
+                    </svg></span><span class="checkbox__text">Сухой</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="ui__mb-60" :class="{isDesctop, isTablet, isLaptop}">
+            <div class="ui__row-group" :class="{isDesctop, isTablet, isLaptop}">
+              <div class="quiz-radio quiz-radio--success" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="quiz-radio__content">
+                  <div class="quiz-radio__border" :class="{isDesctop, isTablet, isLaptop}">
+                    <div class="quiz-radio__inner-circle">
+                      <div class="quiz-radio__result quiz-radio__result--success">
+                        <div class="quiz-radio__wrapper-icon">
+                          <svg class="icon icon--check quiz-radio__icon quiz-radio__icon--success" :class="{isDesctop, isTablet, isLaptop}">
+                            <use xlink:href="/img/icons/icons.svg#check"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="quiz-radio__inner-circle">
+                      <div class="quiz-radio__result quiz-radio__result--failed">
+                        <div class="quiz-radio__wrapper-icon">
+                          <svg class="icon icon--failed quiz-radio__icon quiz-radio__icon--failed" :class="{isDesctop, isTablet, isLaptop}">
+                            <use xlink:href="/img/icons/icons.svg#failed"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div><img class="quiz-radio__img" src="/img/quiz/1.png"/>
+                  </div><span class="quiz-radio__text">Выбран правильный</span>
+                </div>
+              </div>
+              <div class="quiz-radio" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="quiz-radio__content">
+                  <div class="quiz-radio__border" :class="{isDesctop, isTablet, isLaptop}">
+                    <div class="quiz-radio__inner-circle">
+                      <div class="quiz-radio__result quiz-radio__result--success">
+                        <div class="quiz-radio__wrapper-icon">
+                          <svg class="icon icon--check quiz-radio__icon quiz-radio__icon--success" :class="{isDesctop, isTablet, isLaptop}">
+                            <use xlink:href="/img/icons/icons.svg#check"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="quiz-radio__inner-circle">
+                      <div class="quiz-radio__result quiz-radio__result--failed">
+                        <div class="quiz-radio__wrapper-icon">
+                          <svg class="icon icon--failed quiz-radio__icon quiz-radio__icon--failed" :class="{isDesctop, isTablet, isLaptop}">
+                            <use xlink:href="/img/icons/icons.svg#failed"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div><img class="quiz-radio__img" src="/img/quiz/2.png"/>
+                  </div><span class="quiz-radio__text">Не выбран</span>
+                </div>
+              </div>
+              <div class="quiz-radio quiz-radio--falied" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="quiz-radio__content">
+                  <div class="quiz-radio__border" :class="{isDesctop, isTablet, isLaptop}">
+                    <div class="quiz-radio__inner-circle">
+                      <div class="quiz-radio__result quiz-radio__result--success">
+                        <div class="quiz-radio__wrapper-icon">
+                          <svg class="icon icon--check quiz-radio__icon quiz-radio__icon--success" :class="{isDesctop, isTablet, isLaptop}">
+                            <use xlink:href="/img/icons/icons.svg#check"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="quiz-radio__inner-circle">
+                      <div class="quiz-radio__result quiz-radio__result--failed">
+                        <div class="quiz-radio__wrapper-icon">
+                          <svg class="icon icon--failed quiz-radio__icon quiz-radio__icon--failed" :class="{isDesctop, isTablet, isLaptop}">
+                            <use xlink:href="/img/icons/icons.svg#failed"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div><img class="quiz-radio__img" src="/img/quiz/3.png"/>
+                  </div><span class="quiz-radio__text">Выбран не верно</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui__mb-60 no-grid">
+            <div class="filter-reviews">
+              <div class="filter-reviews__top" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="filter-reviews__border-block" :class="{isDesctop, isTablet, isLaptop}">
+                  <div class="filter-reviews__col filter-reviews__col--first" :class="{isDesctop, isTablet, isLaptop}"><span class="filter-reviews__info-title" :class="{isDesctop, isTablet, isLaptop}">Питомец:</span>
+                    <div class="filter-reviews__buttons"> 
+                      <button class="btn btn--gold-border-rounded btn--small" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">Кошке</span>
+                      </button>
+                      <button class="btn btn--gold-border-rounded btn--small" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">Собаке</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="filter-reviews__col filter-reviews__col--center" :class="{isDesctop, isTablet, isLaptop}"><span class="filter-reviews__info-title" :class="{isDesctop, isTablet, isLaptop}">Возраст:</span>
+                    <app-select class="filter-reviews__select" :items="filterReviews.listAge" @on-select="filterReviews.onSelectAge.apply(filterReviews, [$event])"></app-select>
+                  </div>
+                  <div class="filter-reviews__col filter-reviews__col--right" :class="{isDesctop, isTablet, isLaptop}"><span class="filter-reviews__info-title" :class="{isDesctop, isTablet, isLaptop}">Вид корма:</span>
+                    <app-select class="filter-reviews__select" :items="filterReviews.listFeed" @on-select="filterReviews.onSelectFeed.apply(filterReviews, [$event])"></app-select>
+                  </div>
+                </div>
+                <div class="filter-reviews__mobile-action" :class="{isDesctop, isTablet, isLaptop}">
+                  <button class="btn btn--transparent filter-reviews__btn-transaprent" :class="{isDesctop, isTablet, isLaptop}" v-if="!filterReviews.isShowMobileDropdown" @click="filterReviews.toggleMobileDropdown()">
+                    <svg class="icon icon--filter btn__icon btn__icon--filter">
+                      <use xlink:href="/img/icons/icons.svg#filter"></use>
+                    </svg>
+                  </button>
+                  <button class="btn btn--transparent filter-reviews__btn-transaprent" :class="{isDesctop, isTablet, isLaptop}" v-if="filterReviews.isShowMobileDropdown" @click="filterReviews.toggleMobileDropdown()">
+                    <svg class="icon icon--close btn__icon btn__icon--close">
+                      <use xlink:href="/img/icons/icons.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="filter-reviews__mobile-dropdown" :class="{'filter-reviews__mobile-dropdown--is-open': filterReviews.isShowMobileDropdown}">
+                <div class="filter-reviews__mobile-dropdown-content"><span class="filter-reviews__info-title">Возраст:</span>
+                  <div class="filter-reviews__box-age">
+                    <div class="filter-reviews__box-age-content"><span class="filter-reviews__select-item" v-for="(item, index) in filterReviews.listAge" :key="item.id ? item.id : index" @click="filterReviews.onSelectAge(item)" :class="{'filter-reviews__select-item--active': item.select ? item.select : false}">{{ item.title }}</span></div>
+                  </div><span class="filter-reviews__info-title">Вид корма:</span>
+                  <div class="filter-reviews__box-feed"> 
+                    <div class="filter-reviews__box-feed-content"><span class="filter-reviews__select-item" v-for="(item, index) in filterReviews.listFeed" :key="item.id ? item.id : index" @click="filterReviews.onSelectFeed(item)" :class="{'filter-reviews__select-item--active': item.select ? item.select : false}">{{ item.title }}</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+  </div>
+</body>
+<script src="js/app.min.js"></script>
