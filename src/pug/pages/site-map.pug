@@ -1,0 +1,10 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Список страниц"
+
+block content
+    .container
+        ul.list
+            li.list__item 
+                a(href="ui.html", title="ui", target="_blank").list__link ui
