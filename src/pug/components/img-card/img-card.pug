@@ -1,0 +1,7 @@
+mixin img-card(id, img, title)
+    .img-card&attributes(attributes)
+        .img-card__content 
+            .img-card__wrapper-img(:class='{isDesctop, isTablet, isLaptop}')
+                img.img-card__img(src=img, alt="")
+            
+            span.img-card__title(:class='{isDesctop, isTablet, isLaptop}')= title
