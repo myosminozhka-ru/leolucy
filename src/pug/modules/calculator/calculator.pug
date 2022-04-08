@@ -1,0 +1,46 @@
+section.section.calculator(style={'background-image': 'url(/img/section/3.png)'})
+    img.calculator__decoration.calculator__decoration--top(src="/img/calculator/4.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+    img.calculator__decoration.calculator__decoration--bottom(src="/img/calculator/5.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+    +container 
+        .calculator__content(:class='{isDesctop, isTablet, isLaptop}') 
+            h2.title.calculator__title(:class='{isDesctop, isTablet, isLaptop}') Калькулятор дневной порции для вашего питомца
+            .calculator__left(:class='{isDesctop, isTablet, isLaptop}')
+                .calculator__row 
+                    +btn('Кошке')(:class="{'btn--select': this.mainSelectAnimal === 'cat'}", @click="onSelectMainAnimal('cat')").btn--gold-border-rounded.btn--small.calculator__btn
+                    +btn('Собаке')(:class="{'btn--select': this.mainSelectAnimal === 'dog'}", @click="onSelectMainAnimal('dog')").btn--gold-border-rounded.btn--small.calculator__btn
+                
+                .calculator__column-row(:class='{isDesctop, isTablet, isLaptop}')
+                    span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Вес, кг:
+                    +input-slider(class="calculator__slider", data-start-value="0", data-min="0", data-max="10")
+                
+                .calculator__column-row(:class='{isDesctop, isTablet, isLaptop}')
+                    span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Возраст, лет:
+                    +input-slider(class="calculator__slider", data-start-value="0", data-min="0", data-max="10")
+                
+                .calculator__column-row(:class='{isDesctop, isTablet, isLaptop}')
+                    span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Вид:
+                    .calculator__list 
+                        +checkbox("Сухой")#radio-0.calculator__checkbox
+                        +checkbox("Влажный")#radio-1.calculator__checkbox
+                        +checkbox("Комбинированный")#radio-2.calculator__checkbox
+                
+                .calculator__result(:class='{isDesctop, isTablet, isLaptop}')
+                    .calculator__result-content
+                        span.calculator__result-title(:class='{isDesctop, isTablet, isLaptop}') Количество корма на день:
+                        .calculator__result-row 
+                            span.calculator__result-weight(:class='{isDesctop, isTablet, isLaptop}') {{ calculator.resultWeight }}
+                            span.calculator__result-text(:class='{isDesctop, isTablet, isLaptop}') грамм
+            
+            .calculator__right(:class='{isDesctop, isTablet, isLaptop}') 
+                .calculator__box(:class='{isDesctop, isTablet, isLaptop}', style={'background-image': 'url(/img/calculator/1.png)'})
+                    .calculator__box-content
+                        span.subtitle.calculator__box-title(:class='{isDesctop, isTablet, isLaptop}') Рекомендации
+                        p.calculator__box-description(:class='{isDesctop, isTablet, isLaptop}') Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.
+                        
+                        .calculator__block(:class='{isDesctop, isTablet, isLaptop}') 
+                            .calculator__block-content(:class='{isDesctop, isTablet, isLaptop}') 
+                                img.calculator__block-food(:class='{isDesctop, isTablet, isLaptop}', src="/img/calculator/2.png", alt="")
+                                span.calculator__block-title(:class='{isDesctop, isTablet, isLaptop}')  Premium By Nature 
+                                span.calculator__block-subtitle(:class='{isDesctop, isTablet, isLaptop}')  консервы с говядиной и сердцем
+                                img.calculator__block-dish(:class='{isDesctop, isTablet, isLaptop}', src="/img/calculator/3.png", alt="")
+
