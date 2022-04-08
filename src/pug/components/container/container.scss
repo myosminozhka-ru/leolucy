@@ -12,12 +12,12 @@
     &.isLaptop {
         padding-left: 45px;
         padding-right: 45px;
-        max-width: 1900px;
+        max-width: 1290px;
     }
 
     &.isDesctop {
         padding-left: vw(45px);
         padding-right: vw(45px);
-        max-width: vw(1900px)
+        max-width: vw(1290px)
     }
 }
