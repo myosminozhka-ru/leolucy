@@ -1,11 +1,11 @@
 .filter-reviews {
+    z-index: 2;
     $filter: &;
 
     &__top {
         display: flex;
         align-items: center;
         width: 100%;
-        max-width: 996px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -178,6 +178,14 @@
         &--active {
             font-weight: 700;
             pointer-events: none;
+        }
+    }
+
+    &--black {
+        #{$filter}__info-title,
+        #{$filter}__btn,
+        #{$filter}__select {
+            color: $black;
         }
     }
 }

@@ -1,5 +1,6 @@
 const FilterReviews = class FilterReviews {
     constructor() {
+        this.classReviews;
         this.listAge = [
             {
                 id: 1,
@@ -61,7 +62,9 @@ const FilterReviews = class FilterReviews {
         this.isShowMobileDropdown = false;
     }
 
-    init() {}
+    init(classReviews) {
+        this.classReviews = classReviews;
+    }
 
     onSelectAge(selectItemObj) {
         const findLastActiveItem = this.listAge.find(item => item.select === true);
