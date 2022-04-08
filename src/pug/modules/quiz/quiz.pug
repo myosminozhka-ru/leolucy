@@ -1,0 +1,32 @@
+section.section.section--white.quiz(:class='{isDesctop, isTablet, isLaptop}')
+    img.quiz__decor.quiz__decor--top(src="/img/quiz/decor-1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+    +container
+        h2.title.title--black.quiz__title(:class='{isDesctop, isTablet, isLaptop}') Отгадайте из чего состоит корм
+        .quiz__steps(:class='{isDesctop, isTablet, isLaptop}') 
+            .quiz__step(:class='{isDesctop, isTablet, isLaptop}') 
+                .quiz__step-content(:class='{isDesctop, isTablet, isLaptop}') 
+                    span.quiz__step-title(:class='{isDesctop, isTablet, isLaptop}') {{ quiz.currentStepData().question }}
+                    span.quiz__step-info Вопрос: {{ quiz.currentStep + 1 }}-{{ quiz.steps.length }}
+                    .quiz__step-row(:class='{isDesctop, isTablet, isLaptop}') 
+                        .quiz-radio(
+                            :class='[{isDesctop, isTablet, isLaptop}, quiz.addClassResult(answer.id) === "true" ? "quiz-radio--success" : quiz.addClassResult(answer.id) === "false" ? "quiz-radio--falied" : ""]', 
+                            v-for="answer in quiz.currentStepData().listAnswer", 
+                            :key="answer.id"
+                            @click='quiz.onSelectAnswer(answer.id, quiz.currentStepData().id)')
+                            .quiz-radio__content
+                                .quiz-radio__border(:class='{isDesctop, isTablet, isLaptop}')
+                                    .quiz-radio__inner-circle(:class='{isDesctop, isTablet, isLaptop}')
+                                        .quiz-radio__result.quiz-radio__result--success(:class='{isDesctop, isTablet, isLaptop}')
+                                            .quiz-radio__wrapper-icon
+                                                +svg("check")(:class='{isDesctop, isTablet, isLaptop}').quiz-radio__icon.quiz-radio__icon--success
+                                    .quiz-radio__inner-circle(:class='{isDesctop, isTablet, isLaptop}')
+                                        .quiz-radio__result.quiz-radio__result--failed(:class='{isDesctop, isTablet, isLaptop}')
+                                            .quiz-radio__wrapper-icon
+                                                +svg("failed")(:class='{isDesctop, isTablet, isLaptop}').quiz-radio__icon.quiz-radio__icon--failed
+                                    img(:src="answer.img").quiz-radio__img
+                                span.quiz-radio__text {{ answer.title }}
+        
+        .quiz__list-buttons(:class='{isDesctop, isTablet, isLaptop}') 
+            +btn("Назад")(:disabled="quiz.isDisabledPrev()", @click="quiz.onClickPrev()").btn--gold-border-rounded.btn--black-text.quiz__prev
+            +btn("Далее")(:disabled="quiz.isDisabledNext()", @click="quiz.onClickNext()").btn--gold-border-rounded.btn--black-text.quiz__next
+    img.quiz__decor.quiz__decor--bottom(src="/img/quiz/decor-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')

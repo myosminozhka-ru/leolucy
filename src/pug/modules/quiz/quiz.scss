@@ -1,0 +1,133 @@
+.quiz {
+    padding-bottom: 60px;
+    // overflow: visible;
+    z-index: 2;
+
+    &.isLaptop {
+        padding-bottom: 165px;
+    }
+
+    &.isDesctop {
+        padding-bottom: vw(165px);
+    }
+
+    &__decor {
+        position: absolute;
+        display: none;
+
+        &--top {
+            bottom: 0;
+            left: 0;
+        }
+
+        &--bottom {
+            right: 0;
+            bottom: vw(-110px);
+        }
+
+        &.isDesctop {
+            display: block;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        &.isDesctop {
+            margin-bottom: vw(20px);
+        }
+    }
+
+    &__steps {
+        margin-bottom: 30px;
+
+        &.isLaptop {
+            margin-bottom: 50px;
+        }
+
+        &.isDesctop {
+            margin-bottom: vw(50px);
+        }
+    }
+
+    &__step {
+        &-content {
+            display: flex;
+            flex-direction: column;
+            color: $black;
+            text-align: center;
+        }
+
+        &-title {
+            font-family: $din;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+
+            &.isLaptop {
+                font-size: 20px;
+                margin-bottom: 80px;
+            }
+            
+            &.isDesctop {
+                font-size: vw(20px);
+                margin-bottom: vw(80px);
+            }
+        }
+
+        &-info {
+            font-family: $century;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 140%;
+            margin-bottom: 60px;
+
+            &.isLaptop {
+                font-size: 30px;
+                margin-bottom: 50px;
+            }
+            
+            &.isDesctop {
+                font-size: vw(30px);
+                margin-bottom: vw(50px);
+            }
+        }
+
+        &-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0 50px;
+            max-width: 770px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+
+            &.isLaptop {
+                grid-gap: 0 87px;
+            }
+
+            &.isDesctop {
+                grid-gap: 0 vw(87px);
+                max-width: vw(770px);
+            }
+        }
+    }
+
+    &__list-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__prev {
+        margin-right: 20px;
+
+        &.isDesctop {
+            margin-right: vw(20px);
+        }
+    }
+}
