@@ -6,7 +6,7 @@ block variables
 block content
     +container
         .ui
-            .ui__mb-60(:class='{isDesctop, isTablet, isLaptop}')
+            .ui__mb-60.no-grid(:class='{isDesctop, isTablet, isLaptop}')
                 +s(["vk", "#"], ["telegram", "#"])
             .ui__mb-60.no-grid(:class='{isDesctop, isTablet, isLaptop}')
                 +btn("подобрать").btn--gold-border-rounded
@@ -29,4 +29,4 @@ block content
                     +quizRadion("Не выбран", "/img/quiz/2.png")
                     +quizRadion("Выбран не верно", "/img/quiz/3.png").quiz-radio--falied
             .ui__mb-60.no-grid
-                include ../modules/filter-reviews/filter-reviews
+                +filter-reviews
