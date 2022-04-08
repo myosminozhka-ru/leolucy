@@ -1,4 +1,4 @@
-
+import devip from 'dev-ip';
 
 export const server = (done) => {
     app.plugins.browsersync.init({
@@ -6,6 +6,7 @@ export const server = (done) => {
             baseDir:  `${app.path.build.html}`
         },
         notify: true,
+        host: devip(),
         port: process.env.PORT ? process.env.PORT : 3000,
         plugins: ['bs-console-qrcode']
     }, async function(err, bs) {
