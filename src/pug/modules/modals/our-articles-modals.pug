@@ -1,0 +1,23 @@
+.modals.our-articles-modals(@click.self="modals.hideModals('our-articles-modals')", :class='{isDesctop, isTablet, isLaptop}')
+    .modals__content.our-articles-modals__content(:class='{isDesctop, isTablet, isLaptop}') 
+        .modals__top.our-articles-modals__top(:class='{isDesctop, isTablet, isLaptop}')  
+            span.modals__title.our-articles-modals__title(:class='{isDesctop, isTablet, isLaptop}') Умывание. Каприз или природный инстинкт? 
+            +btn(null, 'close')(@click="modals.hideModals('our-articles-modals')").btn--transparent.modals__close
+        .modals__center.our-articles-modals__center(:class='{isDesctop, isTablet, isLaptop}') 
+            .our-articles-modals__wrapper-img(:class='{isDesctop, isTablet, isLaptop}')
+                img.our-articles-modals__img(src="https://picsum.photos/600/600", alt="")
+            p.modals__text.our-articles-modals__text(:class='{isDesctop, isTablet, isLaptop}') Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.
+            span.modals__subtitle.our-articles-modals__subtitle(:class='{isDesctop, isTablet, isLaptop}') Характеристики
+            p.modals__text.our-articles-modals__text(:class='{isDesctop, isTablet, isLaptop}') Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.
+            ul.modals__list.modals__list--column.our-articles-modals__list 
+                li.modals__list-item.our-articles-modals__list-item 
+                    p.modals__text.our-articles-modals__text(:class='{isDesctop, isTablet, isLaptop}') Господа, социально-экономическое развитие не оставляет шанса для новых предложений.
+                li.modals__list-item.our-articles-modals__list-item 
+                    p.modals__text.our-articles-modals__text(:class='{isDesctop, isTablet, isLaptop}') Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. 
+                li.modals__list-item.our-articles-modals__list-item 
+                    p.modals__text.our-articles-modals__text(:class='{isDesctop, isTablet, isLaptop}') В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.
+            span.modals__subtitle.our-articles-modals__subtitle(:class='{isDesctop, isTablet, isLaptop}') Характеристики
+            p.modals__text.our-articles-modals__text(:class='{isDesctop, isTablet, isLaptop}') Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.
+        .modals__bottom.our-articles-modals__bottom(:class='{isDesctop, isTablet, isLaptop}') 
+            +btn('Предыдущая').btn--gold-border-rounded.btn--black-text.our-articles-modals__btn
+            +btn('Следующая').btn--gold-border-rounded.btn--black-text.our-articles-modals__btn

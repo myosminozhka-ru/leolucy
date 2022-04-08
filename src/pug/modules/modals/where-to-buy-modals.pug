@@ -1,0 +1,9 @@
+.modals.where-to-buy-modals(@click.self="modals.hideModals('where-to-buy-modals')")
+    .modals__content.where-to-buy-modals__content(:class='{isDesctop, isTablet, isLaptop}') 
+        .modals__top.where-to-buy-modals__top(:class='{isDesctop, isTablet, isLaptop}')  
+            +btn(null, 'close')(@click="modals.hideModals('where-to-buy-modals')").btn--transparent.modals__close
+        .modals__bottom.where-to-buy-modals__bottom(:class='{isDesctop, isTablet, isLaptop}') 
+            span.modals__title.where-to-buy-modals__title(:class='{isDesctop, isTablet, isLaptop}')  Где купить
+            .where-to-buy-modals__box(style={'background-image': 'url(/img/section/6.png)'}, :class='{isDesctop, isTablet, isLaptop}')
+                +where-to-buy-slider(arrayWhereBuySlides)(data-count-slides="5")
+            +btn('Назад')(@click="modals.hideModals('where-to-buy-modals')").btn--gold-border-rounded.btn--black-text.where-to-buy-modals__btn
