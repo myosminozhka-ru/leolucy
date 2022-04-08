@@ -55,6 +55,99 @@
     }
 
     &--burger {
+        height: 50px;
+        width: 50px;
+        background-color: transparent;
+
+        #{$btn}__icon {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 23px;
+            width: 30px;
+
+            &-line {
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                opacity: 1;
+                background-color: $pesto;
+                transition: all $ease05;
+
+                &--1 {
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(0)
+                }
+
+                &--2 {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(0);
+                }
+
+                &--3 {
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(0)
+                }
+            }
+        }
+
+        &.#{btn}--select {
+            #{$btn}__icon {
+                &-line {
+                    &--1 {
+                        top: 50%;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                        transform-origin: center;
+                    }
+
+                    &--2 {
+                        opacity: 0;
+                    }
+
+                    &--3 {
+                        top: 50%;
+                        transform: translate(-50%, -50%) rotate(45deg);
+                        transform-origin: center;
+                    }
+                }
+            }
+        }
+
+        &.isTablet,
+        &.isLaptop {
+            height: 60px;
+            width: 60px;
+
+            #{$btn}__icon {
+                height: 30px;
+                width: 40px;
+                transition: all $ease05;
+
+                &-line {
+                    width: 40px;
+                    height: 4px;
+                }
+            }
+        }
+
+        &.isDesctop {
+            height: vw(60px);
+            width: vw(60px);
+            
+            #{$btn}__icon {
+                height: vw(30px);
+                width: vw(40px);
+                transition: all $ease05;
+            
+                &-line {
+                    width: vw(40px);
+                    height: vw(4px);
+                }
+            }
+        }
     }
 
     &--gold-fill-circle {
@@ -102,7 +195,7 @@
 
     &--gold-border-rounded {
         padding: 20px 45px;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
         color: $white;
         text-transform: uppercase;
@@ -148,11 +241,13 @@
         }
 
         &.isLaptop {
-            padding: 20px 84px;
+            padding: 20px 50px;
+            font-size: 20px;
         }
         
         &.isDesctop {
-            padding: vw(20px) vw(84px);
+            font-size: vw(20px);
+            padding: vw(20px) vw(50px);
         }
 
         &.#{btn}--select {
@@ -177,15 +272,50 @@
                 padding: vw(15px) vw(35px);
             }
         }
+
+        &.#{btn}--black-text {
+            color: $black;
+        }
+    }
+
+    &--moon-mist-border-rounded {
+        font-family: $century;
+        font-size: 16px;
+        line-height: 20px;
+        color: $costaDelSol;
+        padding: 15px 32px;
+        border-radius: 5px;
+        border: 3px solid $moonMist;
+        background-color: transparent;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &.isDesctop {
+            font-size: vw(16px);
+            line-height: vw(20px);
+            padding: vw(15px) vw(32px);
+            border-radius: vw(5px);
+            border-width: vw(3px);
+        }
     }
 
     &--gold-border-while-fill-circle,
     &--gold-border-mine-shaft-fill-circle {
         border: 5px solid $pesto;
         border-radius: 100%;
-        width: 56px;
-        height: 56px;
+        width: 45px;
+        height: 45px;
         color: $pesto;
+        
+        &.isLaptop {
+            width: 56px;
+            height: 56px;
+        }
+        
+        &.isDesctop {
+            width: vw(56px);
+            height: vw(56px);
+        }
 
         &:disabled {
             pointer-events: none;
@@ -223,5 +353,10 @@
 
     &--transparent {
         background-color: transparent;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.3;
     }
 }
