@@ -1,0 +1,10 @@
+mixin step-block(number, text)
+    .step-block(:class='{isDesctop, isTablet, isLaptop}')&attributes(attributes)
+        .step-block__content 
+            .step-block__top(:class='{isDesctop, isTablet, isLaptop}') 
+                span.step-block__line.step-block__line--first(:class='{isDesctop, isTablet, isLaptop}')
+                span.step-block__circle(:class='{isDesctop, isTablet, isLaptop}')= number
+                span.step-block__line.step-block__line--second(:class='{isDesctop, isTablet, isLaptop}')
+            
+            .step-block__bottom 
+                p.step-block__text(:class='{isDesctop, isTablet, isLaptop}')= text
