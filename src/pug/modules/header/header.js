@@ -1,12 +1,25 @@
 const Header = class Header {
-    constructor({someVareible}){
-        this.someVareible = someVareible;
+    constructor(){
+        this.isShowMenu = false;
+        this.isScroll = false;
     }
-    someMethod() {
-        console.log(this.someVareible);
-    }
+    
     init() {
-        this.someMethod();
+        this.addHeaderScrollClass();
+    }
+
+    toggleMenu() {
+        this.isShowMenu = !this.isShowMenu;
+    }
+
+    addHeaderScrollClass() {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 100) {
+                this.isScroll = true;
+            } else {
+                this.isScroll = false;
+            }
+        })
     }
 }
 

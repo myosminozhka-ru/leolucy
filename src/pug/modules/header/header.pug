@@ -1,0 +1,35 @@
+.header(:class='{isDesctop, isTablet, isLaptop, "header--black": header.isScroll, "header--scoll": header.isScroll}')
+    .header__content 
+        +btn.btn--burger.header__show-menu(@click="header.toggleMenu()" :class="{'btn--select': header.isShowMenu}")
+            .btn__icon
+                span.btn__icon-line.btn__icon-line--1 
+                span.btn__icon-line.btn__icon-line--2 
+                span.btn__icon-line.btn__icon-line--3 
+
+        +logo.header__logo
+
+        +s(["vk", "#"], ["telegram", "#"]).header__s
+
+.header-panel(:class='{isDesctop, isTablet, isLaptop, "header-panel--is-open": header.isShowMenu}')
+    .header-panel__content 
+        .header-panel__contacts
+            a.header-panel__link(href="tel:+74950000000") +7(495)000-00-00
+            a.header-panel__link(href="mailto:info@info.ru") info@info.ru
+
+        ul.header-panel-menu
+            li.header-panel-menu__item
+                a.header-panel-menu__link(href="#") Корма
+
+            li.header-panel-menu__item
+                a.header-panel-menu__link(href="#") Ингредиенты
+
+            li.header-panel-menu__item
+                a.header-panel-menu__link(href="#") FAQ
+
+            li.header-panel-menu__item
+                a.header-panel-menu__link(href="#") Статьи
+
+            li.header-panel-menu__item
+                a.header-panel-menu__link(href="#") Где купить
+        
+        +s(["vk", "#"], ["telegram", "#"]).header-panel__s
