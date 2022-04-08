@@ -1,0 +1,15 @@
+.section {
+    padding: 60px 0;
+
+    &--white {
+        background-color: $white;
+    }
+
+    &.isLaptop {
+        padding: 100px 0;
+    }
+
+    &.isDesctop {
+        padding: vw(100px) 0;
+    }
+}
