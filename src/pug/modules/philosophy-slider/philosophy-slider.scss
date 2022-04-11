@@ -1,0 +1,151 @@
+.philosophy-slider {
+    &__swiper-wrapper {
+        margin-bottom: 50px;
+
+        &.isDesctop {
+            margin-bottom: vw(50px);
+        }
+    }
+
+    &__slide {
+        &-content {
+            padding: 30px 20px;
+
+            &.isTablet,
+            &.isLaptop {
+                padding: 100px 36.83% 100px 105px;
+            }
+
+            &.isDesctop {
+                padding: vw(100px) 36.83% vw(100px) vw(105px);
+            }
+        }
+
+        &-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-blur {
+            background-color: rgba($black, .7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            color: $white;
+            padding: 20px 35px 25px 20px;
+
+            &.isLaptop {
+                padding: 35px 60px 25px 50px;
+            }
+
+            &.isDesctop {
+                padding: vw(35px) vw(60px) vw(25px) vw(50px);
+            }
+        }
+
+        &-title {
+            font-family: $din;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            &.isLaptop {
+                font-size: 25px;
+                margin-bottom: 30px;
+            }
+
+            &.isDesctop {
+                font-size: vw(25px);
+                margin-bottom: vw(30px);
+            }
+        }
+
+        &-description {
+            font-family: $century;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: $dustyGray;
+
+            &.isLaptop {
+                font-size: 18px;
+            }
+            
+            &.isDesctop {
+                font-size: vw(18px);
+            }
+        }
+    }
+
+    &__panel {
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+        width: 100%;
+
+        &.isTablet,
+        &.isLaptop {
+            position: absolute;
+            top: calc(50% - 27px);
+            left: 50%;
+            width: calc(100% - 33px);
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        &.isDesctop {
+            position: absolute;
+            top: calc(50% - #{vw(27px)});
+            left: 50%;
+            width: calc(100% - #{vw(33px)});
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+    }
+
+    &__arrow {
+        pointer-events: auto;
+    }
+
+    &__dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -22.5px;
+        max-width: calc(100% - 160px);
+        margin-left: auto;
+        margin-right: auto;
+
+        &.isTablet,
+        &.isLaptop {
+            top: 0;
+            max-width: 385px;
+        }
+
+        &.isDesctop {
+            top: 0;
+            max-width: vw(385px);
+        }
+    }
+
+    &__dot {
+        height: 4px;
+        width: 20px;
+        background-color: rgba($shadow, .1);
+        flex-basis: 0;
+        flex-grow: 1;
+        transition: all $ease05;
+        cursor: pointer;
+
+        &--active {
+            pointer-events: none;
+            background-color: $pesto;
+        }
+    }
+}

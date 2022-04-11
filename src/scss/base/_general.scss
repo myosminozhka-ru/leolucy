@@ -1,0 +1,62 @@
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $mineShaft;
+}
+
+.ui {
+    &__mb-60 {
+        margin-bottom: 60px;
+
+        &:not(.no-grid) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 30px;
+            grid-auto-flow: row;
+            justify-content: start;
+            align-content: start;
+
+            &.isTablet {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            &.isLaptop {
+                grid-template-columns: repeat(8, 1fr);
+            }
+
+            &.isDesctop {
+                grid-template-columns: repeat(8, 1fr);
+            }
+        }
+    }
+
+    &__column-group {
+        display: grid;
+        grid-gap: 15px 0;
+        justify-content: start;
+    }
+
+    &__row-group {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        grid-column: 1 / -1;
+
+        &.isTablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &.isLaptop {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        &.isDesctop {
+            grid-template-columns: repeat(8, 1fr);
+        }
+    }
+}

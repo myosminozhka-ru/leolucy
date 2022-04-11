@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    &.isTablet {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    &.isLaptop {
+        padding-left: 45px;
+        padding-right: 45px;
+        max-width: 1290px;
+    }
+
+    &.isDesctop {
+        padding-left: vw(45px);
+        padding-right: vw(45px);
+        max-width: vw(1290px)
+    }
+}

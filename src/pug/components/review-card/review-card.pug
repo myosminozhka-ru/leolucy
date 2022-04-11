@@ -1,0 +1,12 @@
+mixin review-card(src, name, city, text)
+    .review-card&attributes(attributes)
+        .review-card__content 
+            .review-card__top(:class='{isDesctop, isTablet, isLaptop}') 
+                .review-card__wrapper-img(:class='{isDesctop, isTablet, isLaptop}')  
+                    img.review-card__img(src=src, alt="")
+                .review-card__col 
+                    span.review-card__name(:class='{isDesctop, isTablet, isLaptop}')= name
+                    span.review-card__city(:class='{isDesctop, isTablet, isLaptop}')= city
+            
+            .review-card__bottom 
+                p.review-card__text(:class='{isDesctop, isTablet, isLaptop}')= text

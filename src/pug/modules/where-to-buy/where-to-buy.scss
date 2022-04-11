@@ -1,0 +1,17 @@
+.where-to-buy {
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__title {
+        margin-bottom: 30px;
+        
+        &.isLaptop {
+            margin-bottom: 40px;
+        }
+
+        &.isDesctop {
+            margin-bottom: vw(40px);
+        }
+    }
+}

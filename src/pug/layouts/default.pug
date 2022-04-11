@@ -8,10 +8,13 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title #{title}
   link(rel='stylesheet' href='css/style.css')
+  
+  include ../data
+
 body
-  #app.wrapper(:class='{isDesctop, isTablet, isLaptop}')
+  #app.wrapper(:class='[{isDesctop, isTablet, isLaptop}, isMounted]', :style="isMounted ? '' : 'display: none'")
       include ../modules/header/header
-      main.main
+      main.main(:class='{isDesctop, isTablet, isLaptop}')
           block content
       include ../modules/footer/footer
 script(src='js/app.min.js')

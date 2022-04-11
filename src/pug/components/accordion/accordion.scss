@@ -1,0 +1,106 @@
+.accordion {
+    &__content {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: $white;
+        border: 4px solid rgba($pesto, .3);
+
+        &.isLaptop {
+            padding: 50px;
+        }
+
+        &.isDesctop {
+            padding: vw(50px);
+            border-radius: vw(10px);
+            border: vw(4px) solid rgba($pesto, .3);
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-family: $din;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: $black;
+
+        &.isLaptop {
+            font-size: 20px;
+        }
+        
+        &.isDesctop {
+            font-size: vw(20px);
+        }
+    }
+
+    &__btn {
+        color: $pesto;
+        width: 30px;
+        height: 30px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        margin-left: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-shrink: 0;
+        $btn: &;
+
+        &-icon {
+            transition: all $ease05;
+        }
+
+        &.isDesctop {
+            width: vw(30px);
+            height: vw(30px);
+            margin-left: vw(30px);
+        }
+
+        &--is-rotate {
+            #{$btn}-icon {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__dropdown {
+        transition: all $ease05;
+        &-content {
+            margin-top: 20px;
+
+            &.isLaptop {
+                margin-top: 40px;
+            }
+            
+            &.isDesctop {
+                margin-top: vw(40px);
+            }
+        }
+    }
+
+    &__text {
+        font-family: $century;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $black;
+
+        &.isLaptop {
+            font-size: 18px;
+        }
+        
+        &.isDesctop {
+            font-size: vw(18px);
+        }
+    }
+}

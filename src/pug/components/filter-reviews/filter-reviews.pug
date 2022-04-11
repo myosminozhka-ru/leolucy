@@ -1,0 +1,34 @@
+mixin filter-reviews()
+    .filter-reviews(:class='{isDesctop, isTablet, isLaptop}')&attributes(attributes)
+        .filter-reviews__top(:class='{isDesctop, isTablet, isLaptop}')
+            .filter-reviews__border-block(:class='{isDesctop, isTablet, isLaptop}')
+                .filter-reviews__col.filter-reviews__col--first(:class='{isDesctop, isTablet, isLaptop}')
+                    span.filter-reviews__info-title(:class='{isDesctop, isTablet, isLaptop}') Питомец:
+                    .filter-reviews__buttons 
+                        +btn("Кошке").btn--gold-border-rounded.btn--small.filter-reviews__btn
+                        +btn("Собаке").btn--gold-border-rounded.btn--small.filter-reviews__btn
+
+                .filter-reviews__col.filter-reviews__col--center(:class='{isDesctop, isTablet, isLaptop}')
+                    span.filter-reviews__info-title(:class='{isDesctop, isTablet, isLaptop}') Возраст:
+                    app-select(:items="filterReviews.listAge", @on-select="filterReviews.onSelectAge.apply(filterReviews, [$event])").filter-reviews__select
+
+
+                .filter-reviews__col.filter-reviews__col--right(:class='{isDesctop, isTablet, isLaptop}')
+                    span.filter-reviews__info-title(:class='{isDesctop, isTablet, isLaptop}') Вид корма:
+                    app-select(:items="filterReviews.listFeed", @on-select="filterReviews.onSelectFeed.apply(filterReviews, [$event])").filter-reviews__select
+                
+            .filter-reviews__mobile-action(:class='{isDesctop, isTablet, isLaptop}')
+                +btn(null, "filter")(v-if="!filterReviews.isShowMobileDropdown" @click="filterReviews.toggleMobileDropdown()").btn--transparent.filter-reviews__btn-transaprent
+                +btn(null, "close")(v-if="filterReviews.isShowMobileDropdown" @click="filterReviews.toggleMobileDropdown()").btn--transparent.filter-reviews__btn-transaprent
+        
+        .filter-reviews__mobile-dropdown(:class="{'filter-reviews__mobile-dropdown--is-open': filterReviews.isShowMobileDropdown}")
+            .filter-reviews__mobile-dropdown-content
+                span.filter-reviews__info-title Возраст:
+                .filter-reviews__box-age
+                    .filter-reviews__box-age-content
+                        span.filter-reviews__select-item(v-for="(item, index) in filterReviews.listAge" :key="item.id ? item.id : index" @click="filterReviews.onSelectAge(item)" :class="{'filter-reviews__select-item--active': item.select ? item.select : false}") {{ item.title }}
+                
+                span.filter-reviews__info-title Вид корма:
+                .filter-reviews__box-feed 
+                    .filter-reviews__box-feed-content
+                        span.filter-reviews__select-item(v-for="(item, index) in filterReviews.listFeed" :key="item.id ? item.id : index" @click="filterReviews.onSelectFeed(item)" :class="{'filter-reviews__select-item--active': item.select ? item.select : false}") {{ item.title }}

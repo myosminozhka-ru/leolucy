@@ -1,0 +1,19 @@
+section.section.section--white.our-articles
+    +container
+        .our-articles__content 
+            h2.title.title--black.our-articles__title(:class='{isDesctop, isTablet, isLaptop}') Наши статьи
+            .our-articles__slider(:class='{isDesctop, isTablet, isLaptop}', v-if="!ourArticles.isShowAll")
+                .swiper.our-articles__swiper
+                    .swiper-wrapper.our-articles__swiper-wrapper
+                        each item in arrayOurArticles
+                            +img-card(item.id, item.img, item.title)(@click="modals.showModals('our-articles-modals')").swiper-slide.our-articles__slide
+                    
+                .our-articles__panel(:class='{isDesctop, isTablet, isLaptop}')
+                    +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.our-articles__arrow.our-articles__arrow--prev
+                    +btn(null, 'triangle-arrow-right').btn--gold-border-while-fill-circle.our-articles__arrow.our-articles__arrow--next
+
+            +btn('Все статьи')(v-if="!ourArticles.isShowAll", @click="ourArticles.toggleAllArticles()").btn--gold-border-rounded.btn--black-text.our-articles__show-all
+
+            .our-articles__grid(:class='{isDesctop, isTablet, isLaptop}', v-else)
+                each item in arrayOurArticles
+                    +img-card(item.id, item.img, item.title)(@click="modals.showModals('our-articles-modals')").our-articles__item

@@ -1,0 +1,34 @@
+section.section.ingredients(style={'background-image': 'url(/img/section/2.png)'})
+    img.ingredients__decoration.ingredients__decoration--right(src="/img/ingredients/3.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+    +container 
+        .ingredients__content(:class='{isDesctop, isTablet, isLaptop}')
+            h2.title.ingredients__title(:class='{isDesctop, isTablet, isLaptop}') Ингредиенты
+            .ingredients-img-slider.ingredients__img-slider(:class='{isDesctop, isTablet, isLaptop}')
+                .swiper.ingredients-img-slider__swiper
+                    .swiper-wrapper.ingredients-img-slider__swiper-wrapper 
+                        each item in arrayIngredientsSlides
+                            .swiper-slide.ingredients-img-slider__slide 
+                                .ingredients-img-slider__slide-content
+                                    img.ingredients-img-slider__slide-food(src=item.img, alt="")
+                                    each decoration, index in item.decoration
+                                        img.ingredients-img-slider__slide-decoration(class=`ingredients-img-slider__slide-decoration--${index + 1}`, :class='{isDesctop, isTablet, isLaptop}', src=decoration, alt="")
+                
+                .ingredients__static
+                    img.ingredients__board(src="/img/ingredients/1.png", alt="")
+                    img.ingredients__dish(src="/img/ingredients/2.png", alt="")
+
+            .ingredients-text-slider.ingredients__text-slider(:class='{isDesctop, isTablet, isLaptop}')
+                .swiper.ingredients-text-slider__swiper(:class='{isDesctop, isTablet, isLaptop}')
+                    .swiper-wrapper.ingredients-text-slider__swiper-wrapper 
+                        each item in arrayIngredientsSlides
+                            .swiper-slide.ingredients-text-slider__slide
+                                .ingredients-text-slider__slide-content
+                                    span.ingredients-text-slider__slide-title(:class='{isDesctop, isTablet, isLaptop}')= item.title
+                                    p.ingredients-text-slider__slide-description(:class='{isDesctop, isTablet, isLaptop}')= item.description
+                .ingredients-text-slider__navigation(:class='{isDesctop, isTablet, isLaptop}')
+                    +btn(null, "triangle-arrow-left").btn--gold-border-mine-shaft-fill-circle.ingredients-text-slider__arrow.ingredients-text-slider__arrow--prev
+                    
+                    .ingredients-text-slider__dots
+
+                    +btn(null, "triangle-arrow-right").btn--gold-border-mine-shaft-fill-circle.ingredients-text-slider__arrow.ingredients-text-slider__arrow--next
+            +btn("перейти в каталог")(@click="onScrollToBlock").btn--gold-border-rounded.ingredients__btn

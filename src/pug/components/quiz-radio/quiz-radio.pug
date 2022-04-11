@@ -1,0 +1,16 @@
+mixin quizRadion(text, img)
+    .quiz-radio(class=attributes.class, :class='{isDesctop, isTablet, isLaptop}')
+        .quiz-radio__content
+            .quiz-radio__border(:class='{isDesctop, isTablet, isLaptop}')
+                .quiz-radio__inner-circle(:class='{isDesctop, isTablet, isLaptop}')
+                    .quiz-radio__result.quiz-radio__result--success(:class='{isDesctop, isTablet, isLaptop}')
+                        .quiz-radio__wrapper-icon
+                            +svg("check")(:class='{isDesctop, isTablet, isLaptop}').quiz-radio__icon.quiz-radio__icon--success
+                .quiz-radio__inner-circle(:class='{isDesctop, isTablet, isLaptop}')
+                    .quiz-radio__result.quiz-radio__result--failed(:class='{isDesctop, isTablet, isLaptop}')
+                        .quiz-radio__wrapper-icon
+                            +svg("failed")(:class='{isDesctop, isTablet, isLaptop}').quiz-radio__icon.quiz-radio__icon--failed
+                if img
+                img(src=img).quiz-radio__img
+            if text
+                span.quiz-radio__text= text

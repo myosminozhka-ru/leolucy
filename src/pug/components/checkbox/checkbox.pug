@@ -1,0 +1,8 @@
+mixin checkbox(text, icon="check")
+    .checkbox(class=attributes.class)
+        input(type="checkbox", id=attributes.id, checked=attributes.checked).checkbox__input
+        label(for=attributes.id).checkbox__label
+            span.checkbox__decoration
+                +svg(icon).checkbox__check
+            if text
+                span.checkbox__text= text

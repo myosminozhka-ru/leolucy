@@ -1,0 +1,110 @@
+.review-card {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px 40px 20px;
+        background-color: $white;
+        border-radius: 20px;
+        border: 3px solid $pesto;
+        
+        &.isLaptop {
+            padding: 40px 40px 50px 40px;
+        }
+
+        &.isDesctop {
+            padding: vw(40px) vw(40px) vw(50px) vw(40px);
+            border-radius: vw(20px);
+            border: vw(3px) solid $pesto;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        &.isLaptop {
+            margin-bottom: 40px;
+        }
+        
+        &.isDesctop {
+            margin-bottom: vw(40px);
+        }
+    }
+
+    &__wrapper-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        flex-shrink: 0;
+        
+        &.isDesctop {
+            margin-right: vw(20px);
+            width: vw(80px);
+            height: vw(80px);
+        }
+    }
+
+    &__img {
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__name {
+        font-family: $century;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: 10px;
+
+        &.isDesctop {
+            font-size: vw(20px);
+            margin-bottom: vw(10px);
+        }
+    }
+
+    &__city {
+        font-family: $din;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: $dustyGray;
+
+        &.isDesctop {
+            font-size: vw(16px);
+        }
+    }
+
+    &__text {
+        font-family: $century;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $black;
+
+        &.isLaptop {
+            font-size: 18px;
+        }
+        
+        &.isDesctop {
+            font-size: vw(18px);
+        }
+    }
+}

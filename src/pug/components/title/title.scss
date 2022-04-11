@@ -1,0 +1,21 @@
+.title {
+    font-family: $din;
+    font-size: 26px;
+    font-weight: bold;
+    color: $white;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+
+    &.isLaptop {
+        font-size: 35px;
+    }
+
+    &.isDesctop {
+        font-size: vw(40px);
+    }
+
+    &--black {
+        color: $black;
+    }
+}

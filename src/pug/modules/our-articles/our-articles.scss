@@ -1,0 +1,79 @@
+.our-articles {
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__title {
+        margin-bottom: 30px;
+
+        &.isLaptop {
+            margin-bottom: 100px;
+        }
+
+        &.isDesctop {
+            margin-bottom: vw(100px);
+        }
+    }
+
+    &__slider {
+        padding-left: 22.5px;
+        padding-right: 22.5px;
+        margin-bottom: 30px;
+        
+        &.isLaptop {
+            margin-bottom: 100px;
+            padding-left: 28px;
+            padding-right: 28px;
+        }
+        
+        &.isDesctop {
+            margin-bottom: vw(100px);
+            padding-left: vw(28px);
+            padding-right: vw(28px);
+        }
+    }
+
+    &__swiper {
+        width: 100%;
+    }
+
+    &__panel {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__show-all {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        &.isTablet {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        &.isLaptop,
+        &.isDesctop {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &.isDesctop {
+            grid-gap: vw(20px);
+        }
+    }
+
+    &__item {
+        min-width: 0;
+    }
+}

@@ -1,0 +1,23 @@
+mixin btn(text, beforeIcon, afterIcon)
+    if attributes.href
+        a(class="btn" href=href, :class='{isDesctop, isTablet, isLaptop}')&attributes(attributes)
+            if beforeIcon || text || afterIcon
+                if beforeIcon
+                    +svg(beforeIcon)(class="btn__icon btn__icon--" + beforeIcon)
+                if text
+                    span.btn__text= text
+                if afterIcon
+                    +svg(afterIcon)(class="btn__icon btn__icon--" + afterIcon)
+            else 
+                block
+    else
+        button(class="btn", :class='{isDesctop, isTablet, isLaptop}')&attributes(attributes)
+            if beforeIcon || text || afterIcon
+                if beforeIcon
+                    +svg(beforeIcon)(class="btn__icon btn__icon--" + beforeIcon)
+                if text
+                    span.btn__text= text
+                if afterIcon
+                    +svg(afterIcon)(class="btn__icon btn__icon--" + afterIcon)
+            else 
+                block

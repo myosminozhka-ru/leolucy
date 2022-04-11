@@ -1,0 +1,25 @@
+.main {
+    overflow: hidden;
+
+    > *:first-child {
+        padding-top: 150px;
+    }
+
+    &.isTablet {
+        >*:first-child {
+            padding-top: 200px;
+        }
+    }
+
+    &.isLaptop {
+        >*:first-child {
+            padding-top: 265px;
+        }
+    }
+
+    &.isDesctop {
+        >*:first-child {
+            padding-top: vw(265px);
+        }
+    }
+}

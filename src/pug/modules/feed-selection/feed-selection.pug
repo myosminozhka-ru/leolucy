@@ -1,0 +1,21 @@
+section.section.section--white.feed-selection
+    .feed-selection__content(:class='{isDesctop, isTablet, isLaptop}')
+        .feed-selection__top(:class='{isDesctop, isTablet, isLaptop}')
+            h2.title.title--black.feed-selection__title(:class='{isDesctop, isTablet, isLaptop}') Подберите корм вашему питомцу
+            .feed-selection__row
+                +btn('Кошке')(:class="{'btn--select': this.mainSelectAnimal === 'cat'}", @click="onSelectMainAnimal('cat')").btn--gold-border-rounded.btn--small.btn--black-text.feed-selection__btn
+                +btn('Собаке')(:class="{'btn--select': this.mainSelectAnimal === 'dog'}", @click="onSelectMainAnimal('dog')").btn--gold-border-rounded.btn--small.btn--black-text.feed-selection__btn
+        .feed-selection__bottom 
+            .swiper.feed-selection__swiper 
+                .swiper-wrapper.feed-selection__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
+                    each item in arrayFeedSelectionSlides
+                        .swiper-slide.feed-selection__slide(:class='{isDesctop, isTablet, isLaptop}')
+                            .feed-selection__slide-content
+                                .feed-selection__slide-wrapper-img
+                                    img.feed-selection__slide-img(src=item.img, alt="", :class='{isDesctop, isTablet, isLaptop}')
+                                span.feed-selection__slide-description(:class='{isDesctop, isTablet, isLaptop}')= item.description
+                                +btn('Подробнее')(@click="modals.showModals('feed-selection-modals')").btn--moon-mist-border-rounded.feed-selection__slide-btn
+                .feed-selection__panel(:class='{isDesctop, isTablet, isLaptop}')
+                    +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.feed-selection__arrow.feed-selection__arrow--prev
+                    +btn(null, 'triangle-arrow-right').btn--gold-border-while-fill-circle.feed-selection__arrow.feed-selection__arrow--next
+                .feed-selection__dots(:class='{isDesctop, isTablet, isLaptop}')
