@@ -13,14 +13,14 @@
         <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
           <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"> </span></div>
         </button>
-        <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="/img/logo/1.svg" alt=""/></a></div>
+        <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
         <div class="s header__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--vk btn__icon btn__icon--vk">
-                <use xlink:href="/img/icons/icons.svg#vk"></use>
+                <use xlink:href="img/icons/icons.svg#vk"></use>
               </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--telegram btn__icon btn__icon--telegram">
-                <use xlink:href="/img/icons/icons.svg#telegram"></use>
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
               </svg></a>
           </div>
         </div>
@@ -39,10 +39,10 @@
         <div class="s header-panel__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--vk btn__icon btn__icon--vk">
-                <use xlink:href="/img/icons/icons.svg#vk"></use>
+                <use xlink:href="img/icons/icons.svg#vk"></use>
               </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--telegram btn__icon btn__icon--telegram">
-                <use xlink:href="/img/icons/icons.svg#telegram"></use>
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
               </svg></a>
           </div>
         </div>
@@ -52,9 +52,9 @@
       <section class="first-screen" style="background-image:url(/img/section/1.png);">
         <div class="first-screen__content" :class="{isDesctop, isTablet, isLaptop}">
           <div class="first-screen__left"> 
-            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="/img/first-screen/group-1/1-1.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="/img/first-screen/group-1/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="/img/first-screen/group-1/1.png" alt=""></div>
-            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="/img/first-screen/group-2/1-1.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="/img/first-screen/group-2/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="/img/first-screen/group-2/1.png" alt=""></div>
-            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="/img/first-screen/group-3/1-1.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="/img/first-screen/group-3/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="/img/first-screen/group-3/1.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="img/first-screen/group-1/1-1.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-1/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="img/first-screen/group-1/1.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="img/first-screen/group-2/1-1.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-2/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="img/first-screen/group-2/1.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="img/first-screen/group-3/1-1.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-3/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="img/first-screen/group-3/1.png" alt=""></div>
           </div>
           <div class="first-screen__center"> 
             <h1 class="title first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Полнорационное сбалансированное питание для кошек и собак</h1><span class="subtitle first-screen__subtitle" :class="{isDesctop, isTablet, isLaptop}">Выберите питомца для которого подбираете корм</span>
@@ -62,9 +62,9 @@
             </button>
           </div>
           <div class="first-screen__right"> 
-            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="/img/first-screen/group-1/2-2.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="/img/first-screen/group-1/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="/img/first-screen/group-1/2.png" alt=""></div>
-            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="/img/first-screen/group-2/2-2.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="/img/first-screen/group-2/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="/img/first-screen/group-2/2.png" alt=""></div>
-            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="/img/first-screen/group-3/2-2.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="/img/first-screen/group-3/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="/img/first-screen/group-3/2.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="img/first-screen/group-1/2-2.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-1/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="img/first-screen/group-1/2.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="img/first-screen/group-2/2-2.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-2/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="img/first-screen/group-2/2.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="img/first-screen/group-3/2-2.png" alt=""><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-3/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="img/first-screen/group-3/2.png" alt=""></div>
           </div>
         </div>
       </section>
@@ -73,21 +73,21 @@
           <div class="swiper philosophy-slider__swiper">
             <div class="swiper-wrapper philosophy-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
               <div class="swiper-slide philosophy-slider__slide"> 
-                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="/img/philosophy-slider/1.png" alt="">
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt="">
                   <div class="philosophy-slider__slide-blur"><span class="philosophy-slider__slide-title" :class="{isDesctop, isTablet, isLaptop}">Наша философия</span>
                     <p class="philosophy-slider__slide-description" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide philosophy-slider__slide"> 
-                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="/img/philosophy-slider/1.png" alt="">
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt="">
                   <div class="philosophy-slider__slide-blur"><span class="philosophy-slider__slide-title" :class="{isDesctop, isTablet, isLaptop}">Наша философия</span>
                     <p class="philosophy-slider__slide-description" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide philosophy-slider__slide"> 
-                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="/img/philosophy-slider/1.png" alt="">
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt="">
                   <div class="philosophy-slider__slide-blur"><span class="philosophy-slider__slide-title" :class="{isDesctop, isTablet, isLaptop}">Наша философия</span>
                     <p class="philosophy-slider__slide-description" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
                   </div>
@@ -98,19 +98,19 @@
           <div class="philosophy-slider__panel" :class="{isDesctop, isTablet, isLaptop}">
             <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
-                <use xlink:href="/img/icons/icons.svg#triangle-arrow-left"></use>
+                <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
               </svg>
             </button>
             <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
-                <use xlink:href="/img/icons/icons.svg#triangle-arrow-right"></use>
+                <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
               </svg>
             </button>
           </div>
           <div class="philosophy-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
         </div>
       </section>
-      <section class="section ingredients" style="background-image:url(/img/section/2.png);"><img class="ingredients__decoration ingredients__decoration--right" src="/img/ingredients/3.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="section ingredients" style="background-image:url(/img/section/2.png);"><img class="ingredients__decoration ingredients__decoration--right" src="img/ingredients/3.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}"> 
           <div class="ingredients__content" :class="{isDesctop, isTablet, isLaptop}">
             <h2 class="title ingredients__title" :class="{isDesctop, isTablet, isLaptop}">Ингредиенты</h2>
@@ -118,20 +118,20 @@
               <div class="swiper ingredients-img-slider__swiper">
                 <div class="swiper-wrapper ingredients-img-slider__swiper-wrapper"> 
                   <div class="swiper-slide ingredients-img-slider__slide"> 
-                    <div class="ingredients-img-slider__slide-content"><img class="ingredients-img-slider__slide-food" src="/img/ingredients/slide1/1.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/2.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/3.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/4.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/5.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/6.png" alt="">
+                    <div class="ingredients-img-slider__slide-content"><img class="ingredients-img-slider__slide-food" src="img/ingredients/slide1/1.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/2.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/3.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/4.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/5.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/6.png" alt="">
                     </div>
                   </div>
                   <div class="swiper-slide ingredients-img-slider__slide"> 
-                    <div class="ingredients-img-slider__slide-content"><img class="ingredients-img-slider__slide-food" src="/img/ingredients/slide1/1.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/3.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/2.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/5.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/4.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/3.png" alt="">
+                    <div class="ingredients-img-slider__slide-content"><img class="ingredients-img-slider__slide-food" src="img/ingredients/slide1/1.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/3.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/2.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/5.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/4.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/3.png" alt="">
                     </div>
                   </div>
                   <div class="swiper-slide ingredients-img-slider__slide"> 
-                    <div class="ingredients-img-slider__slide-content"><img class="ingredients-img-slider__slide-food" src="/img/ingredients/slide1/1.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/2.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/3.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/4.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/5.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="/img/ingredients/slide1/6.png" alt="">
+                    <div class="ingredients-img-slider__slide-content"><img class="ingredients-img-slider__slide-food" src="img/ingredients/slide1/1.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/2.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/3.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/4.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/5.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/6.png" alt="">
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="ingredients__static"><img class="ingredients__board" src="/img/ingredients/1.png" alt=""><img class="ingredients__dish" src="/img/ingredients/2.png" alt=""></div>
+              <div class="ingredients__static"><img class="ingredients__board" src="img/ingredients/1.png" alt=""><img class="ingredients__dish" src="img/ingredients/2.png" alt=""></div>
             </div>
             <div class="ingredients-text-slider ingredients__text-slider" :class="{isDesctop, isTablet, isLaptop}">
               <div class="swiper ingredients-text-slider__swiper" :class="{isDesctop, isTablet, isLaptop}">
@@ -156,13 +156,13 @@
               <div class="ingredients-text-slider__navigation" :class="{isDesctop, isTablet, isLaptop}">
                 <button class="btn btn--gold-border-mine-shaft-fill-circle ingredients-text-slider__arrow ingredients-text-slider__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-left"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
                   </svg>
                 </button>
                 <div class="ingredients-text-slider__dots"></div>
                 <button class="btn btn--gold-border-mine-shaft-fill-circle ingredients-text-slider__arrow ingredients-text-slider__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-right"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
                   </svg>
                 </button>
               </div>
@@ -188,98 +188,98 @@
               <div class="swiper-wrapper feed-selection__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="/img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.showModals('feed-selection-modals')"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
@@ -288,12 +288,12 @@
               <div class="feed-selection__panel" :class="{isDesctop, isTablet, isLaptop}">
                 <button class="btn btn--gold-border-while-fill-circle feed-selection__arrow feed-selection__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-left"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
                   </svg>
                 </button>
                 <button class="btn btn--gold-border-while-fill-circle feed-selection__arrow feed-selection__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-right"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
                   </svg>
                 </button>
               </div>
@@ -302,7 +302,7 @@
           </div>
         </div>
       </section>
-      <section class="section calculator" style="background-image:url(/img/section/3.png);"><img class="calculator__decoration calculator__decoration--top" src="/img/calculator/4.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="calculator__decoration calculator__decoration--bottom" src="/img/calculator/5.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="section calculator" style="background-image:url(/img/section/3.png);"><img class="calculator__decoration calculator__decoration--top" src="img/calculator/4.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="calculator__decoration calculator__decoration--bottom" src="img/calculator/5.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}"> 
           <div class="calculator__content" :class="{isDesctop, isTablet, isLaptop}"> 
             <h2 class="title calculator__title" :class="{isDesctop, isTablet, isLaptop}">Калькулятор дневной порции для вашего питомца</h2>
@@ -325,7 +325,7 @@
                     <input class="checkbox__input" type="checkbox" id="radio-0"/>
                     <label class="checkbox__label" for="radio-0"><span class="checkbox__decoration">
                         <svg class="icon icon--check checkbox__check">
-                          <use xlink:href="/img/icons/icons.svg#check"></use>
+                          <use xlink:href="img/icons/icons.svg#check"></use>
                         </svg></span><span class="checkbox__text">Сухой</span>
                     </label>
                   </div>
@@ -333,7 +333,7 @@
                     <input class="checkbox__input" type="checkbox" id="radio-1"/>
                     <label class="checkbox__label" for="radio-1"><span class="checkbox__decoration">
                         <svg class="icon icon--check checkbox__check">
-                          <use xlink:href="/img/icons/icons.svg#check"></use>
+                          <use xlink:href="img/icons/icons.svg#check"></use>
                         </svg></span><span class="checkbox__text">Влажный</span>
                     </label>
                   </div>
@@ -341,7 +341,7 @@
                     <input class="checkbox__input" type="checkbox" id="radio-2"/>
                     <label class="checkbox__label" for="radio-2"><span class="checkbox__decoration">
                         <svg class="icon icon--check checkbox__check">
-                          <use xlink:href="/img/icons/icons.svg#check"></use>
+                          <use xlink:href="img/icons/icons.svg#check"></use>
                         </svg></span><span class="checkbox__text">Комбинированный</span>
                     </label>
                   </div>
@@ -358,7 +358,7 @@
                 <div class="calculator__box-content"><span class="subtitle calculator__box-title" :class="{isDesctop, isTablet, isLaptop}">Рекомендации</span>
                   <p class="calculator__box-description" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
                   <div class="calculator__block" :class="{isDesctop, isTablet, isLaptop}"> 
-                    <div class="calculator__block-content" :class="{isDesctop, isTablet, isLaptop}"> <img class="calculator__block-food" :class="{isDesctop, isTablet, isLaptop}" src="/img/calculator/2.png" alt=""><span class="calculator__block-title" :class="{isDesctop, isTablet, isLaptop}"> Premium By Nature </span><span class="calculator__block-subtitle" :class="{isDesctop, isTablet, isLaptop}"> консервы с говядиной и сердцем</span><img class="calculator__block-dish" :class="{isDesctop, isTablet, isLaptop}" src="/img/calculator/3.png" alt=""></div>
+                    <div class="calculator__block-content" :class="{isDesctop, isTablet, isLaptop}"> <img class="calculator__block-food" :class="{isDesctop, isTablet, isLaptop}" src="img/calculator/2.png" alt=""><span class="calculator__block-title" :class="{isDesctop, isTablet, isLaptop}"> Premium By Nature </span><span class="calculator__block-subtitle" :class="{isDesctop, isTablet, isLaptop}"> консервы с говядиной и сердцем</span><img class="calculator__block-dish" :class="{isDesctop, isTablet, isLaptop}" src="img/calculator/3.png" alt=""></div>
                   </div>
                 </div>
               </div>
@@ -366,7 +366,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--white quiz" :class="{isDesctop, isTablet, isLaptop}"><img class="quiz__decor quiz__decor--top" src="/img/quiz/decor-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="section section--white quiz" :class="{isDesctop, isTablet, isLaptop}"><img class="quiz__decor quiz__decor--top" src="img/quiz/decor-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <h2 class="title title--black quiz__title" :class="{isDesctop, isTablet, isLaptop}">Отгадайте из чего состоит корм</h2>
           <div class="quiz__steps" :class="{isDesctop, isTablet, isLaptop}"> 
@@ -380,7 +380,7 @@
                           <div class="quiz-radio__result quiz-radio__result--success" :class="{isDesctop, isTablet, isLaptop}">
                             <div class="quiz-radio__wrapper-icon">
                               <svg class="icon icon--check quiz-radio__icon quiz-radio__icon--success" :class="{isDesctop, isTablet, isLaptop}">
-                                <use xlink:href="/img/icons/icons.svg#check"></use>
+                                <use xlink:href="img/icons/icons.svg#check"></use>
                               </svg>
                             </div>
                           </div>
@@ -389,7 +389,7 @@
                           <div class="quiz-radio__result quiz-radio__result--failed" :class="{isDesctop, isTablet, isLaptop}">
                             <div class="quiz-radio__wrapper-icon">
                               <svg class="icon icon--failed quiz-radio__icon quiz-radio__icon--failed" :class="{isDesctop, isTablet, isLaptop}">
-                                <use xlink:href="/img/icons/icons.svg#failed"></use>
+                                <use xlink:href="img/icons/icons.svg#failed"></use>
                               </svg>
                             </div>
                           </div>
@@ -407,9 +407,9 @@
             <button class="btn btn--gold-border-rounded btn--black-text quiz__next" :class="{isDesctop, isTablet, isLaptop}" :disabled="quiz.isDisabledNext()" @click="quiz.onClickNext()"><span class="btn__text">Далее</span>
             </button>
           </div>
-        </div><img class="quiz__decor quiz__decor--bottom" src="/img/quiz/decor-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+        </div><img class="quiz__decor quiz__decor--bottom" src="img/quiz/decor-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
       </section>
-      <section class="section how-to-switch" style="background-image:url(/img/section/4.png);"><img class="how-to-switch__decor" src="/img/how-to-switch/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="section how-to-switch" style="background-image:url(/img/section/4.png);"><img class="how-to-switch__decor" src="img/how-to-switch/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="how-to-switch__content" :class="{isDesctop, isTablet, isLaptop}">
           <h2 class="title how-to-switch__title" :class="{isDesctop, isTablet, isLaptop}">Как перейти на этот корм</h2>
           <div class="how-to-switch__list" :class="{isDesctop, isTablet, isLaptop}">
@@ -457,7 +457,7 @@
           <app-accordion class="answers-to-questions__accordion" title="В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей представляют собой не что иное." description="Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач." :resize-class="{isDesctop, isTablet, isLaptop}"></app-accordion>
         </div>
       </section>
-      <section class="section reviews" style="background-image:url(/img/section/5.png);"><img class="reviews__decor" src="/img/reviews/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="section reviews" style="background-image:url(/img/section/5.png);"><img class="reviews__decor" src="img/reviews/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <div class="reviews__content"> 
             <h2 class="title reviews__title" :class="{isDesctop, isTablet, isLaptop}">Отзывы</h2>
@@ -482,12 +482,12 @@
                 <div class="filter-reviews__mobile-action" :class="{isDesctop, isTablet, isLaptop}">
                   <button class="btn btn--transparent filter-reviews__btn-transaprent" :class="{isDesctop, isTablet, isLaptop}" v-if="!filterReviews.isShowMobileDropdown" @click="filterReviews.toggleMobileDropdown()">
                     <svg class="icon icon--filter btn__icon btn__icon--filter">
-                      <use xlink:href="/img/icons/icons.svg#filter"></use>
+                      <use xlink:href="img/icons/icons.svg#filter"></use>
                     </svg>
                   </button>
                   <button class="btn btn--transparent filter-reviews__btn-transaprent" :class="{isDesctop, isTablet, isLaptop}" v-if="filterReviews.isShowMobileDropdown" @click="filterReviews.toggleMobileDropdown()">
                     <svg class="icon icon--close btn__icon btn__icon--close">
-                      <use xlink:href="/img/icons/icons.svg#close"></use>
+                      <use xlink:href="img/icons/icons.svg#close"></use>
                     </svg>
                   </button>
                 </div>
@@ -523,12 +523,12 @@
               <div class="reviews__panel" :class="{isDesctop, isTablet, isLaptop}" v-if="reviews.arrayReviews.length">
                 <button class="btn btn--gold-border-mine-shaft-fill-circle reviews__arrow reviews__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-left"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
                   </svg>
                 </button>
                 <button class="btn btn--gold-border-mine-shaft-fill-circle reviews__arrow reviews__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-right"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
                   </svg>
                 </button>
               </div><span class="reviews__no" :class="{isDesctop, isTablet, isLaptop}" v-else>Ксожалению ничего не найдено</span>
@@ -580,12 +580,12 @@
               <div class="our-articles__panel" :class="{isDesctop, isTablet, isLaptop}">
                 <button class="btn btn--gold-border-while-fill-circle our-articles__arrow our-articles__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-left"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
                   </svg>
                 </button>
                 <button class="btn btn--gold-border-while-fill-circle our-articles__arrow our-articles__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-right"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
                   </svg>
                 </button>
               </div>
@@ -634,63 +634,63 @@
             <div class="swiper where-to-buy-slider where-to-buy__slider" :class="{isDesctop, isTablet, isLaptop}" data-count-slides="6">
               <div class="swiper-wrapper where-to-buy-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}"> 
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
-                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                  <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                 </div>
               </div>
               <div class="where-to-buy-slider__panel" :class="{isDesctop, isTablet, isLaptop}">
                 <button class="btn btn--gold-border-mine-shaft-fill-circle where-to-buy-slider__arrow where-to-buy-slider__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-left"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
                   </svg>
                 </button>
                 <button class="btn btn--gold-border-mine-shaft-fill-circle where-to-buy-slider__arrow where-to-buy-slider__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
-                    <use xlink:href="/img/icons/icons.svg#triangle-arrow-right"></use>
+                    <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
                   </svg>
                 </button>
               </div>
@@ -704,7 +704,7 @@
           <div class="modals__top feed-selection-modals__top" :class="{isDesctop, isTablet, isLaptop}"> 
             <button class="btn btn--transparent modals__close" :class="{isDesctop, isTablet, isLaptop}" @click="modals.hideModals('feed-selection-modals')">
               <svg class="icon icon--close btn__icon btn__icon--close">
-                <use xlink:href="/img/icons/icons.svg#close"></use>
+                <use xlink:href="img/icons/icons.svg#close"></use>
               </svg>
             </button>
           </div>
@@ -786,7 +786,7 @@
           <div class="modals__top where-to-buy-modals__top" :class="{isDesctop, isTablet, isLaptop}"> 
             <button class="btn btn--transparent modals__close" :class="{isDesctop, isTablet, isLaptop}" @click="modals.hideModals('where-to-buy-modals')">
               <svg class="icon icon--close btn__icon btn__icon--close">
-                <use xlink:href="/img/icons/icons.svg#close"></use>
+                <use xlink:href="img/icons/icons.svg#close"></use>
               </svg>
             </button>
           </div>
@@ -795,63 +795,63 @@
               <div class="swiper where-to-buy-slider" :class="{isDesctop, isTablet, isLaptop}" data-count-slides="5">
                 <div class="swiper-wrapper where-to-buy-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}"> 
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                   <div class="swiper-slide where-to-buy-slider__slide">
-                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="/img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-content"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                 </div>
                 <div class="where-to-buy-slider__panel" :class="{isDesctop, isTablet, isLaptop}">
                   <button class="btn btn--gold-border-mine-shaft-fill-circle where-to-buy-slider__arrow where-to-buy-slider__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
                     <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
-                      <use xlink:href="/img/icons/icons.svg#triangle-arrow-left"></use>
+                      <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
                     </svg>
                   </button>
                   <button class="btn btn--gold-border-mine-shaft-fill-circle where-to-buy-slider__arrow where-to-buy-slider__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
                     <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
-                      <use xlink:href="/img/icons/icons.svg#triangle-arrow-right"></use>
+                      <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
                     </svg>
                   </button>
                 </div>
@@ -868,7 +868,7 @@
           <div class="modals__top our-articles-modals__top" :class="{isDesctop, isTablet, isLaptop}"> <span class="modals__title our-articles-modals__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт? </span>
             <button class="btn btn--transparent modals__close" :class="{isDesctop, isTablet, isLaptop}" @click="modals.hideModals('our-articles-modals')">
               <svg class="icon icon--close btn__icon btn__icon--close">
-                <use xlink:href="/img/icons/icons.svg#close"></use>
+                <use xlink:href="img/icons/icons.svg#close"></use>
               </svg>
             </button>
           </div>
@@ -902,7 +902,7 @@
           <div class="modals__top create-review-modals__top" :class="{isDesctop, isTablet, isLaptop}"> <span class="modals__title create-review-modals__title" :class="{isDesctop, isTablet, isLaptop}"> Напишите ваш отзыв</span>
             <button class="btn btn--transparent modals__close" :class="{isDesctop, isTablet, isLaptop}" @click="modals.hideModals('create-review-modals')">
               <svg class="icon icon--close btn__icon btn__icon--close">
-                <use xlink:href="/img/icons/icons.svg#close"></use>
+                <use xlink:href="img/icons/icons.svg#close"></use>
               </svg>
             </button>
           </div>
@@ -928,12 +928,12 @@
                 <div class="filter-reviews__mobile-action" :class="{isDesctop, isTablet, isLaptop}">
                   <button class="btn btn--transparent filter-reviews__btn-transaprent" :class="{isDesctop, isTablet, isLaptop}" v-if="!filterReviews.isShowMobileDropdown" @click="filterReviews.toggleMobileDropdown()">
                     <svg class="icon icon--filter btn__icon btn__icon--filter">
-                      <use xlink:href="/img/icons/icons.svg#filter"></use>
+                      <use xlink:href="img/icons/icons.svg#filter"></use>
                     </svg>
                   </button>
                   <button class="btn btn--transparent filter-reviews__btn-transaprent" :class="{isDesctop, isTablet, isLaptop}" v-if="filterReviews.isShowMobileDropdown" @click="filterReviews.toggleMobileDropdown()">
                     <svg class="icon icon--close btn__icon btn__icon--close">
-                      <use xlink:href="/img/icons/icons.svg#close"></use>
+                      <use xlink:href="img/icons/icons.svg#close"></use>
                     </svg>
                   </button>
                 </div>
@@ -978,7 +978,7 @@
         </div>
       </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer" :class="{isDesctop, isTablet, isLaptop}"></footer>
   </div>
 </body>
 <script src="js/app.min.js"></script>

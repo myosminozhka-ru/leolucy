@@ -13,14 +13,14 @@
         <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
           <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"> </span></div>
         </button>
-        <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="/img/logo/1.svg" alt=""/></a></div>
+        <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
         <div class="s header__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--vk btn__icon btn__icon--vk">
-                <use xlink:href="/img/icons/icons.svg#vk"></use>
+                <use xlink:href="img/icons/icons.svg#vk"></use>
               </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--telegram btn__icon btn__icon--telegram">
-                <use xlink:href="/img/icons/icons.svg#telegram"></use>
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
               </svg></a>
           </div>
         </div>
@@ -39,10 +39,10 @@
         <div class="s header-panel__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--vk btn__icon btn__icon--vk">
-                <use xlink:href="/img/icons/icons.svg#vk"></use>
+                <use xlink:href="img/icons/icons.svg#vk"></use>
               </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--telegram btn__icon btn__icon--telegram">
-                <use xlink:href="/img/icons/icons.svg#telegram"></use>
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
               </svg></a>
           </div>
         </div>
@@ -55,7 +55,7 @@
         </ul>
       </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer" :class="{isDesctop, isTablet, isLaptop}"></footer>
   </div>
 </body>
 <script src="js/app.min.js"></script>
