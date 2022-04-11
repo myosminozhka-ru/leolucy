@@ -2,9 +2,16 @@ extends ../layouts/default
 
 block variables
     - const title = "Список страниц"
+    - const bodyWhite = ""
 
 block content
-    .container
+    +container
         ul.list
             li.list__item 
                 a(href="ui.html", title="ui", target="_blank").list__link ui
+            li.list__item 
+                a(href="index.html", title="ui", target="_blank").list__link Главная
+            li.list__item 
+                a(href="privacy-policy.html", title="ui", target="_blank").list__link Политика конфиденциальности
+            li.list__item 
+                a(href="404.html", title="ui", target="_blank").list__link 404

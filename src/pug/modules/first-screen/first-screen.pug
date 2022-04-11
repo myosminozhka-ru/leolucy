@@ -1,4 +1,4 @@
-section.first-screen(style={'background-image': 'url(/img/section/1.png)'})
+section.first-screen(style={'background-image': 'url(img/section/1.png)'})
     .first-screen__content(:class='{isDesctop, isTablet, isLaptop}')
         .first-screen__left 
             .first-screen__select(@click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 1", :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}")

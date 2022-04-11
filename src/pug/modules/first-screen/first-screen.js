@@ -2,7 +2,7 @@ export default class FirstScreen {
     constructor() {
         this.domFirstScreen = document.querySelector(".first-screen");
         this.randomGroup = 0;
-        this.countGroups = this.domFirstScreen.querySelectorAll('.first-screen__select').length / 2;
+        this.countGroups = this.domFirstScreen?.querySelectorAll('.first-screen__select').length / 2;
     }
 
     init() {

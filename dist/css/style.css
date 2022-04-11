@@ -4333,6 +4333,25 @@ body {
   background-color: #373737;
 }
 
+body.bg-white {
+  background-color: #fff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__header,
+.app__footer {
+  flex-shrink: 0;
+}
+
+.app__main {
+  flex-grow: 1;
+}
+
 .ui__mb-60 {
   margin-bottom: 60px;
 }
@@ -9529,6 +9548,181 @@ body {
 .footer-menu__link {
   text-decoration: none;
   color: #9B9A9A;
+}
+
+.privacy-policy__title {
+  margin-bottom: 30px;
+}
+
+.privacy-policy__title.isLaptop {
+  margin-bottom: 75px;
+}
+
+.privacy-policy__title.isDesctop {
+  margin-bottom: 3.90625vw;
+}
+
+.privacy-policy__main-list {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+.privacy-policy__main-list-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  margin-bottom: 40px;
+  list-style-type: none;
+}
+
+.privacy-policy__main-list-item.isLaptop {
+  -ms-grid-columns: 380px 1fr;
+  grid-template-columns: 380px 1fr;
+  grid-gap: 0 20px;
+  margin-bottom: 60px;
+}
+
+.privacy-policy__main-list-item.isDesctop {
+  -ms-grid-columns: 19.7916666667vw 1fr;
+  grid-template-columns: 19.7916666667vw 1fr;
+  grid-gap: 0 1.0416666667vw;
+  margin-bottom: 3.125vw;
+}
+
+.privacy-policy__main-list-item::before {
+  counter-increment: section;
+  content: "";
+  opacity: 0;
+  position: absolute;
+}
+
+.privacy-policy__list {
+  list-style-type: none;
+  counter-reset: subsection;
+}
+
+.privacy-policy__list-item {
+  font-family: "Century Gothic";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.privacy-policy__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-policy__list-item.isLaptop {
+  font-size: 18px;
+}
+
+.privacy-policy__list-item.isDesctop {
+  font-size: 0.9375vw;
+  margin-bottom: 1.5625vw;
+}
+
+.privacy-policy__list-item.isDesctop:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-policy__list-item.isDesctop::before {
+  margin-right: 0.2604166667vw;
+}
+
+.privacy-policy__list-item::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) ".";
+  float: left;
+  margin-right: 5px;
+  height: 100%;
+}
+
+.privacy-policy__left,
+.privacy-policy__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.privacy-policy__left {
+  margin-bottom: 20px;
+}
+
+.privacy-policy__heading {
+  font-family: "DIN Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.privacy-policy__heading.isLaptop {
+  font-size: 25px;
+}
+
+.privacy-policy__heading.isDesctop {
+  font-size: 1.3020833333vw;
+}
+
+.privacy-policy__text {
+  font-family: "Century Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.privacy-policy__text:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-policy__text.isLaptop {
+  font-size: 18px;
+}
+
+.privacy-policy__text.isDesctop {
+  font-size: 0.9375vw;
+  margin-bottom: 1.0416666667vw;
+}
+
+.not-found {
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.not-found__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found__img {
+  max-width: 100%;
+}
+
+.not-found__title {
+  margin-bottom: 30px;
+  margin-top: -17px;
+}
+
+.not-found__title.isLaptop {
+  margin-top: -98px;
+  margin-bottom: 40px;
+  max-width: 635px;
+}
+
+.not-found__title.isDesctop {
+  margin-top: -5.1041666667vw;
+  margin-bottom: 2.0833333333vw;
+  max-width: 33.0729166667vw;
 }
 
 @media print, (prefers-reduced-motion: reduce) {

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white">
+  <div class="app wrapper" id="app" :class="[{isDesctop, isTablet, isLaptop}, isMounted]" :style="isMounted ? '' : 'display: none'">
+    <div class="header app__header header--black" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
+      <div class="header__content"> 
+        <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
+          <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"> </span></div>
+        </button>
+        <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+        <div class="s header__s">
+          <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--vk btn__icon btn__icon--vk">
+                <use xlink:href="img/icons/icons.svg#vk"></use>
+              </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-panel" :class="{isDesctop, isTablet, isLaptop, &quot;header-panel--is-open&quot;: header.isShowMenu}">
+      <div class="header-panel__content"> 
+        <div class="header-panel__contacts"><a class="header-panel__link" href="tel:+74950000000">+7(495)000-00-00</a><a class="header-panel__link" href="mailto:info@info.ru">info@info.ru</a></div>
+        <ul class="header-panel-menu">
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#">Корма</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#">Ингредиенты</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#">FAQ</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#">Статьи</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#">Где купить</a></li>
+        </ul>
+        <div class="s header-panel__s">
+          <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--vk btn__icon btn__icon--vk">
+                <use xlink:href="img/icons/icons.svg#vk"></use>
+              </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main app__main" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="section privacy-policy">
+        <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+          <div class="privacy-policy__content"> 
+            <h1 class="title title--black privacy-policy__title" :class="{isDesctop, isTablet, isLaptop}">Политика конфиденциальности</h1>
+            <ol class="privacy-policy__main-list" :class="{isDesctop, isTablet, isLaptop}">
+              <li class="privacy-policy__main-list-item" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="privacy-policy__left" :class="{isDesctop, isTablet, isLaptop}"><span class="privacy-policy__heading" :class="{isDesctop, isTablet, isLaptop}">1. Общие положения</span></div>
+                <div class="privacy-policy__right" :class="{isDesctop, isTablet, isLaptop}">
+                  <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые Потаповым Игорем Сергеевичем (далее – Оператор).</p>
+                  <ol class="privacy-policy__list" :class="{isDesctop, isTablet, isLaptop}">
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта httpsː//</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li class="privacy-policy__main-list-item" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="privacy-policy__left" :class="{isDesctop, isTablet, isLaptop}"><span class="privacy-policy__heading" :class="{isDesctop, isTablet, isLaptop}">2. Основные понятия, используемые в Политике</span></div>
+                <div class="privacy-policy__right" :class="{isDesctop, isTablet, isLaptop}">
+                  <ol class="privacy-policy__list" :class="{isDesctop, isTablet, isLaptop}">
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Блокирование персональных данных – временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных);</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Веб-сайт – совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу httpsː//tools.seo-zona.ru;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных, и обеспечивающих их обработку информационных технологий и технических средств;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Обработка персональных данных – любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Оператор – государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Персональные данные – любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта httpsː//tools.seo-zona.ru;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Пользователь – любой посетитель веб-сайта httpsː//tools.seo-zona.ru;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Предоставление персональных данных – действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Распространение персональных данных – любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Трансграничная передача персональных данных – передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Уничтожение персональных данных – любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и (или) уничтожаются материальные носители персональных данных.</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li class="privacy-policy__main-list-item" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="privacy-policy__left" :class="{isDesctop, isTablet, isLaptop}"><span class="privacy-policy__heading" :class="{isDesctop, isTablet, isLaptop}">3. Оператор может обрабатывать следующие персональные данные Пользователя</span></div>
+                <div class="privacy-policy__right" :class="{isDesctop, isTablet, isLaptop}">
+                  <ol class="privacy-policy__list" :class="{isDesctop, isTablet, isLaptop}"> 
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Фамилия, имя, отчество;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Номер телефона;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Адрес электронной почты;</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов «cookie») с помощью сервисов интернет-статистики (Яндекс Метрика, Google Аналитика и других).</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Вышеперечисленные данные далее по тексту Политики объединены общим понятием Персональные данные.</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li class="privacy-policy__main-list-item" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="privacy-policy__left" :class="{isDesctop, isTablet, isLaptop}"><span class="privacy-policy__heading" :class="{isDesctop, isTablet, isLaptop}">4. Цели обработки персональных данных</span></div>
+                <div class="privacy-policy__right" :class="{isDesctop, isTablet, isLaptop}">
+                  <ol class="privacy-policy__list" :class="{isDesctop, isTablet, isLaptop}"> 
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Цель обработки персональных данных Пользователя — заключение, исполнение и прекращение гражданско-правовых договоров; предоставление доступа Пользователю к сервисам, информации и/или материалам, содержащимся на веб-сайте httpsː//. уточнение деталей заказа.</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Также Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах, специальных предложениях и различных событиях. Пользователь всегда может отказаться от получения информационных сообщений, направив Оператору письмо на адрес электронной почты privacy@info.ru с пометкой «Отказ от уведомлений о новых продуктах и услугах и специальных предложениях».</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его содержания.</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li class="privacy-policy__main-list-item" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="privacy-policy__left" :class="{isDesctop, isTablet, isLaptop}"><span class="privacy-policy__heading" :class="{isDesctop, isTablet, isLaptop}">5. Правовые основания обработки персональных данных</span></div>
+                <div class="privacy-policy__right" :class="{isDesctop, isTablet, isLaptop}">
+                  <ol class="privacy-policy__list" :class="{isDesctop, isTablet, isLaptop}"> 
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или отправки Пользователем самостоятельно через специальные формы, расположенные на сайте httpsː//. Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной Политикой.</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в настройках браузера Пользователя (включено сохранение файлов «cookie» и использование технологии JavaScript).ния.</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li class="privacy-policy__main-list-item" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="privacy-policy__left" :class="{isDesctop, isTablet, isLaptop}"><span class="privacy-policy__heading" :class="{isDesctop, isTablet, isLaptop}">6. Порядок сбора, хранения, передачи и других видов обработки персональных данных</span></div>
+                <div class="privacy-policy__right" :class="{isDesctop, isTablet, isLaptop}">
+                  <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.</p>
+                  <ol class="privacy-policy__list" :class="{isDesctop, isTablet, isLaptop}"> 
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства.</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">В случае выявления неточностей в персональных данных, Пользователь может актуализировать их самостоятельно, путем направления Оператору уведомление на адрес электронной почты Оператора privacy@tools.seo-zona.ru с пометкой «Актуализация персональных данных».</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Срок обработки персональных данных является неограниченным. Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Оператору уведомление посредством электронной почты на электронный адрес Оператора privacy@tools.seo-zona.ru с пометкой «Отзыв согласия на обработку персональных данных».</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li class="privacy-policy__main-list-item" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="privacy-policy__left" :class="{isDesctop, isTablet, isLaptop}"><span class="privacy-policy__heading" :class="{isDesctop, isTablet, isLaptop}">7. Трансграничная передача персональных данных</span></div>
+                <div class="privacy-policy__right" :class="{isDesctop, isTablet, isLaptop}">
+                  <ol class="privacy-policy__list" :class="{isDesctop, isTablet, isLaptop}"> 
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Оператор до начала осуществления трансграничной передачи персональных данных обязан убедиться в том, что иностранным государством, на территорию которого предполагается осуществлять передачу персональных данных, обеспечивается надежная защита прав субъектов персональных данных.</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Трансграничная передача персональных данных на территории иностранных государств, не отвечающих вышеуказанным требованиям, может осуществляться только в случае наличия согласия в письменной форме субъекта персональных данных на трансграничную передачу его персональных данных и/или исполнения договора, стороной которого является субъект персональных данных.</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+              <li class="privacy-policy__main-list-item" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="privacy-policy__left" :class="{isDesctop, isTablet, isLaptop}"><span class="privacy-policy__heading" :class="{isDesctop, isTablet, isLaptop}">8. Заключительные положения</span></div>
+                <div class="privacy-policy__right" :class="{isDesctop, isTablet, isLaptop}">
+                  <ol class="privacy-policy__list" :class="{isDesctop, isTablet, isLaptop}"> 
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты privacy@tools.seo-zona.ru.</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.</p>
+                    </li>
+                    <li class="privacy-policy__list-item" :class="{isDesctop, isTablet, isLaptop}"> 
+                      <p class="privacy-policy__text" :class="{isDesctop, isTablet, isLaptop}">Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу httpsː//.</p>
+                    </li>
+                  </ol>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer app__footer" :class="{isDesctop, isTablet, isLaptop}">
+      <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="footer__content" :class="{isDesctop, isTablet, isLaptop}"> <span class="footer__heading-contacts footer__add-line footer__add-line--right" :class="{isDesctop, isTablet, isLaptop}">Контакты</span>
+          <div class="logo footer__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+          <ul class="footer-menu footer__menu" :class="{isDesctop, isTablet, isLaptop}"> 
+            <li class="footer-menu__item footer__add-line footer__add-line--left" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Корма</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Ингредиенты</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">FAQ</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Статьи</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Где купить</a></li>
+          </ul>
+          <div class="footer__contacts" :class="{isDesctop, isTablet, isLaptop}"> <a class="footer__gold-link" href="tel:+74950000000" :class="{isDesctop, isTablet, isLaptop}">+7(495)000-00-00</a><a class="footer__gold-link" href="mailto:info@info.ru" :class="{isDesctop, isTablet, isLaptop}">info@info.ru</a></div>
+          <div class="s footer__s">
+            <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+                <svg class="icon icon--vk btn__icon btn__icon--vk">
+                  <use xlink:href="img/icons/icons.svg#vk"></use>
+                </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+                <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                  <use xlink:href="img/icons/icons.svg#telegram"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="footer__bottom" :class="{isDesctop, isTablet, isLaptop}"><span class="footer__copyright" :class="{isDesctop, isTablet, isLaptop}">© 2022 Все права защищены</span><a class="footer__policy-link footer__policy-link--first" href="#" :class="{isDesctop, isTablet, isLaptop}">Политика конфиденциальности</a><a class="footer__policy-link footer__policy-link--second" href="#" :class="{isDesctop, isTablet, isLaptop}">Согласие на обработку персональных данных  </a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="js/app.min.js"></script>

@@ -11,10 +11,10 @@ head
   
   include ../data
 
-body
-  #app.wrapper(:class='[{isDesctop, isTablet, isLaptop}, isMounted]', :style="isMounted ? '' : 'display: none'")
+body(class=bodyWhite)
+  #app.app.wrapper(:class='[{isDesctop, isTablet, isLaptop}, isMounted]', :style="isMounted ? '' : 'display: none'")
       include ../modules/header/header
-      main.main(:class='{isDesctop, isTablet, isLaptop}')
+      main.main.app__main(:class='{isDesctop, isTablet, isLaptop}')
           block content
       include ../modules/footer/footer
 script(src='js/app.min.js')
