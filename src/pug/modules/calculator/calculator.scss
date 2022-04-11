@@ -136,8 +136,12 @@
             margin-bottom: 0;
         }
 
+        &.isLaptop {
+            margin-bottom: 45px;
+        }
+
         &.isDesctop {
-            margin-bottom: vw(30px);
+            margin-bottom: vw(45px);
         
             &:last-child {
                 margin-bottom: 0;
@@ -181,7 +185,7 @@
     &__result {
         width: 100%;
         background-image: linear-gradient(246.06deg, rgba($mineShaft, .3) 6.72%, rgba($mineShaft2, .3) 66.64%);
-        border: 5px solid $pesto;
+        border: 5px solid rgba($pesto, .3);
         border-radius: 20px;
         padding: 40px 48px;
         color: $white;

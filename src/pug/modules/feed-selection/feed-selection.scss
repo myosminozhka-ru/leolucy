@@ -129,8 +129,13 @@
             color: $dustyGray;
             text-align: center;
             margin-bottom: 30px;
+
+            &.isLaptop {
+                font-size: 16px;
+            }
             
             &.isDesctop {
+                font-size: vw(16px);
                 margin-bottom: vw(30px);
             }
         }
