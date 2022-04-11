@@ -64,8 +64,10 @@ export default class Ingredients {
 
     syncingTwoSliders() {
         setTimeout(() => {
-            this.imgSlider.controller.control = this.textSlider;
-            this.textSlider.controller.control = this.imgSlider;
+            if (this.imgSlider && this.textSlider) {
+                this.imgSlider.controller.control = this.textSlider;
+                this.textSlider.controller.control = this.imgSlider;
+            }
         }, 0)
     }
 }

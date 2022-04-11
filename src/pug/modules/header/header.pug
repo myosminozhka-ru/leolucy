@@ -1,4 +1,4 @@
-.header(:class='{isDesctop, isTablet, isLaptop, "header--black": header.isScroll, "header--scoll": header.isScroll}')
+.header.app__header(class=(bodyWhite === "bg-white" ? "header--black" : "") :class='{isDesctop, isTablet, isLaptop, "header--black": header.isScroll, "header--scoll": header.isScroll}')
     .header__content 
         +btn.btn--burger.header__show-menu(@click="header.toggleMenu()" :class="{'btn--select': header.isShowMenu}")
             .btn__icon

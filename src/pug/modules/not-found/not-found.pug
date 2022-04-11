@@ -1,0 +1,6 @@
+section.section.not-found(style={'background-image': 'url(img/not-found/1.png)'})
+    +container
+        .not-found__content
+            img.not-found__img(src="img/not-found/2.png", alt="")
+            h1.title.not-found__title(:class='{isDesctop, isTablet, isLaptop}') Извините, такой страницы не существует.
+            +btn("На главную")(href="#").btn.btn--gold-border-rounded.not-found__btn

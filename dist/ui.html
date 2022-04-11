@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="wrapper" id="app" :class="[{isDesctop, isTablet, isLaptop}, isMounted]" :style="isMounted ? '' : 'display: none'">
-    <div class="header" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
+  <div class="app wrapper" id="app" :class="[{isDesctop, isTablet, isLaptop}, isMounted]" :style="isMounted ? '' : 'display: none'">
+    <div class="header app__header" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
       <div class="header__content"> 
         <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
           <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"> </span></div>
@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-    <main class="main" :class="{isDesctop, isTablet, isLaptop}">
+    <main class="main app__main" :class="{isDesctop, isTablet, isLaptop}">
       <div class="container" :class="{isDesctop, isTablet, isLaptop}">
         <div class="ui">
           <div class="ui__mb-60 no-grid" :class="{isDesctop, isTablet, isLaptop}">
@@ -252,7 +252,7 @@
         </div>
       </div>
     </main>
-    <footer class="footer" :class="{isDesctop, isTablet, isLaptop}">
+    <footer class="footer app__footer" :class="{isDesctop, isTablet, isLaptop}">
       <div class="container" :class="{isDesctop, isTablet, isLaptop}">
         <div class="footer__content" :class="{isDesctop, isTablet, isLaptop}"> <span class="footer__heading-contacts footer__add-line footer__add-line--right" :class="{isDesctop, isTablet, isLaptop}">Контакты</span>
           <div class="logo footer__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>

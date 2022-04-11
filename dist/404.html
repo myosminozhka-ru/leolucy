@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Список страниц</title>
+  <title>404</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -49,14 +49,13 @@
       </div>
     </div>
     <main class="main app__main" :class="{isDesctop, isTablet, isLaptop}">
-      <div class="container" :class="{isDesctop, isTablet, isLaptop}">
-        <ul class="list">
-          <li class="list__item"> <a class="list__link" href="ui.html" title="ui" target="_blank">ui</a></li>
-          <li class="list__item"> <a class="list__link" href="index.html" title="ui" target="_blank">Главная</a></li>
-          <li class="list__item"> <a class="list__link" href="privacy-policy.html" title="ui" target="_blank">Политика конфиденциальности</a></li>
-          <li class="list__item"> <a class="list__link" href="404.html" title="ui" target="_blank">404</a></li>
-        </ul>
-      </div>
+      <section class="section not-found" style="background-image:url(img/not-found/1.png);">
+        <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+          <div class="not-found__content"><img class="not-found__img" src="img/not-found/2.png" alt="">
+            <h1 class="title not-found__title" :class="{isDesctop, isTablet, isLaptop}">Извините, такой страницы не существует.</h1><a class="btn btn btn--gold-border-rounded not-found__btn" href="#" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">На главную</span></a>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer app__footer" :class="{isDesctop, isTablet, isLaptop}">
       <div class="container" :class="{isDesctop, isTablet, isLaptop}">
