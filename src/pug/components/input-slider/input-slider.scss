@@ -75,7 +75,15 @@
         pointer-events: none;
     }
 
+    &.isLaptop {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
     &.isDesctop {
+        margin-left: vw(14px);
+        margin-right: vw(14px);
+
         &::before,
         &::after {
             width: vw(14px);

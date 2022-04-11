@@ -1,5 +1,5 @@
 section.section.section--white.quiz(:class='{isDesctop, isTablet, isLaptop}')
-    img.quiz__decor.quiz__decor--top(src="/img/quiz/decor-1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+    img.quiz__decor.quiz__decor--top(src="img/quiz/decor-1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
     +container
         h2.title.title--black.quiz__title(:class='{isDesctop, isTablet, isLaptop}') Отгадайте из чего состоит корм
         .quiz__steps(:class='{isDesctop, isTablet, isLaptop}') 
@@ -29,4 +29,4 @@ section.section.section--white.quiz(:class='{isDesctop, isTablet, isLaptop}')
         .quiz__list-buttons(:class='{isDesctop, isTablet, isLaptop}') 
             +btn("Назад")(:disabled="quiz.isDisabledPrev()", @click="quiz.onClickPrev()").btn--gold-border-rounded.btn--black-text.quiz__prev
             +btn("Далее")(:disabled="quiz.isDisabledNext()", @click="quiz.onClickNext()").btn--gold-border-rounded.btn--black-text.quiz__next
-    img.quiz__decor.quiz__decor--bottom(src="/img/quiz/decor-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+    img.quiz__decor.quiz__decor--bottom(src="img/quiz/decor-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')

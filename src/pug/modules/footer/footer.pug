@@ -1,1 +1,31 @@
-footer.footer
+footer.footer(:class='{isDesctop, isTablet, isLaptop}')
+    +container
+        .footer__content(:class='{isDesctop, isTablet, isLaptop}') 
+            span.footer__heading-contacts.footer__add-line.footer__add-line--right(:class='{isDesctop, isTablet, isLaptop}') Контакты
+            +logo.footer__logo(:class='{isDesctop, isTablet, isLaptop}') 
+            ul.footer-menu.footer__menu(:class='{isDesctop, isTablet, isLaptop}') 
+                li.footer-menu__item.footer__add-line.footer__add-line--left(:class='{isDesctop, isTablet, isLaptop}')
+                    a.footer-menu__link(href="#") Корма
+
+                li.footer-menu__item(:class='{isDesctop, isTablet, isLaptop}')
+                    a.footer-menu__link(href="#") Ингредиенты
+
+                li.footer-menu__item(:class='{isDesctop, isTablet, isLaptop}')
+                    a.footer-menu__link(href="#") FAQ
+
+                li.footer-menu__item(:class='{isDesctop, isTablet, isLaptop}')
+                    a.footer-menu__link(href="#") Статьи
+
+                li.footer-menu__item(:class='{isDesctop, isTablet, isLaptop}')
+                    a.footer-menu__link(href="#") Где купить
+
+            .footer__contacts(:class='{isDesctop, isTablet, isLaptop}') 
+                a.footer__gold-link(href="tel:+74950000000", :class='{isDesctop, isTablet, isLaptop}') +7(495)000-00-00
+                a.footer__gold-link(href="mailto:info@info.ru", :class='{isDesctop, isTablet, isLaptop}') info@info.ru
+            
+            +s(["vk", "#"], ["telegram", "#"]).footer__s
+
+            .footer__bottom(:class='{isDesctop, isTablet, isLaptop}')
+                span.footer__copyright(:class='{isDesctop, isTablet, isLaptop}') © 2022 Все права защищены
+                a.footer__policy-link.footer__policy-link--first(href="#", :class='{isDesctop, isTablet, isLaptop}') Политика конфиденциальности
+                a.footer__policy-link.footer__policy-link--second(href="#", :class='{isDesctop, isTablet, isLaptop}') Согласие на обработку персональных данных  
