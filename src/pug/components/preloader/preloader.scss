@@ -1,0 +1,32 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $mineShaft;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transition: all $ease05;
+
+    &__content {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+    }
+
+    &__logo {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    &--on-hidden {
+        opacity: 0;
+        visibility: collapse;
+        pointer-events: none;
+    }
+}

@@ -13,6 +13,7 @@ head
 
 body(class=bodyWhite)
   #app.app.wrapper(:class='[{isDesctop, isTablet, isLaptop}, isMounted]', :style="isMounted ? '' : 'display: none'")
+      include ../components/preloader/preloader
       include ../modules/header/header
       main.main.app__main(:class='{isDesctop, isTablet, isLaptop}')
           block content

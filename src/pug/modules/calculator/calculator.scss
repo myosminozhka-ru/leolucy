@@ -172,6 +172,7 @@
     &__list {
         display: flex;
         align-items: flex-start;
+        justify-content: center;
     }
 
     &__checkbox {
@@ -195,7 +196,7 @@
         }
 
         &.isDesctop {
-            border: vw(5px) solid $pesto;
+            border: vw(5px) solid rgba($pesto, .3);
             border-radius: vw(20px);
             padding: vw(30px);
             margin-top: vw(30px);
@@ -318,10 +319,15 @@
     }
 
     &__block {
-        backdrop-filter: blur(10px);
         border-radius: 20px;
         padding: 20px;
         color: $white;
+        background-color: rgba($black, 0.1);
+        
+        @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+            backdrop-filter: blur(#{vw(10px)});
+            -webkit-backdrop-filter: blur(#{vw(10px)});
+        }
 
         &.isTablet {
             border-radius: 20px;
@@ -358,6 +364,9 @@
 
         &-food {
             grid-area: box-food;
+            max-width: 130px;
+            margin-left: auto;
+            margin-right: auto;
 
             &.isLaptop {
                 max-width: 217px;

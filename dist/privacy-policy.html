@@ -8,6 +8,13 @@
 </head>
 <body class="bg-white">
   <div class="app wrapper" id="app" :class="[{isDesctop, isTablet, isLaptop}, isMounted]" :style="isMounted ? '' : 'display: none'">
+    <div class="preloader" style="background-image:url(img/preloader/1.png);">
+      <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="preloader__content"> 
+          <div class="logo preloader__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+        </div>
+      </div>
+    </div>
     <div class="header app__header header--black" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
       <div class="header__content"> 
         <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">

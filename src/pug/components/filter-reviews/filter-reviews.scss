@@ -106,7 +106,7 @@
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transition: top $ease05, opacity $ease05, overflow $ease035;
+        transition: top $ease05, opacity $ease05, visibility $ease035;
 
         &-content {
             display: flex;

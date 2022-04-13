@@ -16,7 +16,7 @@
                             input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}', type="text", id="city", placeholder="Ваш город")
                         .create-review-modals__box.create-review-modals__box--small(:class='{isDesctop, isTablet, isLaptop}') 
                             .create-review-modals__wrapper-img(id="create-review-modals__dropzone", :class='[{isDesctop, isTablet, isLaptop}, !modals.createReviewModalsData.photo.status ? "animate__animated animate__headShake": "" ]') 
-                                img.create-review-modals__img(:src="modals.createReviewModalsData.photo.url", alt="")
+                                img.create-review-modals__img(:src="modals.createReviewModalsData.photo.url", v-if="modals.createReviewModalsData.photo.url" alt="")
                 .create-review-modals__row(:class='{isDesctop, isTablet, isLaptop}') 
                     .create-review-modals__box.create-review-modals__box--no-margin(:class='{isDesctop, isTablet, isLaptop}') 
                         label.create-review-modals__label(:class='{isDesctop, isTablet, isLaptop}', for="message") Ваш отзыв:

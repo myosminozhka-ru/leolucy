@@ -4,14 +4,29 @@
     background-repeat: no-repeat;
     z-index: 1;
 
+    &.isLaptop {
+        padding-top: 150px;
+    }
+
+    &.isDesctop {
+        padding-top: vw(150px);
+    }
+
     &__decor {
         position: absolute;
         left: 0;
-        bottom: vw(-130px);
-        display: none;
+        bottom: -70px;
+        max-width: 200px;
+
+        &.isLaptop {
+            max-width: unset;
+            bottom: -130px;
+        }
 
         &.isDesctop {
+            max-width: unset;
             display: block;
+            bottom: vw(-130px);
         }
     }
 

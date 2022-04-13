@@ -98,6 +98,12 @@
             align-items: center;
         }
 
+        &-wrapper-img,
+        &-description,
+        &-btn {
+            max-width: 100%;
+        }
+
         &-wrapper-img {
             width: 100%;
             padding-bottom: 115.79%;

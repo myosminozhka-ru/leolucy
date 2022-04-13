@@ -4,6 +4,7 @@
         border-radius: 10px;
         background-color: $white;
         border: 4px solid rgba($pesto, .3);
+        transition: all $ease05;
 
         &.isLaptop {
             padding: 50px;
@@ -48,7 +49,7 @@
         outline: none;
         background-color: transparent;
         margin-left: 30px;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
@@ -56,7 +57,9 @@
         $btn: &;
 
         &-icon {
+            transform: rotate(0deg);
             transition: all $ease05;
+            width: 100%;
         }
 
         &.isDesctop {
@@ -73,7 +76,10 @@
     }
 
     &__dropdown {
+        height: 0;
+        overflow: hidden;
         transition: all $ease05;
+
         &-content {
             margin-top: 20px;
 
