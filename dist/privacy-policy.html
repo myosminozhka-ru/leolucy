@@ -8,10 +8,13 @@
 </head>
 <body class="bg-white">
   <div class="app wrapper" id="app" :class="[{isDesctop, isTablet, isLaptop}, isMounted]" :style="isMounted ? '' : 'display: none'">
-    <div class="preloader" style="background-image:url(img/preloader/1.png);">
+    <div class="preloader">
       <div class="container" :class="{isDesctop, isTablet, isLaptop}">
         <div class="preloader__content"> 
           <div class="logo preloader__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+          <svg class="preloader__spinner" viewbox="0 0 80 80" :class="{isDesctop, isTablet, isLaptop}">
+            <circle class="preloader__spinner-circle" style="fill: transparent; stroke-linecap: round;" stroke="currentColor" cx="40" cy="40" r="35"></circle>
+          </svg>
         </div>
       </div>
     </div>

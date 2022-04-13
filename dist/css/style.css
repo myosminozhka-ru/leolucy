@@ -6116,10 +6116,8 @@ body.bg-white {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #373737;
+  background-color: #121212;
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 70.75%, rgba(0, 0, 0, 0) 99.46%);
   z-index: 10;
   opacity: 1;
   visibility: visible;
@@ -6130,11 +6128,76 @@ body.bg-white {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
 }
 
 .preloader__logo {
   max-width: 100%;
-  margin: auto;
+  margin: auto auto 50px;
+}
+
+.preloader__logo.isDesctop {
+  margin: auto auto 2.6041666667vw;
+}
+
+.preloader__spinner {
+  color: rgba(117, 97, 48, 0.6);
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  stroke-width: 3px;
+}
+
+.preloader__spinner-circle {
+  transform-origin: center;
+  -webkit-animation-name: animation;
+          animation-name: animation;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: cubic-bezier;
+          animation-timing-function: cubic-bezier;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.preloader__spinner.isDesctop {
+  stroke-width: 0.15625vw;
+  width: 4.1666666667vw;
+}
+
+@-webkit-keyframes animation {
+  0% {
+    stroke-dasharray: 1 78;
+    stroke-dashoffset: -105;
+  }
+
+  50% {
+    stroke-dasharray: 60 10;
+    stroke-dashoffset: -160;
+  }
+
+  100% {
+    stroke-dasharray: 1 78;
+    stroke-dashoffset: -300;
+  }
+}
+
+@keyframes animation {
+  0% {
+    stroke-dasharray: 1 78;
+    stroke-dashoffset: -105;
+  }
+
+  50% {
+    stroke-dasharray: 60 10;
+    stroke-dashoffset: -160;
+  }
+
+  100% {
+    stroke-dasharray: 1 78;
+    stroke-dashoffset: -300;
+  }
 }
 
 .preloader--on-hidden {
@@ -6203,7 +6266,7 @@ body.bg-white {
 
 .header.isTablet .header__content {
   align-items: center;
-  padding: 50px 0 50px 0;
+  padding: 50px 20px 50px 20px;
 }
 
 .header.isTablet .header__logo {
