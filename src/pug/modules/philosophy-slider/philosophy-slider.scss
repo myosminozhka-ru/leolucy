@@ -32,11 +32,15 @@
 
         &-blur {
             background-color: rgba($black, .7);
-            backdrop-filter: blur(5px);
             display: flex;
             flex-direction: column;
             color: $white;
             padding: 20px 35px 25px 20px;
+
+            @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+                backdrop-filter: blur(#{vw(5px)});
+                -webkit-backdrop-filter: blur(#{vw(5px)});
+            }
 
             &.isLaptop {
                 padding: 35px 60px 25px 50px;

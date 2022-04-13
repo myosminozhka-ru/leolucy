@@ -3,8 +3,8 @@ section.section.section--white.feed-selection
         .feed-selection__top(:class='{isDesctop, isTablet, isLaptop}')
             h2.title.title--black.feed-selection__title(:class='{isDesctop, isTablet, isLaptop}') Подберите корм вашему питомцу
             .feed-selection__row
-                +btn('Кошке')(:class="{'btn--select': this.mainSelectAnimal === 'cat'}", @click="onSelectMainAnimal('cat')").btn--gold-border-rounded.btn--small.btn--black-text.feed-selection__btn
                 +btn('Собаке')(:class="{'btn--select': this.mainSelectAnimal === 'dog'}", @click="onSelectMainAnimal('dog')").btn--gold-border-rounded.btn--small.btn--black-text.feed-selection__btn
+                +btn('Кошке')(:class="{'btn--select': this.mainSelectAnimal === 'cat'}", @click="onSelectMainAnimal('cat')").btn--gold-border-rounded.btn--small.btn--black-text.feed-selection__btn
         .feed-selection__bottom 
             .swiper.feed-selection__swiper 
                 .swiper-wrapper.feed-selection__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')

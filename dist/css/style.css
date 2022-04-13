@@ -6385,6 +6385,16 @@ body.bg-white {
 .header-panel-menu__link {
   color: #9B9A9A;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.header-panel-menu__link.isDesctop {
+  border-bottom-width: 0.0520833333vw;
+}
+
+.header-panel-menu__link:hover {
+  border-bottom-color: inherit;
 }
 
 .header-panel__contacts {
@@ -6403,6 +6413,17 @@ body.bg-white {
   line-height: 120%;
   margin-bottom: 30px;
   color: #756130;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.header-panel__link.isDesctop {
+  border-bottom-width: 0.0520833333vw;
+  margin-bottom: 1.5625vw;
+}
+
+.header-panel__link:hover {
+  border-bottom-color: inherit;
 }
 
 .header-panel__link:last-child {
@@ -6752,12 +6773,17 @@ body.bg-white {
 
 .philosophy-slider__slide-blur {
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
   color: #fff;
   padding: 20px 35px 25px 20px;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .philosophy-slider__slide-blur {
+    backdrop-filter: blur(0.2604166667vw);
+    -webkit-backdrop-filter: blur(0.2604166667vw);
+  }
 }
 
 .philosophy-slider__slide-blur.isLaptop {
@@ -8984,8 +9010,9 @@ body.bg-white {
   grid-gap: 1.0416666667vw;
 }
 
-.our-articles__item {
+.our-articles__slide {
   min-width: 0;
+  cursor: pointer;
 }
 
 .answers-to-questions__title {
@@ -9620,6 +9647,12 @@ body.bg-white {
   text-align: center;
   color: #756130;
   margin-bottom: 20px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.footer__gold-link:hover {
+  border-bottom-color: inherit;
 }
 
 .footer__gold-link:last-child {
@@ -9633,6 +9666,7 @@ body.bg-white {
 .footer__gold-link.isDesctop {
   font-size: 1.5625vw;
   margin-bottom: 1.0416666667vw;
+  border-bottom-width: 0.0520833333vw;
 }
 
 .footer__gold-link.isDesctop:last-child {
@@ -9712,6 +9746,16 @@ body.bg-white {
 .footer__policy-link {
   text-decoration: none;
   margin-bottom: 20px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.footer__policy-link.isDesctop {
+  border-bottom-width: 0.0520833333vw;
+}
+
+.footer__policy-link:hover {
+  border-bottom-color: inherit;
 }
 
 .footer__policy-link.isLaptop,
@@ -9723,6 +9767,8 @@ body.bg-white {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: footer__policy-link--first;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__bottom.isLaptop > .footer__policy-link--first, .footer__bottom.isDesctop > .footer__policy-link--first {
@@ -9744,6 +9790,7 @@ body.bg-white {
 .footer__policy-link--second.isLaptop,
 .footer__policy-link--second.isDesctop {
   text-align: right;
+  margin-left: auto;
 }
 
 .footer-menu {
@@ -9793,6 +9840,16 @@ body.bg-white {
 .footer-menu__link {
   text-decoration: none;
   color: #9B9A9A;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.footer-menu__link.isDesctop {
+  border-bottom-width: 0.0520833333vw;
+}
+
+.footer-menu__link:hover {
+  border-bottom-color: inherit;
 }
 
 .privacy-policy__title {

@@ -73,7 +73,8 @@
         }
     }
 
-    &__item {
+    &__slide {
         min-width: 0;
+        cursor: pointer;
     }
 }

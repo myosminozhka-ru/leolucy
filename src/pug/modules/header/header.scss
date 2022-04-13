@@ -192,6 +192,16 @@
         &__link {
             color: $dustyGray;
             text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all $ease05;
+
+            &.isDesctop {
+                border-bottom-width: vw(1px);
+            }
+
+            &:hover {
+                border-bottom-color: inherit;
+            }
         }
     }
 
@@ -211,6 +221,17 @@
         line-height: 120%;
         margin-bottom: 30px;
         color: $pesto;
+        border-bottom: 1px solid transparent;
+        transition: all $ease05;
+        
+        &.isDesctop {
+            border-bottom-width: vw(1px);
+            margin-bottom: vw(30px);
+        }
+        
+        &:hover {
+            border-bottom-color: inherit;
+        }
 
         &:last-child {
             margin-bottom: 0;

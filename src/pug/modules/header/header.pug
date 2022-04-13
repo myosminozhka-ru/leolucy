@@ -13,23 +13,23 @@
 .header-panel(:class='{isDesctop, isTablet, isLaptop, "header-panel--is-open": header.isShowMenu}')
     .header-panel__content 
         .header-panel__contacts
-            a.header-panel__link(href="tel:+74950000000") +7(495)000-00-00
-            a.header-panel__link(href="mailto:info@info.ru") info@info.ru
+            a.header-panel__link(href="tel:+74950000000", :class='{isDesctop, isTablet, isLaptop}') +7(495)000-00-00
+            a.header-panel__link(href="mailto:info@info.ru", :class='{isDesctop, isTablet, isLaptop}') info@info.ru
 
         ul.header-panel-menu
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#") Корма
+                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') Корма
 
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#") Ингредиенты
+                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') Ингредиенты
 
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#") FAQ
+                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') FAQ
 
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#") Статьи
+                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') Статьи
 
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#") Где купить
+                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') Где купить
         
         +s(["vk", "#"], ["telegram", "#"]).header-panel__s
