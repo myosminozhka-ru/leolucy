@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -4526,6 +4528,11 @@ body.bg-white {
   height: 25px;
 }
 
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 .btn--burger {
   height: 50px;
   width: 50px;
@@ -4685,6 +4692,7 @@ body.bg-white {
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 5px;
   background: radial-gradient(21% 107.86% at 100% -7.86%, #FFFFFF 0%, rgba(255, 255, 255, 0.782584) 31.12%, rgba(237, 188, 69, 0) 100%), linear-gradient(278.39deg, #957E47 -16.71%, #8E7434 6.59%, #CAA54A 15.01%, #8D753A 26.21%, #8D753A 60.97%, #C3A355 73.11%, #8E7434 83.67%, #756130 100%);
   box-shadow: inset 3px 2px 4px rgba(210, 210, 210, 0.25), inset -3px -4px 5px rgba(0, 0, 0, 0.28);
   opacity: 0;
@@ -4716,6 +4724,17 @@ body.bg-white {
 .btn--gold-border-rounded.isDesctop {
   font-size: 1.0416666667vw;
   padding: 1.0416666667vw 2.6041666667vw;
+  border-radius: 0.2604166667vw;
+}
+
+.btn--gold-border-rounded.isDesctop::before {
+  border-radius: 0.2604166667vw;
+}
+
+.btn--gold-border-rounded.isDesctop::after {
+  width: calc(100% - 0.4166666667vw);
+  height: calc(100% - 0.4166666667vw);
+  border: 0.2083333333vw solid #64552F;
 }
 
 .btn--gold-border-rounded.btn--select::before {
@@ -4750,10 +4769,45 @@ body.bg-white {
   color: #64552F;
   padding: 15px 32px;
   border-radius: 5px;
-  border: 3px solid #DED7C7;
   background-color: transparent;
   text-transform: uppercase;
   font-weight: 700;
+  overflow: hidden;
+}
+
+.btn--moon-mist-border-rounded::before,
+.btn--moon-mist-border-rounded::after {
+  content: "";
+  position: absolute;
+  transition: opacity 0.5s ease;
+}
+
+.btn--moon-mist-border-rounded::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(21% 107.86% at 100% -7.86%, #FFFFFF 0%, rgba(255, 255, 255, 0.782584) 31.12%, rgba(237, 188, 69, 0) 100%), linear-gradient(278.39deg, #957E47 -16.71%, #8E7434 6.59%, #CAA54A 15.01%, #8D753A 26.21%, #8D753A 60.97%, #C3A355 73.11%, #8E7434 83.67%, #756130 100%);
+  box-shadow: inset 3px 2px 4px rgba(210, 210, 210, 0.25), inset -3px -4px 5px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+}
+
+.btn--moon-mist-border-rounded::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  opacity: 1;
+  border: 4px solid #DED7C7;
+}
+
+.btn--moon-mist-border-rounded:hover::before {
+  opacity: 1;
+}
+
+.btn--moon-mist-border-rounded:hover::after {
+  opacity: 0;
 }
 
 .btn--moon-mist-border-rounded.isDesctop {
@@ -4761,7 +4815,12 @@ body.bg-white {
   line-height: 1.0416666667vw;
   padding: 0.78125vw 1.6666666667vw;
   border-radius: 0.2604166667vw;
-  border-width: 0.15625vw;
+}
+
+.btn--moon-mist-border-rounded.isDesctop::after {
+  width: calc(100% - 0.4166666667vw);
+  height: calc(100% - 0.4166666667vw);
+  border: 0.2083333333vw solid #DED7C7;
 }
 
 .btn--gold-border-while-fill-circle,
@@ -4801,6 +4860,7 @@ body.bg-white {
 }
 
 .btn--gold-border-while-fill-circle:disabled {
+  opacity: 1;
   border-color: rgba(117, 97, 48, 0.3);
 }
 
@@ -4822,11 +4882,6 @@ body.bg-white {
 
 .btn--transparent {
   background-color: transparent;
-}
-
-.btn:disabled {
-  pointer-events: none;
-  opacity: 0.3;
 }
 
 .s {
@@ -5332,6 +5387,7 @@ body.bg-white {
   color: #fff;
   cursor: -webkit-grab;
   cursor: grab;
+  outline: none;
 }
 
 .input-slider .noUi-tooltip {
@@ -5516,6 +5572,7 @@ body.bg-white {
   border-radius: 10px;
   background-color: #fff;
   border: 4px solid rgba(117, 97, 48, 0.3);
+  transition: all 0.5s ease;
 }
 
 .accordion__content.isLaptop {
@@ -5560,7 +5617,7 @@ body.bg-white {
   outline: none;
   background-color: transparent;
   margin-left: 30px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -5568,7 +5625,9 @@ body.bg-white {
 }
 
 .accordion__btn-icon {
+  transform: rotate(0deg);
   transition: all 0.5s ease;
+  width: 100%;
 }
 
 .accordion__btn.isDesctop {
@@ -5582,6 +5641,8 @@ body.bg-white {
 }
 
 .accordion__dropdown {
+  height: 0;
+  overflow: hidden;
   transition: all 0.5s ease;
 }
 
@@ -5971,7 +6032,7 @@ body.bg-white {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: top 0.5s ease, opacity 0.5s ease, overflow 0.35s ease;
+  transition: top 0.5s ease, opacity 0.5s ease, visibility 0.35s ease;
 }
 
 .filter-reviews__mobile-dropdown-content {
@@ -6047,6 +6108,39 @@ body.bg-white {
 .filter-reviews--black .filter-reviews__btn,
 .filter-reviews--black .filter-reviews__select {
   color: #000;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #373737;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+
+.preloader__content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.preloader__logo {
+  max-width: 100%;
+  margin: auto;
+}
+
+.preloader--on-hidden {
+  opacity: 0;
+  visibility: collapse;
+  pointer-events: none;
 }
 
 .header {
@@ -6865,7 +6959,7 @@ body.bg-white {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 60%;
+  padding-top: 35%;
 }
 
 .ingredients-img-slider__swiper {
@@ -6933,6 +7027,11 @@ body.bg-white {
 .ingredients-img-slider:hover .ingredients-img-slider__slide-decoration--5 {
   top: 50%;
   left: 85%;
+}
+
+.ingredients-img-slider.isLaptop,
+.ingredients-img-slider.isDesctop {
+  padding-top: 60%;
 }
 
 .ingredients-text-slider {
@@ -7148,6 +7247,12 @@ body.bg-white {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.feed-selection__slide-wrapper-img,
+.feed-selection__slide-description,
+.feed-selection__slide-btn {
+  max-width: 100%;
 }
 
 .feed-selection__slide-wrapper-img {
@@ -7432,6 +7537,7 @@ body.bg-white {
 .calculator__list {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .calculator__checkbox {
@@ -7456,7 +7562,7 @@ body.bg-white {
 }
 
 .calculator__result.isDesctop {
-  border: 0.2604166667vw solid #756130;
+  border: 0.2604166667vw solid rgba(117, 97, 48, 0.3);
   border-radius: 1.0416666667vw;
   padding: 1.5625vw;
   margin-top: 1.5625vw;
@@ -7578,11 +7684,17 @@ body.bg-white {
 }
 
 .calculator__block {
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 20px;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .calculator__block {
+    backdrop-filter: blur(0.5208333333vw);
+    -webkit-backdrop-filter: blur(0.5208333333vw);
+  }
 }
 
 .calculator__block.isTablet {
@@ -7625,6 +7737,9 @@ body.bg-white {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: box-food;
+  max-width: 130px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .calculator__block-content.isLaptop > .calculator__block-food, .calculator__block-content.isDesctop > .calculator__block-food {
@@ -7718,7 +7833,7 @@ body.bg-white {
   visibility: hidden;
   pointer-events: none;
   transition: all 0.5s ease;
-  z-index: 7;
+  z-index: 0;
   padding: 15px;
   overflow-y: auto;
 }
@@ -7756,6 +7871,7 @@ body.bg-white {
   position: absolute;
   right: 0;
   top: 0;
+  color: #756130;
 }
 
 .modals__title {
@@ -7857,6 +7973,7 @@ body.bg-white {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  z-index: 7;
 }
 
 .our-articles-modals__content {
@@ -7864,16 +7981,32 @@ body.bg-white {
 }
 
 .our-articles-modals__top {
+  display: flex;
   min-height: unset;
-  margin-bottom: 10px;
+  padding-top: 35px;
+  margin-bottom: 20px;
+  justify-content: center;
 }
 
 .our-articles-modals__top.isLaptop {
   margin-bottom: 20px;
+  padding-top: 0;
+  justify-content: flex-start;
 }
 
 .our-articles-modals__top.isDesctop {
   margin-bottom: 1.0416666667vw;
+  padding-top: 0;
+  justify-content: flex-start;
+}
+
+.our-articles-modals__title {
+  text-align: center;
+}
+
+.our-articles-modals__title.isLaptop,
+.our-articles-modals__title.isDesctop {
+  text-align: left;
 }
 
 .our-articles-modals__center {
@@ -7896,9 +8029,14 @@ body.bg-white {
 
 .our-articles-modals__wrapper-img {
   width: 100%;
-  padding-bottom: 38.87%;
+  padding-bottom: 74.19%;
   margin-bottom: 20px;
   overflow: hidden;
+}
+
+.our-articles-modals__wrapper-img.isLaptop,
+.our-articles-modals__wrapper-img.isDesctop {
+  padding-bottom: 38.87%;
 }
 
 .our-articles-modals__wrapper-img.isDesctop {
@@ -7957,6 +8095,7 @@ body.bg-white {
 .our-articles-modals__bottom {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .our-articles-modals__btn {
@@ -8475,6 +8614,10 @@ body.bg-white {
   width: 100%;
 }
 
+.create-review-modals__box--small {
+  flex-shrink: 0;
+}
+
 .create-review-modals__box--small.isLaptop,
 .create-review-modals__box--small.isDesctop {
   flex-grow: 0;
@@ -8572,9 +8715,33 @@ body.bg-white {
   cursor: pointer;
 }
 
+.create-review-modals__wrapper-img::before {
+  content: "Фото";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-color: #E4E4E4;
+  font-family: "DIN Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #9B9A9A;
+}
+
 .create-review-modals__wrapper-img.isDesctop {
   width: 5.7291666667vw;
   height: 5.7291666667vw;
+}
+
+.create-review-modals__wrapper-img.isDesctop::before {
+  font-size: 0.8333333333vw;
 }
 
 .create-review-modals__img {
@@ -8801,15 +8968,30 @@ body.bg-white {
   z-index: 1;
 }
 
+.how-to-switch.isLaptop {
+  padding-top: 150px;
+}
+
+.how-to-switch.isDesctop {
+  padding-top: 7.8125vw;
+}
+
 .how-to-switch__decor {
   position: absolute;
   left: 0;
-  bottom: -6.7708333333vw;
-  display: none;
+  bottom: -70px;
+  max-width: 200px;
+}
+
+.how-to-switch__decor.isLaptop {
+  max-width: unset;
+  bottom: -130px;
 }
 
 .how-to-switch__decor.isDesctop {
+  max-width: unset;
   display: block;
+  bottom: -6.7708333333vw;
 }
 
 .how-to-switch__content {

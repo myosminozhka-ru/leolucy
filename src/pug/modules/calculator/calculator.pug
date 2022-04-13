@@ -19,10 +19,10 @@ section.section.calculator(style={'background-image': 'url(img/section/3.png)'})
                 
                 .calculator__column-row(:class='{isDesctop, isTablet, isLaptop}')
                     span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Вид:
-                    .calculator__list 
-                        +checkbox("Сухой")#radio-0.calculator__checkbox
-                        +checkbox("Влажный")#radio-1.calculator__checkbox
-                        +checkbox("Комбинированный")#radio-2.calculator__checkbox
+                    .calculator__list(:class='{isDesctop, isTablet, isLaptop}') 
+                        +checkbox("Сухой")#radio-0.calculator__checkbox(name="calculator")
+                        +checkbox("Влажный")#radio-1.calculator__checkbox(name="calculator")
+                        +checkbox("Комбо")#radio-2.calculator__checkbox(name="calculator")
                 
                 .calculator__result(:class='{isDesctop, isTablet, isLaptop}')
                     .calculator__result-content
@@ -32,7 +32,7 @@ section.section.calculator(style={'background-image': 'url(img/section/3.png)'})
                             span.calculator__result-text(:class='{isDesctop, isTablet, isLaptop}') грамм
             
             .calculator__right(:class='{isDesctop, isTablet, isLaptop}') 
-                .calculator__box(:class='{isDesctop, isTablet, isLaptop}', style={'background-image': 'url(/img/calculator/1.png)'})
+                .calculator__box(:class='{isDesctop, isTablet, isLaptop}', style={'background-image': 'url(img/calculator/1.png)'})
                     .calculator__box-content
                         span.subtitle.calculator__box-title(:class='{isDesctop, isTablet, isLaptop}') Рекомендации
                         p.calculator__box-description(:class='{isDesctop, isTablet, isLaptop}') Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.

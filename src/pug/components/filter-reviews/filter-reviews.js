@@ -64,6 +64,11 @@ const FilterReviews = class FilterReviews {
 
     init(classReviews) {
         this.classReviews = classReviews;
+        document.addEventListener('click', (e) => {
+            if (!e.composedPath().find(item => item.classList?.contains('filter-reviews__mobile-dropdown') || item.classList?.contains('filter-reviews__btn-transaprent'))) {
+                this.hiddenMobileDropdown();
+            }
+        });
     }
 
     onSelectAge(selectItemObj) {
@@ -84,6 +89,10 @@ const FilterReviews = class FilterReviews {
 
     toggleMobileDropdown() {
         this.isShowMobileDropdown = !this.isShowMobileDropdown;
+    }
+
+    hiddenMobileDropdown() {
+        this.isShowMobileDropdown = false;
     }
 }
 

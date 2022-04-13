@@ -17,6 +17,7 @@ import OurArticles from '../pug/modules/our-articles/our-articles.js';
 import Modals from '../pug/modules/modals/modals.js';
 import Reviews from '../pug/modules/reviews/reviews.js';
 import Quiz from '../pug/modules/quiz/quiz.js';
+import Preloader from '../pug/components/preloader/preloader.js';
 
 import AppSelect from '../pug/components/select/select.jsx';
 import AppAccordion from '../pug/components/accordion/accordion.jsx';
@@ -49,6 +50,7 @@ window.app = new Vue({
         modals: new Modals(),
         reviews: new Reviews(),
         quiz: new Quiz(),
+        preloader: new Preloader(),
     }),
     beforeCreate() {        
         window.addEventListener('resize', () => {
@@ -69,6 +71,7 @@ window.app = new Vue({
         this.modals.init();
         this.reviews.init();
         this.quiz.init();
+        this.preloader.init();
     },
     mounted() {
         this.isMounted = true;

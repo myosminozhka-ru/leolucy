@@ -8,6 +8,13 @@
 </head>
 <body>
   <div class="app wrapper" id="app" :class="[{isDesctop, isTablet, isLaptop}, isMounted]" :style="isMounted ? '' : 'display: none'">
+    <div class="preloader" style="background-image:url(img/preloader/1.png);">
+      <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="preloader__content"> 
+          <div class="logo preloader__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+        </div>
+      </div>
+    </div>
     <div class="header app__header" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
       <div class="header__content"> 
         <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
@@ -320,9 +327,9 @@
                 <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="0" data-min="0" data-max="10"></div>
               </div>
               <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Вид:</span>
-                <div class="calculator__list"> 
+                <div class="calculator__list" :class="{isDesctop, isTablet, isLaptop}"> 
                   <div class="checkbox calculator__checkbox">
-                    <input class="checkbox__input" type="checkbox" id="radio-0"/>
+                    <input class="checkbox__input" type="radio" id="radio-0" name="calculator"/>
                     <label class="checkbox__label" for="radio-0"><span class="checkbox__decoration">
                         <svg class="icon icon--check checkbox__check">
                           <use xlink:href="img/icons/icons.svg#check"></use>
@@ -330,7 +337,7 @@
                     </label>
                   </div>
                   <div class="checkbox calculator__checkbox">
-                    <input class="checkbox__input" type="checkbox" id="radio-1"/>
+                    <input class="checkbox__input" type="radio" id="radio-1" name="calculator"/>
                     <label class="checkbox__label" for="radio-1"><span class="checkbox__decoration">
                         <svg class="icon icon--check checkbox__check">
                           <use xlink:href="img/icons/icons.svg#check"></use>
@@ -338,11 +345,11 @@
                     </label>
                   </div>
                   <div class="checkbox calculator__checkbox">
-                    <input class="checkbox__input" type="checkbox" id="radio-2"/>
+                    <input class="checkbox__input" type="radio" id="radio-2" name="calculator"/>
                     <label class="checkbox__label" for="radio-2"><span class="checkbox__decoration">
                         <svg class="icon icon--check checkbox__check">
                           <use xlink:href="img/icons/icons.svg#check"></use>
-                        </svg></span><span class="checkbox__text">Комбинированный</span>
+                        </svg></span><span class="checkbox__text">Комбо</span>
                     </label>
                   </div>
                 </div>
@@ -354,7 +361,7 @@
               </div>
             </div>
             <div class="calculator__right" :class="{isDesctop, isTablet, isLaptop}"> 
-              <div class="calculator__box" :class="{isDesctop, isTablet, isLaptop}" style="background-image:url(/img/calculator/1.png);">
+              <div class="calculator__box" :class="{isDesctop, isTablet, isLaptop}" style="background-image:url(img/calculator/1.png);">
                 <div class="calculator__box-content"><span class="subtitle calculator__box-title" :class="{isDesctop, isTablet, isLaptop}">Рекомендации</span>
                   <p class="calculator__box-description" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
                   <div class="calculator__block" :class="{isDesctop, isTablet, isLaptop}"> 
@@ -409,7 +416,7 @@
           </div>
         </div><img class="quiz__decor quiz__decor--bottom" src="img/quiz/decor-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
       </section>
-      <section class="section how-to-switch" style="background-image:url(img/section/4.png);"><img class="how-to-switch__decor" src="img/how-to-switch/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="section how-to-switch" style="background-image:url(img/section/4.png);" :class="{isDesctop, isTablet, isLaptop}"><img class="how-to-switch__decor" src="img/how-to-switch/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="how-to-switch__content" :class="{isDesctop, isTablet, isLaptop}">
           <h2 class="title how-to-switch__title" :class="{isDesctop, isTablet, isLaptop}">Как перейти на этот корм</h2>
           <div class="how-to-switch__list" :class="{isDesctop, isTablet, isLaptop}">
@@ -888,12 +895,12 @@
               </li>
             </ul><span class="modals__subtitle our-articles-modals__subtitle" :class="{isDesctop, isTablet, isLaptop}">Характеристики</span>
             <p class="modals__text our-articles-modals__text" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
-          </div>
-          <div class="modals__bottom our-articles-modals__bottom" :class="{isDesctop, isTablet, isLaptop}"> 
-            <button class="btn btn--gold-border-rounded btn--black-text our-articles-modals__btn" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">Предыдущая</span>
-            </button>
-            <button class="btn btn--gold-border-rounded btn--black-text our-articles-modals__btn" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">Следующая</span>
-            </button>
+            <div class="modals__bottom our-articles-modals__bottom" :class="{isDesctop, isTablet, isLaptop}"> 
+              <button class="btn btn--gold-border-rounded btn--black-text our-articles-modals__btn" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">Предыдущая</span>
+              </button>
+              <button class="btn btn--gold-border-rounded btn--black-text our-articles-modals__btn" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">Следующая</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -961,7 +968,7 @@
                     <input class="create-review-modals__input" :class="{isDesctop, isTablet, isLaptop}" type="text" id="city" placeholder="Ваш город">
                   </div>
                   <div class="create-review-modals__box create-review-modals__box--small" :class="{isDesctop, isTablet, isLaptop}"> 
-                    <div class="create-review-modals__wrapper-img" id="create-review-modals__dropzone" :class="[{isDesctop, isTablet, isLaptop}, !modals.createReviewModalsData.photo.status ? &quot;animate__animated animate__headShake&quot;: &quot;&quot; ]"> <img class="create-review-modals__img" :src="modals.createReviewModalsData.photo.url" alt=""></div>
+                    <div class="create-review-modals__wrapper-img" id="create-review-modals__dropzone" :class="[{isDesctop, isTablet, isLaptop}, !modals.createReviewModalsData.photo.status ? &quot;animate__animated animate__headShake&quot;: &quot;&quot; ]"> <img class="create-review-modals__img" :src="modals.createReviewModalsData.photo.url" v-if="modals.createReviewModalsData.photo.url" alt=""></div>
                   </div>
                 </div>
               </div>

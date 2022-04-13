@@ -6,10 +6,21 @@ const Header = class Header {
     
     init() {
         this.addHeaderScrollClass();
+
+        document.addEventListener('click', (e) => {
+            if (!e.composedPath().find(item => item.classList?.contains('header-panel') || item.classList?.contains('header__show-menu'))) {
+                this.hiddenMenu();
+            }
+        });
     }
 
     toggleMenu() {
         this.isShowMenu = !this.isShowMenu;
+    }
+
+
+    hiddenMenu() {
+        this.isShowMenu = false;
     }
 
     addHeaderScrollClass() {
