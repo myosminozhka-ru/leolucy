@@ -4,10 +4,8 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: $mineShaft;
+    background-color: $codGray;
+    background-image: radial-gradient(50% 50% at 50% 50%, rgba($white, .1) 70.75%, rgba(0, 0, 0, 0) 99.46%);
     z-index: 10;
     opacity: 1;
     visibility: visible;
@@ -17,11 +15,55 @@
         width: 100%;
         height: 100vh;
         display: flex;
+        flex-direction: column;
     }
 
     &__logo {
         max-width: 100%;
-        margin: auto;
+        margin: auto auto 50px;
+
+        &.isDesctop {
+            margin: auto auto vw(50px);
+        }
+    }
+
+    &__spinner {
+        color: rgba($pesto, .6);
+        width: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        stroke-width: 3px;
+
+        &-circle {
+            transform-origin: center;
+            animation-name: animation;
+            animation-duration: 1.2s;
+            animation-timing-function: cubic-bezier;
+            animation-iteration-count: infinite;
+        }
+
+        &.isDesctop {
+            stroke-width: vw(3px);
+            width: vw(80px);
+        }
+    }
+
+    @keyframes animation {
+        0% {
+            stroke-dasharray: 1 78;
+            stroke-dashoffset: -105;
+        }
+    
+        50% {
+            stroke-dasharray: 60 10;
+            stroke-dashoffset: -160;
+        }
+    
+        100% {
+            stroke-dasharray: 1 78;
+            stroke-dashoffset: -300;
+        }
     }
 
     &--on-hidden {
