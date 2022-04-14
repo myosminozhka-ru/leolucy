@@ -45,6 +45,13 @@ export default class Modals {
         if(document.querySelector(`.${name}`)) {
             document.querySelector(`.${name}`).classList.remove('modals--is-open');
             document.querySelector('body').style.overflow = '';
+
+            if (name === 'our-articles-modals') {
+                document.querySelectorAll('.our-articles-modals__center').forEach(modalsCenter => {
+                    modalsCenter.scrollTop = 0;
+                })
+                
+            }
         }
     }
 
