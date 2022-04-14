@@ -1,5 +1,6 @@
 .privacy-policy {
     &__title {
+        text-align: left;
         margin-bottom: 30px;
 
         &.isLaptop {
@@ -94,9 +95,6 @@
 
     &__left {
         margin-bottom: 20px;
-    }
-
-    &__right {
     }
 
     &__heading {
