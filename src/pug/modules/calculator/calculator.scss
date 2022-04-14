@@ -345,12 +345,12 @@
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, auto);
             align-content: start;
-            grid-template-areas: 'box-title''box-subtitle''box-food';
+            grid-template-areas: 'box-title' 'box-subtitle' 'box-food';
 
             &.isLaptop,
             &.isDesctop {
                 grid-template-columns: auto 1fr;
-                grid-template-areas: 'box-food box-title''box-food box-subtitle''box-food null''box-food box-dish';
+                grid-template-areas: 'box-food box-title' 'box-food box-subtitle' 'box-food null' 'box-food box-dish';
 
             }
 
