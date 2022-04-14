@@ -4318,10 +4318,129 @@ template {
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto-Black.woff") format("woff"), url("../fonts/Roboto-Black.ttf") format("ttf");
+  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff"), url("../fonts/Mulish-Black.ttf") format("ttf");
   font-weight: 900;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-BlackItalic.woff2") format("woff2"), url("../fonts/Mulish-BlackItalic.woff") format("woff"), url("../fonts/Mulish-BlackItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-ExtraLight.woff2") format("woff2"), url("../fonts/Mulish-ExtraLight.woff") format("woff"), url("../fonts/Mulish-ExtraLight.ttf") format("ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-BoldItalic.woff2") format("woff2"), url("../fonts/Mulish-BoldItalic.woff") format("woff"), url("../fonts/Mulish-BoldItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Mulish-ExtraBoldItalic.woff") format("woff"), url("../fonts/Mulish-ExtraBoldItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Mulish-ExtraLightItalic.woff") format("woff"), url("../fonts/Mulish-ExtraLightItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-Light.woff2") format("woff2"), url("../fonts/Mulish-Light.woff") format("woff"), url("../fonts/Mulish-Light.ttf") format("ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-LightItalic.woff2") format("woff2"), url("../fonts/Mulish-LightItalic.woff") format("woff"), url("../fonts/Mulish-LightItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-Medium.woff2") format("woff2"), url("../fonts/Mulish-Medium.woff") format("woff"), url("../fonts/Mulish-Medium.ttf") format("ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish-Regular.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2"), url("../fonts/Mulish-SemiBold.woff") format("woff"), url("../fonts/Mulish-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Mulish-SemiBoldItalic.woff") format("woff"), url("../fonts/Mulish-SemiBoldItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PTSansNarrow";
+  font-display: swap;
+  src: url("../fonts/PTSansNarrow-Bold.woff2") format("woff2"), url("../fonts/PTSansNarrow-Bold.woff") format("woff"), url("../fonts/PTSansNarrow-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-MediumItalic.woff2") format("woff2"), url("../fonts/Mulish-MediumItalic.woff") format("woff"), url("../fonts/Mulish-MediumItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PTSansNarrow";
+  font-display: swap;
+  src: url("../fonts/PTSansNarrow-Regular.woff2") format("woff2"), url("../fonts/PTSansNarrow-Regular.woff") format("woff"), url("../fonts/PTSansNarrow-Regular.ttf") format("ttf");
+  font-weight: 400;
 }
 
 * {
@@ -4475,7 +4594,7 @@ body.bg-white {
 }
 
 .btn {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -4763,7 +4882,7 @@ body.bg-white {
 }
 
 .btn--moon-mist-border-rounded {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-size: 16px;
   line-height: 20px;
   color: #64552F;
@@ -4900,7 +5019,7 @@ body.bg-white {
 }
 
 .checkbox {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   color: #fff;
   font-weight: 700;
   font-size: 16px;
@@ -4961,7 +5080,7 @@ body.bg-white {
 }
 
 .quiz-radio {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -5150,7 +5269,7 @@ body.bg-white {
 }
 
 .select {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   color: #fff;
 }
 
@@ -5260,7 +5379,7 @@ body.bg-white {
 }
 
 .title {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-size: 26px;
   font-weight: bold;
   color: #F9F9F9;
@@ -5282,7 +5401,7 @@ body.bg-white {
 }
 
 .subtitle {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-size: 16px;
   font-weight: 400;
   color: #F9F9F9;
@@ -5379,7 +5498,7 @@ body.bg-white {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -5551,7 +5670,7 @@ body.bg-white {
 }
 
 .img-card__title {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -5593,7 +5712,7 @@ body.bg-white {
 }
 
 .accordion__title {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -5659,7 +5778,7 @@ body.bg-white {
 }
 
 .accordion__text {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -5676,7 +5795,7 @@ body.bg-white {
 }
 
 .step-block {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   color: #fff;
   max-width: 285px;
 }
@@ -5875,7 +5994,7 @@ body.bg-white {
 }
 
 .review-card__name {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -5891,7 +6010,7 @@ body.bg-white {
 }
 
 .review-card__city {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -5904,7 +6023,7 @@ body.bg-white {
 }
 
 .review-card__text {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -5955,7 +6074,7 @@ body.bg-white {
 }
 
 .filter-reviews__border-block .filter-reviews__info-title {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
@@ -6046,7 +6165,7 @@ body.bg-white {
 }
 
 .filter-reviews__mobile-dropdown .filter-reviews__info-title {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-weight: 700;
   font-size: 20px;
   line-height: 120%;
@@ -6091,7 +6210,7 @@ body.bg-white {
 }
 
 .filter-reviews__select-item {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
@@ -6367,7 +6486,7 @@ body.bg-white {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-size: 18px;
   line-height: 120%;
   margin-bottom: 60px;
@@ -6406,7 +6525,7 @@ body.bg-white {
 }
 
 .header-panel__link {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-size: 26px;
   font-weight: 400;
   text-decoration: none;
@@ -6795,7 +6914,7 @@ body.bg-white {
 }
 
 .philosophy-slider__slide-title {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
@@ -6815,7 +6934,7 @@ body.bg-white {
 }
 
 .philosophy-slider__slide-description {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
@@ -7155,7 +7274,7 @@ body.bg-white {
 }
 
 .ingredients-text-slider__slide-title {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
@@ -7181,7 +7300,7 @@ body.bg-white {
 }
 
 .ingredients-text-slider__slide-description {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
@@ -7370,7 +7489,7 @@ body.bg-white {
 }
 
 .feed-selection__slide-description {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-size: 14px;
   line-height: 120%;
   color: #9B9A9A;
@@ -7604,7 +7723,7 @@ body.bg-white {
 }
 
 .calculator__info-text {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -7661,13 +7780,13 @@ body.bg-white {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
 }
 
 .calculator__result-title {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   line-height: 120%;
   font-size: 20px;
   line-height: 120%;
@@ -7756,7 +7875,7 @@ body.bg-white {
 }
 
 .calculator__box-description {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-size: 16px;
   line-height: 140%;
   margin-bottom: 40px;
@@ -7848,7 +7967,7 @@ body.bg-white {
 .calculator__block-title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-weight: 400;
   font-size: 18px;
   line-height: 120%;
@@ -7874,7 +7993,7 @@ body.bg-white {
 .calculator__block-subtitle {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -7964,7 +8083,7 @@ body.bg-white {
 }
 
 .modals__title {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -7983,7 +8102,7 @@ body.bg-white {
 }
 
 .modals__subtitle {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -8002,7 +8121,7 @@ body.bg-white {
 }
 
 .modals__text {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -8285,7 +8404,7 @@ body.bg-white {
 }
 
 .feed-selection-modals__subtitle {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -8714,7 +8833,7 @@ body.bg-white {
 }
 
 .create-review-modals__label {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -8743,7 +8862,7 @@ body.bg-white {
   padding: 14px 20px;
   border-radius: 10px;
   border: 4px solid #756130;
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -8752,7 +8871,7 @@ body.bg-white {
 }
 
 .create-review-modals__input::-moz-placeholder {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -8765,7 +8884,7 @@ body.bg-white {
 .create-review-modals__input:-ms-input-placeholder,
 .create-review-modals__input::-ms-input-placeholder,
 .create-review-modals__input::placeholder {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -8816,7 +8935,7 @@ body.bg-white {
   height: 100%;
   transform: translate(-50%, -50%);
   background-color: #E4E4E4;
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -8857,7 +8976,7 @@ body.bg-white {
   padding: 14px 20px;
   border-radius: 10px;
   border: 4px solid #756130;
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -8866,7 +8985,7 @@ body.bg-white {
 }
 
 .create-review-modals__textarea::-moz-placeholder {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -8879,7 +8998,7 @@ body.bg-white {
 .create-review-modals__textarea:-ms-input-placeholder,
 .create-review-modals__textarea::-ms-input-placeholder,
 .create-review-modals__textarea::placeholder {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -9285,7 +9404,7 @@ body.bg-white {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -9378,7 +9497,7 @@ body.bg-white {
 }
 
 .quiz__step-title {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -9398,7 +9517,7 @@ body.bg-white {
 }
 
 .quiz__step-info {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -9495,7 +9614,7 @@ body.bg-white {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: footer__heading-contacts;
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
@@ -9639,7 +9758,7 @@ body.bg-white {
 
 .footer__gold-link {
   text-decoration: none;
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
@@ -9718,7 +9837,7 @@ body.bg-white {
 
 .footer__copyright,
 .footer__policy-link {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -9797,7 +9916,7 @@ body.bg-white {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -9905,7 +10024,7 @@ body.bg-white {
 }
 
 .privacy-policy__list-item {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -9954,7 +10073,7 @@ body.bg-white {
 }
 
 .privacy-policy__heading {
-  font-family: "DIN Pro";
+  font-family: "PTSansNarrow";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -9972,7 +10091,7 @@ body.bg-white {
 }
 
 .privacy-policy__text {
-  font-family: "Century Gothic";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

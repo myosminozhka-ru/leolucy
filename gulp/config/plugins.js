@@ -16,5 +16,5 @@ export const plugins = {
     newer: newer,
     if: ifPlugin,
     dotenv: dotenv,
-    ngrok: ngrok
+    ngrok: ngrok,
 }
