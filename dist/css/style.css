@@ -7863,6 +7863,7 @@ body.bg-white {
 }
 
 .calculator__box-title {
+  color: #fff;
   margin-bottom: 10px;
 }
 
@@ -7983,11 +7984,13 @@ body.bg-white {
 
 .calculator__block-title.isLaptop {
   font-size: 20px;
+  padding-top: 29px;
 }
 
 .calculator__block-title.isDesctop {
   font-size: 1.0416666667vw;
   margin-bottom: 0.5208333333vw;
+  padding-top: 1.5104166667vw;
 }
 
 .calculator__block-subtitle {
@@ -9972,6 +9975,7 @@ body.bg-white {
 }
 
 .privacy-policy__title {
+  text-align: left;
   margin-bottom: 30px;
 }
 
