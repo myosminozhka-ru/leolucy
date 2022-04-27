@@ -1,3 +1,5 @@
 export const stringClassesArray = (arr) => {
-    return '.'+ arr.join('.');
+    if (arr) {
+        return '.'+ arr.join('.');
+    }
 };

@@ -1,16 +1,21 @@
 .where-to-buy-slider {
-    &__swiper-wrapper {
-        &.isLaptop,
-        &.isDesctop {
-            flex-direction: column;
-            flex-wrap: wrap;
-        }
-    }
 
     &__slide {
-        height: auto;
+        height: auto;                                                                                                                                           
 
         &-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &.isLaptop,
+            &.isDesctop {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, auto);
+            }
+        }
+
+        &-wrapper-img {
+            min-width: 0;
             width: 100%;
             padding-bottom: 100%;
         }

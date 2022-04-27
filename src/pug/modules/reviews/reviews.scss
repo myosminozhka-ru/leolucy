@@ -6,8 +6,9 @@
 
     &__decor {
         position: absolute;
-        left: 0;
-        bottom: vw(-300px);
+        left: vw(-70px);
+        bottom: vw(-130px);
+        max-width: vw(470px);
         display: none;
 
         &.isDesctop {

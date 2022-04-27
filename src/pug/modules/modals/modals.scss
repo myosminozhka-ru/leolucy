@@ -326,12 +326,12 @@
     &__grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: 'feed-selection-title-box''feed-selection-left''feed-selection-right';
+        grid-template-areas: 'feed-selection-title-box' 'feed-selection-left' 'feed-selection-right';
 
         &.isLaptop,
         &.isDesctop {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-areas: 'feed-selection-left feed-selection-title-box''feed-selection-left feed-selection-right';
+            grid-template-areas: 'feed-selection-left feed-selection-title-box' 'feed-selection-left feed-selection-right';
         }
 
         &.isLaptop {
@@ -651,6 +651,20 @@
     &__btn {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .where-to-buy-slider__panel {
+        display: none;
+
+        &.isLaptop,
+        &.isDesctop {
+            display: flex;
+        }
+    }
+
+    .where-to-buy-slider__dots {
+        margin-top: 30px;
+        top: 0;
     }
 }
 

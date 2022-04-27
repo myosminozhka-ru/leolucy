@@ -5,5 +5,5 @@
         .modals__bottom.where-to-buy-modals__bottom(:class='{isDesctop, isTablet, isLaptop}') 
             span.modals__title.where-to-buy-modals__title(:class='{isDesctop, isTablet, isLaptop}')  Где купить
             .where-to-buy-modals__box(style={'background-image': 'url(img/section/6.png)'}, :class='{isDesctop, isTablet, isLaptop}')
-                +where-to-buy-slider(arrayWhereBuySlides)(data-count-slides="5")
+                +where-to-buy-slider(arrayWhereBuySlides)(data-count-slides="5", data-arrow="false", class="where-to-buy-modals__slider")
             +btn('Назад')(@click="modals.hideModals('where-to-buy-modals')").btn--gold-border-rounded.btn--black-text.where-to-buy-modals__btn

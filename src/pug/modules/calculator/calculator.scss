@@ -27,11 +27,13 @@
             max-width: 342px;
 
             &.isLaptop {
-                max-width: 542px;
+                max-width: 842px;
+                right: -80px;
             }
             
             &.isDesctop {
-                max-width: vw(542px);
+                max-width: vw(842px);
+                right: vw(-80px);
             }
         }
     }
@@ -47,7 +49,7 @@
         }
 
         &.isLaptop {
-            grid-template-columns: 500px auto;
+            grid-template-columns: 400px auto;
             grid-gap: 0 90px;
         }
 
@@ -83,6 +85,7 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 30px;
+        min-width: 0;
 
         &.isDesctop,
         &.isLaptop {
@@ -258,6 +261,7 @@
     }
 
     &__right {
+        min-width: 0;
         &.isDesctop,
         &.isLaptop {
             grid-area: calculator-right;
@@ -332,7 +336,7 @@
 
         &.isTablet {
             border-radius: 20px;
-            padding: 10px 25px 20px;
+            padding: 20px 25px;
         }
 
         &.isDesctop {
@@ -349,16 +353,18 @@
 
             &.isLaptop,
             &.isDesctop {
-                grid-template-columns: auto 1fr;
+                
                 grid-template-areas: 'box-food box-title' 'box-food box-subtitle' 'box-food null' 'box-food box-dish';
 
             }
 
             &.isLaptop {
+                grid-template-columns: .9fr 1fr;
                 grid-gap: 0 10px;
             }
 
             &.isDesctop {
+                grid-template-columns: 1fr vw(250px);
                 grid-gap: 0 vw(10px);
             }
         }
@@ -369,8 +375,13 @@
             margin-left: auto;
             margin-right: auto;
 
+            &.isTablet {
+                max-width: 60%;
+            }
+
             &.isLaptop {
-                max-width: 217px;
+                width: 100%;
+                align-self: end;
             }
             
             &.isDesctop {
@@ -386,6 +397,7 @@
             text-transform: uppercase;
             margin-bottom: 5px;
             grid-area: box-title;
+            min-width: 0;
 
             &.isLaptop {
                 font-size: 20px;
@@ -410,7 +422,7 @@
 
             &.isLaptop {
                 font-size: 16px;
-                margin-bottom: auto;
+                margin-bottom: 20px;
             }
             
             &.isDesctop {
@@ -420,12 +432,21 @@
         }
 
         &-dish {
+            min-width: 0;
             display: none;
         
             &.isLaptop,
             &.isDesctop {
                 display: inline-flex;
                 grid-area: box-dish;
+            }
+
+            &.isLaptop {
+                width: 60%;
+            }
+
+            &.isDesctop {
+                width: 100%;
             }
         }
     }

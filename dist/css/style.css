@@ -4341,22 +4341,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
-  src: url("../fonts/Mulish-ExtraLight.woff2") format("woff2"), url("../fonts/Mulish-ExtraLight.woff") format("woff"), url("../fonts/Mulish-ExtraLight.ttf") format("ttf");
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
   src: url("../fonts/Mulish-BoldItalic.woff2") format("woff2"), url("../fonts/Mulish-BoldItalic.woff") format("woff"), url("../fonts/Mulish-BoldItalic.ttf") format("ttf");
   font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
 }
 
 @font-face {
@@ -4369,7 +4362,21 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
+  src: url("../fonts/Mulish-ExtraLight.woff2") format("woff2"), url("../fonts/Mulish-ExtraLight.woff") format("woff"), url("../fonts/Mulish-ExtraLight.ttf") format("ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
   src: url("../fonts/Mulish-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Mulish-ExtraLightItalic.woff") format("woff"), url("../fonts/Mulish-ExtraLightItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -4390,15 +4397,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Mulish-Medium.woff2") format("woff2"), url("../fonts/Mulish-Medium.woff") format("woff"), url("../fonts/Mulish-Medium.ttf") format("ttf");
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Medium.woff2") format("woff2"), url("../fonts/Mulish-Medium.woff") format("woff"), url("../fonts/Mulish-Medium.ttf") format("ttf");
-  font-weight: 500;
+  src: url("../fonts/Mulish-MediumItalic.woff2") format("woff2"), url("../fonts/Mulish-MediumItalic.woff") format("woff"), url("../fonts/Mulish-MediumItalic.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -4422,25 +4429,158 @@ template {
   font-weight: 400;
 }
 
+/* cyrillic-ext */
+
 @font-face {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
-  src: url("../fonts/PTSansNarrow-Bold.woff2") format("woff2"), url("../fonts/PTSansNarrow-Bold.woff") format("woff"), url("../fonts/PTSansNarrow-Bold.ttf") format("ttf");
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
-  src: url("../fonts/Mulish-MediumItalic.woff2") format("woff2"), url("../fonts/Mulish-MediumItalic.woff") format("woff"), url("../fonts/Mulish-MediumItalic.ttf") format("ttf");
-  font-weight: 400;
-}
+/* cyrillic */
 
 @font-face {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
   font-display: swap;
-  src: url("../fonts/PTSansNarrow-Regular.woff2") format("woff2"), url("../fonts/PTSansNarrow-Regular.woff") format("woff"), url("../fonts/PTSansNarrow-Regular.ttf") format("ttf");
-  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+/* vietnamese */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 * {
@@ -5379,7 +5519,7 @@ body.bg-white {
 }
 
 .title {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-size: 26px;
   font-weight: bold;
   color: #F9F9F9;
@@ -5401,7 +5541,7 @@ body.bg-white {
 }
 
 .subtitle {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #F9F9F9;
@@ -5547,17 +5687,27 @@ body.bg-white {
   font-size: 1.0416666667vw;
 }
 
-.where-to-buy-slider__swiper-wrapper.isLaptop,
-.where-to-buy-slider__swiper-wrapper.isDesctop {
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
 .where-to-buy-slider__slide {
   height: auto;
 }
 
 .where-to-buy-slider__slide-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.where-to-buy-slider__slide-content.isLaptop,
+.where-to-buy-slider__slide-content.isDesctop {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: (auto)[2];
+  grid-template-rows: repeat(2, auto);
+}
+
+.where-to-buy-slider__slide-wrapper-img {
+  min-width: 0;
   width: 100%;
   padding-bottom: 100%;
 }
@@ -5712,7 +5862,7 @@ body.bg-white {
 }
 
 .accordion__title {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6010,7 +6160,7 @@ body.bg-white {
 }
 
 .review-card__city {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -6074,7 +6224,7 @@ body.bg-white {
 }
 
 .filter-reviews__border-block .filter-reviews__info-title {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
@@ -6165,7 +6315,7 @@ body.bg-white {
 }
 
 .filter-reviews__mobile-dropdown .filter-reviews__info-title {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 120%;
@@ -6486,7 +6636,7 @@ body.bg-white {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 120%;
   margin-bottom: 60px;
@@ -6914,7 +7064,7 @@ body.bg-white {
 }
 
 .philosophy-slider__slide-title {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
@@ -7003,7 +7153,7 @@ body.bg-white {
 .philosophy-slider__dot {
   height: 4px;
   width: 20px;
-  background-color: rgba(133, 117, 78, 0.1);
+  background-color: rgba(133, 117, 78, 0.4);
   flex-basis: 0;
   flex-grow: 1;
   transition: all 0.5s ease;
@@ -7027,7 +7177,7 @@ body.bg-white {
 }
 
 .ingredients__decoration--right {
-  right: 0;
+  right: -10%;
   bottom: -10%;
   max-width: 40%;
 }
@@ -7274,7 +7424,7 @@ body.bg-white {
 }
 
 .ingredients-text-slider__slide-title {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
@@ -7489,7 +7639,7 @@ body.bg-white {
 }
 
 .feed-selection__slide-description {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 120%;
   color: #9B9A9A;
@@ -7594,11 +7744,13 @@ body.bg-white {
 }
 
 .calculator__decoration--bottom.isLaptop {
-  max-width: 542px;
+  max-width: 842px;
+  right: -80px;
 }
 
 .calculator__decoration--bottom.isDesctop {
-  max-width: 28.2291666667vw;
+  max-width: 43.8541666667vw;
+  right: -4.1666666667vw;
 }
 
 .calculator__content {
@@ -7614,8 +7766,8 @@ body.bg-white {
 }
 
 .calculator__content.isLaptop {
-  -ms-grid-columns: 500px auto;
-  grid-template-columns: 500px auto;
+  -ms-grid-columns: 400px auto;
+  grid-template-columns: 400px auto;
   grid-gap: 0 90px;
 }
 
@@ -7654,6 +7806,7 @@ body.bg-white {
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
+  min-width: 0;
 }
 
 .calculator__left.isDesctop,
@@ -7723,7 +7876,7 @@ body.bg-white {
 }
 
 .calculator__info-text {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -7780,13 +7933,13 @@ body.bg-white {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 .calculator__result-title {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   line-height: 120%;
   font-size: 20px;
   line-height: 120%;
@@ -7828,6 +7981,10 @@ body.bg-white {
 
 .calculator__result-text.isDesctop {
   font-size: 1.3020833333vw;
+}
+
+.calculator__right {
+  min-width: 0;
 }
 
 .calculator__right.isDesctop,
@@ -7908,7 +8065,7 @@ body.bg-white {
 
 .calculator__block.isTablet {
   border-radius: 20px;
-  padding: 10px 25px 20px;
+  padding: 20px 25px;
 }
 
 .calculator__block.isDesctop {
@@ -7929,16 +8086,18 @@ body.bg-white {
 
 .calculator__block-content.isLaptop,
 .calculator__block-content.isDesctop {
-  -ms-grid-columns: auto 1fr;
-  grid-template-columns: auto 1fr;
       grid-template-areas: "box-food box-title" "box-food box-subtitle" "box-food null" "box-food box-dish";
 }
 
 .calculator__block-content.isLaptop {
+  -ms-grid-columns: 0.9fr 1fr;
+  grid-template-columns: 0.9fr 1fr;
   grid-gap: 0 10px;
 }
 
 .calculator__block-content.isDesctop {
+  -ms-grid-columns: 1fr 13.0208333333vw;
+  grid-template-columns: 1fr 13.0208333333vw;
   grid-gap: 0 0.5208333333vw;
 }
 
@@ -7957,8 +8116,14 @@ body.bg-white {
   -ms-grid-column: 1;
 }
 
+.calculator__block-food.isTablet {
+  max-width: 60%;
+}
+
 .calculator__block-food.isLaptop {
-  max-width: 217px;
+  width: 100%;
+  -ms-grid-row-align: end;
+      align-self: end;
 }
 
 .calculator__block-food.isDesctop {
@@ -7968,13 +8133,14 @@ body.bg-white {
 .calculator__block-title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 120%;
   text-transform: uppercase;
   margin-bottom: 5px;
   grid-area: box-title;
+  min-width: 0;
 }
 
 .calculator__block-content.isLaptop > .calculator__block-title, .calculator__block-content.isDesctop > .calculator__block-title {
@@ -8012,7 +8178,7 @@ body.bg-white {
 
 .calculator__block-subtitle.isLaptop {
   font-size: 16px;
-  margin-bottom: auto;
+  margin-bottom: 20px;
 }
 
 .calculator__block-subtitle.isDesctop {
@@ -8021,6 +8187,7 @@ body.bg-white {
 }
 
 .calculator__block-dish {
+  min-width: 0;
   display: none;
 }
 
@@ -8030,6 +8197,14 @@ body.bg-white {
   -ms-grid-column: 2;
   display: inline-flex;
   grid-area: box-dish;
+}
+
+.calculator__block-dish.isLaptop {
+  width: 60%;
+}
+
+.calculator__block-dish.isDesctop {
+  width: 100%;
 }
 
 .modals {
@@ -8086,7 +8261,7 @@ body.bg-white {
 }
 
 .modals__title {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -8105,7 +8280,7 @@ body.bg-white {
 }
 
 .modals__subtitle {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -8407,7 +8582,7 @@ body.bg-white {
 }
 
 .feed-selection-modals__subtitle {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -8703,6 +8878,20 @@ body.bg-white {
   margin-right: auto;
 }
 
+.where-to-buy-modals .where-to-buy-slider__panel {
+  display: none;
+}
+
+.where-to-buy-modals .where-to-buy-slider__panel.isLaptop,
+.where-to-buy-modals .where-to-buy-slider__panel.isDesctop {
+  display: flex;
+}
+
+.where-to-buy-modals .where-to-buy-slider__dots {
+  margin-top: 30px;
+  top: 0;
+}
+
 .create-review-modals__content.isLaptop {
   padding: 50px;
 }
@@ -8836,7 +9025,7 @@ body.bg-white {
 }
 
 .create-review-modals__label {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -8938,7 +9127,7 @@ body.bg-white {
   height: 100%;
   transform: translate(-50%, -50%);
   background-color: #E4E4E4;
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -9137,6 +9326,18 @@ body.bg-white {
   cursor: pointer;
 }
 
+.answers-to-questions__decor {
+  position: absolute;
+  right: -5vw;
+  bottom: -5%;
+  max-width: 28vw;
+  display: none;
+}
+
+.answers-to-questions__decor.isDesctop {
+  display: block;
+}
+
 .answers-to-questions__title {
   margin-bottom: 30px;
 }
@@ -9190,19 +9391,21 @@ body.bg-white {
 
 .how-to-switch__decor {
   position: absolute;
-  left: 0;
+  left: -80px;
   bottom: -70px;
   max-width: 200px;
 }
 
 .how-to-switch__decor.isLaptop {
-  max-width: unset;
+  left: -150px;
+  max-width: 500px;
   bottom: -130px;
 }
 
 .how-to-switch__decor.isDesctop {
-  max-width: unset;
+  max-width: 26.0416666667vw;
   display: block;
+  left: -7.8125vw;
   bottom: -6.7708333333vw;
 }
 
@@ -9276,8 +9479,9 @@ body.bg-white {
 
 .reviews__decor {
   position: absolute;
-  left: 0;
-  bottom: -15.625vw;
+  left: -3.6458333333vw;
+  bottom: -6.7708333333vw;
+  max-width: 24.4791666667vw;
   display: none;
 }
 
@@ -9407,7 +9611,7 @@ body.bg-white {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -9460,11 +9664,13 @@ body.bg-white {
 
 .quiz__decor--top {
   bottom: 0;
-  left: 0;
+  left: -25%;
+  max-height: 90%;
 }
 
 .quiz__decor--bottom {
   right: 0;
+  max-width: 22.3958333333vw;
   bottom: -5.7291666667vw;
 }
 
@@ -9500,7 +9706,7 @@ body.bg-white {
 }
 
 .quiz__step-title {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -9617,7 +9823,7 @@ body.bg-white {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: footer__heading-contacts;
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
@@ -9840,7 +10046,7 @@ body.bg-white {
 
 .footer__copyright,
 .footer__policy-link {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -9919,7 +10125,7 @@ body.bg-white {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -10077,7 +10283,7 @@ body.bg-white {
 }
 
 .privacy-policy__heading {
-  font-family: "PTSansNarrow";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
