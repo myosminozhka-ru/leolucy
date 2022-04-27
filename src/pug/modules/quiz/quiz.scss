@@ -17,11 +17,13 @@
 
         &--top {
             bottom: 0;
-            left: 0;
+            left: -25%;
+            max-height: 90%;
         }
 
         &--bottom {
             right: 0;
+            max-width: vw(430px);
             bottom: vw(-110px);
         }
 

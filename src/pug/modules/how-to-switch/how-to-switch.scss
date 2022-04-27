@@ -14,18 +14,20 @@
 
     &__decor {
         position: absolute;
-        left: 0;
+        left: -80px;
         bottom: -70px;
         max-width: 200px;
 
         &.isLaptop {
-            max-width: unset;
+            left: -150px;
+            max-width: 500px;
             bottom: -130px;
         }
 
         &.isDesctop {
-            max-width: unset;
+            max-width: vw(500);
             display: block;
+            left: vw(-150px);
             bottom: vw(-130px);
         }
     }

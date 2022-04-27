@@ -1,4 +1,16 @@
 .answers-to-questions {
+    &__decor {
+        position: absolute;
+        right: -5vw;
+        bottom: -5%;
+        max-width: 28vw;
+        display: none;
+
+        &.isDesctop {
+            display: block;
+        }
+    }
+
     &__title {
         margin-bottom: 30px;
 

@@ -83,11 +83,9 @@ export default class Modals {
         }, 0)
     }
 
-    whereToBuyModals (data) {
+    whereToBuyModals (swiper) {
         setTimeout(() => {
-            data.forEach(element => {
-                element.update();
-            });
+            swiper.update();
             return true;
         }, 0)
     }

@@ -3,13 +3,13 @@ mixin where-to-buy-slider(items)
         .swiper-wrapper.where-to-buy-slider__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}') 
             each item in items 
                 .swiper-slide.where-to-buy-slider__slide
-                    .where-to-buy-slider__slide-content
-                        img.where-to-buy-slider__slide-img(src=item.img, alt="")
+                        .where-to-buy-slider__slide-content(:class='{isDesctop, isTablet, isLaptop}')
+                            each img in item
+                                .where-to-buy-slider__slide-wrapper-img
+                                    img.where-to-buy-slider__slide-img(src=img.img, alt="")
 
         .where-to-buy-slider__panel(:class='{isDesctop, isTablet, isLaptop}')
             +btn(null, 'triangle-arrow-left').btn--gold-border-mine-shaft-fill-circle.where-to-buy-slider__arrow.where-to-buy-slider__arrow--prev
             +btn(null, 'triangle-arrow-right').btn--gold-border-mine-shaft-fill-circle.where-to-buy-slider__arrow.where-to-buy-slider__arrow--next
         
         .where-to-buy-slider__dots(:class='{isDesctop, isTablet, isLaptop}')
-            span.where-to-buy-slider__dot 
-            span.where-to-buy-slider__dot--active
