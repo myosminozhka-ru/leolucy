@@ -9500,6 +9500,7 @@ body.bg-white {
 .reviews__decor {
   position: absolute;
   display: none;
+  pointer-events: none;
 }
 
 .reviews__decor--top {
@@ -9692,6 +9693,7 @@ body.bg-white {
   position: absolute;
   transform: scale(0.8);
   display: none;
+  pointer-events: none;
 }
 
 .quiz__decor--top {

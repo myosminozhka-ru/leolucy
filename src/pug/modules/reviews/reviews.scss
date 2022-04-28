@@ -11,6 +11,7 @@
     &__decor {
         position: absolute;
         display: none;
+        pointer-events: none;
 
         &--top {
             right: 0;
