@@ -6991,9 +6991,10 @@ body.bg-white {
 .first-screen__animal-food {
   position: absolute;
   max-width: 70%;
-  top: 0;
+  top: 50%;
   opacity: 0;
   pointer-events: none;
+  transform: translateY(-50%);
   transition: all 0.5s ease;
 }
 
@@ -7003,6 +7004,11 @@ body.bg-white {
 
 .first-screen__animal-food--right {
   right: -100%;
+}
+
+.first-screen__animal-food.isDesctop {
+  max-width: unset;
+  width: 25.78125vw;
 }
 
 .first-screen__btn.isLaptop {
@@ -7177,9 +7183,9 @@ body.bg-white {
 }
 
 .ingredients__decoration--right {
-  right: -10%;
-  bottom: -10%;
-  max-width: 40%;
+  right: 0;
+  top: 0;
+  mix-blend-mode: lighten;
 }
 
 .ingredients__decoration.isDesctop {
@@ -7718,6 +7724,10 @@ body.bg-white {
   background-repeat: no-repeat;
 }
 
+.calculator.isDesctop {
+  padding-bottom: 12.65625vw;
+}
+
 .calculator__decoration {
   position: absolute;
   mix-blend-mode: lighten;
@@ -7726,7 +7736,7 @@ body.bg-white {
 .calculator__decoration--top {
   top: 0;
   left: 0;
-  max-width: 193px;
+  max-width: 342px;
 }
 
 .calculator__decoration--top.isLaptop {
@@ -7734,7 +7744,8 @@ body.bg-white {
 }
 
 .calculator__decoration--top.isDesctop {
-  max-width: 17.8125vw;
+  top: -9.1145833333vw;
+  left: 0;
 }
 
 .calculator__decoration--bottom {
@@ -7744,13 +7755,13 @@ body.bg-white {
 }
 
 .calculator__decoration--bottom.isLaptop {
-  max-width: 842px;
-  right: -80px;
+  max-width: unset;
+  bottom: -475px;
 }
 
 .calculator__decoration--bottom.isDesctop {
-  max-width: 43.8541666667vw;
-  right: -4.1666666667vw;
+  max-width: unset;
+  bottom: -24.7395833333vw;
 }
 
 .calculator__content {
@@ -9351,6 +9362,8 @@ body.bg-white {
 }
 
 .answers-to-questions__accordion {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
 }
 
@@ -9367,6 +9380,7 @@ body.bg-white {
 }
 
 .answers-to-questions__accordion.isDesctop {
+  max-width: 51.875vw;
   margin-bottom: 1.5625vw;
 }
 
@@ -9397,16 +9411,17 @@ body.bg-white {
 }
 
 .how-to-switch__decor.isLaptop {
-  left: -150px;
-  max-width: 500px;
-  bottom: -130px;
+  left: 0;
+  bottom: -210px;
 }
 
 .how-to-switch__decor.isDesctop {
-  max-width: 26.0416666667vw;
+  max-width: unset;
   display: block;
-  left: -7.8125vw;
-  bottom: -6.7708333333vw;
+  left: 0;
+  transform: scale(0.8);
+  transform-origin: left bottom;
+  bottom: -23.4375vw;
 }
 
 .how-to-switch__content {
@@ -9477,12 +9492,27 @@ body.bg-white {
   z-index: 1;
 }
 
+.reviews.isDesctop {
+  padding-bottom: 7.8125vw;
+}
+
 .reviews__decor {
   position: absolute;
-  left: -3.6458333333vw;
-  bottom: -6.7708333333vw;
-  max-width: 24.4791666667vw;
   display: none;
+}
+
+.reviews__decor--top {
+  right: 0;
+  top: -36.9791666667vw;
+  transform: scale(0.8);
+  transform-origin: right center;
+}
+
+.reviews__decor--bottom {
+  left: 0;
+  transform: scale(0.7);
+  transform-origin: left center;
+  bottom: -31.5104166667vw;
 }
 
 .reviews__decor.isDesctop {
@@ -9659,19 +9689,20 @@ body.bg-white {
 
 .quiz__decor {
   position: absolute;
+  transform: scale(0.8);
   display: none;
 }
 
 .quiz__decor--top {
   bottom: 0;
-  left: -25%;
-  max-height: 90%;
+  left: 0;
+  transform-origin: left bottom;
 }
 
 .quiz__decor--bottom {
   right: 0;
-  max-width: 22.3958333333vw;
-  bottom: -5.7291666667vw;
+  bottom: 0;
+  transform-origin: right bottom;
 }
 
 .quiz__decor.isDesctop {

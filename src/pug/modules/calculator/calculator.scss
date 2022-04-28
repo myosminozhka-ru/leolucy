@@ -3,6 +3,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    &.isDesctop {
+        padding-bottom: vw(243px);
+    }
+
     &__decoration {
         position: absolute;
         mix-blend-mode: lighten;
@@ -10,14 +14,15 @@
         &--top {
             top: 0;
             left: 0;
-            max-width: 193px;
+            max-width: 342px; 
 
             &.isLaptop {
                 max-width: 342px; 
             }
 
             &.isDesctop {
-                max-width: vw(342px);
+                top: vw(-175px);
+                left: 0;
             }
         }
 
@@ -27,13 +32,13 @@
             max-width: 342px;
 
             &.isLaptop {
-                max-width: 842px;
-                right: -80px;
+                max-width: unset;
+                bottom: -475px;
             }
             
             &.isDesctop {
-                max-width: vw(842px);
-                right: vw(-80px);
+                max-width: unset;
+                bottom: vw(-475px);
             }
         }
     }

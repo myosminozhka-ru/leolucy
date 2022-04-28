@@ -1,5 +1,6 @@
-section.section.reviews(style={'background-image': 'url(img/section/5.png)'})
-    img.reviews__decor(src="img/reviews/1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+section.section.reviews(style={'background-image': 'url(img/section/5.png)'}, :class='{isDesctop, isTablet, isLaptop}')
+    img.reviews__decor.reviews__decor--bottom(src="img/reviews/1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+    img.reviews__decor.reviews__decor--top(src="img/reviews/2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
     +container
         .reviews__content 
             h2.title.reviews__title(:class='{isDesctop, isTablet, isLaptop}') Отзывы

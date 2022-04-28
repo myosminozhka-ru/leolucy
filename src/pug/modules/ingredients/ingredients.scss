@@ -9,9 +9,9 @@
         display: none;
 
         &--right {
-            right: -10%;
-            bottom: -10%;
-            max-width: 40%;
+            right: 0;
+            top: 0;
+            mix-blend-mode: lighten;
         }
 
         &.isDesctop {
