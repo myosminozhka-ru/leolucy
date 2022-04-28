@@ -7744,6 +7744,7 @@ body.bg-white {
 }
 
 .calculator__decoration--top.isDesctop {
+  max-width: unset;
   top: -9.1145833333vw;
   left: 0;
 }

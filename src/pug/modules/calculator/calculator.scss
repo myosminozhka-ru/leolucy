@@ -21,6 +21,7 @@
             }
 
             &.isDesctop {
+                max-width: unset;
                 top: vw(-175px);
                 left: 0;
             }
