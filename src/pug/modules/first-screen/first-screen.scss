@@ -158,9 +158,10 @@
     &__animal-food {
         position: absolute;
         max-width: 70%;
-        top: 0;
+        top: 50%;
         opacity: 0;
         pointer-events: none;
+        transform: translateY(-50%);
         transition: all $ease05;
 
         &--left {
@@ -169,6 +170,12 @@
 
         &--right {
             right: -100%;
+        }
+
+        &.isDesctop {
+            max-width: unset;
+            width: vw(700px - 205px);
+            // height: vw(700px);
         }
     }
 
