@@ -6935,7 +6935,7 @@ body.bg-white {
 }
 
 .first-screen__select--active .first-screen__animal:not(.first-screen__select--active .first-screen__animal--hidden) {
-  transform: scale(1.2) translateX(-50%);
+  transform: scale(1.2);
 }
 
 .first-screen__select--active .first-screen__animal-food--left {
