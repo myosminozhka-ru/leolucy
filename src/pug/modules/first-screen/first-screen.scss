@@ -89,7 +89,7 @@
         &--active {
             #{$screen}__animal {
                 &:not(&--hidden) {
-                    transform: scale(1.2) translateX(-50%);
+                    transform: scale(1.2);
                 }
             }
             
