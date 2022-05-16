@@ -6,9 +6,9 @@ section.section.reviews(style={'background-image': 'url(img/section/5.png)'}, :c
             h2.title.reviews__title(:class='{isDesctop, isTablet, isLaptop}') Отзывы
             +filter-reviews.reviews__filter
             .reviews__slider(:class='{isDesctop, isTablet, isLaptop}') 
-                .swiper.reviews__swiper(v-if="reviews.arrayReviews.length") 
+                .swiper.reviews__swiper(v-if="filterReviews.filteredList.length") 
                     .swiper-wrapper.reviews__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')  
-                        .swiper-slide.review-card(v-for="review in reviews.arrayReviews", :key="review.id")
+                        .swiper-slide.review-card(v-for="review in filterReviews.filteredList", :key="review.id")
                             .review-card__content 
                                 .review-card__top(:class='{isDesctop, isTablet, isLaptop}') 
                                     .review-card__wrapper-img(:class='{isDesctop, isTablet, isLaptop}')  
@@ -22,7 +22,7 @@ section.section.reviews(style={'background-image': 'url(img/section/5.png)'}, :c
                 
                     .reviews__dots(:class='{isDesctop, isTablet, isLaptop}')
 
-                .reviews__panel(:class='{isDesctop, isTablet, isLaptop}', v-if="reviews.arrayReviews.length")
+                .reviews__panel(:class='{isDesctop, isTablet, isLaptop}', v-if="filterReviews.filteredList.length")
                     +btn(null, 'triangle-arrow-left').btn--gold-border-mine-shaft-fill-circle.reviews__arrow.reviews__arrow--prev
                     +btn(null, 'triangle-arrow-right').btn--gold-border-mine-shaft-fill-circle.reviews__arrow.reviews__arrow--next
                 

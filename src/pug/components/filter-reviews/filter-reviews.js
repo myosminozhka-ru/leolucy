@@ -59,7 +59,10 @@ const FilterReviews = class FilterReviews {
                 select: false
             },
         ];
+        this.selectedAge = this.listAge.filter(item => item.select)[0];
+        this.selectedFeed = this.listFeed.filter(item => item.select)[0];
         this.isShowMobileDropdown = false;
+        this.filteredList = []
     }
 
     init(classReviews) {
@@ -71,20 +74,33 @@ const FilterReviews = class FilterReviews {
         });
     }
 
+    filterList() {
+        this.filteredList = this.classReviews.arrayReviews.filter(item => {
+            if (JSON.stringify(item).includes(this.selectedAge.title.replace(/\s/g, '')) && JSON.stringify(item).includes(this.selectedFeed.title.replace(/\s/g, ''))) {
+                return item;
+            } else {
+                return false;
+            }
+        });
+        app.reviews.initSlider();
+    }
+
     onSelectAge(selectItemObj) {
         const findLastActiveItem = this.listAge.find(item => item.select === true);
         findLastActiveItem.select = false;
 
-        const findNewActiveItem = this.listAge.find(item => item.id === selectItemObj.id);
-        findNewActiveItem.select = true;
+        this.selectedAge = this.listAge.find(item => item.id === selectItemObj.id);
+        this.selectedAge.select = true;
+        this.filterList()
     }
 
     onSelectFeed(selectItemObj) {
         const findLastActiveItem = this.listFeed.find(item => item.select === true);
         findLastActiveItem.select = false;
 
-        const findNewActiveItem = this.listFeed.find(item => item.id === selectItemObj.id);
-        findNewActiveItem.select = true;
+        this.selectedFeed = this.listFeed.find(item => item.id === selectItemObj.id);
+        this.selectedFeed.select = true;
+        this.filterList()
     }
 
     toggleMobileDropdown() {

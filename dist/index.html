@@ -513,9 +513,9 @@
               </div>
             </div>
             <div class="reviews__slider" :class="{isDesctop, isTablet, isLaptop}"> 
-              <div class="swiper reviews__swiper" v-if="reviews.arrayReviews.length"> 
+              <div class="swiper reviews__swiper" v-if="filterReviews.filteredList.length"> 
                 <div class="swiper-wrapper reviews__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}"> 
-                  <div class="swiper-slide review-card" v-for="review in reviews.arrayReviews" :key="review.id">
+                  <div class="swiper-slide review-card" v-for="review in filterReviews.filteredList" :key="review.id">
                     <div class="review-card__content"> 
                       <div class="review-card__top" :class="{isDesctop, isTablet, isLaptop}"> 
                         <div class="review-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"> <img class="review-card__img" :src="review.photo" alt=""></div>
@@ -529,7 +529,7 @@
                 </div>
                 <div class="reviews__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
               </div>
-              <div class="reviews__panel" :class="{isDesctop, isTablet, isLaptop}" v-if="reviews.arrayReviews.length">
+              <div class="reviews__panel" :class="{isDesctop, isTablet, isLaptop}" v-if="filterReviews.filteredList.length">
                 <button class="btn btn--gold-border-mine-shaft-fill-circle reviews__arrow reviews__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
                   <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
                     <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
@@ -1016,3 +1016,47 @@
   </div>
 </body>
 <script src="js/app.min.js"></script>
+<script>
+  app.reviews.arrayReviews = [
+              {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+      {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+      {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+      {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+  ]
+</script>
