@@ -4,32 +4,32 @@ const FilterReviews = class FilterReviews {
         this.listAge = [
             {
                 id: 1,
-                title: "0 - 1",
-                key: "0 - 1",
+                title: "0-1",
+                key: "0-1",
                 select: true
             },
             {
                 id: 2,
-                title: "1 - 5",
-                key: "1 - 5",
+                title: "1-5",
+                key: "1-5",
                 select: false
             },
             {
                 id: 3,
-                title: "5 - 7",
-                key: "5 - 7",
+                title: "5-7",
+                key: "5-7",
                 select: false
             },
             {
                 id: 4,
-                title: "7 - 10",
-                key: "7 - 10",
+                title: "7-10",
+                key: "7-10",
                 select: false
             },
             {
                 id: 5,
-                title: "10 - 15",
-                key: "10 - 15",
+                title: "10-15",
+                key: "10-15",
                 select: false
             },
             {

@@ -4327,27 +4327,6 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-BlackItalic.woff2") format("woff2"), url("../fonts/Mulish-BlackItalic.woff") format("woff"), url("../fonts/Mulish-BlackItalic.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
-  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
-  src: url("../fonts/Mulish-BoldItalic.woff2") format("woff2"), url("../fonts/Mulish-BoldItalic.woff") format("woff"), url("../fonts/Mulish-BoldItalic.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
   src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
   font-weight: 800;
 }
@@ -4426,6 +4405,27 @@ template {
   font-family: "Mulish";
   font-display: swap;
   src: url("../fonts/Mulish-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Mulish-SemiBoldItalic.woff") format("woff"), url("../fonts/Mulish-SemiBoldItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-BlackItalic.woff2") format("woff2"), url("../fonts/Mulish-BlackItalic.woff") format("woff"), url("../fonts/Mulish-BlackItalic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-BoldItalic.woff2") format("woff2"), url("../fonts/Mulish-BoldItalic.woff") format("woff"), url("../fonts/Mulish-BoldItalic.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -4939,6 +4939,10 @@ body.bg-white {
   overflow: hidden;
 }
 
+.btn--gold-border-rounded input {
+  display: none;
+}
+
 .btn--gold-border-rounded::before,
 .btn--gold-border-rounded::after {
   content: "";
@@ -4967,11 +4971,19 @@ body.bg-white {
   border: 4px solid #64552F;
 }
 
-.btn--gold-border-rounded:hover::before {
-  opacity: 1;
+.btn--gold-border-rounded:hover,
+.btn--gold-border-rounded.isSelected {
+  color: #fff !important;
 }
 
-.btn--gold-border-rounded:hover::after {
+.btn--gold-border-rounded:hover::before,
+.btn--gold-border-rounded.isSelected::before {
+  opacity: 1;
+  z-index: -1;
+}
+
+.btn--gold-border-rounded:hover::after,
+.btn--gold-border-rounded.isSelected::after {
   opacity: 0;
 }
 

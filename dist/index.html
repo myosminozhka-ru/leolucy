@@ -909,29 +909,31 @@
       <div class="modals create-review-modals" @click.self="modals.hideModals('create-review-modals')">
         <div class="modals__content create-review-modals__content" :class="{isDesctop, isTablet, isLaptop}"> 
           <div class="modals__top create-review-modals__top" :class="{isDesctop, isTablet, isLaptop}"> <span class="modals__title create-review-modals__title" :class="{isDesctop, isTablet, isLaptop}"> Напишите ваш отзыв</span>
-            <button class="btn btn--transparent modals__close" :class="{isDesctop, isTablet, isLaptop}" @click="modals.hideModals('create-review-modals')">
+            <button class="btn btn--transparent modals__close" :class="{isDesctop, isTablet, isLaptop}" @click.stop="modals.hideModals('create-review-modals')">
               <svg class="icon icon--close btn__icon btn__icon--close">
                 <use xlink:href="img/icons/icons.svg#close"></use>
               </svg>
             </button>
           </div>
-          <div class="modals__bottom create-review-modals__bottom" :class="{isDesctop, isTablet, isLaptop}"> 
+          <form class="modals__bottom create-review-modals__bottom" :class="{isDesctop, isTablet, isLaptop}" action=""> 
             <div class="filter-reviews filter-reviews--black create-review-modals__filter" :class="{isDesctop, isTablet, isLaptop}">
               <div class="filter-reviews__top" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="filter-reviews__border-block" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="filter-reviews__col filter-reviews__col--first" :class="{isDesctop, isTablet, isLaptop}"><span class="filter-reviews__info-title" :class="{isDesctop, isTablet, isLaptop}">Питомец:</span>
                     <div class="filter-reviews__buttons"> 
-                      <button class="btn btn--gold-border-rounded btn--small filter-reviews__btn" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">Собаке</span>
-                      </button>
-                      <button class="btn btn--gold-border-rounded btn--small filter-reviews__btn" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">Кошке</span>
-                      </button>
+                      <label class="btn btn--gold-border-rounded btn--small filter-reviews__btn" :class="{isSelected : modals.selectedPet === &quot;dog&quot;}">Собаке
+                        <input type="radio" value="dog" name="pet" v-model="modals.selectedPet">
+                      </label>
+                      <label class="btn btn--gold-border-rounded btn--small filter-reviews__btn" :class="{isSelected : modals.selectedPet === &quot;cat&quot;}">Кошке
+                        <input type="radio" value="cat" name="pet" v-model="modals.selectedPet">
+                      </label>
                     </div>
                   </div>
                   <div class="filter-reviews__col filter-reviews__col--center" :class="{isDesctop, isTablet, isLaptop}"><span class="filter-reviews__info-title" :class="{isDesctop, isTablet, isLaptop}">Возраст:</span>
-                    <app-select class="filter-reviews__select" :items="filterReviews.listAge" @on-select="filterReviews.onSelectAge.apply(filterReviews, [$event])"></app-select>
+                    <app-select class="filter-reviews__select" :items="filterReviews.listAge" :name="`age`" @on-select="filterReviews.onSelectAge.apply(filterReviews, [$event])"></app-select>
                   </div>
                   <div class="filter-reviews__col filter-reviews__col--right" :class="{isDesctop, isTablet, isLaptop}"><span class="filter-reviews__info-title" :class="{isDesctop, isTablet, isLaptop}">Вид корма:</span>
-                    <app-select class="filter-reviews__select" :items="filterReviews.listFeed" @on-select="filterReviews.onSelectFeed.apply(filterReviews, [$event])"></app-select>
+                    <app-select class="filter-reviews__select" :items="filterReviews.listFeed" :name="`form`" @on-select="filterReviews.onSelectFeed.apply(filterReviews, [$event])"></app-select>
                   </div>
                 </div>
                 <div class="filter-reviews__mobile-action" :class="{isDesctop, isTablet, isLaptop}">
@@ -958,7 +960,7 @@
                 </div>
               </div>
             </div>
-            <form class="create-review-modals__form" action="">
+            <div class="create-review-modals__form">
               <div class="create-review-modals__row" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="create-review-modals__row-hidden" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="create-review-modals__box" :class="{isDesctop, isTablet, isLaptop}"> 
@@ -982,8 +984,8 @@
               </div>
               <button class="btn btn--gold-border-rounded btn--black-text create-review-modals__btn" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">Отправить</span>
               </button>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </main>

@@ -9,6 +9,7 @@ export default class Modals {
                 status: true,
             }
         }
+        this.selectedPet = 'dog'
     }
 
     init() {
