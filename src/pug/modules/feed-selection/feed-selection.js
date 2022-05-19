@@ -22,7 +22,7 @@ export default class FeedSelection {
                 new Swiper(stringClassesArray(Array.from(this.domSlider.classList)), {
                     modules: [Pagination, Navigation],
                     speed: 1000,
-                    loop: true,
+                    loop: false,
                     slidesPerView: 2,
                     spaceBetween: 20,
                     pagination: {
