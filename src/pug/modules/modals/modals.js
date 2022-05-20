@@ -7,7 +7,8 @@ export default class Modals {
             photo: {
                 url: '',
                 status: true,
-            }
+            },
+            isSended: false
         }
         this.selectedPet = 'dog',
         this.productData = {
@@ -22,6 +23,23 @@ export default class Modals {
 
     init() {
 
+    }
+
+    async newReview() {
+        let form = document.querySelector('.create-review-modals__bottom');
+        let data = new URLSearchParams(Array.from(new FormData(form))).toString();
+        let url = `http://leolucy.01sh.ru/local/api/review.php?${data}`;
+        let response = await fetch(url, {
+            method: 'POST'
+        });
+        if (response.ok) {
+            let json = await response.json(); // читаем ответ в формате JSON
+            if (json.status === 'success') {
+                this.createReviewModalsData.isSended = true;
+            }
+        } else {
+            alert ('Что-то пошло не так...');
+        }
     }
 
     async loadProduct(productId) {
@@ -41,7 +59,6 @@ export default class Modals {
         if (response.ok) {
             let json = await response.json(); // читаем ответ в формате JSON
             this.articleData.data = json.data;
-            console.log(this.articleData.data);
             this.showModals('our-articles-modals');
         } else {
             alert ('Что-то пошло не так...');
@@ -93,18 +110,26 @@ export default class Modals {
     }
 
     hideModals(name) {
-        this.productData = {
-            isLoading: false,
-            data: null
-        };
+        
         if(document.querySelector(`.${name}`)) {
             document.querySelector(`.${name}`).classList.remove('modals--is-open');
             document.querySelector('body').style.overflow = '';
 
             if (name === 'our-articles-modals') {
+                this.articleData = {
+                    isLoading: false,
+                    data: null
+                };
                 document.querySelectorAll('.our-articles-modals__center').forEach(modalsCenter => {
                     modalsCenter.scrollTop = 0;
                 })
+                
+            }
+            if (name === 'feed-selection-modals') {
+                this.productData = {
+                    isLoading: false,
+                    data: null
+                };
                 
             }
         }

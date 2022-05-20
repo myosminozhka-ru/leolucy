@@ -28,7 +28,7 @@ export default Vue.component('AppSelect', {
         });
     },
     beforeDestroy() {
-        document.removeEventListener('click');
+        document.removeEventListener('click', () => {});
     },
     methods: {
         toggleDropdown: function() {
