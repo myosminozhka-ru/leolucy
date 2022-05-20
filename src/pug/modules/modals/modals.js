@@ -9,11 +9,27 @@ export default class Modals {
                 status: true,
             }
         }
-        this.selectedPet = 'dog'
+        this.selectedPet = 'dog',
+        this.productData = {
+            isLoading: false,
+            data: null
+        }
     }
 
     init() {
 
+    }
+
+    async loadProduct(productId) {
+        let url = `http://leolucy.01sh.ru/local/api/catalog.php?id=${productId}&action=get`;
+        let response = await fetch(url);
+        if (response.ok) {
+            let json = await response.json(); // читаем ответ в формате JSON
+            this.productData.data = json.data;
+            this.showModals('feed-selection-modals');
+        } else {
+            alert ('Что-то пошло не так...');
+        }
     }
 
     actionShowModals(name) {
@@ -43,6 +59,10 @@ export default class Modals {
     }
 
     hideModals(name) {
+        this.productData = {
+            isLoading: false,
+            data: null
+        };
         if(document.querySelector(`.${name}`)) {
             document.querySelector(`.${name}`).classList.remove('modals--is-open');
             document.querySelector('body').style.overflow = '';

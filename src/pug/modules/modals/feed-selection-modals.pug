@@ -2,61 +2,45 @@
     .modals__content.feed-selection-modals__content(:class='{isDesctop, isTablet, isLaptop}')  
         .modals__top.feed-selection-modals__top(:class='{isDesctop, isTablet, isLaptop}')  
             +btn(null, 'close')(@click="modals.hideModals('feed-selection-modals')").btn--transparent.modals__close
-        .modals__bottom.feed-selection-modals__bottom(:class='{isDesctop, isTablet, isLaptop}') 
-            .feed-selection-modals__grid(:class='{isDesctop, isTablet, isLaptop}')   
+        .modals__bottom.feed-selection-modals__bottom(:class='{isDesctop, isTablet, isLaptop}')
+            .feed-selection-modals__grid(:class='{isDesctop, isTablet, isLaptop}' v-if="modals.productData.data")   
                 .feed-selection-modals__left(:class='{isDesctop, isTablet, isLaptop}')
                     .swiper.feed-selection-modals__swiper(:class='{isDesctop, isTablet, isLaptop}')  
-                        .swiper-wrapper.feed-selection-modals__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')  
-                            each item in [1, 2, 3, 4, 5]
-                                .swiper-slide.feed-selection-modals__slide(:class='{isDesctop, isTablet, isLaptop}') 
+                        .swiper-wrapper.feed-selection-modals__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
+                                .swiper-slide.feed-selection-modals__slide(:class='{isDesctop, isTablet, isLaptop}' v-for="image in modals.productData.data.gallery" :key="image.index") 
                                     .feed-selection-modals__slide-content(:class='{isDesctop, isTablet, isLaptop}') 
-                                        img.feed-selection-modals__slide-img(src="https://picsum.photos/600/600?random="+item, alt="")
+                                        img.feed-selection-modals__slide-img(:src="`http://leolucy.01sh.ru/${image}`", alt="")
 
                         .feed-selection-modals__swiper-dots(:class='{isDesctop, isTablet, isLaptop}')   
 
                     .swiper.feed-selection-modals__dots-swiper(:class='{isDesctop, isTablet, isLaptop}')  
                         .swiper-wrapper.feed-selection-modals__dots-swiper-wrapper
-                            each item in [1, 2, 3, 4, 5]
-                                .swiper-slide.feed-selection-modals__dots-slide 
+                                .swiper-slide.feed-selection-modals__dots-slide(v-for="image in modals.productData.data.gallery" :key="image.index")
                                     .feed-selection-modals__dots-slide-content 
-                                        img.feed-selection-modals__dots-slide-img(src="https://picsum.photos/600/600?random"+item, alt="")
+                                        img.feed-selection-modals__dots-slide-img(:src="`http://leolucy.01sh.ru/${image}`", alt="")
                 
                 .feed-selection-modals__title-box(:class='{isDesctop, isTablet, isLaptop}')
-                    span.modals__title.feed-selection-modals__title(:class='{isDesctop, isTablet, isLaptop}') Premium By Nature 
-                    span.feed-selection-modals__subtitle(:class='{isDesctop, isTablet, isLaptop}') консервы с говядиной и сердцем
+                    span.modals__title.feed-selection-modals__title(:class='{isDesctop, isTablet, isLaptop}') {{ modals.productData.data.name }} 
+                    span.feed-selection-modals__subtitle(:class='{isDesctop, isTablet, isLaptop}') {{ modals.productData.data.subheader }}
 
                 .feed-selection-modals__right(:class='{isDesctop, isTablet, isLaptop}') 
                     .feed-selection-modals__column-row(:class='{isDesctop, isTablet, isLaptop}') 
                         span.modals__subtitle.feed-selection-modals__heading(:class='{isDesctop, isTablet, isLaptop}') Характеристики
-                        p.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}') Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.
+                        p.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}') {{ modals.productData.data.description }}
                     
                     .feed-selection-modals__column-row(:class='{isDesctop, isTablet, isLaptop}') 
                         span.modals__subtitle.feed-selection-modals__heading(:class='{isDesctop, isTablet, isLaptop}') Состав
                         .feed-selection-modals__wrapper-list 
                             .feed-selection-modals__list 
-                                .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}')
-                                    span.modals__text.feed-selection-modals__list-text Говядина
-                                .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}')
-                                    span.modals__text.feed-selection-modals__list-text Свинина
-                                .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}')
-                                    span.modals__text.feed-selection-modals__list-text Овощи
-                                .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}')
-                                    span.modals__text.feed-selection-modals__list-text Фрукты
-                                .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}')
-                                    span.modals__text.feed-selection-modals__list-text Говядина
-                                .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}')
-                                    span.modals__text.feed-selection-modals__list-text Свинина
-                                .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}')
-                                    span.modals__text.feed-selection-modals__list-text Овощи
-                                .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}')
-                                    span.modals__text.feed-selection-modals__list-text Фрукты
+                                .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}' v-for="compound in modals.productData.data.compound" :key="compound.index")
+                                    span.modals__text.feed-selection-modals__list-text {{ compound }}
                         
                     .feed-selection-modals__between-row(:class='{isDesctop, isTablet, isLaptop}') 
                         .feed-selection-modals__col(:class='{isDesctop, isTablet, isLaptop}')  
                             span.modals__subtitle.feed-selection-modals__heading(:class='{isDesctop, isTablet, isLaptop}') Размеры, см (д*ш*в)
-                            span.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}')  56*42*160
+                            span.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}')  {{ modals.productData.data.size }}
                         .feed-selection-modals__col(:class='{isDesctop, isTablet, isLaptop}')  
                             span.modals__subtitle.feed-selection-modals__heading(:class='{isDesctop, isTablet, isLaptop}') Вес
-                            span.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}')  5 кг.
+                            span.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}')  {{ modals.productData.data.weight }} кг.
                     
                     +btn('где купить')(@click="modals.showModals('where-to-buy-modals', whereToBuySlider.sliders)").btn--gold-border-rounded.btn--black-text.feed-selection-modals__btn

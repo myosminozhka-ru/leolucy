@@ -14,7 +14,7 @@ section.section.section--white.feed-selection
                                 .feed-selection__slide-wrapper-img
                                     img.feed-selection__slide-img(src=item.img, alt="", :class='{isDesctop, isTablet, isLaptop}')
                                 span.feed-selection__slide-description(:class='{isDesctop, isTablet, isLaptop}')= item.description
-                                +btn('Подробнее')(@click="modals.showModals('feed-selection-modals')").btn--moon-mist-border-rounded.feed-selection__slide-btn
+                                +btn('Подробнее')(@click="modals.loadProduct(5)").btn--moon-mist-border-rounded.feed-selection__slide-btn
                 .feed-selection__panel(:class='{isDesctop, isTablet, isLaptop}')
                     +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.feed-selection__arrow.feed-selection__arrow--prev
                     +btn(null, 'triangle-arrow-right').btn--gold-border-while-fill-circle.feed-selection__arrow.feed-selection__arrow--next
