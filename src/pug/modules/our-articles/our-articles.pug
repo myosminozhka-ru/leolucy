@@ -6,7 +6,7 @@ section.section.section--white.our-articles
                 .swiper.our-articles__swiper
                     .swiper-wrapper.our-articles__swiper-wrapper
                         each item in arrayOurArticles
-                            +img-card(item.id, item.img, item.title)(@click="modals.showModals('our-articles-modals')").swiper-slide.our-articles__slide
+                            +img-card(item.id, item.img, item.title)(@click="modals.loadArticle(8)").swiper-slide.our-articles__slide
                     
                 .our-articles__panel(:class='{isDesctop, isTablet, isLaptop}')
                     +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.our-articles__arrow.our-articles__arrow--prev

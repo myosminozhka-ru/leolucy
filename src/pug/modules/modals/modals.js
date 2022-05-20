@@ -14,6 +14,10 @@ export default class Modals {
             isLoading: false,
             data: null
         }
+        this.articleData = {
+            isLoading: false,
+            data: null
+        }
     }
 
     init() {
@@ -27,6 +31,36 @@ export default class Modals {
             let json = await response.json(); // читаем ответ в формате JSON
             this.productData.data = json.data;
             this.showModals('feed-selection-modals');
+        } else {
+            alert ('Что-то пошло не так...');
+        }
+    }
+    async loadArticle(articleId) {
+        let url = `http://leolucy.01sh.ru/local/api/news.php?id=${articleId}&action=get`;
+        let response = await fetch(url);
+        if (response.ok) {
+            let json = await response.json(); // читаем ответ в формате JSON
+            this.articleData.data = json.data;
+            console.log(this.articleData.data);
+            this.showModals('our-articles-modals');
+        } else {
+            alert ('Что-то пошло не так...');
+        }
+    }
+    async loadNewArticle(articleId) {
+        console.log(articleId);
+        let url = `http://leolucy.01sh.ru/local/api/news.php?id=${articleId}&action=get`;
+        let response = await fetch(url);
+        console.log(response);
+        if (response.ok) {
+            let json = await response.json(); // читаем ответ в формате JSON
+            if (json.data) {
+                this.articleData.data = json.data;
+            } else {
+                alert ('Мы не нашли такую новость...');
+            }
+            console.log(this.articleData.data);
+            // this.showModals('our-articles-modals');
         } else {
             alert ('Что-то пошло не так...');
         }
