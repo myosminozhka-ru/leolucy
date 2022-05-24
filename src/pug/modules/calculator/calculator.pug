@@ -6,16 +6,16 @@ section.section.calculator(style={'background-image': 'url(img/section/3.png)'},
             h2.title.calculator__title(:class='{isDesctop, isTablet, isLaptop}') Калькулятор дневной порции для вашего питомца
             .calculator__left(:class='{isDesctop, isTablet, isLaptop}')
                 .calculator__row 
-                    +btn('Собаке')(:class="{'btn--select': this.mainSelectAnimal === 'dog'}", @click="onSelectMainAnimal('dog')").btn--gold-border-rounded.btn--small.calculator__btn
-                    +btn('Кошке')(:class="{'btn--select': this.mainSelectAnimal === 'cat'}", @click="onSelectMainAnimal('cat')").btn--gold-border-rounded.btn--small.calculator__btn
+                    +btn('Собаке')(:class="{'btn--select': calculator.pet === 'Собаке'}", @click="calculator.onSelectCalcAnimal('Собаке')").btn--gold-border-rounded.btn--small.calculator__btn
+                    +btn('Кошке')(:class="{'btn--select': calculator.pet === 'Кошке'}", @click="calculator.onSelectCalcAnimal('Кошке')").btn--gold-border-rounded.btn--small.calculator__btn
                 
                 .calculator__column-row(:class='{isDesctop, isTablet, isLaptop}')
-                    span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Вес, кг:
-                    +input-slider(class="calculator__slider", data-start-value="0", data-min="0", data-max="10")
+                    span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Вес, кг: {{ calculator.weight }}
+                    +input-slider(class="calculator__slider", data-start-value="1", data-min="0", data-max="40" data-type="weight")
                 
                 .calculator__column-row(:class='{isDesctop, isTablet, isLaptop}')
-                    span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Возраст, лет:
-                    +input-slider(class="calculator__slider", data-start-value="0", data-min="0", data-max="10")
+                    span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Возраст, лет: {{ calculator.age }}
+                    +input-slider(class="calculator__slider", data-start-value="1", data-min="0", data-max="15" data-type="age")
                 
                 .calculator__column-row(:class='{isDesctop, isTablet, isLaptop}')
                     span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Вид:

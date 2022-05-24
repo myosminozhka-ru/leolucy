@@ -1,8 +1,7 @@
 import noUiSlider from 'nouislider/dist/nouislider.mjs';
 
 export default class InputSlider {
-    constructor() {
-    }
+    constructor() {}
 
     init() {
         setTimeout(() => {
@@ -15,18 +14,25 @@ export default class InputSlider {
                     start: startValue,
                     connect: 'lower',
                     tooltips: true,
-                    step: 1,
+                    step: 0.1,
                     format: {
                         to: function (value) {
-                            return Number(value);
+                            return Number(value).toFixed(1);
                         },
                         from: function (value) {
-                            return Number(value);
+                            return Number(value).toFixed(1);
                         }
                     },
                     range: {
                         'min': min,
                         'max': max
+                    }
+                }).on('update', function (values) {
+                    if (this.target.dataset.type === 'weight') {
+                        app.calculator.updateWeight(values[0]);
+                    }
+                    if (this.target.dataset.type === 'age') {
+                        app.calculator.updateAge(values[0]);
                     }
                 });
             });

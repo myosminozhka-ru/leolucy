@@ -317,16 +317,16 @@
             <h2 class="title calculator__title" :class="{isDesctop, isTablet, isLaptop}">Калькулятор дневной порции для вашего питомца</h2>
             <div class="calculator__left" :class="{isDesctop, isTablet, isLaptop}">
               <div class="calculator__row"> 
-                <button class="btn btn--gold-border-rounded btn--small calculator__btn" :class="{'btn--select': this.mainSelectAnimal === 'dog'}" @click="onSelectMainAnimal('dog')"><span class="btn__text">Собаке</span>
+                <button class="btn btn--gold-border-rounded btn--small calculator__btn" :class="{'btn--select': calculator.pet === 'Собаке'}" @click="calculator.onSelectCalcAnimal('Собаке')"><span class="btn__text">Собаке</span>
                 </button>
-                <button class="btn btn--gold-border-rounded btn--small calculator__btn" :class="{'btn--select': this.mainSelectAnimal === 'cat'}" @click="onSelectMainAnimal('cat')"><span class="btn__text">Кошке</span>
+                <button class="btn btn--gold-border-rounded btn--small calculator__btn" :class="{'btn--select': calculator.pet === 'Кошке'}" @click="calculator.onSelectCalcAnimal('Кошке')"><span class="btn__text">Кошке</span>
                 </button>
               </div>
-              <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Вес, кг:</span>
-                <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="0" data-min="0" data-max="10"></div>
+              <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Вес, кг: {{ calculator.weight }}</span>
+                <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="1" data-min="0" data-max="40" data-type="weight"></div>
               </div>
-              <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Возраст, лет:</span>
-                <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="0" data-min="0" data-max="10"></div>
+              <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Возраст, лет: {{ calculator.age }}</span>
+                <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="1" data-min="0" data-max="15" data-type="age"></div>
               </div>
               <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Вид:</span>
                 <div class="calculator__list" :class="{isDesctop, isTablet, isLaptop}"> 
