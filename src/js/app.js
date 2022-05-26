@@ -79,6 +79,9 @@ window.app = new Vue({
     methods: {
         onSelectMainAnimal(animal) {
             this.mainSelectAnimal = animal;
+            if (this.feedSelection.slider) {
+                this.feedSelection.slider.reInit();
+            }
         }, 
         onScrollToBlock() {
             const scrollTarget = document.querySelector('.feed-selection');

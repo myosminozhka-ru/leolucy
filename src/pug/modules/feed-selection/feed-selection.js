@@ -8,6 +8,7 @@ export default class FeedSelection {
         this.domNext = this.domSlider?.querySelector('.feed-selection__arrow--next');
         this.domPagination = this.domSlider?.querySelector('.feed-selection__dots');
         this.sizes;
+        this.slider = null;
     }
 
     init(sizes) {
@@ -19,7 +20,7 @@ export default class FeedSelection {
         const sizes = this.sizes;
         if (this.domSlider) {
             setTimeout(() => {
-                new Swiper(stringClassesArray(Array.from(this.domSlider.classList)), {
+                this.slider = new Swiper(stringClassesArray(Array.from(this.domSlider.classList)), {
                     modules: [Pagination, Navigation],
                     speed: 1000,
                     loop: false,
