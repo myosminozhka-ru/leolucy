@@ -22,6 +22,7 @@ export default class PhilosophySlider {
                     speed: 1000,
                     slidesPerView: 1,
                     loop: true,
+                    autoHeight: true,
                     navigation: {
                         prevEl: stringClassesArray(Array.from(this.domPrev.classList)),
                         nextEl: stringClassesArray(Array.from(this.domNext.classList)),

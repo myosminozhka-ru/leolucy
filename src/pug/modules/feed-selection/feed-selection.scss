@@ -1,4 +1,7 @@
 .feed-selection {
+    .swiper-wrapper {
+        height: auto !important;
+    }
     &__content {
         display: flex;
         flex-direction: column;

@@ -4320,13 +4320,6 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff"), url("../fonts/Mulish-Black.ttf") format("ttf");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
   src: url("../fonts/Mulish-BlackItalic.woff2") format("woff2"), url("../fonts/Mulish-BlackItalic.woff") format("woff"), url("../fonts/Mulish-BlackItalic.ttf") format("ttf");
   font-weight: 400;
 }
@@ -4334,14 +4327,14 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-BoldItalic.woff2") format("woff2"), url("../fonts/Mulish-BoldItalic.woff") format("woff"), url("../fonts/Mulish-BoldItalic.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff"), url("../fonts/Mulish-Black.ttf") format("ttf");
+  font-weight: 900;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Mulish-ExtraLightItalic.woff") format("woff"), url("../fonts/Mulish-ExtraLightItalic.ttf") format("ttf");
+  src: url("../fonts/Mulish-BoldItalic.woff2") format("woff2"), url("../fonts/Mulish-BoldItalic.woff") format("woff"), url("../fonts/Mulish-BoldItalic.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -4362,8 +4355,8 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -4383,6 +4376,13 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
+  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
   src: url("../fonts/Mulish-Light.woff2") format("woff2"), url("../fonts/Mulish-Light.woff") format("woff"), url("../fonts/Mulish-Light.ttf") format("ttf");
   font-weight: 300;
 }
@@ -4390,8 +4390,8 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/Mulish-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Mulish-ExtraLightItalic.woff") format("woff"), url("../fonts/Mulish-ExtraLightItalic.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -7053,6 +7053,7 @@ body.bg-white {
 
 .philosophy-slider__slide-content.isDesctop {
   padding: 5.2083333333vw 36.83% 5.2083333333vw 5.46875vw;
+  min-height: 25.5208333333vw;
 }
 
 .philosophy-slider__slide-img {
@@ -7541,6 +7542,10 @@ body.bg-white {
   pointer-events: none;
 }
 
+.feed-selection .swiper-wrapper {
+  height: auto !important;
+}
+
 .feed-selection__content {
   display: flex;
   flex-direction: column;
@@ -7861,11 +7866,11 @@ body.bg-white {
 .calculator__row {
   display: flex;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 5px;
 }
 
 .calculator__row.isDesctop {
-  margin-bottom: 3.125vw;
+  margin-bottom: 0.2604166667vw;
 }
 
 .calculator__btn {
@@ -7932,7 +7937,7 @@ body.bg-white {
 }
 
 .calculator__info-text.isDesctop {
-  margin-bottom: 1.0416666667vw;
+  margin-bottom: 5.2083333333vw;
 }
 
 .calculator__list {

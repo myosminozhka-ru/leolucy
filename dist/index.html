@@ -322,11 +322,11 @@
                 <button class="btn btn--gold-border-rounded btn--small calculator__btn" :class="{'btn--select': calculator.pet === 'Кошке'}" @click="calculator.onSelectCalcAnimal('Кошке')"><span class="btn__text">Кошке</span>
                 </button>
               </div>
-              <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Вес, кг: {{ calculator.weight }}</span>
-                <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="1" data-min="0" data-max="40" data-type="weight"></div>
-              </div>
               <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Возраст, лет: {{ calculator.age }}</span>
                 <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="1" data-min="0" data-max="15" data-type="age"></div>
+              </div>
+              <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Вес, кг: {{ calculator.weight }}</span>
+                <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="1" data-min="0" data-max="40" data-type="weight"></div>
               </div>
               <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Вид:</span>
                 <div class="calculator__list" :class="{isDesctop, isTablet, isLaptop}"> 

@@ -104,10 +104,10 @@
     &__row {
         display: flex;
         align-items: center;
-        margin-bottom: 60px;
+        margin-bottom: 5px;
 
         &.isDesctop {
-            margin-bottom: vw(60px);
+            margin-bottom: vw(5px);
         }
     }
 
@@ -174,7 +174,7 @@
         }
 
         &.isDesctop {
-            margin-bottom: vw(20px);
+            margin-bottom: vw(100px);
         }
     }
 
