@@ -24,6 +24,10 @@
             grid-template-rows: auto;
             grid-template-areas: 'left main right';
             grid-gap: 0 vw(20px);
+            .btn {
+                max-width: 300px;
+                width: 100%;
+            }
         }
     }
 
@@ -42,8 +46,8 @@
     &__center {
         display: flex;
         flex-direction: column;
-        padding-left: 40px;
-        padding-right: 40px;
+        // padding-left: 40px;
+        // padding-right: 40px;
         align-items: center;
         justify-content: center;
         grid-area: main;
@@ -96,12 +100,12 @@
             #{$screen}__animal-food {
             
                 &--left {
-                    left: 0;
+                    left: -20%;
                     opacity: 1;
                 }
             
                 &--right {
-                    right: 0;
+                    right: -20%;
                     opacity: 1;
                 }
             }
@@ -159,8 +163,8 @@
 
     &__animal-food {
         position: absolute;
-        max-width: 70%;
-        top: 50%;
+        max-width: 85%;
+        top: 10%;
         opacity: 0;
         pointer-events: none;
         transform: translateY(-50%);
@@ -175,6 +179,8 @@
         }
 
         &.isDesctop {
+            max-width: 70%;
+            top: 35%;
             max-width: unset;
             width: vw(700px - 205px);
             // height: vw(700px);

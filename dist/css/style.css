@@ -4334,13 +4334,6 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
   src: url("../fonts/Mulish-BoldItalic.woff2") format("woff2"), url("../fonts/Mulish-BoldItalic.woff") format("woff"), url("../fonts/Mulish-BoldItalic.ttf") format("ttf");
   font-weight: 400;
 }
@@ -4348,8 +4341,8 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
-  font-weight: 800;
+  src: url("../fonts/Mulish-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Mulish-ExtraLightItalic.woff") format("woff"), url("../fonts/Mulish-ExtraLightItalic.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -4369,14 +4362,21 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Mulish-ExtraLightItalic.woff") format("woff"), url("../fonts/Mulish-ExtraLightItalic.ttf") format("ttf");
+  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
+  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-LightItalic.woff2") format("woff2"), url("../fonts/Mulish-LightItalic.woff") format("woff"), url("../fonts/Mulish-LightItalic.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -4390,8 +4390,8 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-LightItalic.woff2") format("woff2"), url("../fonts/Mulish-LightItalic.woff") format("woff"), url("../fonts/Mulish-LightItalic.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -4411,15 +4411,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish-Regular.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2"), url("../fonts/Mulish-SemiBold.woff") format("woff"), url("../fonts/Mulish-SemiBold.ttf") format("ttf");
+  font-weight: 600;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2"), url("../fonts/Mulish-SemiBold.woff") format("woff"), url("../fonts/Mulish-SemiBold.ttf") format("ttf");
-  font-weight: 600;
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish-Regular.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -4994,7 +4994,7 @@ body.bg-white {
 
 .btn--gold-border-rounded.isDesctop {
   font-size: 1.0416666667vw;
-  padding: 1.0416666667vw 2.6041666667vw;
+  padding: 1.25vw 2.2395833333vw;
   border-radius: 0.2604166667vw;
 }
 
@@ -6850,6 +6850,11 @@ body.bg-white {
   grid-gap: 0 1.0416666667vw;
 }
 
+.first-screen__content.isDesctop .btn {
+  max-width: 300px;
+  width: 100%;
+}
+
 .first-screen__left,
 .first-screen__right {
   display: flex;
@@ -6880,8 +6885,6 @@ body.bg-white {
   -ms-grid-column-span: 3;
   display: flex;
   flex-direction: column;
-  padding-left: 40px;
-  padding-right: 40px;
   align-items: center;
   justify-content: center;
   grid-area: main;
@@ -6951,12 +6954,12 @@ body.bg-white {
 }
 
 .first-screen__select--active .first-screen__animal-food--left {
-  left: 0;
+  left: -20%;
   opacity: 1;
 }
 
 .first-screen__select--active .first-screen__animal-food--right {
-  right: 0;
+  right: -20%;
   opacity: 1;
 }
 
@@ -7004,8 +7007,8 @@ body.bg-white {
 
 .first-screen__animal-food {
   position: absolute;
-  max-width: 70%;
-  top: 50%;
+  max-width: 85%;
+  top: 10%;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-50%);
@@ -7021,6 +7024,8 @@ body.bg-white {
 }
 
 .first-screen__animal-food.isDesctop {
+  max-width: 70%;
+  top: 35%;
   max-width: unset;
   width: 25.78125vw;
 }
@@ -7189,6 +7194,11 @@ body.bg-white {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 11.9270833333vw;
+}
+
+.ingredients .container.isDesctop {
+  max-width: 82.8125vw;
 }
 
 .ingredients__decoration {
@@ -7206,6 +7216,10 @@ body.bg-white {
   display: block;
 }
 
+.ingredients__static {
+  text-align: center;
+}
+
 .ingredients__content {
   display: -ms-grid;
   display: grid;
@@ -7220,8 +7234,8 @@ body.bg-white {
 .ingredients__content.isDesctop {
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (auto)[3];
-  grid-template-rows: repeat(3, auto);
+  -ms-grid-rows: (0fr)[1];
+  grid-template-rows: repeat(1, 0fr);
       grid-template-areas: "img title" "img text" "img btn";
 }
 
@@ -7327,7 +7341,7 @@ body.bg-white {
 
 .ingredients__dish {
   position: absolute;
-  max-width: 40%;
+  max-width: 70%;
   bottom: 45%;
   left: 50%;
   transform: translateX(-50%);
@@ -7337,7 +7351,7 @@ body.bg-white {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 35%;
+  padding-top: 85%;
 }
 
 .ingredients-img-slider__swiper {
@@ -7365,7 +7379,7 @@ body.bg-white {
 }
 
 .ingredients-img-slider__slide-decoration.isDesctop {
-  max-width: 5.9895833333vw;
+  max-width: 10.4166666667vw;
 }
 
 .ingredients-img-slider__slide-food {
