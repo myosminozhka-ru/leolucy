@@ -1,7 +1,9 @@
-.feed-selection {
+.feed-selection-modals {
     .swiper-wrapper {
         height: auto !important;
     }
+}
+.feed-selection {
     &__content {
         display: flex;
         flex-direction: column;
