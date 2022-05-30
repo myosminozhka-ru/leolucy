@@ -333,12 +333,12 @@
         border-radius: 20px;
         padding: 20px;
         color: $white;
-        background-color: rgba($black, 0.1);
+        // background-color: rgba($black, 0.1);
         
-        @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-            backdrop-filter: blur(#{vw(10px)});
-            -webkit-backdrop-filter: blur(#{vw(10px)});
-        }
+        // @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        //     backdrop-filter: blur(#{vw(10px)});
+        //     -webkit-backdrop-filter: blur(#{vw(10px)});
+        // }
 
         &.isTablet {
             border-radius: 20px;
