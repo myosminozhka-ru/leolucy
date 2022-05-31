@@ -14,18 +14,18 @@
     .header-panel__content 
         ul.header-panel-menu
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') Корма
+                a.header-panel-menu__link(href="#link1", :class='{isDesctop, isTablet, isLaptop}' @click="header.hiddenMenu.apply(header)") Корма
 
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') Ингредиенты
+                a.header-panel-menu__link(href="#link2", :class='{isDesctop, isTablet, isLaptop}' @click="header.hiddenMenu.apply(header)") Ингредиенты
 
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') FAQ
+                a.header-panel-menu__link(href="#link3", :class='{isDesctop, isTablet, isLaptop}' @click="header.hiddenMenu.apply(header)") FAQ
 
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') Статьи
+                a.header-panel-menu__link(href="#link4", :class='{isDesctop, isTablet, isLaptop}' @click="header.hiddenMenu.apply(header)") Статьи
 
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#", :class='{isDesctop, isTablet, isLaptop}') Где купить
+                a.header-panel-menu__link(href="#link5", :class='{isDesctop, isTablet, isLaptop}' @click="header.hiddenMenu.apply(header)") Где купить
         
         +s(["vk", "#"], ["telegram", "#"]).header-panel__s

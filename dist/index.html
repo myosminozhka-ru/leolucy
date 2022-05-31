@@ -39,11 +39,11 @@
     <div class="header-panel" :class="{isDesctop, isTablet, isLaptop, &quot;header-panel--is-open&quot;: header.isShowMenu}">
       <div class="header-panel__content"> 
         <ul class="header-panel-menu">
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Корма</a></li>
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Ингредиенты</a></li>
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">FAQ</a></li>
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Статьи</a></li>
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Где купить</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link1" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Корма</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link2" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Ингредиенты</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link3" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">FAQ</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link4" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Статьи</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link5" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Где купить</a></li>
         </ul>
         <div class="s header-panel__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
@@ -119,7 +119,7 @@
           <div class="philosophy-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
         </div>
       </section>
-      <section class="section ingredients" style="background-image:url(img/section/2.png);"><img class="ingredients__decoration ingredients__decoration--right" src="img/ingredients/3.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="section ingredients" id="link2" style="background-image:url(img/section/2.png);"><img class="ingredients__decoration ingredients__decoration--right" src="img/ingredients/3.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}"> 
           <div class="ingredients__content" :class="{isDesctop, isTablet, isLaptop}">
             <h2 class="title ingredients__title" :class="{isDesctop, isTablet, isLaptop}">Ингредиенты</h2>
@@ -181,7 +181,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--white feed-selection">
+      <section class="section section--white feed-selection" id="link1">
         <div class="feed-selection__content" :class="{isDesctop, isTablet, isLaptop}">
           <div class="feed-selection__top" :class="{isDesctop, isTablet, isLaptop}">
             <h2 class="title title--black feed-selection__title" :class="{isDesctop, isTablet, isLaptop}">Подберите корм вашему питомцу</h2>
@@ -457,7 +457,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--white answers-to-questions">
+      <section class="section section--white answers-to-questions" id="link3">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <h2 class="title title--black answers-to-questions__title" :class="{isDesctop, isTablet, isLaptop}">Ответы на частые вопросы</h2>
           <app-accordion class="answers-to-questions__accordion" title="В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей представляют собой не что иное." description="Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач." :resize-class="{isDesctop, isTablet, isLaptop}"></app-accordion>
@@ -547,7 +547,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--white our-articles">
+      <section class="section section--white our-articles" id="link4">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <div class="our-articles__content"> 
             <h2 class="title title--black our-articles__title" :class="{isDesctop, isTablet, isLaptop}">Наши статьи</h2>
@@ -636,7 +636,7 @@
           </div>
         </div>
       </section>
-      <section class="section where-to-buy" style="background-image:url(img/section/6.png);">
+      <section class="section where-to-buy" id="link5" style="background-image:url(img/section/6.png);">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <div class="where-to-buy__content"> 
             <h2 class="title where-to-buy__title" :class="{isDesctop, isTablet, isLaptop}">Где купить</h2>
@@ -955,11 +955,11 @@
         <div class="footer__content" :class="{isDesctop, isTablet, isLaptop}"> <span class="footer__heading-contacts footer__add-line footer__add-line--right" :class="{isDesctop, isTablet, isLaptop}">Контакты</span>
           <div class="logo footer__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
           <ul class="footer-menu footer__menu" :class="{isDesctop, isTablet, isLaptop}"> 
-            <li class="footer-menu__item footer__add-line footer__add-line--left" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Корма</a></li>
-            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Ингредиенты</a></li>
-            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">FAQ</a></li>
-            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Статьи</a></li>
-            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Где купить</a></li>
+            <li class="footer-menu__item footer__add-line footer__add-line--left" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link1">Корма</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link2">Ингредиенты</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link3">FAQ</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link4">Статьи</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link5">Где купить</a></li>
           </ul>
           <div class="footer__contacts" :class="{isDesctop, isTablet, isLaptop}"> <a class="footer__gold-link" href="tel:+74950000000" :class="{isDesctop, isTablet, isLaptop}">+7(495)000-00-00</a><a class="footer__gold-link" href="mailto:info@info.ru" :class="{isDesctop, isTablet, isLaptop}">info@info.ru</a></div>
           <div class="s footer__s">

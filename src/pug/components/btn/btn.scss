@@ -242,7 +242,7 @@
         &:hover, &.isSelected {
             &::before {
                 opacity: 1;
-                z-index: -1;
+                // z-index: -1;
             }
 
             &::after {

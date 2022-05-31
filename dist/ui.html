@@ -39,11 +39,11 @@
     <div class="header-panel" :class="{isDesctop, isTablet, isLaptop, &quot;header-panel--is-open&quot;: header.isShowMenu}">
       <div class="header-panel__content"> 
         <ul class="header-panel-menu">
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Корма</a></li>
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Ингредиенты</a></li>
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">FAQ</a></li>
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Статьи</a></li>
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Где купить</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link1" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Корма</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link2" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Ингредиенты</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link3" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">FAQ</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link4" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Статьи</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link5" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Где купить</a></li>
         </ul>
         <div class="s header-panel__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
@@ -266,11 +266,11 @@
         <div class="footer__content" :class="{isDesctop, isTablet, isLaptop}"> <span class="footer__heading-contacts footer__add-line footer__add-line--right" :class="{isDesctop, isTablet, isLaptop}">Контакты</span>
           <div class="logo footer__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
           <ul class="footer-menu footer__menu" :class="{isDesctop, isTablet, isLaptop}"> 
-            <li class="footer-menu__item footer__add-line footer__add-line--left" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Корма</a></li>
-            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Ингредиенты</a></li>
-            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">FAQ</a></li>
-            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Статьи</a></li>
-            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#">Где купить</a></li>
+            <li class="footer-menu__item footer__add-line footer__add-line--left" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link1">Корма</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link2">Ингредиенты</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link3">FAQ</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link4">Статьи</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link5">Где купить</a></li>
           </ul>
           <div class="footer__contacts" :class="{isDesctop, isTablet, isLaptop}"> <a class="footer__gold-link" href="tel:+74950000000" :class="{isDesctop, isTablet, isLaptop}">+7(495)000-00-00</a><a class="footer__gold-link" href="mailto:info@info.ru" :class="{isDesctop, isTablet, isLaptop}">info@info.ru</a></div>
           <div class="s footer__s">
