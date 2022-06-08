@@ -4320,8 +4320,8 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
-  font-weight: 800;
+  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff"), url("../fonts/Mulish-Black.ttf") format("ttf");
+  font-weight: 900;
 }
 
 @font-face {
@@ -4334,8 +4334,8 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff"), url("../fonts/Mulish-Black.ttf") format("ttf");
-  font-weight: 900;
+  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
 }
 
 @font-face {
