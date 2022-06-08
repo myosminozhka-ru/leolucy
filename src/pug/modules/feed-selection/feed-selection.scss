@@ -4,6 +4,8 @@
     }
 }
 .feed-selection {
+    position: relative;
+    z-index: 2;
     &__content {
         display: flex;
         flex-direction: column;

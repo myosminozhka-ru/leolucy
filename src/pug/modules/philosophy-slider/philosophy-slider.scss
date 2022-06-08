@@ -1,4 +1,6 @@
 .philosophy-slider {
+    position: relative;
+    z-index: 2;
     &__swiper-wrapper {
         margin-bottom: 50px;
 
