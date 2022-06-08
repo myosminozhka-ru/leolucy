@@ -4320,15 +4320,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff"), url("../fonts/Mulish-Black.ttf") format("ttf");
-  font-weight: 900;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff"), url("../fonts/Mulish-Black.ttf") format("ttf");
+  font-weight: 900;
 }
 
 @font-face {
@@ -7698,13 +7698,6 @@ body.bg-white {
   justify-content: space-between;
   width: 100%;
   z-index: 1;
-  pointer-events: none;
-}
-
-.feed-selection__panel.isTablet,
-.feed-selection__panel.isLaptop,
-.feed-selection__panel.isDesctop {
-  display: none;
 }
 
 .feed-selection__arrow {

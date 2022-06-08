@@ -38,12 +38,10 @@ export default class FeedSelection {
                     },
                     breakpoints: {
                         1024: {
-                            slidesPerView: 4,
-                            navigation: false
+                            slidesPerView: 4
                         }, 
                         1366: {
-                            slidesPerView: 6,
-                            navigation: false
+                            slidesPerView: 6
                         }
                     },
                     on: {
