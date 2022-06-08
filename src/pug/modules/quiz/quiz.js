@@ -125,7 +125,7 @@ export default class Quiz {
 
     isDisabledNext() {
         if (this.currentStep !== this.steps.length - 1) {
-            return this.answers.find(step => step.id === this.currentStep)?.listAnswer.find(answer => answer.status === true) ? false : true;
+            return this.answers.find(step => step.id === this.currentStep)?.listAnswer.find(answer => answer.status === true) ? true : true;
         } else {
             return true;
         }
