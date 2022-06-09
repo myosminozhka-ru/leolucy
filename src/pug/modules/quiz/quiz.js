@@ -108,6 +108,9 @@ export default class Quiz {
                 ]
             })
         }
+        if (this.currentStep !== this.steps.length - 1) {
+            this.onClickNext()
+        }
     }
 
     addClassResult(idAnswer) {
