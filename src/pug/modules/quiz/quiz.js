@@ -109,7 +109,9 @@ export default class Quiz {
             })
         }
         if (this.currentStep !== this.steps.length - 1) {
-            this.onClickNext()
+            setTimeout(() =>
+                this.onClickNext()
+            , 1000);
         }
     }
 
