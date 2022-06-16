@@ -28,7 +28,7 @@ export default class Modals {
     async newReview() {
         let form = document.querySelector('.create-review-modals__bottom');
         let data = new URLSearchParams(Array.from(new FormData(form))).toString();
-        let url = `http://leolucy.01sh.ru/local/api/review.php?${data}`;
+        let url = `https://leolucy.ru/local/api/review.php?${data}`;
         let response = await fetch(url, {
             method: 'POST'
         });
@@ -43,7 +43,7 @@ export default class Modals {
     }
 
     async loadProduct(productId) {
-        let url = `http://leolucy.01sh.ru/local/api/catalog.php?id=${productId}&action=get`;
+        let url = `https://leolucy.ru/local/api/catalog.php?id=${productId}&action=get`;
         let response = await fetch(url);
         if (response.ok) {
             let json = await response.json(); // читаем ответ в формате JSON
@@ -54,7 +54,7 @@ export default class Modals {
         }
     }
     async loadArticle(articleId) {
-        let url = `http://leolucy.01sh.ru/local/api/news.php?id=${articleId}&action=get`;
+        let url = `https://leolucy.ru/local/api/news.php?id=${articleId}&action=get`;
         let response = await fetch(url);
         if (response.ok) {
             let json = await response.json(); // читаем ответ в формате JSON
@@ -66,7 +66,7 @@ export default class Modals {
     }
     async loadNewArticle(articleId) {
         console.log(articleId);
-        let url = `http://leolucy.01sh.ru/local/api/news.php?id=${articleId}&action=get`;
+        let url = `https://leolucy.ru/local/api/news.php?id=${articleId}&action=get`;
         let response = await fetch(url);
         console.log(response);
         if (response.ok) {
