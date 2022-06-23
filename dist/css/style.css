@@ -4334,6 +4334,13 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
+  src: url("../fonts/Mulish-ExtraLight.woff2") format("woff2"), url("../fonts/Mulish-ExtraLight.woff") format("woff"), url("../fonts/Mulish-ExtraLight.ttf") format("ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
   src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
   font-weight: 800;
 }
@@ -4343,13 +4350,6 @@ template {
   font-display: swap;
   src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
   font-weight: 400;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
-  src: url("../fonts/Mulish-ExtraLight.woff2") format("woff2"), url("../fonts/Mulish-ExtraLight.woff") format("woff"), url("../fonts/Mulish-ExtraLight.ttf") format("ttf");
-  font-weight: 200;
 }
 
 @font-face {
@@ -4369,15 +4369,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish-Regular.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2"), url("../fonts/Mulish-SemiBold.woff") format("woff"), url("../fonts/Mulish-SemiBold.ttf") format("ttf");
+  font-weight: 600;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2"), url("../fonts/Mulish-SemiBold.woff") format("woff"), url("../fonts/Mulish-SemiBold.ttf") format("ttf");
-  font-weight: 600;
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish-Regular.ttf") format("ttf");
+  font-weight: 400;
 }
 
 /* cyrillic-ext */
