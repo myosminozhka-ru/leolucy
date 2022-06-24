@@ -47,6 +47,10 @@
         justify-content: space-between;
         width: 100%;
         z-index: 1;
+        pointer-events: none;
+        > button {
+            pointer-events: all;
+        }
     }
 
     &__show-all {
