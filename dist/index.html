@@ -723,7 +723,7 @@
                 <div class="swiper feed-selection-modals__swiper" :class="{isDesctop, isTablet, isLaptop}"> 
                   <div class="swiper-wrapper feed-selection-modals__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
                     <div class="swiper-slide feed-selection-modals__slide" :class="{isDesctop, isTablet, isLaptop}" v-for="image in modals.productData.data.gallery" :key="image.index"> 
-                      <div class="feed-selection-modals__slide-content" :class="{isDesctop, isTablet, isLaptop}"> <img class="feed-selection-modals__slide-img" :src="`http://leolucy.01sh.ru/${image}`" alt=""></div>
+                      <div class="feed-selection-modals__slide-content" :class="{isDesctop, isTablet, isLaptop}"> <img class="feed-selection-modals__slide-img" :src="`https://leolucy.ru/${image}`" alt=""></div>
                     </div>
                   </div>
                   <div class="feed-selection-modals__swiper-dots" :class="{isDesctop, isTablet, isLaptop}">  </div>
@@ -731,7 +731,7 @@
                 <div class="swiper feed-selection-modals__dots-swiper" :class="{isDesctop, isTablet, isLaptop}"> 
                   <div class="swiper-wrapper feed-selection-modals__dots-swiper-wrapper">
                     <div class="swiper-slide feed-selection-modals__dots-slide" v-for="image in modals.productData.data.gallery" :key="image.index">
-                      <div class="feed-selection-modals__dots-slide-content"> <img class="feed-selection-modals__dots-slide-img" :src="`http://leolucy.01sh.ru/${image}`" alt=""></div>
+                      <div class="feed-selection-modals__dots-slide-content"> <img class="feed-selection-modals__dots-slide-img" :src="`https://leolucy.ru/${image}`" alt=""></div>
                     </div>
                   </div>
                 </div>
@@ -851,7 +851,7 @@
             </button>
           </div>
           <div class="modals__center our-articles-modals__center" :class="{isDesctop, isTablet, isLaptop}" v-if="modals.articleData.data"> 
-            <div class="our-articles-modals__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="our-articles-modals__img" :src="`http://leolucy.01sh.ru/${modals.articleData.data.img}`" alt=""></div>
+            <div class="our-articles-modals__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="our-articles-modals__img" :src="`https://leolucy.ru/${modals.articleData.data.img}`" alt=""></div>
             <p class="modals__text our-articles-modals__text" :class="{isDesctop, isTablet, isLaptop}" v-html="modals.articleData.data.text"></p>
             <div class="modals__bottom our-articles-modals__bottom" :class="{isDesctop, isTablet, isLaptop}" v-if="modals.articleData.data"> 
               <button class="btn btn--gold-border-rounded btn--black-text our-articles-modals__btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadNewArticle(+modals.articleData.data.id-1)"><span class="btn__text">Предыдущая</span>

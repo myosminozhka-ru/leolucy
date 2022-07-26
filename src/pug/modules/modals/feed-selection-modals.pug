@@ -9,7 +9,7 @@
                         .swiper-wrapper.feed-selection-modals__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
                                 .swiper-slide.feed-selection-modals__slide(:class='{isDesctop, isTablet, isLaptop}' v-for="image in modals.productData.data.gallery" :key="image.index") 
                                     .feed-selection-modals__slide-content(:class='{isDesctop, isTablet, isLaptop}') 
-                                        img.feed-selection-modals__slide-img(:src="`http://leolucy.01sh.ru/${image}`", alt="")
+                                        img.feed-selection-modals__slide-img(:src="`https://leolucy.ru/${image}`", alt="")
 
                         .feed-selection-modals__swiper-dots(:class='{isDesctop, isTablet, isLaptop}')   
 
@@ -17,7 +17,7 @@
                         .swiper-wrapper.feed-selection-modals__dots-swiper-wrapper
                                 .swiper-slide.feed-selection-modals__dots-slide(v-for="image in modals.productData.data.gallery" :key="image.index")
                                     .feed-selection-modals__dots-slide-content 
-                                        img.feed-selection-modals__dots-slide-img(:src="`http://leolucy.01sh.ru/${image}`", alt="")
+                                        img.feed-selection-modals__dots-slide-img(:src="`https://leolucy.ru/${image}`", alt="")
                 
                 .feed-selection-modals__title-box(:class='{isDesctop, isTablet, isLaptop}')
                     span.modals__title.feed-selection-modals__title(:class='{isDesctop, isTablet, isLaptop}') {{ modals.productData.data.name }} 

@@ -5,7 +5,7 @@
             +btn(null, 'close')(@click="modals.hideModals('our-articles-modals')").btn--transparent.modals__close
         .modals__center.our-articles-modals__center(:class='{isDesctop, isTablet, isLaptop}' v-if="modals.articleData.data") 
             .our-articles-modals__wrapper-img(:class='{isDesctop, isTablet, isLaptop}')
-                img.our-articles-modals__img(:src="`http://leolucy.01sh.ru/${modals.articleData.data.img}`", alt="")
+                img.our-articles-modals__img(:src="`https://leolucy.ru/${modals.articleData.data.img}`", alt="")
             p.modals__text.our-articles-modals__text(:class='{isDesctop, isTablet, isLaptop}' v-html="modals.articleData.data.text")
             //- p.modals__text.our-articles-modals__text(:class='{isDesctop, isTablet, isLaptop}') {{ modals.articleData.data }} Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.
             //- span.modals__subtitle.our-articles-modals__subtitle(:class='{isDesctop, isTablet, isLaptop}') Характеристики
