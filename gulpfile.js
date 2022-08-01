@@ -6,7 +6,7 @@ import { path } from './gulp/config/path.js';
 
 // Импорт задач
 import { copy } from './gulp/tasks/copy.js';
-import { reset } from './gulp/tasks/reset.js';
+// import { reset } from './gulp/tasks/reset.js';
 import { html } from './gulp/tasks/html.js';
 import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
@@ -52,8 +52,8 @@ const watcher = () => {
 const mainTasks = gulp.series(fonts, gulp.parallel(copy, buildPug, scss, js, images, svgSprites));
 
 // Построение сценариев выполнения задач
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
-const build = gulp.series(reset, mainTasks);
+const dev = gulp.series(mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(mainTasks);
 
 
 // Экспорт сценариев

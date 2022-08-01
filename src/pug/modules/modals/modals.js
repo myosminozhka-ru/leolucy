@@ -44,7 +44,9 @@ export default class Modals {
 
     async loadProduct(productId) {
         let url = `https://leolucy.ru/local/api/catalog.php?id=${productId}&action=get`;
-        let response = await fetch(url);
+        let response = await fetch(url, {
+            method: 'POST'
+        });
         if (response.ok) {
             let json = await response.json(); // читаем ответ в формате JSON
             this.productData.data = json.data;
