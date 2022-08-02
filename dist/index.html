@@ -326,7 +326,8 @@
                 <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="1" data-min="0" data-max="15" data-type="age"></div>
               </div>
               <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Вес, кг: {{ calculator.weight }}</span>
-                <div class="input-slider calculator__slider" :class="{isDesctop, isTablet, isLaptop}" data-start-value="1" data-min="0" data-max="40" data-type="weight"></div>
+                <div class="input-slider calculator__slider2" :class="{isDesctop, isTablet, isLaptop}" data-start-value="1" data-min="0" data-max="40" data-type="weight" v-show="calculator.pet === 'Собаке'"></div>
+                <div class="input-slider calculator__slider3" :class="{isDesctop, isTablet, isLaptop}" data-start-value="1" data-min="0" data-max="9" data-type="weight" v-show="calculator.pet === 'Кошке'"></div>
               </div>
               <div class="calculator__column-row" :class="{isDesctop, isTablet, isLaptop}"><span class="calculator__info-text" :class="{isDesctop, isTablet, isLaptop}">Вид:</span>
                 <div class="calculator__list" :class="{isDesctop, isTablet, isLaptop}"> 

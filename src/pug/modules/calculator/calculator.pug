@@ -17,7 +17,9 @@ section.section.calculator(style={'background-image': 'url(img/section/3.png)'},
                 
                 .calculator__column-row(:class='{isDesctop, isTablet, isLaptop}')
                     span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Вес, кг: {{ calculator.weight }}
-                    +input-slider(class="calculator__slider", data-start-value="1", data-min="0", data-max="40" data-type="weight")
+                    +input-slider(class="calculator__slider2", data-start-value="1", data-min="0", data-max="40" data-type="weight", v-show="calculator.pet === 'Собаке'")
+                    +input-slider(class="calculator__slider3", data-start-value="1", data-min="0", data-max="9" data-type="weight", v-show="calculator.pet === 'Кошке'")
+                    
                 
                 .calculator__column-row(:class='{isDesctop, isTablet, isLaptop}')
                     span.calculator__info-text(:class='{isDesctop, isTablet, isLaptop}') Вид:
