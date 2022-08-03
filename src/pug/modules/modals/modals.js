@@ -58,10 +58,15 @@ export default class Modals {
     async loadArticle(articleId) {
         let url = `https://leolucy.ru/local/api/news.php?id=${articleId}&action=get`;
         let response = await fetch(url);
+        console.log(response);
         if (response.ok) {
             let json = await response.json(); // читаем ответ в формате JSON
-            this.articleData.data = json.data;
-            this.showModals('our-articles-modals');
+            if ('status' in json) {
+                this.articleData.data = json.data;
+                this.showModals('our-articles-modals');
+            } else {
+                this.loadArticle(articleId);
+            }
         } else {
             alert ('Что-то пошло не так...');
         }
