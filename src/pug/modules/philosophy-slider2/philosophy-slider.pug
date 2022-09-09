@@ -1,0 +1,41 @@
++section.reg_block
+    +container
+        .reg_block__title регистрация
+        form.reg_block__form
+            input(type="text" placeholder="ФИО")
+            input(type="email" placeholder="E-mail")
+            input(type="text" placeholder="Номер телефона")
+            input(type="text" placeholder="Город")
+            input(type="text" placeholder="Род деятельности")
+            button.btn.btn--gold-border-rounded(type="submit") 
+                span.btn__text Зарегистрироваться
++section.section--white.philosophy-slider.new_block
+    .philosophy-slider__title презентации
+    .philosophy-slider__tit маркетинговая
+    a.philosophy-slider__link(href="#") Скачать pdf
+    +container
+        .swiper.philosophy-slider__swiper
+            .swiper-wrapper.philosophy-slider__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
+                each item in arrayPhilosophySlider
+                    .swiper-slide.philosophy-slider__slide 
+                        .philosophy-slider__slide-content(:class='{isDesctop, isTablet, isLaptop}')
+                            img.philosophy-slider__slide-img(src=item.img, alt="")
+        .philosophy-slider__panel(:class='{isDesctop, isTablet, isLaptop}')
+            +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.philosophy-slider__arrow.philosophy-slider__arrow--prev
+            +btn(null, 'triangle-arrow-right').btn--gold-border-while-fill-circle.philosophy-slider__arrow.philosophy-slider__arrow--next
+        .philosophy-slider__dots(:class='{isDesctop, isTablet, isLaptop}')
++section.section--white.philosophy-slider.new_block
+    .philosophy-slider__tit продуктовая
+    a.philosophy-slider__link(href="#") Скачать pdf
+    +container
+        .swiper.philosophy-slider__swiper
+            .swiper-wrapper.philosophy-slider__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
+                each item in arrayPhilosophySlider
+                    .swiper-slide.philosophy-slider__slide 
+                        .philosophy-slider__slide-content(:class='{isDesctop, isTablet, isLaptop}')
+                            img.philosophy-slider__slide-img(src=item.img, alt="")
+        .philosophy-slider__panel(:class='{isDesctop, isTablet, isLaptop}')
+            +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.philosophy-slider__arrow.philosophy-slider__arrow--prev
+            +btn(null, 'triangle-arrow-right').btn--gold-border-while-fill-circle.philosophy-slider__arrow.philosophy-slider__arrow--next
+        .philosophy-slider__dots(:class='{isDesctop, isTablet, isLaptop}')
+

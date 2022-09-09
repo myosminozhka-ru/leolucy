@@ -1,0 +1,35 @@
+section.first-screen(style={'background-image': 'url(img/section/1.png)'})
+    .first-screen__content(:class='{isDesctop, isTablet, isLaptop}')
+        .first-screen__left 
+            .first-screen__select(@click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 1", :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}")
+                img.first-screen__animal-food.first-screen__animal-food--left(src="img/first-screen/group-1/1-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+                img.first-screen__animal.first-screen__animal--hidden(src="img/first-screen/group-1/1.png", alt="")
+                img.first-screen__animal.first-screen__animal--left(src="img/first-screen/group-1/1.png", alt="")
+            .first-screen__select(@click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 2", :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}")
+                img.first-screen__animal-food.first-screen__animal-food--left(src="img/first-screen/group-2/1-1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+                img.first-screen__animal.first-screen__animal--hidden(src="img/first-screen/group-2/1.png", alt="")
+                img.first-screen__animal.first-screen__animal--left(src="img/first-screen/group-2/1.png", alt="")
+            .first-screen__select(@click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 3", :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}")
+                img.first-screen__animal-food.first-screen__animal-food--left(src="img/first-screen/group-3/1-1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+                img.first-screen__animal.first-screen__animal--hidden(src="img/first-screen/group-3/1.png", alt="")
+                img.first-screen__animal.first-screen__animal--left(src="img/first-screen/group-3/1.png", alt="")
+        .first-screen__center 
+            h1.title.first-screen__title(:class='{isDesctop, isTablet, isLaptop}') Коллеги, благодарим Вас за проявленный интерес к бренду Leo&Lucy!
+            div.first-screen__text(:class='{isDesctop, isTablet, isLaptop}')
+                p Мы ценим Ваше решение и заранее подготовили все подробные материалы о нашем продукте. Вы получите их на электронную почту, после заполнения небольшой формы регистрации.
+                br
+                p Также мы подготовили памятный сувенир, который можно забрать у сотрудников стенда.
+            +btn("Зарегистрироваться")(@click="onScrollToBlock").btn--gold-border-rounded.first-screen__btn
+        .first-screen__right 
+            .first-screen__select(@click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 1", :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}")
+                img.first-screen__animal-food.first-screen__animal-food--right(src="img/first-screen/group-1/2-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+                img.first-screen__animal.first-screen__animal--hidden(src="img/first-screen/group-1/2.png", alt="")
+                img.first-screen__animal.first-screen__animal--right(src="img/first-screen/group-1/2.png", alt="")
+            .first-screen__select(@click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 2", :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}")
+                img.first-screen__animal-food.first-screen__animal-food--right(src="img/first-screen/group-2/2-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+                img.first-screen__animal.first-screen__animal--hidden(src="img/first-screen/group-2/2.png", alt="")
+                img.first-screen__animal.first-screen__animal--right(src="img/first-screen/group-2/2.png", alt="")
+            .first-screen__select(@click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 3", :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}")
+                img.first-screen__animal-food.first-screen__animal-food--right(src="img/first-screen/group-3/2-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+                img.first-screen__animal.first-screen__animal--hidden(src="img/first-screen/group-3/2.png", alt="")
+                img.first-screen__animal.first-screen__animal--right(src="img/first-screen/group-3/2.png", alt="")

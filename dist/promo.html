@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Промо</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app wrapper" id="app" :class="[{isDesctop, isTablet, isLaptop}, isMounted]" :style="isMounted ? '' : 'display: none'">
+    <div class="preloader">
+      <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="preloader__content"> 
+          <div class="logo preloader__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+          <svg class="preloader__spinner" viewbox="0 0 80 80" :class="{isDesctop, isTablet, isLaptop}">
+            <circle class="preloader__spinner-circle" style="fill: transparent; stroke-linecap: round;" stroke="currentColor" cx="40" cy="40" r="35"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="header app__header" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
+      <div class="header__content"> 
+        <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
+          <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"> </span></div>
+        </button>
+        <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+        <div class="s header__s">
+          <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--vk btn__icon btn__icon--vk">
+                <use xlink:href="img/icons/icons.svg#vk"></use>
+              </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-panel" :class="{isDesctop, isTablet, isLaptop, &quot;header-panel--is-open&quot;: header.isShowMenu}">
+      <div class="header-panel__content"> 
+        <ul class="header-panel-menu">
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link1" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Корма</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link2" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Ингредиенты</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link3" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">FAQ</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link4" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Статьи</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link5" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Где купить</a></li>
+        </ul>
+        <div class="s header-panel__s">
+          <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--vk btn__icon btn__icon--vk">
+                <use xlink:href="img/icons/icons.svg#vk"></use>
+              </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main app__main" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="first-screen" style="background-image:url(img/section/1.png);">
+        <div class="first-screen__content" :class="{isDesctop, isTablet, isLaptop}">
+          <div class="first-screen__left"> 
+            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="img/first-screen/group-1/1-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-1/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="img/first-screen/group-1/1.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="img/first-screen/group-2/1-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-2/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="img/first-screen/group-2/1.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="img/first-screen/group-3/1-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-3/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="img/first-screen/group-3/1.png" alt=""></div>
+          </div>
+          <div class="first-screen__center"> 
+            <h1 class="title first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Коллеги, благодарим Вас за проявленный интерес к бренду Leo&Lucy!</h1>
+            <div class="first-screen__text" :class="{isDesctop, isTablet, isLaptop}">
+              <p>Мы ценим Ваше решение и заранее подготовили все подробные материалы о нашем продукте. Вы получите их на электронную почту, после заполнения небольшой формы регистрации.</p><br>
+              <p>Также мы подготовили памятный сувенир, который можно забрать у сотрудников стенда.</p>
+            </div>
+            <button class="btn btn--gold-border-rounded first-screen__btn" :class="{isDesctop, isTablet, isLaptop}" @click="onScrollToBlock"><span class="btn__text">Зарегистрироваться</span>
+            </button>
+          </div>
+          <div class="first-screen__right"> 
+            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="img/first-screen/group-1/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-1/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="img/first-screen/group-1/2.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="img/first-screen/group-2/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-2/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="img/first-screen/group-2/2.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="img/first-screen/group-3/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-3/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="img/first-screen/group-3/2.png" alt=""></div>
+          </div>
+        </div>
+      </section>
+      <section class="section reg_block" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+          <div class="reg_block__title">регистрация</div>
+          <form class="reg_block__form">
+            <input type="text" placeholder="ФИО">
+            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="Номер телефона">
+            <input type="text" placeholder="Город">
+            <input type="text" placeholder="Род деятельности">
+            <button class="btn btn--gold-border-rounded" type="submit"> <span class="btn__text">Зарегистрироваться</span></button>
+          </form>
+        </div>
+      </section>
+      <section class="section section--white philosophy-slider new_block" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="philosophy-slider__title">презентации</div>
+        <div class="philosophy-slider__tit">маркетинговая</div><a class="philosophy-slider__link" href="#">Скачать pdf</a>
+        <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+          <div class="swiper philosophy-slider__swiper">
+            <div class="swiper-wrapper philosophy-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
+              <div class="swiper-slide philosophy-slider__slide"> 
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt=""></div>
+              </div>
+              <div class="swiper-slide philosophy-slider__slide"> 
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt=""></div>
+              </div>
+              <div class="swiper-slide philosophy-slider__slide"> 
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-slider__panel" :class="{isDesctop, isTablet, isLaptop}">
+            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
+                <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
+                <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="philosophy-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
+        </div>
+      </section>
+      <section class="section section--white philosophy-slider new_block" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="philosophy-slider__tit">продуктовая</div><a class="philosophy-slider__link" href="#">Скачать pdf</a>
+        <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+          <div class="swiper philosophy-slider__swiper">
+            <div class="swiper-wrapper philosophy-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
+              <div class="swiper-slide philosophy-slider__slide"> 
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt=""></div>
+              </div>
+              <div class="swiper-slide philosophy-slider__slide"> 
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt=""></div>
+              </div>
+              <div class="swiper-slide philosophy-slider__slide"> 
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-slider__panel" :class="{isDesctop, isTablet, isLaptop}">
+            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
+                <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
+                <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="philosophy-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer app__footer" :class="{isDesctop, isTablet, isLaptop}">
+      <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="footer__content" :class="{isDesctop, isTablet, isLaptop}"> <span class="footer__heading-contacts footer__add-line footer__add-line--right" :class="{isDesctop, isTablet, isLaptop}">Контакты</span>
+          <div class="logo footer__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+          <ul class="footer-menu footer__menu" :class="{isDesctop, isTablet, isLaptop}"> 
+            <li class="footer-menu__item footer__add-line footer__add-line--left" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link1">Корма</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link2">Ингредиенты</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link3">FAQ</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link4">Статьи</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link5">Где купить</a></li>
+          </ul>
+          <div class="footer__contacts" :class="{isDesctop, isTablet, isLaptop}"> <a class="footer__gold-link" href="tel:+74950000000" :class="{isDesctop, isTablet, isLaptop}">+7(495)000-00-00</a><a class="footer__gold-link" href="mailto:info@info.ru" :class="{isDesctop, isTablet, isLaptop}">info@info.ru</a></div>
+          <div class="s footer__s">
+            <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+                <svg class="icon icon--vk btn__icon btn__icon--vk">
+                  <use xlink:href="img/icons/icons.svg#vk"></use>
+                </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+                <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                  <use xlink:href="img/icons/icons.svg#telegram"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="footer__bottom" :class="{isDesctop, isTablet, isLaptop}"><span class="footer__copyright" :class="{isDesctop, isTablet, isLaptop}">© 2022 Все права защищены</span><a class="footer__policy-link footer__policy-link--first" href="#" :class="{isDesctop, isTablet, isLaptop}">Политика конфиденциальности</a><a class="footer__policy-link footer__policy-link--second" href="#" :class="{isDesctop, isTablet, isLaptop}">Согласие на обработку персональных данных  </a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="js/app.min.js"></script>
+<script>
+  app.reviews.arrayReviews = [
+              {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+      {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+      {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+      {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+  ]
+</script>
