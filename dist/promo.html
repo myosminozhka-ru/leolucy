@@ -85,11 +85,36 @@
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <div class="reg_block__title">регистрация</div>
           <form class="reg_block__form">
-            <input type="text" placeholder="ФИО">
-            <input type="email" placeholder="E-mail">
-            <input type="text" placeholder="Номер телефона">
-            <input type="text" placeholder="Город">
-            <input type="text" placeholder="Род деятельности">
+            <div class="input input--error reg_block__input"><span class="input__info">Текст Ошибки</span>
+              <div class="input__box">
+                <input class="input__field" type="text" placeholder="ФИО">
+                <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
+              </div>
+            </div>
+            <div class="input reg_block__input"><span class="input__info"></span>
+              <div class="input__box"> 
+                <input class="input__field" type="email" placeholder="E-mail">
+                <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
+              </div>
+            </div>
+            <div class="input reg_block__input"><span class="input__info"></span>
+              <div class="input__box"> 
+                <input class="input__field" type="tel" placeholder="Номер телефона">
+                <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
+              </div>
+            </div>
+            <div class="input reg_block__input"><span class="input__info"></span>
+              <div class="input__box"> 
+                <input class="input__field" type="text" placeholder="Город">
+                <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
+              </div>
+            </div>
+            <div class="input reg_block__input"><span class="input__info"></span>
+              <div class="input__box"> 
+                <input class="input__field" type="text" placeholder="Род деятельности">
+                <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
+              </div>
+            </div>
             <button class="btn btn--gold-border-rounded" type="submit"> <span class="btn__text">Зарегистрироваться</span></button>
           </form>
         </div>
@@ -98,7 +123,7 @@
         <div class="philosophy-slider__title">презентации</div>
         <div class="philosophy-slider__tit">маркетинговая</div><a class="philosophy-slider__link" href="#">Скачать pdf</a>
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
-          <div class="swiper philosophy-slider__swiper">
+          <div class="swiper philosophy-slider__swiper philosophy-slider__swiper--first">
             <div class="swiper-wrapper philosophy-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
               <div class="swiper-slide philosophy-slider__slide"> 
                 <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt=""></div>
@@ -112,24 +137,24 @@
             </div>
           </div>
           <div class="philosophy-slider__panel" :class="{isDesctop, isTablet, isLaptop}">
-            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
+            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--prev first-slider__btn" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
                 <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
               </svg>
             </button>
-            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
+            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--next first-slider__btn" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
                 <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
               </svg>
             </button>
           </div>
-          <div class="philosophy-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
+          <div class="philosophy-slider__dots first-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
         </div>
       </section>
       <section class="section section--white philosophy-slider new_block" :class="{isDesctop, isTablet, isLaptop}">
         <div class="philosophy-slider__tit">продуктовая</div><a class="philosophy-slider__link" href="#">Скачать pdf</a>
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
-          <div class="swiper philosophy-slider__swiper">
+          <div class="swiper philosophy-slider__swiper philosophy-slider__swiper--second">
             <div class="swiper-wrapper philosophy-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
               <div class="swiper-slide philosophy-slider__slide"> 
                 <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="img/philosophy-slider/1.png" alt=""></div>
@@ -143,18 +168,18 @@
             </div>
           </div>
           <div class="philosophy-slider__panel" :class="{isDesctop, isTablet, isLaptop}">
-            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--prev" :class="{isDesctop, isTablet, isLaptop}">
+            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--prev second-slider__btn" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
                 <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
               </svg>
             </button>
-            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--next" :class="{isDesctop, isTablet, isLaptop}">
+            <button class="btn btn--gold-border-while-fill-circle philosophy-slider__arrow philosophy-slider__arrow--next second-slider__btn" :class="{isDesctop, isTablet, isLaptop}">
               <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
                 <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
               </svg>
             </button>
           </div>
-          <div class="philosophy-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
+          <div class="philosophy-slider__dots second-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
         </div>
       </section>
     </main>
