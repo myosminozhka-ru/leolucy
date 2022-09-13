@@ -925,11 +925,21 @@
                 <div class="create-review-modals__row-hidden" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="create-review-modals__box" :class="{isDesctop, isTablet, isLaptop}"> 
                     <label class="create-review-modals__label" :class="{isDesctop, isTablet, isLaptop}" for="name">Представьтесь:</label>
-                    <input class="create-review-modals__input" :class="{isDesctop, isTablet, isLaptop}" type="text" name="name" placeholder="Ваше имя" required>
+                    <div class="input create-review-modals__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
+                      <div class="input__box">
+                        <input class="input__field" type="text" name="name" placeholder="Ваше имя" required>
+                        <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
+                      </div>
+                    </div>
                   </div>
                   <div class="create-review-modals__box" :class="{isDesctop, isTablet, isLaptop}"> 
                     <label class="create-review-modals__label" :class="{isDesctop, isTablet, isLaptop}" for="city">Город:</label>
-                    <input class="create-review-modals__input" :class="{isDesctop, isTablet, isLaptop}" type="text" name="city" placeholder="Ваш город" required>
+                    <div class="input create-review-modals__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
+                      <div class="input__box">
+                        <input class="input__field" type="text" name="city" placeholder="Ваш город" required>
+                        <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
+                      </div>
+                    </div>
                   </div>
                   <div class="create-review-modals__box create-review-modals__box--small" :class="{isDesctop, isTablet, isLaptop}"> 
                     <div class="create-review-modals__wrapper-img" id="create-review-modals__dropzone" :class="[{isDesctop, isTablet, isLaptop}, !modals.createReviewModalsData.photo.status ? &quot;animate__animated animate__headShake&quot;: &quot;&quot; ]">

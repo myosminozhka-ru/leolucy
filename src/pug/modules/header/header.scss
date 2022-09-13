@@ -1,307 +1,307 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  transition: all $ease05;
+  $header: &;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    padding: 30px 15px;
+  }
+
+  &__show-menu {
+    margin-right: 0;
+    margin-left: 30px;
+    order: 1;
+    z-index: 3;
+  }
+
+  &__logo {
+    margin-right: auto;
+    max-width: 200px;
+    order: 0;
     transition: all $ease05;
-    $header: &;
+  }
 
-    &__content {
-        display: flex;
-        align-items: center;
-        padding: 30px 15px;
+  &__s {
+    order: 2;
+    display: none;
+    transition: all $ease05;
+  }
+
+  &.isTablet,
+  &.isLaptop,
+  &.isDesctop {
+    #{$header}__show-menu {
+      order: 0;
+      margin-left: 0;
+      margin-right: auto;
     }
 
-    &__show-menu {
-        margin-right: 0;
-        margin-left: 30px;
-        order: 1;
-        z-index: 3;
+    #{$header}__logo {
+      order: 1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    &__logo {
-        margin-right: auto;
-        max-width: 200px;
-        order: 0;
-        transition: all $ease05;
+    #{$header}__s {
+      display: flex;
+    }
+  }
+
+  &.isTablet {
+    #{$header}__content {
+      align-items: center;
+      padding: 50px 20px 50px 20px;
     }
 
-    &__s {
-        order: 2;
-        display: none;
-        transition: all $ease05;
+    #{$header}__logo {
+      max-width: 310px;
+    }
+  }
+
+  &.isLaptop,
+  &.isDesctop {
+    #{$header}__content {
+      align-items: flex-start;
+    }
+  }
+
+  &.isLaptop {
+    #{$header}__content {
+      padding: 50px 100px 115px 100px;
     }
 
-    &.isTablet, 
+    #{$header}__show-menu {
+      top: -15px;
+    }
+
+    #{$header}__logo {
+      max-width: 410px;
+    }
+  }
+
+  &.isDesctop {
+    #{$header}__content {
+      padding: vw(50px) vw(100px) vw(115px) vw(100px);
+    }
+
+    #{$header}__show-menu {
+      top: vw(-15px);
+    }
+
+    #{$header}__logo {
+      max-width: vw(410px);
+    }
+  }
+
+  &--black {
+    background-color: $black;
+  }
+
+  &--scoll {
+    &.isTablet,
     &.isLaptop,
     &.isDesctop {
-        #{$header}__show-menu {
-            order: 0;
-            margin-left: 0;
-            margin-right: auto;
-        }
+      #{$header}__content {
+        align-items: center;
+      }
 
-        #{$header}__logo {
-            order: 1;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        #{$header}__s {
-            display: flex;
-        }
+      #{$header}__show-menu {
+        top: 0;
+      }
     }
 
     &.isTablet {
-        #{$header}__content {
-            align-items: center;
-            padding: 50px 20px 50px 20px;
-        }
-
-        #{$header}__logo {
-            max-width: 310px;
-        }
-    }
-
-    &.isLaptop,
-    &.isDesctop {
-        #{$header}__content {
-            align-items: flex-start;
-        }
+      #{$header}__logo {
+        max-width: 310px;
+      }
     }
 
     &.isLaptop {
-        #{$header}__content {
-            padding: 50px 100px 115px 100px;
-        }
+      #{$header}__content {
+        padding: 30px 100px 30px 100px;
+      }
 
-        #{$header}__show-menu {
-            top: -15px;
-        }
-
-        #{$header}__logo {
-            max-width: 410px;
-        }
+      #{$header}__logo {
+        max-width: 255px;
+      }
     }
 
     &.isDesctop {
-        #{$header}__content {
-            padding: vw(50px) vw(100px) vw(115px) vw(100px);
-        }
+      #{$header}__content {
+        padding: vw(30px) vw(100px) vw(30px) vw(100px);
+      }
 
-        #{$header}__show-menu {
-            top: vw(-15px);
-        }
-
-        #{$header}__logo {
-            max-width: vw(410px);
-        }
+      #{$header}__logo {
+        max-width: vw(255px);
+      }
     }
-
-
-    &--black {
-        background-color: $black;
-    }
-
-    &--scoll {
-        &.isTablet,
-        &.isLaptop,
-        &.isDesctop {
-            #{$header}__content {
-                align-items: center;
-            }
-
-            #{$header}__show-menu {
-                top: 0;
-            }
-        }
-
-        &.isTablet {
-            #{$header}__logo {
-                max-width: 310px;
-            }
-        }
-
-        &.isLaptop {
-            #{$header}__content {
-                padding: 30px 100px 30px 100px;
-            }
-
-            #{$header}__logo {
-                max-width: 255px;
-            }
-        }
-
-        &.isDesctop {
-            #{$header}__content {
-                padding: vw(30px) vw(100px) vw(30px) vw(100px);
-            }
-
-            #{$header}__logo {
-                max-width: vw(255px);
-            }
-        }
-    }
+  }
 }
 
 .header-panel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: $black;
-    z-index: 5;
-    padding-top: 160px;
-    padding-bottom: 65px;
-    border-radius: 0 0 30px 30px;
-    opacity: 0;
-    transition: all $ease05;
-    pointer-events: none;
-    overflow: hidden;
-    $panel: &;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $black;
+  z-index: 5;
+  padding-top: 160px;
+  padding-bottom: 65px;
+  border-radius: 0 0 30px 30px;
+  opacity: 0;
+  transition: all $ease05;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 6;
+  $panel: &;
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left: 12px;
-        padding-right: 12px;
-    }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 
-    &-menu {
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: $din;
-        font-size: 18px;
-        line-height: 120%;
-        margin-bottom: 60px;
-        order: 0;
+  &-menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $din;
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 60px;
+    order: 0;
 
-        &__item {
-            margin-bottom: 20px;
+    &__item {
+      margin-bottom: 20px;
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        &__link {
-            color: $dustyGray;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: all $ease05;
-
-            &.isDesctop {
-                border-bottom-width: vw(1px);
-            }
-
-            &:hover {
-                border-bottom-color: inherit;
-            }
-        }
-    }
-
-    &__contacts {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        order: 1;
-        margin-bottom: 60px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &__link {
-        font-family: $century;
-        font-size: 26px;
-        font-weight: 400;
-        text-decoration: none;
-        line-height: 120%;
-        margin-bottom: 30px;
-        color: $pesto;
-        border-bottom: 1px solid transparent;
-        transition: all $ease05;
-        
-        &.isDesctop {
-            border-bottom-width: vw(1px);
-            margin-bottom: vw(30px);
-        }
-        
-        &:hover {
-            border-bottom-color: inherit;
-        }
+      color: $dustyGray;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all $ease05;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+      &.isDesctop {
+        border-bottom-width: vw(1px);
+      }
+
+      &:hover {
+        border-bottom-color: inherit;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    font-family: $century;
+    font-size: 26px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 120%;
+    margin-bottom: 30px;
+    color: $pesto;
+    border-bottom: 1px solid transparent;
+    transition: all $ease05;
+
+    &.isDesctop {
+      border-bottom-width: vw(1px);
+      margin-bottom: vw(30px);
     }
 
-    &__s {
-        order: 2;
+    &:hover {
+      border-bottom-color: inherit;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__s {
+    order: 2;
+  }
+
+  &.isTablet,
+  &.isLaptop,
+  &.isDesctop {
+    padding-top: 0;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+
+    #{$panel}__content {
+      padding-top: 200px;
+    }
+
+    #{$panel}__content,
+    #{$panel}__contacts,
+    #{$panel}-menu,
+    #{$panel}__s {
+      align-items: flex-start;
+    }
+
+    #{$panel}__content {
+      order: 0;
+    }
+
+    #{$panel}-menu {
+      order: 1;
+    }
+
+    #{$panel}__s {
+      order: 2;
+    }
+  }
+
+  &.isTablet,
+  &.isLaptop {
+    width: 435px;
+    border-radius: 0 0 30px 0;
+    padding-left: 100px;
+  }
+
+  &.isDesctop {
+    width: vw(435);
+    border-radius: 0 0 vw(30px) 0;
+    padding-left: vw(100px);
+
+    #{$panel}__content {
+      padding-top: vw(200px);
+    }
+  }
+
+  &--is-open {
+    top: 0px;
+    opacity: 1;
+    pointer-events: auto;
+    overflow: visible;
 
     &.isTablet,
     &.isLaptop,
     &.isDesctop {
-        padding-top: 0;
-        top: 0;
-        left: -100%;
-        height: 100vh;
-
-        #{$panel}__content {
-            padding-top: 200px;
-        }
-
-        #{$panel}__content,
-        #{$panel}__contacts,
-        #{$panel}-menu,
-        #{$panel}__s {
-            align-items: flex-start;
-        }
-
-        #{$panel}__content {
-            order: 0;
-        }
-
-        #{$panel}-menu {
-            order: 1;
-        }
-
-        #{$panel}__s {
-            order: 2;
-        }
+      top: 0;
+      left: 0;
     }
-
-    &.isTablet,
-    &.isLaptop {
-        width: 435px;
-        border-radius: 0 0 30px 0;
-        padding-left: 100px;
-    }
-
-    &.isDesctop {
-        width: vw(435);
-        border-radius: 0 0 vw(30px) 0;
-        padding-left: vw(100px);
-
-        #{$panel}__content {
-            padding-top: vw(200px);
-        }
-    }
-
-    &--is-open {
-        top: 0px;
-        opacity: 1;
-        pointer-events: auto;
-        overflow: visible;
-
-        &.isTablet,
-        &.isLaptop,
-        &.isDesctop {
-            top: 0;
-            left: 0;
-        }
-    }
+  }
 }
