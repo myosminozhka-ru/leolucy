@@ -140,7 +140,7 @@
   margin-right: auto;
 
   &.isDesctop {
-    max-width: rem(380px);
+    max-width: vw(380px);
   }
 
   &__title {
@@ -159,8 +159,8 @@
     }
 
     &.isDesctop {
-      font-size: rem(40px);
-      margin-bottom: rem(65px);
+      font-size: vw(40px);
+      margin-bottom: vw(65px);
     }
   }
 
@@ -178,7 +178,7 @@
     }
 
     &.isDesctop {
-      font-size: rem(25px);
+      font-size: vw(25px);
     }
   }
 
