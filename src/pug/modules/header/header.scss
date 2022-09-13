@@ -159,7 +159,6 @@
   transition: all $ease05;
   pointer-events: none;
   overflow: hidden;
-  z-index: 6;
   $panel: &;
 
   &__content {
@@ -251,7 +250,7 @@
     height: 100vh;
 
     #{$panel}__content {
-      padding-top: 200px;
+      padding-top: 215px;
     }
 
     #{$panel}__content,
@@ -287,7 +286,7 @@
     padding-left: vw(100px);
 
     #{$panel}__content {
-      padding-top: vw(200px);
+      padding-top: vw(215px);
     }
   }
 

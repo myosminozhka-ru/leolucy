@@ -6660,7 +6660,6 @@ body.bg-white {
   transition: all 0.5s ease;
   pointer-events: none;
   overflow: hidden;
-  z-index: 6;
 }
 
 .header-panel__content {
@@ -6755,7 +6754,7 @@ body.bg-white {
 .header-panel.isTablet .header-panel__content,
 .header-panel.isLaptop .header-panel__content,
 .header-panel.isDesctop .header-panel__content {
-  padding-top: 200px;
+  padding-top: 215px;
 }
 
 .header-panel.isTablet .header-panel__content,
@@ -6805,7 +6804,7 @@ body.bg-white {
 }
 
 .header-panel.isDesctop .header-panel__content {
-  padding-top: 10.4166666667vw;
+  padding-top: 11.1979166667vw;
 }
 
 .header-panel--is-open {
