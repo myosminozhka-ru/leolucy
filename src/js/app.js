@@ -130,6 +130,29 @@ window.app = new Vue({
         const url = "/local/api/register.php";
         request.responseType = "json";
         request.open("POST", url, true);
+
+        request.addEventListener("readystatechange", () => {
+          if (request.readyState === 4 && request.status === 200) {
+            let obj = request.response;
+            if ("success" in obj) {
+            } else {
+              if ("error" in obj) {
+                for (errorItem in obj.error) {
+                  const parentInput = form
+                    .querySelector('[name="' + errorItem + '"]')
+                    .closest(".input");
+                  parentInput.classList.add("input--error");
+                  parentInput.querySelector(".input__info").innerHTML =
+                    obj.error[errorItem];
+                }
+              }
+            }
+            // // Здесь мы можем обращаться к свойству объекта и получать	его значение
+            // console.log(obj.id_product);
+            // console.log(obj.qty_product);
+          }
+        });
+
         request.send(formData);
       }
     },
