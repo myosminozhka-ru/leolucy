@@ -135,6 +135,15 @@ window.app = new Vue({
           if (request.readyState === 4 && request.status === 200) {
             let obj = request.response;
             if ("success" in obj) {
+              document
+                .querySelector(".reg_block__title")
+                ?.classList.add("reg_block__title--hidden");
+              document
+                .querySelector(".reg_block__form")
+                ?.classList.add("reg_block__form--hidden");
+              document
+                .querySelector(".promo-success")
+                ?.classList.add("promo-success--visible");
             } else {
               if ("error" in obj) {
                 for (let errorItem in obj.error) {
@@ -147,9 +156,6 @@ window.app = new Vue({
                 }
               }
             }
-            // // Здесь мы можем обращаться к свойству объекта и получать	его значение
-            // console.log(obj.id_product);
-            // console.log(obj.qty_product);
           }
         });
 

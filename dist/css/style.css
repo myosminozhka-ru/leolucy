@@ -7247,11 +7247,19 @@ body.bg-white {
   color: #1c1b1f;
 }
 
+.reg_block__title--hidden {
+  display: none;
+}
+
 .reg_block__form {
   max-width: 380px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.reg_block__form--hidden {
+  display: none;
 }
 
 .reg_block__input {
@@ -7319,6 +7327,61 @@ body.bg-white {
 
 .new_block .philosophy-slider__slide-content {
   min-height: 615px;
+}
+
+.promo-success {
+  display: none;
+  flex-direction: column;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.promo-success.isDesctop {
+  max-width: 23.75pxrem;
+}
+
+.promo-success__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 100px;
+  font-weight: 700;
+}
+
+.promo-success__title.isLaptop {
+  font-size: 40px;
+  margin-bottom: 65px;
+}
+
+.promo-success__title.isDesctop {
+  font-size: 2.5pxrem;
+  margin-bottom: 4.0625pxrem;
+}
+
+.promo-success__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.promo-success__text.isLaptop {
+  font-size: 25px;
+}
+
+.promo-success__text.isDesctop {
+  font-size: 1.5625pxrem;
+}
+
+.promo-success--visible {
+  display: flex;
 }
 
 .ingredients {
