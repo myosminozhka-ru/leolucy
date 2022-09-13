@@ -75,6 +75,7 @@ window.app = new Vue({
   },
   mounted() {
     this.isMounted = true;
+    this.scrollToRegistrationForm();
   },
   methods: {
     onSelectMainAnimal(animal) {
@@ -101,6 +102,36 @@ window.app = new Vue({
       if (parentInput.classList.contains("input--error")) {
         parentInput.classList.remove("input--error");
       }
+    },
+
+    scrollToRegistrationForm() {
+      document
+        .getElementById("promo_button")
+        .addEventListener("click", function () {
+          let headerHeight = document.querySelector(".header").clientHeight;
+          const block = document.getElementById("promo-form-container");
+          const elementPosition = block.getBoundingClientRect().top;
+          const offsetPosition = elementPosition - headerHeight;
+
+          window.scrollBy({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+
+          if (
+            document
+              .querySelector(".header")
+              .classList.contains("header--scoll")
+          ) {
+            headerHeight =
+              document.querySelector(".header--scoll").clientHeight;
+
+            window.scrollBy({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
     },
 
     sendPromoForm() {
