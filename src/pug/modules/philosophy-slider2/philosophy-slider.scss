@@ -10,6 +10,11 @@
     line-height: 120%;
     text-transform: uppercase;
     color: #1c1b1f;
+
+    &--hidden {
+      display: none;
+    }
+
     @media all and (max-width: 1023px) {
       font-size: 26px;
       margin-bottom: 24px;
@@ -20,6 +25,10 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+
+    &--hidden {
+      display: none;
+    }
   }
 
   &__input {
@@ -120,5 +129,60 @@
   }
   .philosophy-slider__slide-content {
     min-height: 615px;
+  }
+}
+
+.promo-success {
+  display: none;
+  flex-direction: column;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.isDesctop {
+    max-width: rem(380px);
+  }
+
+  &__title {
+    font-family: $din;
+    font-size: 26px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 100px;
+    font-weight: 700;
+
+    &.isLaptop {
+      font-size: 40px;
+      margin-bottom: 65px;
+    }
+
+    &.isDesctop {
+      font-size: rem(40px);
+      margin-bottom: rem(65px);
+    }
+  }
+
+  &__text {
+    font-family: $din;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+
+    &.isLaptop {
+      font-size: 25px;
+    }
+
+    &.isDesctop {
+      font-size: rem(25px);
+    }
+  }
+
+  &--visible {
+    display: flex;
   }
 }
