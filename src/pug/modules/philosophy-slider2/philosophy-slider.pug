@@ -1,43 +1,43 @@
 +section.reg_block
     +container
         .reg_block__title регистрация
-        form.reg_block__form
+        form#promo-form.reg_block__form
             .input.input--error.reg_block__input(:class='{isDesctop, isTablet, isLaptop}')
                 span.input__info Текст Ошибки
                 .input__box
-                    input.input__field(type="text" placeholder="ФИО")
+                    input.input__field(type="text", name="fio", placeholder="ФИО", @focus="activeInput($event.target)")
                     .input__icons
                         img.input__icon.input__icon--error(src="/img/icons/error.png")
             
             .input.reg_block__input(:class='{isDesctop, isTablet, isLaptop}')
                 span.input__info
                 .input__box 
-                    input.input__field(type="email" placeholder="E-mail")
+                    input.input__field(type="email", name="email" placeholder="E-mail", @focus="activeInput($event.target)")
                     .input__icons
                         img.input__icon.input__icon--error(src="/img/icons/error.png")
             
             .input.reg_block__input(:class='{isDesctop, isTablet, isLaptop}')
                 span.input__info
                 .input__box 
-                    input.input__field(type="tel" placeholder="Номер телефона")
+                    input.input__field(type="tel", name="phone", placeholder="Номер телефона", @focus="activeInput($event.target)")
                     .input__icons
                         img.input__icon.input__icon--error(src="/img/icons/error.png")
             
             .input.reg_block__input(:class='{isDesctop, isTablet, isLaptop}')
                 span.input__info
                 .input__box 
-                    input.input__field(type="text" placeholder="Город")
+                    input.input__field(type="text", name="city", placeholder="Город", @focus="activeInput($event.target)")
                     .input__icons
                         img.input__icon.input__icon--error(src="/img/icons/error.png")
 
             .input.reg_block__input(:class='{isDesctop, isTablet, isLaptop}')
                 span.input__info
                 .input__box 
-                    input.input__field(type="text" placeholder="Род деятельности")
+                    input.input__field(type="text", name="work", placeholder="Род деятельности", @focus="activeInput($event.target)")
                     .input__icons
                         img.input__icon.input__icon--error(src="/img/icons/error.png")
 
-            button.btn.btn--gold-border-rounded(type="submit") 
+            button.btn.btn--gold-border-rounded(type="submit" @click.prevent="sendPromoForm") 
                 span.btn__text Зарегистрироваться
 +section.section--white.philosophy-slider.new_block
     .philosophy-slider__title презентации

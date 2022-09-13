@@ -75,7 +75,6 @@ window.app = new Vue({
   },
   mounted() {
     this.isMounted = true;
-    this.activeInput();
   },
   methods: {
     onSelectMainAnimal(animal) {
@@ -97,15 +96,42 @@ window.app = new Vue({
       });
     },
 
-    activeInput() {
-      document
-        .querySelector(".input__field")
-        .addEventListener("focus", function () {
-          const parentInput = this.closest(".input");
-          if (parentInput.classList.contains("input--error")) {
-            parentInput.classList.remove("input--error");
-          }
-        });
+    activeInput(elem) {
+      const parentInput = elem.closest(".input");
+      if (parentInput.classList.contains("input--error")) {
+        parentInput.classList.remove("input--error");
+      }
+    },
+
+    sendPromoForm() {
+      const form = document.getElementById("promo-form");
+      const inputs = form.getElementsByTagName("input");
+      const formData = new FormData();
+
+      for (let input of inputs) {
+        if (input.value) {
+          formData.append(input.name, input.value);
+        } else {
+          const parentInput = input.closest(".input");
+          parentInput.classList.add("input--error");
+          parentInput.querySelector(".input__info").innerHTML =
+            "Поле обязательное для заполнения";
+        }
+      }
+
+      const lengthFormData = Array.from(formData.entries(), ([key, prop]) => ({
+        [key]: {
+          ContentLength: typeof prop === "string" ? prop.length : prop.size,
+        },
+      })).length;
+
+      if (lengthFormData === inputs.length) {
+        const request = new XMLHttpRequest();
+        const url = "/local/api/register.php";
+        request.responseType = "json";
+        request.open("POST", url, true);
+        request.send(formData);
+      }
     },
   },
   computed: {
