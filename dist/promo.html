@@ -84,38 +84,38 @@
       <section class="section reg_block" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <div class="reg_block__title">регистрация</div>
-          <form class="reg_block__form">
+          <form class="reg_block__form" id="promo-form">
             <div class="input input--error reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info">Текст Ошибки</span>
               <div class="input__box">
-                <input class="input__field" type="text" placeholder="ФИО">
+                <input class="input__field" type="text" name="fio" placeholder="ФИО" @focus="activeInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box"> 
-                <input class="input__field" type="email" placeholder="E-mail">
+                <input class="input__field" type="email" name="email" placeholder="E-mail" @focus="activeInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box"> 
-                <input class="input__field" type="tel" placeholder="Номер телефона">
+                <input class="input__field" type="tel" name="phone" placeholder="Номер телефона" @focus="activeInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box"> 
-                <input class="input__field" type="text" placeholder="Город">
+                <input class="input__field" type="text" name="city" placeholder="Город" @focus="activeInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box"> 
-                <input class="input__field" type="text" placeholder="Род деятельности">
+                <input class="input__field" type="text" name="work" placeholder="Род деятельности" @focus="activeInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
-            <button class="btn btn--gold-border-rounded" type="submit"> <span class="btn__text">Зарегистрироваться</span></button>
+            <button class="btn btn--gold-border-rounded" type="submit" @click.prevent="sendPromoForm"> <span class="btn__text">Зарегистрироваться</span></button>
           </form>
         </div>
       </section>
