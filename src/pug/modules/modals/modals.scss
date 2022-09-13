@@ -1,979 +1,968 @@
 .modals {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba($black, 0.54);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($black, 0.54);
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all $ease05;
+  z-index: 0;
+  padding: 15px;
+  overflow-y: auto;
+
+  &.isDesctop {
+    padding: vw(15px);
+  }
+
+  &__content {
+    background-color: $white;
+    border: 4px solid $shadow;
+    box-shadow: 0px 30px 30px rgba($black, 0.15);
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
     display: flex;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: all $ease05;
-    z-index: 0;
-    padding: 15px;
-    overflow-y: auto;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1205px;
 
     &.isDesctop {
-        padding: vw(15px);
+      border: vw(4px) solid $shadow;
+      box-shadow: vw(0px) vw(30px) vw(30px) rgba($black, 0.15);
+      border-radius: vw(10px);
+      padding: vw(20px);
+      max-width: vw(1205px);
+    }
+  }
+
+  &__top {
+    min-height: 25px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $pesto;
+  }
+
+  &__title {
+    font-family: $din;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+
+    &.isLaptop {
+      font-size: 25px;
     }
 
-    &__content {
-        background-color: $white;
-        border: 4px solid $shadow;
-        box-shadow: 0px 30px 30px rgba($black, 0.15);
-        border-radius: 10px;
-        margin: auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 1205px;
+    &.isDesctop {
+      font-size: vw(25px);
+    }
+  }
 
-        &.isDesctop {
-            border: vw(4px) solid $shadow;
-            box-shadow: vw(0px) vw(30px) vw(30px) rgba($black, 0.15);
-            border-radius: vw(10px);
-            padding: vw(20px);
-            max-width: vw(1205px);
-        }
+  &__subtitle {
+    font-family: $din;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+
+    &.isLaptop {
+      font-size: 20px;
     }
 
-    &__top {
-        min-height: 25px;
+    &.isDesctop {
+      font-size: vw(20);
+    }
+  }
+
+  &__text {
+    font-family: $century;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: $black;
+
+    &.isLaptop {
+      font-size: 18px;
+      text-align: left;
     }
 
-    &__close {
+    &.isDesctop {
+      font-size: vw(18px);
+      text-align: left;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    $list: &;
+
+    &-item {
+      padding-left: 15px;
+
+      &::before {
+        content: "";
         position: absolute;
-        right: 0;
-        top: 0;
-        color: $pesto;
+        left: 0;
+        top: 7px;
+        width: 6px;
+        height: 6px;
+        background-color: $black;
+        border-radius: 100%;
+      }
     }
 
-    &__title {
-        font-family: $din;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 120%;
-        text-align: center;
-        text-transform: uppercase;
-        color: $black;
+    &--column {
+      flex-direction: column;
 
-        &.isLaptop {
-            font-size: 25px;
+      #{$list}-item {
+        margin-bottom: 20px;
+
+        > * {
+          text-align: left;
         }
 
-        &.isDesctop {
-            font-size: vw(25px);
+        &:last-child {
+          margin-bottom: 0;
         }
+      }
     }
+  }
 
-    &__subtitle {
-        font-family: $din;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 120%;
-        text-align: center;
-        text-transform: uppercase;
-        color: $black;
-
-        &.isLaptop {
-            font-size: 20px;
-        }
-
-        &.isDesctop {
-            font-size: vw(20);
-        }
-    }
-
-    &__text {
-        font-family: $century;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 120%;
-        text-align: center;
-        color: $black;
-
-        &.isLaptop {
-            font-size: 18px;
-            text-align: left;
-        }
-
-        &.isDesctop {
-            font-size: vw(18px);
-            text-align: left;
-        }
-    }
-
-    &__list {
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        $list: &;
-
-        &-item {
-            padding-left: 15px;
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 7px;
-                width: 6px;
-                height: 6px;
-                background-color: $black;
-                border-radius: 100%;
-            }
-        }
-
-        &--column {
-            flex-direction: column;
-
-            #{$list}-item {
-                margin-bottom: 20px;
-                
-                > * {
-                    text-align: left;
-                }
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
-
-    &--is-open {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        z-index: 7;
-    }
+  &--is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 7;
+  }
 }
 
 .our-articles-modals {
-    &__content {
-        max-height: 100%;
+  &__content {
+    max-height: 100%;
+  }
+
+  &__top {
+    display: flex;
+    min-height: unset;
+    padding-top: 35px;
+    margin-bottom: 20px;
+    justify-content: center;
+
+    &.isLaptop {
+      margin-bottom: 20px;
+      padding-top: 0;
+      justify-content: flex-start;
     }
 
-    &__top {
-        display: flex;
-        min-height: unset;
-        padding-top: 35px;
-        margin-bottom: 20px;
-        justify-content: center;
+    &.isDesctop {
+      margin-bottom: vw(20);
+      padding-top: 0;
+      justify-content: flex-start;
+    }
+  }
 
-        &.isLaptop {
-            margin-bottom: 20px;
-            padding-top: 0;
-            justify-content: flex-start;
-        }
+  &__title {
+    text-align: center;
 
-        &.isDesctop {
-            margin-bottom: vw(20);
-            padding-top: 0;
-            justify-content: flex-start;
-        }
+    &.isLaptop,
+    &.isDesctop {
+      text-align: left;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-bottom: 20px;
+
+    &.isLaptop {
+      padding-right: 75px;
+      align-items: flex-start;
     }
 
-    &__title {
-        text-align: center;
+    &.isDesctop {
+      padding-right: vw(75px);
+      align-items: flex-start;
+      padding-bottom: vw(20);
+    }
+  }
 
-        &.isLaptop,
-        &.isDesctop {
-            text-align: left;
-        }
+  &__wrapper-img {
+    width: 100%;
+    padding-bottom: 74.19%;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    &.isLaptop,
+    &.isDesctop {
+      padding-bottom: 38.87%;
     }
 
+    &.isDesctop {
+      margin-bottom: vw(20px);
+    }
+  }
 
-    &__center {
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-        padding-bottom: 20px;
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    min-width: 100%;
+    height: 100%;
+  }
 
-        &.isLaptop {
-            padding-right: 75px;
-            align-items: flex-start;
-        }
+  &__text {
+    margin-bottom: 20px;
 
-        &.isDesctop {
-            padding-right: vw(75px);
-            align-items: flex-start;
-            padding-bottom: vw(20);
-        }
+    &:last-child {
+      margin-bottom: 0;
     }
 
-    &__wrapper-img {
-        width: 100%;
-        padding-bottom: 74.19%;
-        margin-bottom: 20px;
-        overflow: hidden;
+    &.isDesctop {
+      margin-bottom: vw(20px);
 
-        &.isLaptop,
-        &.isDesctop {
-            padding-bottom: 38.87%;
-        }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 
-        &.isDesctop {
-            margin-bottom: vw(20px);
-        }
+  &__subtitle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    &.isDesctop {
+      margin-bottom: vw(10px);
+      margin-top: vw(20px);
+    }
+  }
+
+  &__list {
+    margin-bottom: 30px;
+
+    &.isLaptop {
+      margin-bottom: 40px;
     }
 
-    &__img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        object-fit: cover;
-        min-width: 100%;
-        height: 100%;
+    &.isDesctop {
+      margin-bottom: vw(40px);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__btn {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
     }
 
-    &__text {
-        margin-bottom: 20px;
+    &.isLaptop {
+      margin-right: 20px;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &.isDesctop {
-            margin-bottom: vw(20px);
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
+      &:last-child {
+        margin-right: 0;
+      }
     }
 
-    &__subtitle {
-        margin-top: 20px;
-        margin-bottom: 10px;
+    &.isDesctop {
+      margin-right: vw(20px);
 
-        &.isDesctop {
-            margin-bottom: vw(10px);
-            margin-top: vw(20px);
-        }
+      &:last-child {
+        margin-right: 0;
+      }
     }
-
-    &__list {
-        margin-bottom: 30px;
-
-        &.isLaptop {
-            margin-bottom: 40px;
-        }
-
-        &.isDesctop {
-            margin-bottom: vw(40px);
-        }
-    }
-
-    &__bottom {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    &__btn {
-        margin-right: 15px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &.isLaptop {
-            margin-right: 20px;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-
-        &.isDesctop {
-            margin-right: vw(20px);
-        
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
+  }
 }
 
 .feed-selection-modals {
-    &__content {
-        &.isLaptop {
-            padding: 50px 50px 70px;
-        }
-
-        &.isDesctop {
-            padding: vw(50px) vw(50px) vw(70px);
-        }
+  &__content {
+    &.isLaptop {
+      padding: 50px 50px 70px;
     }
 
-    &__top {
-        height: 30px;
-        margin-bottom: 20px;
+    &.isDesctop {
+      padding: vw(50px) vw(50px) vw(70px);
+    }
+  }
 
-        &.isDesctop {
-            height: vw(30px);
-            margin-bottom: vw(20px);
-        }
+  &__top {
+    height: 30px;
+    margin-bottom: 20px;
+
+    &.isDesctop {
+      height: vw(30px);
+      margin-bottom: vw(20px);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "feed-selection-title-box" "feed-selection-left" "feed-selection-right";
+
+    &.isLaptop,
+    &.isDesctop {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "feed-selection-left feed-selection-title-box" "feed-selection-left feed-selection-right";
     }
 
-    &__grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 'feed-selection-title-box' 'feed-selection-left' 'feed-selection-right';
-
-        &.isLaptop,
-        &.isDesctop {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-areas: 'feed-selection-left feed-selection-title-box' 'feed-selection-left feed-selection-right';
-        }
-
-        &.isLaptop {
-            grid-gap: 0 125px;
-        }
-
-        &.isDesctop {
-            grid-gap: 0 vw(125px);
-        }
+    &.isLaptop {
+      grid-gap: 0 125px;
     }
 
-    &__title-box {
-        grid-area: feed-selection-title-box;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
+    &.isDesctop {
+      grid-gap: 0 vw(125px);
+    }
+  }
 
-        &.isLaptop {
-            margin-bottom: 40px;
-            align-items: flex-start;
-        }
+  &__title-box {
+    grid-area: feed-selection-title-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
 
-        &.isDesctop {
-            margin-bottom: vw(40px);
-            align-items: flex-start;
-        }
+    &.isLaptop {
+      margin-bottom: 40px;
+      align-items: flex-start;
     }
 
-    &__title {
-        margin-bottom: 10px;
+    &.isDesctop {
+      margin-bottom: vw(40px);
+      align-items: flex-start;
+    }
+  }
 
-        &.isDesctop {
-            margin-bottom: vw(10px);
-        }
+  &__title {
+    margin-bottom: 10px;
+
+    &.isDesctop {
+      margin-bottom: vw(10px);
+    }
+  }
+
+  &__subtitle {
+    font-family: $din;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: $black;
+
+    &.isLaptop {
+      font-size: 16px;
     }
 
-    &__subtitle {
-        font-family: $din;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 120%;
-        text-align: center;
-        color: $black;
+    &.isDesctop {
+      font-size: vw(16px);
+    }
+  }
 
-        &.isLaptop {
-            font-size: 16px;
-        }
-        
-        &.isDesctop {
-            font-size: vw(16px);
-        }
+  &__left,
+  &__right {
+    min-width: 0;
+  }
+
+  &__left {
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-bottom: 30px;
+    grid-area: feed-selection-left;
+
+    &.isLaptop,
+    &.isDesctop {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__swiper {
+    width: 100%;
+    height: auto;
+
+    &-wrapper {
+      margin-bottom: 20px;
+
+      &.isLaptop,
+      &.isDesctop {
+        margin-bottom: 0;
+      }
     }
 
-    &__left,
-    &__right {
-        min-width: 0;
-    }
+    &-dots {
+      width: 100%;
+      display: flex;
 
-    &__left {
-        padding-left: 45px;
-        padding-right: 45px;
-        margin-bottom: 30px;
-        grid-area: feed-selection-left;
-
-        &.isLaptop,
-        &.isDesctop {
-            padding: 0;
-            margin: 0;
-        }
-    }
-
-    &__swiper {
-        width: 100%;
-        height: auto;
-
-        &-wrapper {
-            margin-bottom: 20px;
-
-            &.isLaptop,
-            &.isDesctop {
-                margin-bottom: 0;
-            }
-        }
-
-        &-dots {
-            width: 100%;
-            display: flex;
-
-            &.isLaptop,
-            &.isDesctop {
-                display: none;
-            }
-        }
-
-        &-dot {
-            flex-grow: 1;
-            flex-basis: 0;
-            height: 4px;
-            background-color: rgba($codGray, .2);
-            cursor: pointer;
-            transition: all $ease05;
-
-            &--active {
-                pointer-events: none;
-                background-color: $pesto;
-            }
-        }
-
-        &.isLaptop {
-            margin-bottom: 20px;
-        }
-
-        &.isDesctop {
-            margin-bottom: vw(20px);
-        }
-    }
-
-    &__slide {
-        
-
-        &-content {
-            min-height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        &-img {
-            max-width: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &__dots-swiper {
+      &.isLaptop,
+      &.isDesctop {
         display: none;
-
-        &.isLaptop,
-        &.isDesctop {
-            display: block;
-        }
+      }
     }
 
-    &__dots-slide {
-        cursor: pointer;
+    &-dot {
+      flex-grow: 1;
+      flex-basis: 0;
+      height: 4px;
+      background-color: rgba($codGray, 0.2);
+      cursor: pointer;
+      transition: all $ease05;
 
-        &-content {
-            width: 100%;
-        }
-
-        &-img {
-            max-width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        &.swiper-slide-thumb-active {
-            pointer-events: none;
-        }
+      &--active {
+        pointer-events: none;
+        background-color: $pesto;
+      }
     }
 
-    &__right {
-        display: flex;
-        flex-direction: column;
-        grid-area: feed-selection-right;
+    &.isLaptop {
+      margin-bottom: 20px;
     }
 
-    &__column-row {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
+    &.isDesctop {
+      margin-bottom: vw(20px);
+    }
+  }
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &.isLaptop,
-        &.isDesctop {
-            align-items: flex-start;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        &.isLaptop {
-            margin-bottom: 40px;
-        }
-        
-        &.isDesctop {
-            margin-bottom: vw(40px);
-        }
+  &__slide {
+    &-content {
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    &__heading {
-        margin-bottom: 10px;
+    &-img {
+      max-width: 100%;
+      object-fit: cover;
     }
-    
-    &__wrapper-list {
-        overflow: hidden;
+  }
+
+  &__dots-swiper {
+    display: none;
+
+    &.isLaptop,
+    &.isDesctop {
+      display: block;
     }
+  }
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -5px;
+  &__dots-slide {
+    cursor: pointer;
 
-        &-item {
-            margin: 5px;
-            padding-left: 8px;
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 4px;
-                height: 4px;
-                border-radius: 100%;
-                background-color: $black;
-            }
-        }
+    &-content {
+      width: 100%;
     }
 
-    &__between-row {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 30px;
-
-        &.isLaptop,
-        &.isDesctop {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
-        }
-
-        &.isLaptop {
-            margin-bottom: 40px;
-        }
-
-        &.isDesctop {
-            margin-bottom: vw(40px);
-        }
+    &-img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
     }
 
-    &__col {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
+    &.swiper-slide-thumb-active {
+      pointer-events: none;
+    }
+  }
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    grid-area: feed-selection-right;
+  }
 
-        &.isLaptop,
-        &.isDesctop {
-            margin: 0;
-        }
+  &__column-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
-    &__btn {
-        margin-left: auto;
-        margin-right: auto;
+    &.isLaptop,
+    &.isDesctop {
+      align-items: flex-start;
 
-        &.isLaptop,
-        &.isDesctop {
-            margin-left: 0;
-        }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
+
+    &.isLaptop {
+      margin-bottom: 40px;
+    }
+
+    &.isDesctop {
+      margin-bottom: vw(40px);
+    }
+  }
+
+  &__heading {
+    margin-bottom: 10px;
+  }
+
+  &__wrapper-list {
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    &-item {
+      margin: 5px;
+      padding-left: 8px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background-color: $black;
+      }
+    }
+  }
+
+  &__between-row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    &.isLaptop,
+    &.isDesctop {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &.isLaptop {
+      margin-bottom: 40px;
+    }
+
+    &.isDesctop {
+      margin-bottom: vw(40px);
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.isLaptop,
+    &.isDesctop {
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+    margin-right: auto;
+
+    &.isLaptop,
+    &.isDesctop {
+      margin-left: 0;
+    }
+  }
 }
 
 .where-to-buy-modals {
-    &__top {
-        margin-bottom: 10px;
+  &__top {
+    margin-bottom: 10px;
 
-        &.isDesctop {
-            margin-bottom: vw(10);
-        }
+    &.isDesctop {
+      margin-bottom: vw(10);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    &.isLaptop {
+      margin-bottom: 40px;
     }
 
-    &__bottom {
-        display: flex;
-        flex-direction: column;
+    &.isDesctop {
+      margin-bottom: vw(40px);
+    }
+  }
+
+  &__box {
+    padding: 30px 15px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+
+    &.isLaptop {
+      padding: 20px 25px;
+      margin-bottom: 47px;
     }
 
-    &__title {
-        margin-bottom: 30px;
-
-        &.isLaptop {
-            margin-bottom: 40px;
-        }
-
-        &.isDesctop {
-            margin-bottom: vw(40px);
-        }
+    &.isDesctop {
+      padding: vw(20px) vw(25px);
+      margin-bottom: vw(47px);
+      border-radius: vw(20px);
     }
+  }
 
-    &__box {
-        padding: 30px 15px;
-        border-radius: 20px;
-        margin-bottom: 30px;
+  &__btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-        &.isLaptop {
-            padding: 20px 25px;
-            margin-bottom: 47px;
-        }
-        
-        &.isDesctop {
-            padding: vw(20px) vw(25px);
-            margin-bottom: vw(47px);
-            border-radius: vw(20px);
-        }
+  .where-to-buy-slider__panel {
+    display: none;
+
+    &.isLaptop,
+    &.isDesctop {
+      display: flex;
     }
+  }
 
-    &__btn {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .where-to-buy-slider__panel {
-        display: none;
-
-        &.isLaptop,
-        &.isDesctop {
-            display: flex;
-        }
-    }
-
-    .where-to-buy-slider__dots {
-        margin-top: 30px;
-        top: 0;
-    }
+  .where-to-buy-slider__dots {
+    margin-top: 30px;
+    top: 0;
+  }
 }
 
 .create-review-modals {
-    &__content {
-        &.isLaptop {
-            padding: 50px;
-        }
-
-        &.isDesctop {
-            padding: vw(50px);
-        }
+  &__content {
+    &.isLaptop {
+      padding: 50px;
     }
 
-    &__top {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
+    &.isDesctop {
+      padding: vw(50px);
+    }
+  }
 
-        &.isLaptop {
-            margin-bottom: 40px;
-        }
-        
-        &.isDesctop {
-            margin-bottom: vw(30px);
-        }
+  &__top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    &.isLaptop {
+      margin-bottom: 40px;
     }
 
-    &__title {
-        margin-top: 40px;
+    &.isDesctop {
+      margin-bottom: vw(30px);
+    }
+  }
 
-        &.isLaptop,
-        &.isDesctop {
-            margin-top: 0;
-        }
+  &__title {
+    margin-top: 40px;
+
+    &.isLaptop,
+    &.isDesctop {
+      margin-top: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__filter {
+    margin-bottom: 30px;
+
+    &.isLaptop {
+      margin-bottom: 40px;
     }
 
-    &__bottom {
-        display: flex;
-        flex-direction: column;
+    &.isDesctop {
+      margin-bottom: vw(30px);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+
+      &.isLaptop {
+        margin-bottom: 60px;
+      }
+
+      &.isDesctop {
+        margin-bottom: vw(60px);
+      }
     }
 
-    &__filter {
-        margin-bottom: 30px;
+    &-hidden {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% + 46px);
+      margin: -10px -23px;
 
-        &.isLaptop {
-            margin-bottom: 40px;
-        }
-        
-        &.isDesctop {
-            margin-bottom: vw(30px);
-        }
+      &.isLaptop,
+      &.isDesctop {
+        flex-direction: row;
+      }
+
+      &.isDesctop {
+        margin: vw(-10px) vw(-23px);
+      }
     }
 
-    &__form {
-        display: flex;
-        flex-direction: column;
+    &.isDesctop {
+      margin-bottom: vw(20px);
+    }
+  }
+
+  &__box {
+    margin: 10px 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 0;
+
+    &.isLaptop,
+    &.isDesctop {
+      align-items: flex-start;
+      flex-grow: 1;
+      width: auto;
+      flex-basis: unset;
     }
 
-    &__row {
-        overflow: hidden;
-        margin-bottom: 20px;
-
-        &:last-of-type {
-            margin-bottom: 30px;
-
-            &.isLaptop {
-                margin-bottom: 60px;
-            }
-            
-            &.isDesctop {
-                margin-bottom: vw(60px);
-            }
-        }
-
-        &-hidden {
-            display: flex;
-            flex-direction: column;
-            width: calc(100% + 46px);
-            margin: -10px -23px;
-
-            &.isLaptop,
-            &.isDesctop {
-                flex-direction: row;
-            }
-
-            &.isDesctop {
-                margin: vw(-10px) vw(-23px);
-            }
-        }
-        
-        &.isDesctop {
-            margin-bottom: vw(20px);
-        }
+    &.isDesctop {
+      margin: vw(10px) vw(23px);
     }
 
-    &__box {
-        margin: 10px 23px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-grow: 1;
-        flex-basis: 0;
+    &--no-margin {
+      margin: 0;
+      width: 100%;
 
-        &.isLaptop,
-        &.isDesctop {
-            align-items: flex-start;
-            flex-grow: 1;
-            width: auto;
-            flex-basis: unset;
-        }
-
-        &.isDesctop {
-            margin: vw(10px) vw(23px);
-        }
-
-        &--no-margin {
-            margin: 0;
-            width: 100%;
-
-            &.isLaptop,
-            &.isDesctop {
-                margin: 0;
-                width: 100%;
-            }
-        }
-
-        &--small {
-            flex-shrink: 0;
-
-            &.isLaptop,
-            &.isDesctop {
-                flex-grow: 0;
-                flex-shrink: 0;
-            }
-        }
-    }
-
-    &__label {
-        font-family: $din;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 120%;
-        text-align: center;
-        color: $black;
-        margin-bottom: 10px;
-
-        &.isLaptop {
-            font-weight: 400;
-            font-size: 20px;
-            margin-bottom: 20px;
-            margin-left: vw(30px);
-        }
-
-        &.isDesctop {
-            font-weight: 400;
-            font-size: vw(20px);
-            margin-bottom: vw(20px);
-            margin-left: vw(30px);
-        }
-    }
-
-    &__input {
+      &.isLaptop,
+      &.isDesctop {
+        margin: 0;
         width: 100%;
-        padding: 14px 20px;
-        border-radius: 10px;
-        border: 4px solid $pesto;
-        font-family: $century;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
-        color: $dustyGray;
-
-        &::-moz-placeholder,
-        &::-webkit-input-placeholder,
-        &:-ms-input-placeholder,
-        &::-ms-input-placeholder,
-        &::placeholder {
-            font-family: $century;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 140%;
-            color: $dustyGray;
-        }
-
-        &.isLaptop {
-            padding: 20px 30px;
-            border: 4px solid rgba($pesto, .3);
-        }
-        
-        &.isDesctop {
-            padding: vw(20px) vw(30px);
-            border: vw(4px) solid rgba($pesto, .3);
-
-            &::-moz-placeholder,
-            &::-webkit-input-placeholder,
-            &:-ms-input-placeholder,
-            &::-ms-input-placeholder,
-            &::placeholder {
-                font-size: vw(16px);
-            }
-        }
+      }
     }
 
-    &__wrapper-img {
-        width: 110px;
-        height: 110px;
-        border-radius: 100%;
-        overflow: hidden;
-        background-color: $mercury;
-        cursor: pointer;
+    &--small {
+      flex-shrink: 0;
 
-        &::before {
-            content: "Фото";
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            transform: translate(-50%, -50%);
-            background-color: $mercury;
-            font-family: $din;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 120%;            
-            color: $dustyGray;
-        }
+      &.isLaptop,
+      &.isDesctop {
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+    }
+  }
 
-        &.isDesctop {
-            width: vw(110px);
-            height: vw(110px);
+  &__label {
+    font-family: $din;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: $black;
+    margin-bottom: 10px;
 
-            &::before {
-                font-size: vw(16px);
-            }
-        }
+    &.isLaptop {
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 20px;
+      margin-left: vw(30px);
     }
 
-    &__img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 100%;
-        height: 100%;
-        object-fit: cover;
-        pointer-events: none;
+    &.isDesctop {
+      font-weight: 400;
+      font-size: vw(20px);
+      margin-bottom: vw(20px);
+      margin-left: vw(30px);
+    }
+  }
+
+  &__input {
+    // width: 100%;
+    // padding: 14px 20px;
+    // border-radius: 10px;
+    // border: 4px solid $pesto;
+    // font-family: $century;
+    // font-style: normal;
+    // font-weight: 400;
+    // font-size: 16px;
+    // line-height: 140%;
+    // color: $dustyGray;
+
+    // &::-moz-placeholder,
+    // &::-webkit-input-placeholder,
+    // &:-ms-input-placeholder,
+    // &::-ms-input-placeholder,
+    // &::placeholder {
+    //   font-family: $century;
+    //   font-style: normal;
+    //   font-weight: 400;
+    //   font-size: 16px;
+    //   line-height: 140%;
+    //   color: $dustyGray;
+    // }
+
+    // &.isLaptop {
+    //   padding: 20px 30px;
+    //   border: 4px solid rgba($pesto, 0.3);
+    // }
+
+    // &.isDesctop {
+    //   padding: vw(20px) vw(30px);
+    //   border: vw(4px) solid rgba($pesto, 0.3);
+    // }
+  }
+
+  &__wrapper-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    overflow: hidden;
+    background-color: $mercury;
+    cursor: pointer;
+
+    &::before {
+      content: "Фото";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      background-color: $mercury;
+      font-family: $din;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: $dustyGray;
     }
 
-    &__files {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
+    &.isDesctop {
+      width: vw(110px);
+      height: vw(110px);
+
+      &::before {
+        font-size: vw(16px);
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  &__files {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 4px solid $pesto;
+    font-family: $century;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $dustyGray;
+
+    &::-moz-placeholder,
+    &::-webkit-input-placeholder,
+    &:-ms-input-placeholder,
+    &::-ms-input-placeholder,
+    &::placeholder {
+      font-family: $century;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $dustyGray;
     }
 
-    &__textarea {
-        width: 100%;
-        padding: 14px 20px;
-        border-radius: 10px;
-        border: 4px solid $pesto;
-        font-family: $century;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
-        color: $dustyGray;
-        
-        &::-moz-placeholder,
-        &::-webkit-input-placeholder,
-        &:-ms-input-placeholder,
-        &::-ms-input-placeholder,
-        &::placeholder {
-            font-family: $century;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 140%;
-            color: $dustyGray;
-        }
-
-        &.isLaptop {
-            padding: 20px 30px;
-            border: 4px solid rgba($pesto, .3);
-        }
-        
-        &.isDesctop {
-            padding: vw(20px) vw(30px);
-            border: vw(4px) solid rgba($pesto, .3);
-        
-            &::-moz-placeholder,
-            &::-webkit-input-placeholder,
-            &:-ms-input-placeholder,
-            &::-ms-input-placeholder,
-            &::placeholder {
-                font-size: vw(16px);
-            }
-        }
+    &.isLaptop {
+      padding: 20px 30px;
+      border: 4px solid rgba($pesto, 0.3);
     }
 
-    &__btn {
-        margin-left: auto;
-        margin-right: auto;
+    &.isDesctop {
+      padding: vw(20px) vw(30px);
+      border: vw(4px) solid rgba($pesto, 0.3);
+
+      &::-moz-placeholder,
+      &::-webkit-input-placeholder,
+      &:-ms-input-placeholder,
+      &::-ms-input-placeholder,
+      &::placeholder {
+        font-size: vw(16px);
+      }
     }
+  }
+
+  &__btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

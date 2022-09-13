@@ -1,423 +1,461 @@
 .btn {
-    font-family: $century;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    transition: all $ease05;
-    $btn: &;
+  font-family: $century;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  transition: all $ease05;
+  $btn: &;
 
-    > * {
-        margin-right: 10px;
+  > * {
+    margin-right: 10px;
 
-        &:last-child {
-            margin-right: 0;
-        }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    &--vk {
+      width: 24px;
+      height: 14px;
     }
 
-    &__icon {
-        &--vk {
-            width: 24px;
-            height: 14px;
+    &--telegram {
+      width: 18px;
+      height: 16px;
+    }
+
+    &--triangle-arrow-left,
+    &--triangle-arrow-right {
+      width: 11px;
+      height: 18px;
+    }
+
+    &--triangle-arrow-left {
+      left: -1px;
+    }
+
+    &--triangle-arrow-right {
+      left: 1px;
+    }
+
+    &--filter {
+      width: 32px;
+      height: 36px;
+    }
+
+    &--close {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  &--burger {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+
+    #{$btn}__icon {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 23px;
+      width: 30px;
+
+      &-line {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        opacity: 1;
+        background-color: $pesto;
+        transition: all $ease05;
+
+        &--1 {
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%) rotate(0);
         }
 
-        &--telegram {
-            width: 18px;
-            height: 16px;
+        &--2 {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(0);
         }
 
-        &--triangle-arrow-left,
-        &--triangle-arrow-right {
-            width: 11px;
-            height: 18px;
+        &--3 {
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%) rotate(0);
         }
+      }
+    }
 
-        &--triangle-arrow-left {
-            left: -1px;
-        }
+    &.#{btn}--select {
+      #{$btn}__icon {
+        &-line {
+          &--1 {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            transform-origin: center;
+          }
 
-        &--triangle-arrow-right {
-            left: 1px;
-        }
+          &--2 {
+            opacity: 0;
+          }
 
-        &--filter {
-            width: 32px;
-            height: 36px;
+          &--3 {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transform-origin: center;
+          }
         }
+      }
+    }
 
-        &--close {
-            width: 25px;
-            height: 25px;
+    &.isTablet,
+    &.isLaptop {
+      height: 60px;
+      width: 60px;
+
+      #{$btn}__icon {
+        height: 30px;
+        width: 40px;
+        transition: all $ease05;
+
+        &-line {
+          width: 40px;
+          height: 4px;
         }
+      }
+    }
+
+    &.isDesctop {
+      height: vw(60px);
+      width: vw(60px);
+
+      #{$btn}__icon {
+        height: vw(30px);
+        width: vw(40px);
+        transition: all $ease05;
+
+        &-line {
+          width: vw(40px);
+          height: vw(4px);
+        }
+      }
+    }
+  }
+
+  &--gold-fill-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    color: $black;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      transition: opacity $ease05;
+    }
+
+    &::before {
+      background-image: $goldFillCircleGradient;
+      opacity: 1;
+    }
+
+    &::after {
+      background: $goldFillCircleHoverGradient;
+      opacity: 0;
+    }
+
+    #{$btn}__icon,
+    #{$btn}__text {
+      z-index: 1;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--gold-border-rounded {
+    padding: 20px 45px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 0 rgba($black, 0);
+    overflow: hidden;
+    input {
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      transition: opacity $ease05;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      background: radial-gradient(
+          21% 107.86% at 100% -7.86%,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0.782584) 31.12%,
+          rgba(237, 188, 69, 0) 100%
+        ),
+        linear-gradient(
+          278.39deg,
+          #957e47 -16.71%,
+          #8e7434 6.59%,
+          #caa54a 15.01%,
+          #8d753a 26.21%,
+          #8d753a 60.97%,
+          #c3a355 73.11%,
+          #8e7434 83.67%,
+          #756130 100%
+        );
+      box-shadow: inset 3px 2px 4px rgba(210, 210, 210, 0.25),
+        inset -3px -4px 5px rgba(0, 0, 0, 0.28);
+      opacity: 0;
+    }
+
+    &::after {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      opacity: 1;
+      border: 4px solid $costaDelSol;
+    }
+
+    &:hover,
+    &.isSelected {
+      &::before {
+        opacity: 1;
+        // z-index: -1;
+      }
+
+      &::after {
+        opacity: 0;
+      }
+      color: #fff !important;
+    }
+
+    &.isLaptop {
+      padding: 20px 50px;
+      font-size: 20px;
+    }
+
+    &.isDesctop {
+      font-size: vw(20px);
+      // padding: vw(20px) vw(50px);
+      padding: vw(24px) vw(43px);
+      border-radius: vw(5px);
+
+      &::before {
+        border-radius: vw(5px);
+      }
+
+      &::after {
+        width: calc(100% - #{vw(8px)});
+        height: calc(100% - #{vw(8px)});
+        border: vw(4px) solid $costaDelSol;
+      }
+    }
+
+    &.#{btn}--select {
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 0;
+      }
+    }
+
+    &.#{btn}--small {
+      font-size: 16px;
+      padding: 14px 18px;
+
+      &.isLaptop {
+        padding: 15px 35px;
+      }
+
+      &.isDesctop {
+        padding: vw(15px) vw(35px);
+      }
+    }
+
+    &.#{btn}--black-text {
+      color: $black;
+    }
+  }
+
+  &--moon-mist-border-rounded {
+    font-family: $century;
+    font-size: 16px;
+    line-height: 20px;
+    color: $costaDelSol;
+    padding: 15px 32px;
+    border-radius: 5px;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      transition: opacity $ease05;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+          21% 107.86% at 100% -7.86%,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0.782584) 31.12%,
+          rgba(237, 188, 69, 0) 100%
+        ),
+        linear-gradient(
+          278.39deg,
+          #957e47 -16.71%,
+          #8e7434 6.59%,
+          #caa54a 15.01%,
+          #8d753a 26.21%,
+          #8d753a 60.97%,
+          #c3a355 73.11%,
+          #8e7434 83.67%,
+          #756130 100%
+        );
+      box-shadow: inset 3px 2px 4px rgba(210, 210, 210, 0.25),
+        inset -3px -4px 5px rgba(0, 0, 0, 0.28);
+      opacity: 0;
+    }
+
+    &::after {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      opacity: 1;
+      border: 4px solid $moonMist;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 0;
+      }
+    }
+
+    &.isDesctop {
+      font-size: vw(16px);
+      line-height: vw(20px);
+      padding: vw(15px) vw(32px);
+      border-radius: vw(5px);
+
+      &::after {
+        width: calc(100% - #{vw(8px)});
+        height: calc(100% - #{vw(8px)});
+        border: vw(4px) solid $moonMist;
+      }
+    }
+  }
+
+  &--gold-border-while-fill-circle,
+  &--gold-border-mine-shaft-fill-circle {
+    border: 5px solid $pesto;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    color: $pesto;
+
+    &.isLaptop {
+      width: 56px;
+      height: 56px;
+    }
+
+    &.isDesctop {
+      width: vw(56px);
+      height: vw(56px);
     }
 
     &:disabled {
-        pointer-events: none;
+      pointer-events: none;
+    }
+
+    &:hover {
+      background-color: $pesto;
+      color: $white;
+    }
+  }
+
+  &--gold-border-while-fill-circle {
+    background-color: $white;
+
+    &:disabled {
+      opacity: 1;
+      border-color: rgba($pesto, 0.3);
+
+      #{$btn}__icon {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &--gold-border-mine-shaft-fill-circle {
+    background-color: $mineShaft;
+
+    &:disabled {
+      border-color: rgba($pesto, 0.3);
+
+      #{$btn}__icon {
         opacity: 0.3;
+      }
     }
+  }
 
-    &--burger {
-        height: 50px;
-        width: 50px;
-        background-color: transparent;
-
-        #{$btn}__icon {
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 23px;
-            width: 30px;
-
-            &-line {
-                position: absolute;
-                width: 30px;
-                height: 3px;
-                opacity: 1;
-                background-color: $pesto;
-                transition: all $ease05;
-
-                &--1 {
-                    top: 0;
-                    left: 50%;
-                    transform: translateX(-50%) rotate(0)
-                }
-
-                &--2 {
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%) rotate(0);
-                }
-
-                &--3 {
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%) rotate(0)
-                }
-            }
-        }
-
-        &.#{btn}--select {
-            #{$btn}__icon {
-                &-line {
-                    &--1 {
-                        top: 50%;
-                        transform: translate(-50%, -50%) rotate(-45deg);
-                        transform-origin: center;
-                    }
-
-                    &--2 {
-                        opacity: 0;
-                    }
-
-                    &--3 {
-                        top: 50%;
-                        transform: translate(-50%, -50%) rotate(45deg);
-                        transform-origin: center;
-                    }
-                }
-            }
-        }
-
-        &.isTablet,
-        &.isLaptop {
-            height: 60px;
-            width: 60px;
-
-            #{$btn}__icon {
-                height: 30px;
-                width: 40px;
-                transition: all $ease05;
-
-                &-line {
-                    width: 40px;
-                    height: 4px;
-                }
-            }
-        }
-
-        &.isDesctop {
-            height: vw(60px);
-            width: vw(60px);
-            
-            #{$btn}__icon {
-                height: vw(30px);
-                width: vw(40px);
-                transition: all $ease05;
-            
-                &-line {
-                    width: vw(40px);
-                    height: vw(4px);
-                }
-            }
-        }
-    }
-
-    &--gold-fill-circle {
-        width: 40px;
-        height: 40px;
-        border-radius: 100%;
-        color: $black;
-        overflow: hidden;
-
-        &::before, &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 100%;
-            transition: opacity $ease05;
-        }
-
-        &::before {
-            background-image: $goldFillCircleGradient;
-            opacity: 1;
-        }
-
-        &::after {
-            background: $goldFillCircleHoverGradient;
-            opacity: 0;
-        }
-
-        #{$btn}__icon, #{$btn}__text {
-            z-index: 1;
-        }
-
-        &:hover {
-            &::before {
-                opacity: 0;
-            }
-
-            &::after {
-                opacity: 1;
-            }
-        }
-    }
-
-    &--gold-border-rounded {
-        padding: 20px 45px;
-        font-size: 16px;
-        font-weight: 700;
-        color: $white;
-        text-transform: uppercase;
-        background-color: transparent;
-        border-radius: 5px;
-        box-shadow: 0 0 0 rgba($black, 0);
-        overflow: hidden;
-        input {
-            display: none;
-        }
-
-        &::before, &::after {
-            content: "";
-            position: absolute;
-            transition: opacity $ease05;
-        }
-
-        &::before {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-            background: radial-gradient(21% 107.86% at 100% -7.86%, #FFFFFF 0%, rgba(255, 255, 255, 0.782584) 31.12%, rgba(237, 188, 69, 0) 100%), linear-gradient(278.39deg, #957E47 -16.71%, #8E7434 6.59%, #CAA54A 15.01%, #8D753A 26.21%, #8D753A 60.97%, #C3A355 73.11%, #8E7434 83.67%, #756130 100%);
-            box-shadow: inset 3px 2px 4px rgba(210, 210, 210, 0.25), inset -3px -4px 5px rgba(0, 0, 0, 0.28);
-            opacity: 0;
-        }
-
-        &::after {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: calc(100% - 8px);
-            height: calc(100% - 8px);
-            opacity: 1;
-            border: 4px solid $costaDelSol;
-        }
-
-        &:hover, &.isSelected {
-            &::before {
-                opacity: 1;
-                // z-index: -1;
-            }
-
-            &::after {
-                opacity: 0;
-            }
-            color: #fff !important;
-        }
-
-        &.isLaptop {
-            padding: 20px 50px;
-            font-size: 20px;
-        }
-        
-        &.isDesctop {
-            font-size: vw(20px);
-            // padding: vw(20px) vw(50px);
-            padding: vw(24px) vw(43px);
-            border-radius: vw(5px);
-
-            &::before {
-                border-radius: vw(5px);
-            }
-
-            &::after {
-                width: calc(100% - #{vw(8px)});
-                height: calc(100% - #{vw(8px)});
-                border: vw(4px) solid $costaDelSol;
-            }
-        }
-
-        &.#{btn}--select {
-            &::before {
-                opacity: 1;
-            }
-
-            &::after {
-                opacity: 0;
-            }
-        }
-
-        &.#{btn}--small {
-            font-size: 16px;
-            padding: 14px 18px;
-            
-            &.isLaptop {
-                padding: 15px 35px;
-            }
-            
-            &.isDesctop {
-                padding: vw(15px) vw(35px);
-            }
-        }
-
-        &.#{btn}--black-text {
-            color: $black;
-        }
-    }
-
-    &--moon-mist-border-rounded {
-        font-family: $century;
-        font-size: 16px;
-        line-height: 20px;
-        color: $costaDelSol;
-        padding: 15px 32px;
-        border-radius: 5px;
-        background-color: transparent;
-        text-transform: uppercase;
-        font-weight: 700;
-        overflow: hidden;
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            transition: opacity $ease05;
-        }
-        
-        &::before {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(21% 107.86% at 100% -7.86%, #FFFFFF 0%, rgba(255, 255, 255, 0.782584) 31.12%, rgba(237, 188, 69, 0) 100%), linear-gradient(278.39deg, #957E47 -16.71%, #8E7434 6.59%, #CAA54A 15.01%, #8D753A 26.21%, #8D753A 60.97%, #C3A355 73.11%, #8E7434 83.67%, #756130 100%);
-            box-shadow: inset 3px 2px 4px rgba(210, 210, 210, 0.25), inset -3px -4px 5px rgba(0, 0, 0, 0.28);
-            opacity: 0;
-        }
-        
-        &::after {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: calc(100% - 8px);
-            height: calc(100% - 8px);
-            opacity: 1;
-            border: 4px solid $moonMist;
-        }
-        
-        &:hover {
-            &::before {
-                opacity: 1;
-            }
-        
-            &::after {
-                opacity: 0;
-            }
-        }
-
-        &.isDesctop {
-            font-size: vw(16px);
-            line-height: vw(20px);
-            padding: vw(15px) vw(32px);
-            border-radius: vw(5px);
-
-            &::after {
-                width: calc(100% - #{vw(8px)});
-                height: calc(100% - #{vw(8px)});
-                border: vw(4px) solid $moonMist;
-            }
-        }
-    }
-
-    &--gold-border-while-fill-circle,
-    &--gold-border-mine-shaft-fill-circle {
-        border: 5px solid $pesto;
-        border-radius: 100%;
-        width: 45px;
-        height: 45px;
-        color: $pesto;
-        
-        &.isLaptop {
-            width: 56px;
-            height: 56px;
-        }
-        
-        &.isDesctop {
-            width: vw(56px);
-            height: vw(56px);
-        }
-
-        &:disabled {
-            pointer-events: none;
-        }
-
-        &:hover {
-            background-color: $pesto;
-            color: $white;
-        }
-    }
-
-    &--gold-border-while-fill-circle {
-        background-color: $white;
-
-        &:disabled {
-            opacity: 1;
-            border-color: rgba($pesto, .3);
-
-            #{$btn}__icon {
-                opacity: 0.6;
-            }
-        }
-    }
-
-    &--gold-border-mine-shaft-fill-circle {
-        background-color: $mineShaft;
-
-        &:disabled {
-            border-color: rgba($pesto, .3);
-
-            #{$btn}__icon {
-                opacity: 0.3;
-            }
-        }
-    }
-
-    &--transparent {
-        background-color: transparent;
-    }
+  &--transparent {
+    background-color: transparent;
+  }
 }

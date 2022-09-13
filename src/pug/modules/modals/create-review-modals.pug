@@ -49,10 +49,22 @@
                     .create-review-modals__row-hidden(:class='{isDesctop, isTablet, isLaptop}')
                         .create-review-modals__box(:class='{isDesctop, isTablet, isLaptop}') 
                             label.create-review-modals__label(:class='{isDesctop, isTablet, isLaptop}', for="name") Представьтесь:
-                            input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}', type="text", name="name", placeholder="Ваше имя" required)
+                            .input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}')
+                                span.input__info
+                                .input__box
+                                    input.input__field(type="text" name="name", placeholder="Ваше имя", required)
+                                    .input__icons
+                                        img.input__icon.input__icon--error(src="/img/icons/error.png")
+                            //- input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}', type="text",  required)
                         .create-review-modals__box(:class='{isDesctop, isTablet, isLaptop}') 
                             label.create-review-modals__label(:class='{isDesctop, isTablet, isLaptop}', for="city") Город:
-                            input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}', type="text", name="city", placeholder="Ваш город" required)
+                            .input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}')
+                                span.input__info
+                                .input__box
+                                    input.input__field(type="text" name="city", placeholder="Ваш город", required)
+                                    .input__icons
+                                        img.input__icon.input__icon--error(src="/img/icons/error.png")
+                            //- input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}', type="text", required)
                         .create-review-modals__box.create-review-modals__box--small(:class='{isDesctop, isTablet, isLaptop}') 
                             .create-review-modals__wrapper-img(id="create-review-modals__dropzone", :class='[{isDesctop, isTablet, isLaptop}, !modals.createReviewModalsData.photo.status ? "animate__animated animate__headShake": "" ]')
                                 input(type="file" name="photo" style="display: none;")
