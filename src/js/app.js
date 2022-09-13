@@ -137,7 +137,7 @@ window.app = new Vue({
             if ("success" in obj) {
             } else {
               if ("error" in obj) {
-                for (errorItem in obj.error) {
+                for (let errorItem in obj.error) {
                   const parentInput = form
                     .querySelector('[name="' + errorItem + '"]')
                     .closest(".input");
