@@ -1,0 +1,68 @@
+.input {
+  $input: &;
+
+  &__info {
+    display: flex;
+    font-family: "Century Gothic";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 140%;
+    visibility: collapse;
+  }
+
+  &__box {
+    position: relative;
+    border: 4px solid rgba(117, 97, 48, 0.3);
+    border-radius: 10px;
+    width: 100%;
+    height: 57px;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #1c1b1f;
+  }
+
+  &__field {
+    padding: 16px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__icons {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    display: flex;
+  }
+
+  &__icon {
+    &--error {
+      opacity: 0;
+    }
+  }
+
+  &--error {
+    #{$input}__info {
+      color: #753430;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #{$input}__box {
+      border-color: #753430;
+    }
+
+    #{$input}__icon {
+      &--error {
+        opacity: 1;
+      }
+    }
+  }
+}
