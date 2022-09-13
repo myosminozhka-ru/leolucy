@@ -6660,6 +6660,7 @@ body.bg-white {
   transition: all 0.5s ease;
   pointer-events: none;
   overflow: hidden;
+  z-index: 6;
 }
 
 .header-panel__content {
