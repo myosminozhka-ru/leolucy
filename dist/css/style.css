@@ -7338,7 +7338,7 @@ body.bg-white {
 }
 
 .promo-success.isDesctop {
-  max-width: 23.75pxrem;
+  max-width: 19.7916666667vw;
 }
 
 .promo-success__title {
@@ -7358,8 +7358,8 @@ body.bg-white {
 }
 
 .promo-success__title.isDesctop {
-  font-size: 2.5pxrem;
-  margin-bottom: 4.0625pxrem;
+  font-size: 2.0833333333vw;
+  margin-bottom: 3.3854166667vw;
 }
 
 .promo-success__text {
@@ -7377,7 +7377,7 @@ body.bg-white {
 }
 
 .promo-success__text.isDesctop {
-  font-size: 1.5625pxrem;
+  font-size: 1.3020833333vw;
 }
 
 .promo-success--visible {
