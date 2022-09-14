@@ -97,17 +97,25 @@ window.app = new Vue({
       });
     },
 
-    activeInput(elem) {
+    onFocusInput(elem) {
       const parentInput = elem.closest(".input");
       if (parentInput.classList.contains("input--error")) {
         parentInput.classList.remove("input--error");
+        parentInput.classList.add("input--focus");
+      } else {
+        parentInput.classList.add("input--focus");
       }
+    },
+
+    onBlurInput(elem) {
+      const parentInput = elem.closest(".input");
+      parentInput.classList.remove("input--focus");
     },
 
     scrollToRegistrationForm() {
       document
         .getElementById("promo_button")
-        .addEventListener("click", function () {
+        ?.addEventListener("click", function () {
           let headerHeight = document.querySelector(".header").clientHeight;
           const block = document.getElementById("promo-form-container");
           const elementPosition = block.getBoundingClientRect().top;

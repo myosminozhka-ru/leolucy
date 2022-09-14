@@ -1,6 +1,11 @@
 .reg_block {
   background: #fff;
   text-align: center;
+
+  &.section {
+    padding-bottom: 0;
+  }
+
   &__title {
     font-family: "Roboto", sans-serif;
     margin-bottom: 32px;

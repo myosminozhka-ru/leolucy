@@ -4325,8 +4325,8 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
-  font-weight: 800;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -4339,15 +4339,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
 }
 
 @font-face {
@@ -6488,14 +6488,18 @@ body.bg-white {
   opacity: 0;
 }
 
+.input--focus .input__box {
+  border-color: #756130;
+}
+
 .input--error .input__info {
-  color: #753430;
+  color: #671511;
   opacity: 1;
   visibility: visible;
 }
 
 .input--error .input__box {
-  border-color: #753430;
+  border-color: #671511;
 }
 
 .input--error .input__icon--error {
@@ -7234,6 +7238,10 @@ body.bg-white {
 .reg_block {
   background: #fff;
   text-align: center;
+}
+
+.reg_block.section {
+  padding-bottom: 0;
 }
 
 .reg_block__title {

@@ -87,31 +87,31 @@
           <form class="reg_block__form" id="promo-form">
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box">
-                <input class="input__field" type="text" name="fio" placeholder="ФИО" @focus="activeInput($event.target)">
+                <input class="input__field" type="text" name="fio" placeholder="ФИО" @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box"> 
-                <input class="input__field" type="email" name="email" placeholder="E-mail" @focus="activeInput($event.target)">
+                <input class="input__field" type="email" name="email" placeholder="E-mail" @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box"> 
-                <input class="input__field" type="tel" name="phone" placeholder="Номер телефона" @focus="activeInput($event.target)">
+                <input class="input__field" type="tel" name="phone" placeholder="Номер телефона" @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box"> 
-                <input class="input__field" type="text" name="city" placeholder="Город" @focus="activeInput($event.target)">
+                <input class="input__field" type="text" name="city" placeholder="Город" @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box"> 
-                <input class="input__field" type="text" name="work" placeholder="Род деятельности" @focus="activeInput($event.target)">
+                <input class="input__field" type="text" name="work" placeholder="Род деятельности" @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>
