@@ -52,7 +52,7 @@
                             .input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}')
                                 span.input__info
                                 .input__box
-                                    input.input__field(type="text" name="name", placeholder="Ваше имя", required)
+                                    input.input__field(type="text" name="name", placeholder="Ваше имя", required, @focus="onFocusInput($event.target)", @blur="onBlurInput($event.target)")
                                     .input__icons
                                         img.input__icon.input__icon--error(src="/img/icons/error.png")
                             //- input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}', type="text",  required)
@@ -61,7 +61,7 @@
                             .input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}')
                                 span.input__info
                                 .input__box
-                                    input.input__field(type="text" name="city", placeholder="Ваш город", required)
+                                    input.input__field(type="text" name="city", placeholder="Ваш город", required, @focus="onFocusInput($event.target)", @blur="onBlurInput($event.target)")
                                     .input__icons
                                         img.input__icon.input__icon--error(src="/img/icons/error.png")
                             //- input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}', type="text", required)

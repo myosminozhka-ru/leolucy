@@ -28,7 +28,7 @@ export default class PhilosophySlider {
             ".philosophy-slider__dots"
           );
           this.sliders[index] = new Swiper(
-            stringClassesArray(Array.from(domSliderSwiper.classList)),
+            stringClassesArray(Array.from(domSliderSwiper?.classList)),
             {
               modules: [Navigation, Pagination],
               speed: 1000,
@@ -36,11 +36,11 @@ export default class PhilosophySlider {
               loop: true,
               autoHeight: true,
               navigation: {
-                prevEl: stringClassesArray(Array.from(domPrev.classList)),
-                nextEl: stringClassesArray(Array.from(domNext.classList)),
+                prevEl: stringClassesArray(Array.from(domPrev?.classList)),
+                nextEl: stringClassesArray(Array.from(domNext?.classList)),
               },
               pagination: {
-                el: stringClassesArray(Array.from(domPagination.classList)),
+                el: stringClassesArray(Array.from(domPagination?.classList)),
                 bulletClass: "philosophy-slider__dot",
                 bulletActiveClass: "philosophy-slider__dot--active",
                 clickable: true,

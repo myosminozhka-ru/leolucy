@@ -927,7 +927,7 @@
                     <label class="create-review-modals__label" :class="{isDesctop, isTablet, isLaptop}" for="name">Представьтесь:</label>
                     <div class="input create-review-modals__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
                       <div class="input__box">
-                        <input class="input__field" type="text" name="name" placeholder="Ваше имя" required>
+                        <input class="input__field" type="text" name="name" placeholder="Ваше имя" required @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
                         <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
                       </div>
                     </div>
@@ -936,7 +936,7 @@
                     <label class="create-review-modals__label" :class="{isDesctop, isTablet, isLaptop}" for="city">Город:</label>
                     <div class="input create-review-modals__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
                       <div class="input__box">
-                        <input class="input__field" type="text" name="city" placeholder="Ваш город" required>
+                        <input class="input__field" type="text" name="city" placeholder="Ваш город" required @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
                         <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
                       </div>
                     </div>

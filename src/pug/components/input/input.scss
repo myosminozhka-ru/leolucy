@@ -61,15 +61,21 @@
     }
   }
 
+  &--focus {
+    #{$input}__box {
+      border-color: $pesto;
+    }
+  }
+
   &--error {
     #{$input}__info {
-      color: #753430;
+      color: $darkTan;
       opacity: 1;
       visibility: visible;
     }
 
     #{$input}__box {
-      border-color: #753430;
+      border-color: $darkTan;
     }
 
     #{$input}__icon {
