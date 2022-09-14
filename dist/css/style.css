@@ -7279,6 +7279,10 @@ body.bg-white {
   color: #000 !important;
 }
 
+.new_block.section:not(.new_block:last-child) {
+  padding-bottom: 0;
+}
+
 .new_block .philosophy-slider__title {
   font-family: "Roboto", sans-serif;
   text-align: center;

@@ -70,6 +70,9 @@
   }
 }
 .new_block {
+  &.section:not(&:last-child) {
+    padding-bottom: 0;
+  }
   .philosophy-slider__title {
     font-family: "Roboto", sans-serif;
     text-align: center;
