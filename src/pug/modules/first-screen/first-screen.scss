@@ -62,8 +62,9 @@
         // padding-left: 40px;
         // padding-right: 40px;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         grid-area: main;
+        padding: 0 15px;
     }
 
     &__title, &__subtitle {
