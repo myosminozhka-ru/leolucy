@@ -38,24 +38,24 @@ export default class WhereToBuySlider {
                     breakpoints: {
                         769: {
                             slidesPerView: 4,
-                            navigation: {
+                            navigation: isArrow ? {
                                 prevEl: stringClassesArray(Array.from(domPrev.classList)),
                                 nextEl: stringClassesArray(Array.from(domNext.classList)),
-                            } 
+                            } : false
                         },
                         1024: {
                             slidesPerView: countSlides,
-                            navigation: {
+                            navigation: isArrow ? {
                                 prevEl: stringClassesArray(Array.from(domPrev.classList)),
                                 nextEl: stringClassesArray(Array.from(domNext.classList)),
-                            } 
+                            } : false
                         }, 
                         1366: {
                             slidesPerView: countSlides,
-                            navigation: {
+                            navigation: isArrow ? {
                                 prevEl: stringClassesArray(Array.from(domPrev.classList)),
                                 nextEl: stringClassesArray(Array.from(domNext.classList)),
-                            } 
+                            } : false
                         }
                     }
                 })

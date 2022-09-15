@@ -3,44 +3,44 @@
         .modals__top.feed-selection-modals__top(:class='{isDesctop, isTablet, isLaptop}')  
             +btn(null, 'close')(@click="modals.hideModals('feed-selection-modals')").btn--transparent.modals__close
         .modals__bottom.feed-selection-modals__bottom(:class='{isDesctop, isTablet, isLaptop}')
-            .feed-selection-modals__grid(:class='{isDesctop, isTablet, isLaptop}' v-if="modals.productData.data")   
+            .feed-selection-modals__grid(:class='{isDesctop, isTablet, isLaptop}' v-if="modals.productData.data")
                 .feed-selection-modals__left(:class='{isDesctop, isTablet, isLaptop}')
-                    .swiper.feed-selection-modals__swiper(:class='{isDesctop, isTablet, isLaptop}')  
+                    .swiper.feed-selection-modals__swiper(:class='{isDesctop, isTablet, isLaptop}')
                         .swiper-wrapper.feed-selection-modals__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
-                                .swiper-slide.feed-selection-modals__slide(:class='{isDesctop, isTablet, isLaptop}' v-for="image in modals.productData.data.gallery" :key="image.index") 
-                                    .feed-selection-modals__slide-content(:class='{isDesctop, isTablet, isLaptop}') 
+                                .swiper-slide.feed-selection-modals__slide(:class='{isDesctop, isTablet, isLaptop}' v-for="image in modals.productData.data.gallery" :key="image.index")
+                                    .feed-selection-modals__slide-content(:class='{isDesctop, isTablet, isLaptop}')
                                         img.feed-selection-modals__slide-img(:src="`https://leolucy.ru/${image}`", alt="")
 
-                        .feed-selection-modals__swiper-dots(:class='{isDesctop, isTablet, isLaptop}')   
+                        .feed-selection-modals__swiper-dots(:class='{isDesctop, isTablet, isLaptop}')
 
-                    .swiper.feed-selection-modals__dots-swiper(:class='{isDesctop, isTablet, isLaptop}')  
+                    .swiper.feed-selection-modals__dots-swiper(:class='{isDesctop, isTablet, isLaptop}')
                         .swiper-wrapper.feed-selection-modals__dots-swiper-wrapper
                                 .swiper-slide.feed-selection-modals__dots-slide(v-for="image in modals.productData.data.gallery" :key="image.index")
-                                    .feed-selection-modals__dots-slide-content 
+                                    .feed-selection-modals__dots-slide-content
                                         img.feed-selection-modals__dots-slide-img(:src="`https://leolucy.ru/${image}`", alt="")
-                
+
                 .feed-selection-modals__title-box(:class='{isDesctop, isTablet, isLaptop}')
-                    span.modals__title.feed-selection-modals__title(:class='{isDesctop, isTablet, isLaptop}') {{ modals.productData.data.name }} 
+                    span.modals__title.feed-selection-modals__title(:class='{isDesctop, isTablet, isLaptop}') {{ modals.productData.data.name }}
                     span.feed-selection-modals__subtitle(:class='{isDesctop, isTablet, isLaptop}') {{ modals.productData.data.subheader }}
 
-                .feed-selection-modals__right(:class='{isDesctop, isTablet, isLaptop}') 
-                    .feed-selection-modals__column-row(:class='{isDesctop, isTablet, isLaptop}') 
+                .feed-selection-modals__right(:class='{isDesctop, isTablet, isLaptop}')
+                    .feed-selection-modals__column-row(:class='{isDesctop, isTablet, isLaptop}')
                         span.modals__subtitle.feed-selection-modals__heading(:class='{isDesctop, isTablet, isLaptop}') Характеристики
-                        p.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}') {{ modals.productData2.data.description }}
-                    
-                    .feed-selection-modals__column-row(:class='{isDesctop, isTablet, isLaptop}') 
+                        p.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}') {{ modals.productData.data.description }}
+
+                    .feed-selection-modals__column-row(:class='{isDesctop, isTablet, isLaptop}')
                         span.modals__subtitle.feed-selection-modals__heading(:class='{isDesctop, isTablet, isLaptop}') Состав
-                        .feed-selection-modals__wrapper-list 
-                            .feed-selection-modals__list 
+                        .feed-selection-modals__wrapper-list
+                            .feed-selection-modals__list
                                 .feed-selection-modals__list-item(:class='{isDesctop, isTablet, isLaptop}' v-for="compound in modals.productData.data.compound" :key="compound.index")
                                     span.modals__text.feed-selection-modals__list-text {{ compound }}
-                        
-                    .feed-selection-modals__between-row(:class='{isDesctop, isTablet, isLaptop}') 
-                        .feed-selection-modals__col(:class='{isDesctop, isTablet, isLaptop}')  
+
+                    .feed-selection-modals__between-row(:class='{isDesctop, isTablet, isLaptop}')
+                        .feed-selection-modals__col(:class='{isDesctop, isTablet, isLaptop}')
                             span.modals__subtitle.feed-selection-modals__heading(:class='{isDesctop, isTablet, isLaptop}') Размеры, см (д*ш*в)
                             span.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}')  {{ modals.productData.data.size }}
-                        .feed-selection-modals__col(:class='{isDesctop, isTablet, isLaptop}')  
+                        .feed-selection-modals__col(:class='{isDesctop, isTablet, isLaptop}')
                             span.modals__subtitle.feed-selection-modals__heading(:class='{isDesctop, isTablet, isLaptop}') Вес
                             span.modals__text.feed-selection-modals__text(:class='{isDesctop, isTablet, isLaptop}')  {{ modals.productData.data.weight }} кг.
-                    
+
                     +btn('где купить')(@click="modals.showModals('where-to-buy-modals', whereToBuySlider.sliders)").btn--gold-border-rounded.btn--black-text.feed-selection-modals__btn
