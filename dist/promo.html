@@ -99,7 +99,7 @@
             </div>
             <div class="input reg_block__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
               <div class="input__box"> 
-                <input class="input__field" type="tel" name="phone" placeholder="Номер телефона" @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
+                <input class="input__field" type="tel" name="phone" placeholder="Номер телефона" @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)" v-mask="'+7 (___) ___ - __ - __'">
                 <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
               </div>
             </div>

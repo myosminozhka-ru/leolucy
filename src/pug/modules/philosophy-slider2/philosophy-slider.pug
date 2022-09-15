@@ -19,7 +19,7 @@
             .input.reg_block__input(:class='{isDesctop, isTablet, isLaptop}')
                 span.input__info
                 .input__box 
-                    input.input__field(type="tel", name="phone", placeholder="Номер телефона", @focus="onFocusInput($event.target)", @blur="onBlurInput($event.target)")
+                    input.input__field(type="tel", name="phone", placeholder="Номер телефона", @focus="onFocusInput($event.target)", @blur="onBlurInput($event.target)", v-mask="'+7 (___) ___ - __ - __'")
                     .input__icons
                         img.input__icon.input__icon--error(src="/img/icons/error.png")
             
