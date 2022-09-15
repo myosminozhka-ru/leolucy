@@ -15,6 +15,7 @@ import InputSlider from "../pug/components/input-slider/input-slider.js";
 import WhereToBuySlider from "../pug/components/where-to-buy-slider/where-to-buy-slider.js";
 import OurArticles from "../pug/modules/our-articles/our-articles.js";
 import Modals from "../pug/modules/modals/modals.js";
+import WhereToBuyModalsSlider from "../pug/modules/modals/where-to-buy-modals-slider.js";
 import Reviews from "../pug/modules/reviews/reviews.js";
 import Quiz from "../pug/modules/quiz/quiz.js";
 import Preloader from "../pug/components/preloader/preloader.js";
@@ -141,6 +142,7 @@ window.app = new Vue({
     whereToBuySlider: new WhereToBuySlider(),
     ourArticles: new OurArticles(),
     modals: new Modals(),
+    whereToBuyModalsSlider: new WhereToBuyModalsSlider(),
     reviews: new Reviews(),
     quiz: new Quiz(),
     preloader: new Preloader(),
@@ -162,6 +164,7 @@ window.app = new Vue({
     this.whereToBuySlider.init(this.sizes);
     this.ourArticles.init();
     this.modals.init();
+    this.whereToBuyModalsSlider.init();
     this.reviews.init();
     this.quiz.init();
     this.preloader.init();
