@@ -4325,15 +4325,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
-  font-weight: 800;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
 }
 
 @font-face {
@@ -6929,8 +6929,9 @@ body.bg-white {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   grid-area: main;
+  padding: 0 15px;
 }
 
 .first-screen__content.isLaptop > .first-screen__center {
@@ -7315,7 +7316,7 @@ body.bg-white {
   text-align: center;
   display: table;
   position: relative;
-  margin-bottom: 64px;
+  margin-bottom: 25px;
   padding-right: 32px;
   font-family: "Mulish";
   font-style: normal;
@@ -7343,6 +7344,16 @@ body.bg-white {
 
 .new_block .philosophy-slider__slide-content {
   min-height: 615px;
+}
+
+.new_block .philosophy-slider__swiper--ratio .philosophy-slider__swiper-wrapper {
+  margin-bottom: 20px;
+}
+
+.new_block .philosophy-slider__slide-content--ratio {
+  width: 100%;
+  padding-bottom: 45.7%;
+  min-height: unset;
 }
 
 .promo-success {

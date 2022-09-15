@@ -47,11 +47,11 @@
     .philosophy-slider__tit маркетинговая
     a.philosophy-slider__link(href="#") Скачать pdf
     +container
-        .swiper.philosophy-slider__swiper.philosophy-slider__swiper--first
+        .swiper.philosophy-slider__swiper.philosophy-slider__swiper--first.philosophy-slider__swiper--ratio
             .swiper-wrapper.philosophy-slider__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
                 each item in arrayPhilosophySlider
                     .swiper-slide.philosophy-slider__slide 
-                        .philosophy-slider__slide-content(:class='{isDesctop, isTablet, isLaptop}')
+                        .philosophy-slider__slide-content.philosophy-slider__slide-content--ratio(:class='{isDesctop, isTablet, isLaptop}')
                             img.philosophy-slider__slide-img(src=item.img, alt="")
         .philosophy-slider__panel(:class='{isDesctop, isTablet, isLaptop}')
             +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.philosophy-slider__arrow.philosophy-slider__arrow--prev.first-slider__btn
@@ -61,11 +61,11 @@
     .philosophy-slider__tit продуктовая
     a.philosophy-slider__link(href="#") Скачать pdf
     +container
-        .swiper.philosophy-slider__swiper.philosophy-slider__swiper--second
+        .swiper.philosophy-slider__swiper.philosophy-slider__swiper--second.philosophy-slider__swiper--ratio
             .swiper-wrapper.philosophy-slider__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
                 each item in arrayPhilosophySlider
                     .swiper-slide.philosophy-slider__slide 
-                        .philosophy-slider__slide-content(:class='{isDesctop, isTablet, isLaptop}')
+                        .philosophy-slider__slide-content.philosophy-slider__slide-content--ratio(:class='{isDesctop, isTablet, isLaptop}')
                             img.philosophy-slider__slide-img(src=item.img, alt="")
         .philosophy-slider__panel(:class='{isDesctop, isTablet, isLaptop}')
             +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.philosophy-slider__arrow.philosophy-slider__arrow--prev.second-slider__btn
