@@ -7250,7 +7250,15 @@ body.bg-white {
 }
 
 .reg_block.section {
-  padding-bottom: 0;
+  padding: 60px 0 30px 0;
+}
+
+.reg_block.section.isLaptop {
+  padding: 100px 0 50px 0;
+}
+
+.reg_block.section.isDesctop {
+  padding: 5.2083333333vw 0 2.6041666667vw 0;
 }
 
 .reg_block__title {
@@ -7283,13 +7291,20 @@ body.bg-white {
   margin-bottom: 16px;
 }
 
-.reg_block button[type=submit] {
-  display: inline-block;
-  color: #000 !important;
+.reg_block .reg_block__send-form {
+  color: #000;
 }
 
 .new_block.section:not(.new_block:last-child) {
-  padding-bottom: 0;
+  padding: 30px 0 0 0;
+}
+
+.new_block.section:not(.new_block:last-child).isLaptop {
+  padding: 50px 0 0 0;
+}
+
+.new_block.section:not(.new_block:last-child).isDesctop {
+  padding: 2.6041666667vw 0 0 0;
 }
 
 .new_block .philosophy-slider__title {
@@ -7413,6 +7428,22 @@ body.bg-white {
 
 .promo-success--visible {
   display: flex;
+}
+
+section.section.reg_block.hidden-section--hidden,
+section.section.new_block.hidden-section--hidden,
+section.section.new_block:not(section.section:last-child).hidden-section--hidden {
+  opacity: 0;
+  height: 0;
+  visibility: collapse;
+  padding: 0;
+}
+
+.hidden-section {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  transition: all 0.5s ease;
 }
 
 .ingredients {
