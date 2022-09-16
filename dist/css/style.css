@@ -4325,15 +4325,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
-  font-weight: 800;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -4346,8 +4346,8 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Mulish-Medium.woff2") format("woff2"), url("../fonts/Mulish-Medium.woff") format("woff"), url("../fonts/Mulish-Medium.ttf") format("ttf");
+  font-weight: 500;
 }
 
 @font-face {
@@ -4360,14 +4360,7 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Medium.woff2") format("woff2"), url("../fonts/Mulish-Medium.woff") format("woff"), url("../fonts/Mulish-Medium.ttf") format("ttf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
-  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish-Regular.ttf") format("ttf");
+  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -4376,6 +4369,13 @@ template {
   font-display: swap;
   src: url("../fonts/Mulish-SemiBold.woff2") format("woff2"), url("../fonts/Mulish-SemiBold.woff") format("woff"), url("../fonts/Mulish-SemiBold.ttf") format("ttf");
   font-weight: 600;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish-Regular.ttf") format("ttf");
+  font-weight: 400;
 }
 
 /* cyrillic-ext */
@@ -6929,7 +6929,7 @@ body.bg-white {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   grid-area: main;
   padding: 0 15px;
 }
@@ -7076,6 +7076,10 @@ body.bg-white {
 
 .first-screen__btn.isLaptop {
   margin-bottom: 60px;
+}
+
+.first-screen-promo .first-screen__center {
+  justify-content: flex-start;
 }
 
 .philosophy-slider {
@@ -7352,7 +7356,7 @@ body.bg-white {
 
 .new_block .philosophy-slider__slide-content--ratio {
   width: 100%;
-  padding-bottom: 45.7%;
+  padding: 0 0 56% 0;
   min-height: unset;
 }
 

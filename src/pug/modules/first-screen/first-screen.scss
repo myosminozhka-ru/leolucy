@@ -59,10 +59,8 @@
     &__center {
         display: flex;
         flex-direction: column;
-        // padding-left: 40px;
-        // padding-right: 40px;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         grid-area: main;
         padding: 0 15px;
     }
@@ -205,5 +203,11 @@
         &.isLaptop {
             margin-bottom: 60px;
         }
+    }
+}
+
+.first-screen-promo {
+    .first-screen__center {
+        justify-content: flex-start;
     }
 }
