@@ -7369,7 +7369,7 @@ body.bg-white {
   margin-bottom: 20px;
 }
 
-.new_block .philosophy-slider__slide-content--ratio {
+.new_block div.philosophy-slider__slide-content--ratio {
   width: 100%;
   padding: 0 0 56% 0;
   min-height: unset;
