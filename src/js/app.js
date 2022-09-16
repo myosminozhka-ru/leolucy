@@ -184,13 +184,16 @@ window.app = new Vue({
     onScrollToBlock() {
       const scrollTarget = document.querySelector(".feed-selection");
       const topOffset = 0;
-      const elementPosition = scrollTarget.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - topOffset;
+      if(scrollTarget) {
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
 
-      window.scrollBy({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+
     },
 
     onInputPhone(event) {
@@ -220,31 +223,35 @@ window.app = new Vue({
 
     scrollToRegistrationForm() {
       document
-        .getElementById("promo_button")
+        // .getElementById("promo_button")
+        .querySelector(".first-screen__btn")
         ?.addEventListener("click", function () {
-          let headerHeight = document.querySelector(".header").clientHeight;
-          const block = document.getElementById("promo-form-container");
-          const elementPosition = block.getBoundingClientRect().top;
-          const offsetPosition = elementPosition - headerHeight;
-
-          window.scrollBy({
-            top: offsetPosition,
-            behavior: "smooth",
-          });
-
-          if (
-            document
-              .querySelector(".header")
-              .classList.contains("header--scoll")
-          ) {
-            headerHeight =
-              document.querySelector(".header--scoll").clientHeight;
+          document.querySelector(".hidden-section--1").classList.remove("hidden-section--hidden");
+          setTimeout(() => {
+            let headerHeight = document.querySelector(".header").clientHeight;
+            const block = document.getElementById("promo-form-container");
+            const elementPosition = block.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - headerHeight;
 
             window.scrollBy({
               top: offsetPosition,
               behavior: "smooth",
             });
-          }
+
+            if (
+                document
+                    .querySelector(".header")
+                    .classList.contains("header--scoll")
+            ) {
+              headerHeight =
+                  document.querySelector(".header--scoll").clientHeight;
+
+              window.scrollBy({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          }, 500)
         });
     },
 
@@ -272,7 +279,8 @@ window.app = new Vue({
 
       if (lengthFormData === inputs.length) {
         const request = new XMLHttpRequest();
-        const url = "/local/api/register.php";
+        // const url = "/local/api/register.php";
+        const url = "https://leolucy.fvds.ru/local/api/register.php";
         request.responseType = "json";
         request.open("POST", url, true);
 
@@ -289,6 +297,8 @@ window.app = new Vue({
               document
                 .querySelector(".promo-success")
                 ?.classList.add("promo-success--visible");
+              document.querySelector(".hidden-section--2").classList.remove("hidden-section--hidden");
+              document.querySelector(".hidden-section--3").classList.remove("hidden-section--hidden");
             } else {
               if ("error" in obj) {
                 for (let errorItem in obj.error) {

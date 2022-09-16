@@ -1,4 +1,4 @@
-+section.reg_block
++section.reg_block.hidden-section.hidden-section--hidden.hidden-section--1
     +container#promo-form-container
         .reg_block__title регистрация
         form#promo-form.reg_block__form
@@ -37,12 +37,12 @@
                     .input__icons
                         img.input__icon.input__icon--error(src="/img/icons/error.png")
 
-            button.btn.btn--gold-border-rounded(type="submit" @click.prevent="sendPromoForm") 
+            button.btn.btn--gold-border-rounded.reg_block__send-form(type="submit" @click.prevent="sendPromoForm")
                 span.btn__text Зарегистрироваться
         .promo-success(:class='{isDesctop, isTablet, isLaptop}')
             h2.promo-success__title(:class='{isDesctop, isTablet, isLaptop}') спасибо <br>за регистрацию
             p.promo-success__text(:class='{isDesctop, isTablet, isLaptop}') Информационные материалы отправлены Вам на электронную почту<br><br>Хорошего дня!
-+section.section--white.philosophy-slider.new_block
++section.section--white.philosophy-slider.new_block.hidden-section.hidden-section--hidden.hidden-section--2
     .philosophy-slider__title презентации
     .philosophy-slider__tit маркетинговая
     a.philosophy-slider__link(href="#") Скачать pdf
@@ -57,7 +57,7 @@
             +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.philosophy-slider__arrow.philosophy-slider__arrow--prev.first-slider__btn
             +btn(null, 'triangle-arrow-right').btn--gold-border-while-fill-circle.philosophy-slider__arrow.philosophy-slider__arrow--next.first-slider__btn
         .philosophy-slider__dots(:class='{isDesctop, isTablet, isLaptop}').first-slider__dots
-+section.section--white.philosophy-slider.new_block
++section.section--white.philosophy-slider.new_block.hidden-section.hidden-section--hidden.hidden-section--3
     .philosophy-slider__tit продуктовая
     a.philosophy-slider__link(href="#") Скачать pdf
     +container
