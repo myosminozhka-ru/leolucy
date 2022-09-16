@@ -223,8 +223,7 @@ window.app = new Vue({
 
     scrollToRegistrationForm() {
       document
-        // .getElementById("promo_button")
-        .querySelector(".first-screen__btn")
+        .getElementById("promo_button")
         ?.addEventListener("click", function () {
           document.querySelector(".hidden-section--1").classList.remove("hidden-section--hidden");
           setTimeout(() => {
@@ -279,8 +278,7 @@ window.app = new Vue({
 
       if (lengthFormData === inputs.length) {
         const request = new XMLHttpRequest();
-        // const url = "/local/api/register.php";
-        const url = "https://leolucy.fvds.ru/local/api/register.php";
+        const url = "/local/api/register.php";
         request.responseType = "json";
         request.open("POST", url, true);
 
