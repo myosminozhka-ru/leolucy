@@ -7372,6 +7372,10 @@ body.bg-white {
 .new_block div.philosophy-slider__slide-content--ratio {
   width: 100%;
   padding: 0 0 56% 0;
+}
+
+.new_block div.philosophy-slider__slide-content--ratio.isDesctop,
+.new_block div.philosophy-slider__slide-content--ratio.isLaptop {
   min-height: unset;
 }
 
