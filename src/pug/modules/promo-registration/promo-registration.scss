@@ -1,0 +1,74 @@
+.promo-registration {
+  background-color: #0B0B0B;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+  transition: all .5s ease;
+
+  &.isTablet,
+  &.isLaptop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &.isDesctop {
+    padding-top: vw(100px);
+    padding-bottom: vw(100px);
+  }
+
+  &--hidden {
+    opacity: 0;
+    padding: 0;
+    visibility: collapse;
+    height: 0;
+
+    &.isTablet,
+    &.isLaptop,
+    &.isDesctop {
+      opacity: 0;
+      padding: 0;
+      visibility: collapse;
+      height: 0;
+    }
+}
+}
+
+.promo-registration__decoration {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+  display: none;
+
+  &.isTablet,
+  &.isLaptop,
+  &.isDesctop {
+    display: block;
+  }
+}
+
+.promo-registration__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-registration__form,
+.promo-registration__success-send {
+  width: 100%;
+  max-width: 480px;
+
+  &.isTablet,
+  &.isLaptop {
+    max-width: 462px;
+    //min-height: 539px;
+  }
+
+  &.isDesctop {
+    max-width: vw(600px);
+    //min-height: 679px;
+  }
+}

@@ -1,0 +1,13 @@
+section.promo-presentations(:class="[{isDesctop, isTablet, isLaptop}, {'promo-presentations--hidden': !promo.isShowPromoPresentations}]")
+    img.promo-presentations__decoration(src="img/promo-presentations/decoration.png", :class="{isDesctop, isTablet, isLaptop}")
+    .promo-container(:class='{isDesctop, isTablet, isLaptop}')
+        .promo-presentations__content
+            +promo-section-title.promo-presentations__title презентации
+
+            .promo-presentations__hidden-block
+                .promo-presentations__row
+                    .promo-presentations__column.promo-presentations__column--left(:class='{isDesctop, isTablet, isLaptop}')
+                        +promo-presentations-slider-box('grocery', 'продуктовая').promo-presentations__slider-box
+
+                    .promo-presentations__column.promo-presentations__column--right(:class='{isDesctop, isTablet, isLaptop}')
+                        +promo-presentations-slider-box('marketing', 'маркетинговая').promo-presentations__slider-box

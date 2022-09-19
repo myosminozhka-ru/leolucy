@@ -19,6 +19,11 @@ import WhereToBuyModalsSlider from "../pug/modules/modals/where-to-buy-modals-sl
 import Reviews from "../pug/modules/reviews/reviews.js";
 import Quiz from "../pug/modules/quiz/quiz.js";
 import Preloader from "../pug/components/preloader/preloader.js";
+import PromoPresentationsSliderBox from "../pug/components/promo-presentations-slider-box/promo-presentations-slider-box.js";
+import PromoRegistration from "../pug/modules/promo-registration/promo-registration.js";
+import PromoInput from "../pug/components/promo-input/promo-input.js"
+import Promo from "../pug/modules/promo/promo.js"
+import PromoFirstScreen from "../pug/modules/promo-first-screen/promo-first-screen.js"
 
 import AppSelect from "../pug/components/select/select.jsx";
 import AppAccordion from "../pug/components/accordion/accordion.jsx";
@@ -39,8 +44,10 @@ Vue.directive('mask', {
       }
     }
 
-    el.value = mask
-    el.clean = mask.replace(/[^0-9]/gm, '')
+    if (!el.classList.contains('promo-input__field')) {
+      el.value = mask
+      el.clean = mask.replace(/[^0-9]/gm, '')
+    }
 
     function maskIt(event, start){
       let value = el.value,
@@ -84,7 +91,17 @@ Vue.directive('mask', {
     }
 
     el.addEventListener('focus', function(event){
+      if (el.classList.contains('promo-input__field')) {
+        el.value = mask
+        el.clean = mask.replace(/[^0-9]/gm, '')
+      }
       event.preventDefault()
+    })
+
+    el.addEventListener('blur', function (event) {
+      if(el.classList.contains('promo-input__field') && el.value.indexOf('_') !== -1) {
+        el.value = ''
+      }
     })
 
     el.addEventListener('click', function(event){
@@ -146,6 +163,11 @@ window.app = new Vue({
     reviews: new Reviews(),
     quiz: new Quiz(),
     preloader: new Preloader(),
+    promoPresentationsSliderBox: new PromoPresentationsSliderBox(),
+    promoRegistration: new PromoRegistration(),
+    promoInput: new PromoInput(),
+    promo: new Promo(),
+    promoFirstScreen: new PromoFirstScreen(),
   }),
   beforeCreate() {
     window.addEventListener("resize", () => {
@@ -168,10 +190,12 @@ window.app = new Vue({
     this.reviews.init();
     this.quiz.init();
     this.preloader.init();
+    this.promoRegistration.init();
   },
   mounted() {
     this.isMounted = true;
     this.scrollToRegistrationForm();
+    this.promoPresentationsSliderBox.init();
   },
   methods: {
     onSelectMainAnimal(animal) {
