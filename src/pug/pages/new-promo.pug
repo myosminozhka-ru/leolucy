@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Leo&Lucy ПаркЗОО 2022"
+    - const bodyWhite = ""
+
+block content
+    // Переменные отвечающие за показ секций лежат в src/pug/modules/promo/promo.js
+    // Изменение переменной, отвечающей за показ секции формы регистрации в src/pug/modules/promo-first-screen/promo-first-screen.pug
+    // Изменение переменной, отвечающей за показ секции презентаций в src/pug/modules/promo-registration/promo-registration.pug
+    include ../modules/promo-first-screen/promo-first-screen
+    include ../modules/promo-registration/promo-registration
+    include ../modules/promo-presentations/promo-presentations

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leo&amp;Lucy ПаркЗОО 2022</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app wrapper" id="app" :class="[{isDesctop, isTablet, isLaptop}, isMounted]" :style="isMounted ? '' : 'display: none'">
+    <div class="preloader">
+      <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="preloader__content"> 
+          <div class="logo preloader__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+          <svg class="preloader__spinner" viewbox="0 0 80 80" :class="{isDesctop, isTablet, isLaptop}">
+            <circle class="preloader__spinner-circle" style="fill: transparent; stroke-linecap: round;" stroke="currentColor" cx="40" cy="40" r="35"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="header app__header" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
+      <div class="header__content"> 
+        <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
+          <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"> </span></div>
+        </button>
+        <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+        <div class="s header__s">
+          <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--vk btn__icon btn__icon--vk">
+                <use xlink:href="img/icons/icons.svg#vk"></use>
+              </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-panel" :class="{isDesctop, isTablet, isLaptop, &quot;header-panel--is-open&quot;: header.isShowMenu}">
+      <div class="header-panel__content"> 
+        <ul class="header-panel-menu">
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link1" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Корма</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link2" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Ингредиенты</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link3" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">FAQ</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link4" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Статьи</a></li>
+          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link5" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Где купить</a></li>
+        </ul>
+        <div class="s header-panel__s">
+          <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--vk btn__icon btn__icon--vk">
+                <use xlink:href="img/icons/icons.svg#vk"></use>
+              </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+              <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main app__main" :class="{isDesctop, isTablet, isLaptop}">
+      <!-- Переменные отвечающие за показ секций лежат в src/pug/modules/promo/promo.js-->
+      <!-- Изменение переменной, отвечающей за показ секции формы регистрации в src/pug/modules/promo-first-screen/promo-first-screen.pug-->
+      <!-- Изменение переменной, отвечающей за показ секции презентаций в src/pug/modules/promo-registration/promo-registration.pug-->
+      <section class="promo-first-screen" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="promo-container" :class="{isDesctop, isTablet, isLaptop}">
+          <div class="promo-first-screen__content" :class="{isDesctop, isTablet, isLaptop}">
+            <div class="promo-first-screen__column promo-first-screen__column--left" :class="{isDesctop, isTablet, isLaptop}">
+              <h1 class="promo-first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Коллеги, благодарим Вас<br>за проявленный интерес<br>к бренду <span>Leo&Lucy!</span></h1>
+              <p class="promo-first-screen__text" :class="{isDesctop, isTablet, isLaptop}">Мы ценим Ваше решение и заранее подготовили все подробные материалы о нашем продукте.<br>Вы получите их на электронную почту, после заполнения <b>небольшой формы регистрации.</b><br><br>Также мы <b>подготовили памятный сувенир,</b><br>который можно забрать у сотрудников стенда.</p>
+              <button class="btn btn--gold-border-rounded promo-first-screen__btn" :class="{isDesctop, isTablet, isLaptop}" @click.prevent="promoFirstScreen.showPromoRegistration($event, promo)"><span class="btn__text">зарегистрироваться</span>
+              </button>
+            </div>
+            <div class="promo-first-screen__column promo-first-screen__column--right" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-first-screen__decoration" src="img/promo-first-screen/decoration.png" :class="{isDesctop, isTablet, isLaptop}"></div>
+          </div>
+        </div>
+      </section>
+      <section class="promo-registration" :class="[{isDesctop, isTablet, isLaptop}, {'promo-registration--hidden': !promo.isShowPromoRegistration}]">
+        <div class="promo-container" :class="{isDesctop, isTablet, isLaptop}">
+          <div class="promo-registration__content"><img class="promo-registration__decoration" src="img/promo-registration/decoration.png" :class="{isDesctop, isTablet, isLaptop}">
+            <form class="promo-form promo-registration__form" :class="{isDesctop, isTablet, isLaptop}" v-if="!promoRegistration.isSuccessSendForm">
+              <h2 class="promo-section-title promo-form__title" :class="{isDesctop, isTablet, isLaptop}">регистрация
+              </h2>
+              <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="promo-input__box">
+                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <input class="promo-input__field" type="text" placeholder="ФИО" name="fio" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur"/>
+                </div><span class="promo-input__info"></span>
+              </div>
+              <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="promo-input__box">
+                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <input class="promo-input__field" type="email" placeholder="E-mail" name="email" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur"/>
+                </div><span class="promo-input__info"></span>
+              </div>
+              <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="promo-input__box">
+                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <input class="promo-input__field" type="tel" placeholder="Номер телефона" name="phone" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur" v-mask="'+7 (___) ___ - __ - __'"/>
+                </div><span class="promo-input__info"></span>
+              </div>
+              <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="promo-input__box">
+                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <input class="promo-input__field" type="text" placeholder="Город" name="city" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur"/>
+                </div><span class="promo-input__info"></span>
+              </div>
+              <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
+                <div class="promo-input__box">
+                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <input class="promo-input__field" type="text" placeholder="Род деятельности" name="work" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur"/>
+                </div><span class="promo-input__info"></span>
+              </div>
+              <button class="btn btn--gold-border-rounded promo-form__send" :class="{isDesctop, isTablet, isLaptop}" @click.prevent="promoRegistration.onSend()"><span class="btn__text">зарегистрироваться</span>
+              </button>
+            </form>
+            <div class="promo-success-send promo-registration__success-send" :class="{isDesctop, isTablet, isLaptop}" v-else><img class="promo-success-send__icon" src="img/icons/success-send-icon.svg" :class="{isDesctop, isTablet, isLaptop}">
+              <h2 class="promo-section-title promo-success-send__title" :class="{isDesctop, isTablet, isLaptop}">спасибо<br>за регистрацию
+              </h2>
+              <p class="promo-success-send__subtitle" :class="{isDesctop, isTablet, isLaptop}">Информационные материалы отправлены<br>на вашу<br>электронную почту<br><br>Хорошего дня!</p>
+              <button class="btn btn--gold-border-rounded promo-success-send__see-more" :class="{isDesctop, isTablet, isLaptop}" @click.prevent="promoRegistration.showPromoPresentations($event, promo)"><span class="btn__text">посмотреть презентации</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="promo-presentations" :class="[{isDesctop, isTablet, isLaptop}, {'promo-presentations--hidden': !promo.isShowPromoPresentations}]"><img class="promo-presentations__decoration" src="img/promo-presentations/decoration.png" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="promo-container" :class="{isDesctop, isTablet, isLaptop}">
+          <div class="promo-presentations__content">
+            <h2 class="promo-section-title promo-presentations__title" :class="{isDesctop, isTablet, isLaptop}">презентации
+            </h2>
+            <div class="promo-presentations__hidden-block">
+              <div class="promo-presentations__row">
+                <div class="promo-presentations__column promo-presentations__column--left" :class="{isDesctop, isTablet, isLaptop}">
+                  <div class="promo-presentations-slider-box promo-presentations__slider-box">
+                    <div class="promo-presentations-slider-box__content">
+                      <div class="swiper promo-presentations-slider-box__swiper promo-presentations-slider-box__swiper--grocery" :class="{isDesctop, isTablet, isLaptop}">
+                        <div class="swiper-wrapper promo-presentations-slider-box__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
+                          <div class="swiper-slide promo-presentations-slider-box__slide">
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                          </div>
+                          <div class="swiper-slide promo-presentations-slider-box__slide">
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                          </div>
+                          <div class="swiper-slide promo-presentations-slider-box__slide">
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="promo-presentations-slider-box__hidden-block">
+                        <div class="promo-presentations-slider-box__bottom" :class="{isDesctop, isTablet, isLaptop}">
+                          <div class="promo-presentations-slider-box__column promo-presentations-slider-box__column--left" :class="{isDesctop, isTablet, isLaptop}"><span class="promo-presentations-slider-box__title" :class="{isDesctop, isTablet, isLaptop}">продуктовая</span><a class="promo-presentations-slider-box__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Скачать pdf</a></div>
+                          <div class="promo-presentations-slider-box__column promo-presentations-slider-box__column--right" :class="{isDesctop, isTablet, isLaptop}">
+                            <button class="btn btn--mine-shaft-border-transaprent-circle promo-presentations-slider-box__btn-prev-slide promo-presentations-slider-box__btn--grocery" :class="{isDesctop, isTablet, isLaptop}">
+                              <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
+                                <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
+                              </svg>
+                            </button>
+                            <div class="swiper-pagination promo-presentations-slider-box__swiper-pagination" :class="{isDesctop, isTablet, isLaptop}"><span class="promo-presentations-slider-box__current-slide">0</span><span class="promo-presentations-slider-box__separator-info-slides">&nbsp;/&nbsp;</span><span class="promo-presentations-slider-box__all-slides">0</span></div>
+                            <button class="btn btn--mine-shaft-border-transaprent-circle promo-presentations-slider-box__btn-next-slide promo-presentations-slider-box__btn--grocery" :class="{isDesctop, isTablet, isLaptop}">
+                              <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
+                                <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="promo-presentations__column promo-presentations__column--right" :class="{isDesctop, isTablet, isLaptop}">
+                  <div class="promo-presentations-slider-box promo-presentations__slider-box">
+                    <div class="promo-presentations-slider-box__content">
+                      <div class="swiper promo-presentations-slider-box__swiper promo-presentations-slider-box__swiper--marketing" :class="{isDesctop, isTablet, isLaptop}">
+                        <div class="swiper-wrapper promo-presentations-slider-box__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
+                          <div class="swiper-slide promo-presentations-slider-box__slide">
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                          </div>
+                          <div class="swiper-slide promo-presentations-slider-box__slide">
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                          </div>
+                          <div class="swiper-slide promo-presentations-slider-box__slide">
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="promo-presentations-slider-box__hidden-block">
+                        <div class="promo-presentations-slider-box__bottom" :class="{isDesctop, isTablet, isLaptop}">
+                          <div class="promo-presentations-slider-box__column promo-presentations-slider-box__column--left" :class="{isDesctop, isTablet, isLaptop}"><span class="promo-presentations-slider-box__title" :class="{isDesctop, isTablet, isLaptop}">маркетинговая</span><a class="promo-presentations-slider-box__link" href="#" :class="{isDesctop, isTablet, isLaptop}">Скачать pdf</a></div>
+                          <div class="promo-presentations-slider-box__column promo-presentations-slider-box__column--right" :class="{isDesctop, isTablet, isLaptop}">
+                            <button class="btn btn--mine-shaft-border-transaprent-circle promo-presentations-slider-box__btn-prev-slide promo-presentations-slider-box__btn--marketing" :class="{isDesctop, isTablet, isLaptop}">
+                              <svg class="icon icon--triangle-arrow-left btn__icon btn__icon--triangle-arrow-left">
+                                <use xlink:href="img/icons/icons.svg#triangle-arrow-left"></use>
+                              </svg>
+                            </button>
+                            <div class="swiper-pagination promo-presentations-slider-box__swiper-pagination" :class="{isDesctop, isTablet, isLaptop}"><span class="promo-presentations-slider-box__current-slide">0</span><span class="promo-presentations-slider-box__separator-info-slides">&nbsp;/&nbsp;</span><span class="promo-presentations-slider-box__all-slides">0</span></div>
+                            <button class="btn btn--mine-shaft-border-transaprent-circle promo-presentations-slider-box__btn-next-slide promo-presentations-slider-box__btn--marketing" :class="{isDesctop, isTablet, isLaptop}">
+                              <svg class="icon icon--triangle-arrow-right btn__icon btn__icon--triangle-arrow-right">
+                                <use xlink:href="img/icons/icons.svg#triangle-arrow-right"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer app__footer" :class="{isDesctop, isTablet, isLaptop}">
+      <div class="container" :class="{isDesctop, isTablet, isLaptop}">
+        <div class="footer__content" :class="{isDesctop, isTablet, isLaptop}"> <span class="footer__heading-contacts footer__add-line footer__add-line--right" :class="{isDesctop, isTablet, isLaptop}">Контакты</span>
+          <div class="logo footer__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
+          <ul class="footer-menu footer__menu" :class="{isDesctop, isTablet, isLaptop}"> 
+            <li class="footer-menu__item footer__add-line footer__add-line--left" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link1">Корма</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link2">Ингредиенты</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link3">FAQ</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link4">Статьи</a></li>
+            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link5">Где купить</a></li>
+          </ul>
+          <div class="footer__contacts" :class="{isDesctop, isTablet, isLaptop}"> <a class="footer__gold-link" href="tel:+74950000000" :class="{isDesctop, isTablet, isLaptop}">+7(495)000-00-00</a><a class="footer__gold-link" href="mailto:info@info.ru" :class="{isDesctop, isTablet, isLaptop}">info@info.ru</a><span class="footer__requisites" :class="{isDesctop, isTablet, isLaptop}">
+               ООО НТС Градиент <br>ОГРН 1027739304570 / ИНН 7720125736 <br>
+              Юридический адрес: 129301, РФ, г. Москва, ул. Бориса Галушкина, дом 14, корпус 14</span></div>
+          <div class="s footer__s">
+            <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+                <svg class="icon icon--vk btn__icon btn__icon--vk">
+                  <use xlink:href="img/icons/icons.svg#vk"></use>
+                </svg></a><a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
+                <svg class="icon icon--telegram btn__icon btn__icon--telegram">
+                  <use xlink:href="img/icons/icons.svg#telegram"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="footer__bottom" :class="{isDesctop, isTablet, isLaptop}"><span class="footer__copyright" :class="{isDesctop, isTablet, isLaptop}">© 2022 Все права защищены</span><a class="footer__policy-link footer__policy-link--first" href="#" :class="{isDesctop, isTablet, isLaptop}">Политика конфиденциальности</a><a class="footer__policy-link footer__policy-link--second" href="#" :class="{isDesctop, isTablet, isLaptop}">Согласие на обработку персональных данных  </a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="js/app.min.js"></script>
+<script>
+  app.reviews.arrayReviews = [
+              {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+      {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+      {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+      {
+          id: "6",
+          animal: "Собаке",
+          age: "1-5",
+          food: "Влажный",
+          photo: "/upload/iblock/f79/wtif0ayid5krs71429jwbsna7ah8jz97.jpg",
+          name: "Test",
+          city: "Москва",
+          text: "fkjsdkf h sdkfjberjkc vc kcj,xnbgk j dhfxh sdkfhsdkjfhs dfhgsdjfgsj dhgfsydgfj sdhgf jysdgfjhsgfjydsgfsdg fshdg f sgfsdgfs dgfsdfgsdfg"
+      },
+  ]
+</script>

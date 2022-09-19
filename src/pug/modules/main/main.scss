@@ -1,24 +1,24 @@
 .main {
     overflow: hidden;
 
-    > *:first-child {
+    > *:first-child:not(.promo-first-screen) {
         padding-top: 150px;
     }
 
     &.isTablet {
-        >*:first-child {
+        >*:first-child:not(.promo-first-screen) {
             padding-top: 200px;
         }
     }
 
     &.isLaptop {
-        >*:first-child {
+        >*:first-child:not(.promo-first-screen) {
             padding-top: 265px;
         }
     }
 
     &.isDesctop {
-        >*:first-child {
+        >*:first-child:not(.promo-first-screen) {
             padding-top: vw(265px);
         }
     }

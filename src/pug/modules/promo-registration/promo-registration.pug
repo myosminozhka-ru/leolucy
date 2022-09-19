@@ -1,0 +1,18 @@
+section.promo-registration(:class="[{isDesctop, isTablet, isLaptop}, {'promo-registration--hidden': !promo.isShowPromoRegistration}]")
+    .promo-container(:class='{isDesctop, isTablet, isLaptop}')
+        .promo-registration__content
+            img.promo-registration__decoration(src="img/promo-registration/decoration.png", :class='{isDesctop, isTablet, isLaptop}')
+            form.promo-form.promo-registration__form(:class='{isDesctop, isTablet, isLaptop}', v-if="!promoRegistration.isSuccessSendForm")
+                +promo-section-title.promo-form__title регистрация
+                +promo-input('text', 'ФИО', 'fio').promo-form__input
+                +promo-input('email', 'E-mail', 'email').promo-form__input
+                +promo-input('tel', 'Номер телефона', 'phone').promo-form__input
+                +promo-input('text', 'Город', 'city').promo-form__input
+                +promo-input('text', 'Род деятельности', 'work').promo-form__input
+                +btn("зарегистрироваться").btn--gold-border-rounded.promo-form__send(@click.prevent="promoRegistration.onSend()")
+
+            .promo-success-send.promo-registration__success-send(:class='{isDesctop, isTablet, isLaptop}', v-else)
+                img.promo-success-send__icon(src="img/icons/success-send-icon.svg", :class='{isDesctop, isTablet, isLaptop}')
+                +promo-section-title.promo-success-send__title спасибо<br>за регистрацию
+                p.promo-success-send__subtitle(:class='{isDesctop, isTablet, isLaptop}') Информационные материалы отправлены<br>на вашу<br>электронную почту<br><br>Хорошего дня!
+                +btn("посмотреть презентации").btn--gold-border-rounded.promo-success-send__see-more(@click.prevent="promoRegistration.showPromoPresentations($event, promo)")

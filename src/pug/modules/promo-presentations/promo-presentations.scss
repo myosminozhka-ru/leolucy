@@ -1,0 +1,144 @@
+.promo-presentations {
+  background-color: #111111;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+  transition: all .5s ease;
+
+  &.isTablet,
+  &.isLaptop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &.isDesctop {
+    padding-top: vw(100px);
+    padding-bottom: vw(100px);
+  }
+
+  &--hidden {
+    opacity: 0;
+    padding: 0;
+    visibility: collapse;
+    height: 0;
+
+    &.isTablet,
+    &.isLaptop,
+    &.isDesctop {
+      opacity: 0;
+      padding: 0;
+      visibility: collapse;
+      height: 0;
+    }
+  }
+}
+
+.promo-presentations__title {
+  margin-bottom: 16px;
+
+  &.isTablet,
+  &.isLaptop {
+    margin-bottom: 32px;
+  }
+
+  &.isDesctop {
+    margin-bottom: vw(32px);
+  }
+}
+
+.promo-presentations__hidden-block {
+  overflow: hidden;
+}
+
+.promo-presentations__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8px 0;
+}
+
+.promo-presentations__column {
+  min-width: 288px;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 10px 0;
+
+  &--left,
+  &--right {
+    border: 1px solid #373737;
+    border-radius: 10px;
+    padding: 8px;
+  }
+
+  &--left {
+    &.isLaptop {
+      border: 1px solid #373737;
+      border-radius: 10px 0 0 10px;
+      border-right: none;
+    }
+
+    &.isDesctop {
+      border: vw(1px) solid #373737;
+      border-radius: vw(10px) 0 0 vw(10px);
+      border-right: none;
+    }
+
+    //@media (min-width: 608px) and (max-width: 1366px) {
+    //  border-right: none;
+    //  border-top-right-radius: 0;
+    //  border-bottom-right-radius: 0;
+    //}
+  }
+
+  &--right {
+    &.isLaptop {
+      border: 1px solid #373737;
+      border-radius: 0 10px 10px 0;
+    }
+
+    &.isDesctop {
+      border: vw(1px) solid #373737;
+      border-radius: 0 vw(10px) vw(10px) 0;
+    }
+
+    //@media (min-width: 608px) and (max-width: 1366px) {
+    //  border-top-left-radius: 0;
+    //  border-bottom-left-radius: 0;
+    //}
+  }
+
+  &.isTablet {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  &.isTablet,
+  &.isLaptop {
+    padding: 16px;
+  }
+
+  &.isDesctop {
+    min-width: vw(228px);
+    padding: vw(16px);
+  }
+}
+
+.promo-presentations__decoration {
+  position: absolute;
+  display: none;
+
+  &.isTablet,
+  &.isLaptop,
+  &.isDesctop {
+    display: block;
+    top: 82px;
+    left: 70%;
+  }
+
+  &.isDesctop {
+    top: unset;
+    left: 70%;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,165 @@
+.promo-presentations-slider-box {
+
+}
+
+.promo-presentations-slider-box__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-presentations-slider-box__swiper {
+  width: 100%;
+  margin-bottom: 16px;
+
+  &.isDesctop {
+    margin-bottom: vw(16px);
+  }
+}
+
+.promo-presentations-slider-box__slide-content {
+  width: 100%;
+  padding-bottom: 56%;
+}
+
+.promo-presentations-slider-box__slide-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  max-width: 100%;
+}
+
+.promo-presentations-slider-box__hidden-block {
+  overflow: hidden;
+}
+
+.promo-presentations-slider-box__bottom {
+  display: flex;
+  margin: -6px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  &.isDesctop {
+    margin: vw(-6px);
+  }
+}
+
+.promo-presentations-slider-box__column {
+  display: flex;
+  margin: 6px;
+
+  &.isDesctop {
+    margin: vw(6px);
+  }
+
+  &--left {
+    flex-direction: column;
+    min-width: 175px;
+
+    &.isDesctop {
+      min-width: vw(175px);
+    }
+  }
+
+  &--right {
+    align-items: center;
+  }
+}
+
+.promo-presentations-slider-box__title {
+  font-family: $din;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $white;
+  margin-bottom: 4px;
+
+  &.isTablet,
+  &.isLaptop {
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  &.isDesctop {
+    font-size: vw(25px);
+    margin-bottom: vw(8px);
+  }
+}
+
+.promo-presentations-slider-box__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #957e47;
+  font-family: $century;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+
+  &::after {
+    content: "";
+    margin-left: 12px;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 16.5C1.45 16.5 0.979333 16.3043 0.588 15.913C0.196 15.521 0 15.05 0 14.5V11.5H2V14.5H14V11.5H16V14.5C16 15.05 15.8043 15.521 15.413 15.913C15.021 16.3043 14.55 16.5 14 16.5H2ZM8 12.5L3 7.5L4.4 6.05L7 8.65V0.5H9V8.65L11.6 6.05L13 7.5L8 12.5Z' fill='%23957E47'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.isTablet,
+  &.isLaptop{
+    font-size: 18px;
+  }
+
+  &.isDesctop {
+    font-size: vw(18px);
+
+    &::after {
+      margin-left: vw(12px);
+      width: vw(16px);
+      height: vw(16px);
+    }
+  }
+}
+
+.promo-presentations-slider-box__btn-prev-slide,
+.promo-presentations-slider-box__swiper-pagination {
+  margin-right: 16px;
+
+  &.isTablet,
+  &.isLaptop {
+    margin-right: 18px;
+  }
+
+  &.isDesctop {
+    margin-right: vw(18px);
+  }
+}
+
+.promo-presentations-slider-box__swiper-pagination {
+  font-family: $century;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+
+  &.isDesctop {
+    font-size: vw(18px);
+  }
+}
+
+.promo-presentations-slider-box__current-slide {
+  color: #957E47;
+}
+
+
+.promo-presentations-slider-box__separator-info-slides,
+.promo-presentations-slider-box__all-slides {
+  color: #373737;
+}

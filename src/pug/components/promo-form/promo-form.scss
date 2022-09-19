@@ -1,0 +1,59 @@
+.promo-form {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  background-color: #111111;
+  border-radius: 5px;
+  border: 1px solid $mineShaft;
+  align-items: center;
+
+  &.isTabled {
+    padding: 40px 103px;
+  }
+
+  &.isLaptop {
+    padding: 64px 103px;
+  }
+
+  &.isDesctop {
+    padding: vw(64px) vw(103px);
+  }
+}
+
+.promo-form__title {
+  margin-bottom: 24px;
+
+  &.isLaptop {
+    margin-bottom: 32px;
+  }
+
+  &.isDesctop {
+    margin-bottom: vw(32px);
+  }
+}
+
+.promo-form__input {
+  margin-bottom: 16px;
+  width: 256px;
+  max-width: 100%;
+
+  &:last-child,
+  &:last-of-type {
+    margin-bottom: 24px;
+  }
+
+  &.isDesctop {
+    width: vw(395);
+    margin-bottom: vw(24);
+
+    &:last-child,
+    &:last-of-type {
+      margin-bottom: vw(32px);
+    }
+  }
+}
+
+.promo-form__send {
+  align-self: center;
+  max-width: 100%;
+}

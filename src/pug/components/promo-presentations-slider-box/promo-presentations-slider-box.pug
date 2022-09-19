@@ -1,0 +1,26 @@
+mixin promo-presentations-slider-box(key, title, href)
+    - key = key || null
+    - href = href || "#"
+    .promo-presentations-slider-box&attributes(attributes)
+        .promo-presentations-slider-box__content
+            .swiper.promo-presentations-slider-box__swiper(class='promo-presentations-slider-box__swiper--' + key, :class='{isDesctop, isTablet, isLaptop}')
+                .swiper-wrapper.promo-presentations-slider-box__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
+                    each item in arrayPhilosophySlider
+                        .swiper-slide.promo-presentations-slider-box__slide
+                            .promo-presentations-slider-box__slide-content(:class='{isDesctop, isTablet, isLaptop}')
+                                img.promo-presentations-slider-box__slide-img(src="img/promo-presentations-slider-box/1.png", alt="")
+
+
+            .promo-presentations-slider-box__hidden-block
+                .promo-presentations-slider-box__bottom(:class='{isDesctop, isTablet, isLaptop}')
+                    .promo-presentations-slider-box__column.promo-presentations-slider-box__column--left(:class='{isDesctop, isTablet, isLaptop}')
+                        span.promo-presentations-slider-box__title(:class='{isDesctop, isTablet, isLaptop}') #{title}
+                        a.promo-presentations-slider-box__link(href=href, :class='{isDesctop, isTablet, isLaptop}') Скачать pdf
+
+                    .promo-presentations-slider-box__column.promo-presentations-slider-box__column--right(:class='{isDesctop, isTablet, isLaptop}')
+                        +btn(null, 'triangle-arrow-left').btn--mine-shaft-border-transaprent-circle.promo-presentations-slider-box__btn-prev-slide(class='promo-presentations-slider-box__btn--' + key)
+                        .swiper-pagination.promo-presentations-slider-box__swiper-pagination(:class='{isDesctop, isTablet, isLaptop}')
+                            span.promo-presentations-slider-box__current-slide 0
+                            span.promo-presentations-slider-box__separator-info-slides &nbsp;/&nbsp;
+                            span.promo-presentations-slider-box__all-slides 0
+                        +btn(null, 'triangle-arrow-right').btn--mine-shaft-border-transaprent-circle.promo-presentations-slider-box__btn-next-slide(class='promo-presentations-slider-box__btn--' + key)

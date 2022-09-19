@@ -458,4 +458,24 @@
   &--transparent {
     background-color: transparent;
   }
+
+  &--mine-shaft-border-transaprent-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: 1px solid #373737;
+    color: #957E47;
+    background-color: transparent;
+
+    &.isTablet,
+    &.isLaptop {
+      width: 50px;
+      height: 50px;
+    }
+
+    &.isDesctop {
+      width: vw(50px);
+      height: vw(50px);
+    }
+  }
 }

@@ -1,0 +1,18 @@
+.promo-section-title {
+  font-family: $din;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+
+  &.isLaptop {
+    font-size: 48px;
+  }
+
+  &.isDesctop {
+    font-size: vw(48px);
+  }
+}

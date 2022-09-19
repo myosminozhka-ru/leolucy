@@ -1,0 +1,156 @@
+section.promo-first-screen {
+  background-color: #0B0B0B;
+}
+
+.promo-first-screen__content {
+  display: flex;
+  flex-wrap: wrap;
+  //align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+  margin: -15px 0;
+  padding-top: 110px;
+
+  &.isTablet {
+    padding-top: 150px;
+    align-items: center;
+    //align-items: flex-end;
+  }
+
+  &.isLaptop {
+    padding-top: 215px;
+  }
+
+  &.isDesctop {
+    padding-top: vw(255px);
+    margin: vw(-15px) 0;
+  }
+}
+
+.promo-first-screen__column {
+  min-width: 285px;
+  margin: 15px 0;
+  flex-grow: 1;
+  flex-basis: 0;
+
+  &--left {
+    &.isLaptop,
+    &.isTablet {
+      //max-width: 60%;
+    }
+  }
+
+  &--right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.isLaptop,
+    &.isTablet{
+      //max-width: 40%;
+    }
+
+    &.isDesctop {
+      max-width: vw(578px);
+    }
+  }
+
+  &.isDesctop {
+    min-width: vw(288px);
+    margin: vw(15px) 0;
+  }
+}
+
+.promo-first-screen__title {
+  font-family: $din;
+  font-weight: 700;
+  font-size: 26px;
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+
+  span {
+    color: $gold;
+  }
+
+  &.isTablet {
+    //max-width: 355px;
+  }
+
+  &.isDesctop {
+    font-size: vw(40px);
+    margin-bottom: vw(24px);
+    max-width: vw(635px);
+  }
+}
+
+.promo-first-screen__text {
+  font-family: $century;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $white;
+  margin-bottom: 24px;
+
+  &.isTablet{
+    font-size: 18px;
+    margin-bottom: 32px;
+    //max-width: 355px;
+  }
+
+  &.isDesctop {
+    font-size: vw(18px);
+    margin-bottom: vw(32px);
+    max-width: vw(490px);
+  }
+}
+
+.promo-first-screen__decoration {
+  max-width: 100%;
+}
+
+.promo-first-screen__btn {
+  max-width: 100%;
+}
+
+//.promo-first-screen__images {
+//  //width: 100%;
+//}
+//
+//.promo-first-screen__image {
+//
+//  &--paw {
+//    width: 100%;
+//    max-width: 578px;
+//  }
+//
+//  &--cat,
+//  &--dog {
+//    position: absolute;
+//  }
+//
+//  &--dog{
+//    top: 60%;
+//    left: 50%;
+//    transform: translate(-50%, -50%);
+//    max-width: 110%;
+//
+//    &.isDesctop {
+//      max-width: 127.85%;
+//    }
+//  }
+//
+//  &--cat {
+//    top: 15%;
+//    left: -5%;
+//    max-width: 50%;
+//
+//    &.isDesctop {
+//      top: 10%;
+//      left: -5%;
+//      max-width: 52.77%;
+//    }
+//  }
+//}
