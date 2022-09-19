@@ -190,7 +190,6 @@ window.app = new Vue({
     this.reviews.init();
     this.quiz.init();
     this.preloader.init();
-    this.promoRegistration.init();
   },
   mounted() {
     this.isMounted = true;
