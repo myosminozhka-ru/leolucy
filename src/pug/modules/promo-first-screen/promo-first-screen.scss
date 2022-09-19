@@ -26,6 +26,7 @@ section.promo-first-screen {
   &.isDesctop {
     padding-top: vw(255px);
     margin: vw(-15px) 0;
+    align-items: flex-start;
   }
 }
 

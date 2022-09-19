@@ -11067,6 +11067,7 @@ section.promo-first-screen {
 .promo-first-screen__content.isDesctop {
   padding-top: 13.28125vw;
   margin: -0.78125vw 0;
+  align-items: flex-start;
 }
 
 .promo-first-screen__column {
