@@ -25,11 +25,20 @@ const Header = class Header {
 
     addHeaderScrollClass() {
         window.addEventListener('scroll', () => {
-            if (window.scrollY >= 100) {
-                this.isScroll = true;
+            if (!document.querySelector('.header').classList.contains('.promo_page')) {
+                if (window.scrollY >= 100) {
+                    this.isScroll = true;
+                } else {
+                    this.isScroll = false;
+                }
             } else {
-                this.isScroll = false;
+                if (window.scrollY >= 50) {
+                    this.isScroll = true;
+                } else {
+                    this.isScroll = false;
+                }
             }
+
         })
     }
 }
