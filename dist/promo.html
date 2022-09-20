@@ -43,7 +43,7 @@
           <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link2" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Ингредиенты</a></li>
           <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link3" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">FAQ</a></li>
           <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link4" :class="{isDesctop, isTablet, isLaptop}" @click="header.hiddenMenu.apply(header)">Статьи</a></li>
-          <li class="header-panel-menu__item"><a class="header-panel-menu__link" href="#link5" :class="{isDesctop, isTablet, isLaptop}" @click.prevent="header.hiddenMenu.apply(header), modals.showModals('where-to-buy-modals')">Где купить</a></li>
+          <li class="header-panel-menu__item menu__show-modal-where-to-buy"><a class="header-panel-menu__link" href="#link5" :class="{isDesctop, isTablet, isLaptop}" @click.prevent="header.hiddenMenu.apply(header)">Где купить</a></li>
         </ul>
         <div class="s header-panel__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
@@ -196,7 +196,7 @@
             <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link2">Ингредиенты</a></li>
             <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link3">FAQ</a></li>
             <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link4">Статьи</a></li>
-            <li class="footer-menu__item" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link5" @click.prevent="modals.showModals('where-to-buy-modals')">Где купить</a></li>
+            <li class="footer-menu__item menu__show-modal-where-to-buy" :class="{isDesctop, isTablet, isLaptop}"><a class="footer-menu__link" href="#link5">Где купить</a></li>
           </ul>
           <div class="footer__contacts" :class="{isDesctop, isTablet, isLaptop}"> <a class="footer__gold-link" href="tel:+74950000000" :class="{isDesctop, isTablet, isLaptop}">+7(495)000-00-00</a><a class="footer__gold-link" href="mailto:info@info.ru" :class="{isDesctop, isTablet, isLaptop}">info@info.ru</a><span class="footer__requisites" :class="{isDesctop, isTablet, isLaptop}">
                ООО НТС Градиент <br>ОГРН 1027739304570 / ИНН 7720125736 <br>

@@ -16,8 +16,8 @@ footer.footer.app__footer(:class='{isDesctop, isTablet, isLaptop}')
                 li.footer-menu__item(:class='{isDesctop, isTablet, isLaptop}')
                     a.footer-menu__link(href="#link4") Статьи
 
-                li.footer-menu__item(:class='{isDesctop, isTablet, isLaptop}')
-                    a.footer-menu__link(href="#link5", @click.prevent="modals.showModals('where-to-buy-modals')") Где купить
+                li.footer-menu__item.menu__show-modal-where-to-buy(:class='{isDesctop, isTablet, isLaptop}')
+                    a.footer-menu__link(href="#link5") Где купить
 
             .footer__contacts(:class='{isDesctop, isTablet, isLaptop}') 
                 a.footer__gold-link(href="tel:+74950000000", :class='{isDesctop, isTablet, isLaptop}') +7(495)000-00-00

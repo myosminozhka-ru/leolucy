@@ -195,6 +195,7 @@ window.app = new Vue({
     this.isMounted = true;
     this.scrollToRegistrationForm();
     this.promoPresentationsSliderBox.init();
+    this.showModalOnClickLink();
   },
   methods: {
     onSelectMainAnimal(animal) {
@@ -203,6 +204,17 @@ window.app = new Vue({
         this.feedSelection.slider.destroy();
       }
       this.feedSelection.initSlider();
+    },
+    showModalOnClickLink(){
+      const menuShowModalWhereToBuy = document.querySelectorAll('.menu__show-modal-where-to-buy')
+      const modals = this.modals
+      menuShowModalWhereToBuy.forEach(item => {
+        item.querySelector('a').addEventListener('click', function(event) {
+          event.preventDefault();
+
+          modals.showModals('where-to-buy-modals')
+        })
+      })
     },
     onScrollToBlock() {
       const scrollTarget = document.querySelector(".feed-selection");
@@ -217,16 +229,6 @@ window.app = new Vue({
         });
       }
 
-    },
-
-    onInputPhone(event) {
-      console.log('event: ', event)
-      event.target.value = "+7" + event.target.value.replace(/\D/g, '');
-      // console.log('elem: ', elem)
-      // if (event.keyCode >= 48 && event.keyCode <= 90) {
-      //   event.preventDefault()
-      //   return
-      // }
     },
 
     onFocusInput(elem) {
