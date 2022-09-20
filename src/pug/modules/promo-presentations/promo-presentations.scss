@@ -123,22 +123,3 @@
     padding: vw(16px);
   }
 }
-
-.promo-presentations__decoration {
-  position: absolute;
-  display: none;
-
-  &.isTablet,
-  &.isLaptop,
-  &.isDesctop {
-    display: block;
-    top: 82px;
-    left: 70%;
-  }
-
-  &.isDesctop {
-    top: unset;
-    left: 70%;
-    bottom: 0;
-  }
-}

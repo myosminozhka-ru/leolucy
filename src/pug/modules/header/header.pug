@@ -26,6 +26,6 @@
                 a.header-panel-menu__link(href="#link4", :class='{isDesctop, isTablet, isLaptop}' @click="header.hiddenMenu.apply(header)") Статьи
 
             li.header-panel-menu__item
-                a.header-panel-menu__link(href="#link5", :class='{isDesctop, isTablet, isLaptop}' @click="header.hiddenMenu.apply(header)") Где купить
+                a.header-panel-menu__link(href="#link5", :class='{isDesctop, isTablet, isLaptop}' @click.prevent="header.hiddenMenu.apply(header), modals.showModals('where-to-buy-modals')") Где купить
         
         +s(["vk", "#"], ["telegram", "#"]).header-panel__s
