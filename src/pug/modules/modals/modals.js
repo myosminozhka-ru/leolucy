@@ -172,7 +172,7 @@ export default class Modals {
 
     whereToBuyModals (swiper) {
         setTimeout(() => {
-            swiper.update();
+            swiper?.update();
             return true;
         }, 0)
     }

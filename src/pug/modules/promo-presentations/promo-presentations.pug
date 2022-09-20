@@ -1,5 +1,4 @@
 section.promo-presentations(:class="[{isDesctop, isTablet, isLaptop}, {'promo-presentations--hidden': !promo.isShowPromoPresentations}]")
-    img.promo-presentations__decoration(src="img/promo-presentations/decoration.png", :class="{isDesctop, isTablet, isLaptop}")
     .promo-container(:class='{isDesctop, isTablet, isLaptop}')
         .promo-presentations__content
             +promo-section-title.promo-presentations__title презентации
