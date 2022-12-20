@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "backdropper": "^0.1.2",
+    "blazy": "^1.8.2",
     "dropzone": "^6.0.0-beta.2",
     "jquery": "^3.6.0",
     "nouislider": "^15.5.1",

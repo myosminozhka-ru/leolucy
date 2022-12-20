@@ -4,12 +4,13 @@
             +btn(null, 'close')(@click="modals.hideModals('where-to-buy-modals')").btn--transparent.modals__close
         .modals__bottom.where-to-buy-modals__bottom(:class='{isDesctop, isTablet, isLaptop}') 
             span.modals__title.where-to-buy-modals__title(:class='{isDesctop, isTablet, isLaptop}')  Где купить
-            .where-to-buy-modals__box(style={'background-image': 'url(img/section/6.png)'}, :class='{isDesctop, isTablet, isLaptop}')
+            //.where-to-buy-modals__box(style={'background-image': 'url(img/section/6.png)'}, :class='{isDesctop, isTablet, isLaptop}')
+            .b-lazy.where-to-buy-modals__box(data-src="img/section/6.png", :class='{isDesctop, isTablet, isLaptop}')
                 .where-to-buy-modals-slider__slider
                     .swiper.where-to-buy-modals-slider__swiper
                         .swiper-wrapper.where-to-buy-modals-slider__swiper-wrapper
                             each item in whereToBuyModalsSlider
-                                +img-card(item.id, item.img, item.title, item.link).swiper-slide.where-to-buy-modals-slider__slide
+                                +img-card(item.id, item.img, item.title, item.link, null, true).swiper-slide.where-to-buy-modals-slider__slide
 
                     .our-articles__panel(:class='{isDesctop, isTablet, isLaptop}')
                         +btn(null, 'triangle-arrow-left').btn--gold-border-while-fill-circle.where-to-buy-modals-slider__arrow.where-to-buy-modals-slider__arrow--prev

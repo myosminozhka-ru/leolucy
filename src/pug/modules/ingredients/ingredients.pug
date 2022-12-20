@@ -1,5 +1,6 @@
-section.section.ingredients#link2(style={'background-image': 'url(img/section/2.png)'})
-    img.ingredients__decoration.ingredients__decoration--right(src="img/ingredients/3.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+//section.section.ingredients#link2(style={'background-image': 'url(img/section/2.png)'})
+section.b-lazy.section.ingredients#link2(data-src='img/section/2.png')
+    img.b-lazy.ingredients__decoration.ingredients__decoration--right(src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', data-src="img/ingredients/3.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
     +container 
         .ingredients__content(:class='{isDesctop, isTablet, isLaptop}')
             h2.title.ingredients__title(:class='{isDesctop, isTablet, isLaptop}') Ингредиенты
@@ -9,14 +10,14 @@ section.section.ingredients#link2(style={'background-image': 'url(img/section/2.
                         each item in arrayIngredientsSlides
                             .swiper-slide.ingredients-img-slider__slide 
                                 .ingredients-img-slider__slide-content
-                                    img.ingredients-img-slider__slide-food(src=item.img, alt="")
+                                    img.b-lazy.ingredients-img-slider__slide-food(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=item.img, alt="")
                                     each decoration, index in item.decoration
-                                        img.ingredients-img-slider__slide-decoration(class=`ingredients-img-slider__slide-decoration--${index + 1}`, :class='{isDesctop, isTablet, isLaptop}', src=decoration, alt="")
+                                        img.b-lazy.ingredients-img-slider__slide-decoration(class=`ingredients-img-slider__slide-decoration--${index + 1}`, :class='{isDesctop, isTablet, isLaptop}', src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=decoration, alt="")
                 
                 .ingredients__static
                     //- img.ingredients__board(src="img/ingredients/1.png", alt="")
                     //- img.ingredients__dish(src="img/ingredients/2.png", alt="")
-                    img.ingredients__dish(src="img/ingredients/4.png", alt="")
+                    img.b-lazy.ingredients__dish(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/ingredients/4.png", alt="")
 
             .ingredients-text-slider.ingredients__text-slider(:class='{isDesctop, isTablet, isLaptop}')
                 .swiper.ingredients-text-slider__swiper(:class='{isDesctop, isTablet, isLaptop}')

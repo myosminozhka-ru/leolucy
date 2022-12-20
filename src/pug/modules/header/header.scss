@@ -27,6 +27,11 @@
     transition: all $ease05;
   }
 
+  &__cashback-logo {
+    display: none;
+    margin-right: auto;
+  }
+
   &__s {
     order: 2;
     display: none;
@@ -39,11 +44,11 @@
     #{$header}__show-menu {
       order: 0;
       margin-left: 0;
-      margin-right: auto;
+      margin-right: 75px;
     }
 
     #{$header}__logo {
-      order: 1;
+      order: 2;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -60,6 +65,10 @@
       padding: 50px 20px 50px 20px;
     }
 
+    #{$header}__show-menu {
+      margin-right: auto;
+    }
+
     #{$header}__logo {
       max-width: 310px;
     }
@@ -70,6 +79,12 @@
     #{$header}__content {
       align-items: flex-start;
     }
+
+    #{$header}__cashback-logo {
+      display: flex;
+      margin-right: auto;
+      order: 1;
+    }
   }
 
   &.isLaptop {
@@ -79,6 +94,10 @@
 
     #{$header}__show-menu {
       top: -15px;
+    }
+
+    #{$header}__cashback-logo {
+      top: -20px;
     }
 
     #{$header}__logo {
@@ -93,6 +112,10 @@
 
     #{$header}__show-menu {
       top: vw(-15px);
+    }
+
+    #{$header}__cashback-logo {
+      top: vw(-20px);
     }
 
     #{$header}__logo {

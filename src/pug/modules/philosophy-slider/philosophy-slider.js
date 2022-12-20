@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Lazy } from "swiper";
 import { stringClassesArray } from "../../../js/utils.js";
 
 export default class PhilosophySlider {
@@ -30,8 +30,9 @@ export default class PhilosophySlider {
           this.sliders[index] = new Swiper(
             stringClassesArray(Array.from(domSliderSwiper?.classList)),
             {
-              modules: [Navigation, Pagination],
+              modules: [Navigation, Pagination, Lazy],
               speed: 1000,
+                lazy: true,
               slidesPerView: 1,
               loop: true,
               autoHeight: true,

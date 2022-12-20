@@ -4318,13 +4318,6 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff"), url("../fonts/Mulish-Black.ttf") format("ttf");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "Mulish";
-  font-display: swap;
   src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.ttf") format("ttf");
   font-weight: 700;
 }
@@ -4332,15 +4325,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
-  font-weight: 800;
+  src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff"), url("../fonts/Mulish-Black.ttf") format("ttf");
+  font-weight: 900;
 }
 
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-ExtraLight.woff2") format("woff2"), url("../fonts/Mulish-ExtraLight.woff") format("woff"), url("../fonts/Mulish-ExtraLight.ttf") format("ttf");
-  font-weight: 200;
+  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -4360,8 +4353,8 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish-Regular.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff"), url("../fonts/Mulish-ExtraBold.ttf") format("ttf");
+  font-weight: 800;
 }
 
 @font-face {
@@ -4374,8 +4367,15 @@ template {
 @font-face {
   font-family: "Mulish";
   font-display: swap;
-  src: url("../fonts/Mulish-Italic.woff2") format("woff2"), url("../fonts/Mulish-Italic.woff") format("woff"), url("../fonts/Mulish-Italic.ttf") format("ttf");
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff"), url("../fonts/Mulish-Regular.ttf") format("ttf");
   font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-display: swap;
+  src: url("../fonts/Mulish-ExtraLight.woff2") format("woff2"), url("../fonts/Mulish-ExtraLight.woff") format("woff"), url("../fonts/Mulish-ExtraLight.ttf") format("ttf");
+  font-weight: 200;
 }
 
 /* cyrillic-ext */
@@ -5485,6 +5485,20 @@ body.bg-white {
 }
 
 .logo__img {
+  max-width: 100%;
+}
+
+.cashback-logo {
+  display: flex;
+  align-items: center;
+}
+
+.cashback-logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.cashback-logo__img {
   max-width: 100%;
 }
 
@@ -6989,6 +7003,11 @@ body.bg-white {
   transition: all 0.5s ease;
 }
 
+.header__cashback-logo {
+  display: none;
+  margin-right: auto;
+}
+
 .header__s {
   order: 2;
   display: none;
@@ -7000,13 +7019,13 @@ body.bg-white {
 .header.isDesctop .header__show-menu {
   order: 0;
   margin-left: 0;
-  margin-right: auto;
+  margin-right: 75px;
 }
 
 .header.isTablet .header__logo,
 .header.isLaptop .header__logo,
 .header.isDesctop .header__logo {
-  order: 1;
+  order: 2;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -7023,6 +7042,10 @@ body.bg-white {
   padding: 50px 20px 50px 20px;
 }
 
+.header.isTablet .header__show-menu {
+  margin-right: auto;
+}
+
 .header.isTablet .header__logo {
   max-width: 310px;
 }
@@ -7032,12 +7055,23 @@ body.bg-white {
   align-items: flex-start;
 }
 
+.header.isLaptop .header__cashback-logo,
+.header.isDesctop .header__cashback-logo {
+  display: flex;
+  margin-right: auto;
+  order: 1;
+}
+
 .header.isLaptop .header__content {
   padding: 50px 100px 115px 100px;
 }
 
 .header.isLaptop .header__show-menu {
   top: -15px;
+}
+
+.header.isLaptop .header__cashback-logo {
+  top: -20px;
 }
 
 .header.isLaptop .header__logo {
@@ -7050,6 +7084,10 @@ body.bg-white {
 
 .header.isDesctop .header__show-menu {
   top: -0.78125vw;
+}
+
+.header.isDesctop .header__cashback-logo {
+  top: -1.0416666667vw;
 }
 
 .header.isDesctop .header__logo {
@@ -7518,6 +7556,18 @@ body.bg-white {
 
 .first-screen-promo .first-screen__center {
   justify-content: flex-start;
+}
+
+.first-screen-slider {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.first-screen-slider__slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .philosophy-slider {
@@ -8390,7 +8440,7 @@ section.section.new_block:not(section.section:last-child).hidden-section--hidden
 
 .feed-selection__slide--opacity.isLaptop,
 .feed-selection__slide--opacity.isDesctop {
-  opacity: 0.2;
+  opacity: 1;
 }
 
 .feed-selection__dots {

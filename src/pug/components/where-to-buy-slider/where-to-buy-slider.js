@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Lazy } from 'swiper';
 import { stringClassesArray } from '../../../js/utils.js';
 
 export default class WhereToBuySlider {
@@ -21,9 +21,10 @@ export default class WhereToBuySlider {
 
             setTimeout(() => {
                 this.sliders = new Swiper(stringClassesArray(Array.from(element.classList)), {
-                    modules: [Navigation, Pagination],
+                    modules: [Navigation, Pagination, Lazy],
                     speed: 1000,
                     slidesPerView: 1.5,
+                    lazy: true,
                     spaceBetween: 0,
                     navigation: isArrow ? {
                         prevEl: stringClassesArray(Array.from(domPrev.classList)),

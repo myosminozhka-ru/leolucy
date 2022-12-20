@@ -1,4 +1,4 @@
-import Swiper, { Navigation }  from 'swiper';
+import Swiper, { Navigation, Lazy }  from 'swiper';
 import { stringClassesArray } from '../../../js/utils.js';
 
 export default class OurArticles {
@@ -24,8 +24,9 @@ export default class OurArticles {
         if (this.domSlider) {
             setTimeout(() => {
                 this.slider = new Swiper(stringClassesArray(Array.from(this.domSliderSwiper.classList)), {
-                    modules: [Navigation],
+                    modules: [Navigation, Lazy],
                     speed: 1000,
+                    lazy: true,
                     slidesPerView: 1,
                     spaceBetween: 20,
                     navigation: {

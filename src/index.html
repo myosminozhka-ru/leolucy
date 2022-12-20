@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link media="none" onload="if(media !== 'all') media='all'" rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -21,6 +21,6 @@
         @@include('blocks/modules/footer/footer.html', {})
         @@include('blocks/modules/modals/main.modal.html', {})
     </div>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.min.js" async></script>
 </body>
 </html>

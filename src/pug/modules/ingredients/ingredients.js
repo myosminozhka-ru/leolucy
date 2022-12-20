@@ -1,4 +1,4 @@
-import Swiper, { EffectFade, Navigation, Pagination, Controller } from 'swiper';
+import Swiper, { EffectFade, Navigation, Pagination, Controller, Lazy } from 'swiper';
 import { stringClassesArray } from '../../../js/utils.js';
 
 export default class Ingredients {
@@ -24,7 +24,8 @@ export default class Ingredients {
         if (this.domIngredientsImgSliderSwiper) {
             setTimeout(() => {
                 this.imgSlider = new Swiper(stringClassesArray(Array.from(this.domIngredientsImgSliderSwiper.classList)), {
-                    modules: [EffectFade, Controller],
+                    modules: [EffectFade, Controller, Lazy],
+                    lazy: true,
                     speed: 1000,
                     slidesPerView: 1,
                     effect: 'fade',
@@ -40,8 +41,9 @@ export default class Ingredients {
         if (this.domIngredientsTextSliderSwiper) {
             setTimeout(() => {
                 this.textSlider = new Swiper(stringClassesArray(Array.from(this.domIngredientsTextSliderSwiper.classList)), {
-                    modules: [EffectFade, Navigation, Pagination, Controller],
+                    modules: [EffectFade, Navigation, Pagination, Controller, Lazy],
                     speed: 1000,
+                    lazy: true,
                     slidesPerView: 1,
                     effect: 'fade',
                     fadeEffect: {

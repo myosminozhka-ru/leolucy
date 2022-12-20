@@ -1,51 +1,9 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Lazy } from 'swiper';
 import { stringClassesArray } from '../../../js/utils.js';
 
 export default class Reviews {
     constructor() {
         this.arrayReviews = [];
-        // this.arrayReviews = [
-        //     {
-        //         id: 1,
-        //         animal: 'cat',
-        //         age: '0-1',
-        //         food: 'sec',
-        //         photo: 'https://picsum.photos/600/600?random=1',
-        //         name: 'Екатерина',
-        //         city: 'г. Железнодорожный',
-        //         text: 'Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач.'
-        //     },
-        //     {
-        //         id: 2,
-        //         animal: 'cat',
-        //         age: '0-1',
-        //         food: 'sec',
-        //         photo: 'https://picsum.photos/600/600?random=2',
-        //         name: 'Екатерина2',
-        //         city: 'г. Железнодорожный',
-        //         text: 'Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач.'
-        //     },
-        //     {
-        //         id: 3,
-        //         animal: 'cat',
-        //         age: '0-1',
-        //         food: 'sec',
-        //         photo: 'https://picsum.photos/600/600?random=3',
-        //         name: 'Екатерина3',
-        //         city: 'г. Железнодорожный',
-        //         text: 'Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач.'
-        //     },
-        //     {
-        //         id: 4,
-        //         animal: 'dog',
-        //         age: '0-1',
-        //         food: 'sec',
-        //         photo: 'https://picsum.photos/600/600?random=4',
-        //         name: 'Екатерина3',
-        //         city: 'г. Железнодорожный',
-        //         text: 'Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач.'
-        //     },
-        // ];
 
         this.domSlider = document.querySelector('.reviews__slider');
         this.domSliderSwiper = this.domSlider?.querySelector('.reviews__swiper');
@@ -62,8 +20,9 @@ export default class Reviews {
         if (this.domSliderSwiper) {
             setTimeout(() => {
                 new Swiper(stringClassesArray(Array.from(this.domSliderSwiper.classList)), {
-                    modules: [Navigation, Pagination],
+                    modules: [Navigation, Pagination, Lazy],
                     speed: 1000,
+                    lazy: true,
                     slidesPerView: 1,
                     spaceBetween: 20,
                     navigation: {

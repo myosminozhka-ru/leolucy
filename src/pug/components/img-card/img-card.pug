@@ -1,16 +1,28 @@
-mixin img-card(id, img, title, link)
+mixin img-card(id, img, title, link, bLazy, swiper)
     - link = link || null
+    - bLazy = bLazy || null
+    - swiper = swiper || null
     if !link
         .img-card&attributes(attributes)
             .img-card__content
                 .img-card__wrapper-img(:class='{isDesctop, isTablet, isLaptop}')
-                    img.img-card__img(src=img, alt="")
+                    if bLazy
+                        img.b-lazy.img-card__img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=img, alt="")
+                    else if swiper
+                        img.swiper-lazy.img-card__img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=img, alt="")
+                    else 
+                        img.img-card__img(src=img, alt="")
 
                 span.img-card__title(:class='{isDesctop, isTablet, isLaptop}')= title
     else
         a(href=link, target="_blank").img-card&attributes(attributes)
             .img-card__content
                 .img-card__wrapper-img(:class='{isDesctop, isTablet, isLaptop}')
-                    img.img-card__img(src=img, alt="")
+                    if bLazy
+                        img.b-lazy.img-card__img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=img, alt="")
+                    else if swiper
+                        img.swiper-lazy.img-card__img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=img, alt="")
+                    else
+                        img.img-card__img(src=img, alt="")
 
                 span.img-card__title(:class='{isDesctop, isTablet, isLaptop}')= title

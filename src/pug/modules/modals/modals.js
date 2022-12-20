@@ -1,4 +1,4 @@
-import Swiper, { Pagination, Thumbs } from 'swiper';
+import Swiper, { Pagination, Thumbs, Lazy } from 'swiper';
 import Dropzone from "dropzone";
 
 export default class Modals {
@@ -10,7 +10,7 @@ export default class Modals {
             },
             isSended: false
         }
-        this.selectedPet = 'dog',
+        this.selectedPet = 'dog'
         this.productData = {
             isLoading: false,
             data: null
@@ -145,15 +145,18 @@ export default class Modals {
     feedSelectionModals(data) {
         setTimeout(() => {
             const dotsSlider = new Swiper(document.querySelector('.feed-selection-modals__dots-swiper'), {
+                modules: [Lazy],
                 spaceBetween: 5,
                 slidesPerView: 4,
+                lazy: true,
                 freeMode: true,
                 watchSlidesProgress: true,
             });
 
             const mainSlider = new Swiper(document.querySelector('.feed-selection-modals__swiper'), {
-                modules: [Pagination, Thumbs],
+                modules: [Pagination, Thumbs, Lazy],
                 speed: 1000,
+                lazy: true,
                 slidesPerView: 1,
                 pagination: {
                     el: '.feed-selection-modals__swiper-dots',

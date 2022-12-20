@@ -4,6 +4,8 @@ globalFunctions.isWebp();
 import Vue from "vue/dist/vue.js";
 import $ from "jquery";
 
+import Blazy from 'blazy';
+
 import Header from "../pug/modules/header/header.js";
 import FilterReviews from "../pug/components/filter-reviews/filter-reviews.js";
 import FirstScreen from "../pug/modules/first-screen/first-screen.js";
@@ -168,11 +170,15 @@ window.app = new Vue({
     promoInput: new PromoInput(),
     promo: new Promo(),
     promoFirstScreen: new PromoFirstScreen(),
+    bLazy: null
   }),
   beforeCreate() {
     window.addEventListener("resize", () => {
       this.sizes.window = window.innerWidth;
     });
+
+    this.bLazy = new Blazy()
+
   },
   beforeMount() {
     this.header.init();

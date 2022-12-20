@@ -21,8 +21,9 @@
     <div class="header app__header" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
       <div class="header__content"> 
         <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
-          <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"> </span></div>
+          <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"></span></div>
         </button>
+        <div class="cashback-logo header__cashback-logo" :class="{isDesctop, isTablet, isLaptop}"><a class="cashback-logo__link" href="https://club.leolucy.ru/?utm_source=pack&amp;utm_medium=qrcode&amp;utm_campaign=cashback" target="_blank"><img class="cashback-logo__img" src="img/logo.svg"></a></div>
         <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
         <div class="s header__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
@@ -82,31 +83,31 @@
               </h2>
               <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="promo-input__box">
-                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <div class="promo-input__icons"><img class="b-lazy promo-input__icon promo-input__icon--error" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
                   <input class="promo-input__field" type="text" placeholder="ФИО" name="fio" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur"/>
                 </div><span class="promo-input__info"></span>
               </div>
               <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="promo-input__box">
-                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <div class="promo-input__icons"><img class="b-lazy promo-input__icon promo-input__icon--error" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
                   <input class="promo-input__field" type="email" placeholder="E-mail" name="email" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur"/>
                 </div><span class="promo-input__info"></span>
               </div>
               <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="promo-input__box">
-                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <div class="promo-input__icons"><img class="b-lazy promo-input__icon promo-input__icon--error" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
                   <input class="promo-input__field" type="tel" placeholder="Номер телефона" name="phone" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur" v-mask="'+7 (___) ___ - __ - __'"/>
                 </div><span class="promo-input__info"></span>
               </div>
               <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="promo-input__box">
-                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <div class="promo-input__icons"><img class="b-lazy promo-input__icon promo-input__icon--error" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
                   <input class="promo-input__field" type="text" placeholder="Город" name="city" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur"/>
                 </div><span class="promo-input__info"></span>
               </div>
               <div class="promo-input promo-form__input" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="promo-input__box">
-                  <div class="promo-input__icons"><img class="promo-input__icon promo-input__icon--error" src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
+                  <div class="promo-input__icons"><img class="b-lazy promo-input__icon promo-input__icon--error" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/icons/promo-input-error.png" :class="{isDesctop, isTablet, isLaptop}"/></div>
                   <input class="promo-input__field" type="text" placeholder="Род деятельности" name="work" :class="{isDesctop, isTablet, isLaptop}" @focus="promoInput.onFocus" @blur="promoInput.onBlur"/>
                 </div><span class="promo-input__info"></span>
               </div>
@@ -136,13 +137,13 @@
                       <div class="swiper promo-presentations-slider-box__swiper promo-presentations-slider-box__swiper--grocery" :class="{isDesctop, isTablet, isLaptop}">
                         <div class="swiper-wrapper promo-presentations-slider-box__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
                           <div class="swiper-slide promo-presentations-slider-box__slide">
-                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy promo-presentations-slider-box__slide-img" data-src="img/promo-presentations-slider-box/1.png" alt=""/></div>
                           </div>
                           <div class="swiper-slide promo-presentations-slider-box__slide">
-                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy promo-presentations-slider-box__slide-img" data-src="img/promo-presentations-slider-box/1.png" alt=""/></div>
                           </div>
                           <div class="swiper-slide promo-presentations-slider-box__slide">
-                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy promo-presentations-slider-box__slide-img" data-src="img/promo-presentations-slider-box/1.png" alt=""/></div>
                           </div>
                         </div>
                       </div>
@@ -173,13 +174,13 @@
                       <div class="swiper promo-presentations-slider-box__swiper promo-presentations-slider-box__swiper--marketing" :class="{isDesctop, isTablet, isLaptop}">
                         <div class="swiper-wrapper promo-presentations-slider-box__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
                           <div class="swiper-slide promo-presentations-slider-box__slide">
-                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy promo-presentations-slider-box__slide-img" data-src="img/promo-presentations-slider-box/1.png" alt=""/></div>
                           </div>
                           <div class="swiper-slide promo-presentations-slider-box__slide">
-                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy promo-presentations-slider-box__slide-img" data-src="img/promo-presentations-slider-box/1.png" alt=""/></div>
                           </div>
                           <div class="swiper-slide promo-presentations-slider-box__slide">
-                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="promo-presentations-slider-box__slide-img" src="img/promo-presentations-slider-box/1.png" alt=""/></div>
+                            <div class="promo-presentations-slider-box__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy promo-presentations-slider-box__slide-img" data-src="img/promo-presentations-slider-box/1.png" alt=""/></div>
                           </div>
                         </div>
                       </div>
