@@ -62,18 +62,18 @@
       <!--section.b-lazy.first-screen(style={'background-image': 'url(img/section/1.png)'})-->
       <section class="b-lazy first-screen" data-src="img/section/1.png">
         <div class="first-screen__content" :class="{isDesctop, isTablet, isLaptop}">
-          <div class="first-screen__left"> 
+          <div class="first-screen__left" :class="{isDesctop, isTablet, isLaptop}">
             <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/1-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/1.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/1.png" alt=""></div>
             <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/1-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/1.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/1.png" alt=""></div>
             <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/1-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/1.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/1.png" alt=""></div>
           </div>
-          <div class="first-screen__center">
-            <div class="swiper first-screen-slider first-screen__slider">
-              <div class="swiper-wrapper first-screen-slider__swiper-wrapper">
+          <div class="first-screen__center" :class="{isDesctop, isTablet, isLaptop}">
+            <div class="swiper first-screen-slider first-screen__slider" :class="{isDesctop, isTablet, isLaptop}">
+              <div class="swiper-wrapper first-screen-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="swiper-slide first-screen-slider__slide">
                   <div class="first-screen-slider__slide-content">
                     <h1 class="title first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Полнорационное сбалансированное питание для кошек и собак</h1><span class="subtitle first-screen__subtitle" :class="{isDesctop, isTablet, isLaptop}">Выберите питомца для которого подбираете корм</span>
-                    <button class="btn btn--gold-border-rounded first-screen__btn" :class="{isDesctop, isTablet, isLaptop}" @click="onScrollToBlock"><span class="btn__text">подобрать</span>
+                    <button class="btn btn--gold-border-rounded first-screen-slider__btn" :class="{isDesctop, isTablet, isLaptop}" @click="onScrollToBlock"><span class="btn__text">подобрать</span>
                     </button>
                   </div>
                 </div>
@@ -84,17 +84,18 @@
                 </div>
                 <div class="swiper-slide first-screen-slider__slide">
                   <div class="first-screen-slider__slide-content">
-                    <h1 class="title first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Полнорационное сбалансированное питание для кошек и собак 3</h1><a class="btn btn--gold-border-rounded first-screen__btn" href="#" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">подобрать 2</span></a>
+                    <h1 class="title first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Полнорационное сбалансированное питание для кошек и собак 3</h1><a class="btn btn--gold-border-rounded first-screen-slider__btn" href="#" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">подобрать 2</span></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="first-screen__right"> 
+          <div class="first-screen__right" :class="{isDesctop, isTablet, isLaptop}">
             <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/2.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/2.png" alt=""></div>
             <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/2.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/2.png" alt=""></div>
             <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/2.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/2.png" alt=""></div>
           </div>
+          <div class="first-screen-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
         </div>
       </section>
       <section class="section section--white philosophy-slider" :class="{isDesctop, isTablet, isLaptop}">

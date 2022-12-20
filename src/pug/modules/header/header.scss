@@ -76,9 +76,9 @@
 
   &.isLaptop,
   &.isDesctop {
-    #{$header}__content {
-      align-items: flex-start;
-    }
+    //#{$header}__content {
+    //  align-items: flex-start;
+    //}
 
     #{$header}__cashback-logo {
       display: flex;
@@ -92,13 +92,13 @@
       padding: 50px 100px 115px 100px;
     }
 
-    #{$header}__show-menu {
-      top: -15px;
-    }
-
-    #{$header}__cashback-logo {
-      top: -20px;
-    }
+    //#{$header}__show-menu {
+    //  top: -15px;
+    //}
+    //
+    //#{$header}__cashback-logo {
+    //  top: -20px;
+    //}
 
     #{$header}__logo {
       max-width: 410px;
@@ -110,13 +110,13 @@
       padding: vw(50px) vw(100px) vw(115px) vw(100px);
     }
 
-    #{$header}__show-menu {
-      top: vw(-15px);
-    }
-
-    #{$header}__cashback-logo {
-      top: vw(-20px);
-    }
+    //#{$header}__show-menu {
+    //  top: vw(-15px);
+    //}
+    //
+    //#{$header}__cashback-logo {
+    //  top: vw(-20px);
+    //}
 
     #{$header}__logo {
       max-width: vw(410px);

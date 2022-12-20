@@ -1,7 +1,7 @@
 //section.b-lazy.first-screen(style={'background-image': 'url(img/section/1.png)'})
 section.b-lazy.first-screen(data-src='img/section/1.png')
     .first-screen__content(:class='{isDesctop, isTablet, isLaptop}')
-        .first-screen__left 
+        .first-screen__left(:class='{isDesctop, isTablet, isLaptop}')
             .first-screen__select(@click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 1", :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}")
                 img.b-lazy.first-screen__animal-food.first-screen__animal-food--left(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-1/1-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
                 img.b-lazy.first-screen__animal.first-screen__animal--hidden(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-1/1.png", alt="")
@@ -14,14 +14,14 @@ section.b-lazy.first-screen(data-src='img/section/1.png')
                 img.b-lazy.first-screen__animal-food.first-screen__animal-food--left(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-3/1-1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
                 img.b-lazy.first-screen__animal.first-screen__animal--hidden(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-3/1.png", alt="")
                 img.b-lazy.first-screen__animal.first-screen__animal--left(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-3/1.png", alt="")
-        .first-screen__center
-            .swiper.first-screen-slider.first-screen__slider
-                .swiper-wrapper.first-screen-slider__swiper-wrapper
+        .first-screen__center(:class='{isDesctop, isTablet, isLaptop}')
+            .swiper.first-screen-slider.first-screen__slider(:class='{isDesctop, isTablet, isLaptop}')
+                .swiper-wrapper.first-screen-slider__swiper-wrapper(:class='{isDesctop, isTablet, isLaptop}')
                     .swiper-slide.first-screen-slider__slide
                         .first-screen-slider__slide-content
                             h1.title.first-screen__title(:class='{isDesctop, isTablet, isLaptop}') Полнорационное сбалансированное питание для кошек и собак
                             span.subtitle.first-screen__subtitle(:class='{isDesctop, isTablet, isLaptop}') Выберите питомца для которого подбираете корм
-                            +btn("подобрать")(@click="onScrollToBlock").btn--gold-border-rounded.first-screen__btn
+                            +btn("подобрать")(@click="onScrollToBlock").btn--gold-border-rounded.first-screen-slider__btn
                     .swiper-slide.first-screen-slider__slide
                         .first-screen-slider__slide-content
                             h1.title.first-screen__title(:class='{isDesctop, isTablet, isLaptop}') Полнорационное сбалансированное питание для кошек и собак 2
@@ -29,8 +29,8 @@ section.b-lazy.first-screen(data-src='img/section/1.png')
                     .swiper-slide.first-screen-slider__slide
                         .first-screen-slider__slide-content
                             h1.title.first-screen__title(:class='{isDesctop, isTablet, isLaptop}') Полнорационное сбалансированное питание для кошек и собак 3
-                            +btn("подобрать 2")(href="#").btn--gold-border-rounded.first-screen__btn
-        .first-screen__right 
+                            +btn("подобрать 2")(href="#").btn--gold-border-rounded.first-screen-slider__btn
+        .first-screen__right(:class='{isDesctop, isTablet, isLaptop}')
             .first-screen__select(@click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 1", :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}")
                 img.b-lazy.first-screen__animal-food.first-screen__animal-food--right(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-1/2-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
                 img.b-lazy.first-screen__animal.first-screen__animal--hidden(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-1/2.png", alt="")
@@ -43,3 +43,4 @@ section.b-lazy.first-screen(data-src='img/section/1.png')
                 img.b-lazy.first-screen__animal-food.first-screen__animal-food--right(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-3/2-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
                 img.b-lazy.first-screen__animal.first-screen__animal--hidden(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-3/2.png", alt="")
                 img.b-lazy.first-screen__animal.first-screen__animal--right(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-3/2.png", alt="")
+        .first-screen-slider__dots(:class='{isDesctop, isTablet, isLaptop}')
