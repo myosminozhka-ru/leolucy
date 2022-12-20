@@ -32,6 +32,11 @@ export default class FirstScreen {
                         bulletActiveClass: "first-screen-slider__dot--active",
                         clickable: true,
                     },
+                    breakpoints: {
+                        1365: {
+                            autoHeight: false,
+                        },
+                    },
                 }
             );
         },0)
