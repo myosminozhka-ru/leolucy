@@ -24,12 +24,8 @@ section.b-lazy.first-screen(data-src='img/section/1.png')
                             +btn("подобрать")(@click="onScrollToBlock").btn--gold-border-rounded.first-screen-slider__btn
                     .swiper-slide.first-screen-slider__slide
                         .first-screen-slider__slide-content
-                            h1.title.first-screen__title(:class='{isDesctop, isTablet, isLaptop}') Полнорационное сбалансированное питание для кошек и собак 2
-                            span.subtitle.first-screen__subtitle(:class='{isDesctop, isTablet, isLaptop}') Выберите питомца для которого подбираете корм
-                    .swiper-slide.first-screen-slider__slide
-                        .first-screen-slider__slide-content
-                            h1.title.first-screen__title(:class='{isDesctop, isTablet, isLaptop}') Полнорационное сбалансированное питание для кошек и собак 3
-                            +btn("подобрать 2")(href="#").btn--gold-border-rounded.first-screen-slider__btn
+                            h1.title.first-screen__title(:class='{isDesctop, isTablet, isLaptop}') Регистрируйтесь в клубе привилегий Leo&Lucy и получайте кэш-бэк и подарки
+                            +btn("Зарегистрироваться")(href="https://club.leolucy.ru", target="_blank").btn--gold-border-rounded.first-screen-slider__btn
         .first-screen__right(:class='{isDesctop, isTablet, isLaptop}')
             .first-screen__select(@click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 1", :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}")
                 img.b-lazy.first-screen__animal-food.first-screen__animal-food--right(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/first-screen/group-1/2-2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
