@@ -54,7 +54,7 @@
                                 .input__box
                                     input.input__field(type="text" name="name", placeholder="Ваше имя", required, @focus="onFocusInput($event.target)", @blur="onBlurInput($event.target)")
                                     .input__icons
-                                        img.input__icon.input__icon--error(src="/img/icons/error.png")
+                                        img.b-lazy.input__icon.input__icon--error(src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', data-src="/img/icons/error.png")
                             //- input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}', type="text",  required)
                         .create-review-modals__box(:class='{isDesctop, isTablet, isLaptop}') 
                             label.create-review-modals__label(:class='{isDesctop, isTablet, isLaptop}', for="city") Город:
@@ -63,7 +63,7 @@
                                 .input__box
                                     input.input__field(type="text" name="city", placeholder="Ваш город", required, @focus="onFocusInput($event.target)", @blur="onBlurInput($event.target)")
                                     .input__icons
-                                        img.input__icon.input__icon--error(src="/img/icons/error.png")
+                                        img.b-lazy.input__icon.input__icon--error(src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', data-src="/img/icons/error.png")
                             //- input.create-review-modals__input(:class='{isDesctop, isTablet, isLaptop}', type="text", required)
                         .create-review-modals__box.create-review-modals__box--small(:class='{isDesctop, isTablet, isLaptop}') 
                             .create-review-modals__wrapper-img(id="create-review-modals__dropzone", :class='[{isDesctop, isTablet, isLaptop}, !modals.createReviewModalsData.photo.status ? "animate__animated animate__headShake": "" ]')

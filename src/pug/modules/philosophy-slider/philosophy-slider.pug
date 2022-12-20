@@ -5,7 +5,7 @@
                 each item in arrayPhilosophySlider
                     .swiper-slide.philosophy-slider__slide 
                         .philosophy-slider__slide-content(:class='{isDesctop, isTablet, isLaptop}')
-                            img.philosophy-slider__slide-img(src=item.img, alt="")
+                            img.swiper-lazy.philosophy-slider__slide-img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=item.img, alt="")
                             .philosophy-slider__slide-blur
                                 span.philosophy-slider__slide-title(:class='{isDesctop, isTablet, isLaptop}')= item.title
                                 p.philosophy-slider__slide-description(:class='{isDesctop, isTablet, isLaptop}')= item.description

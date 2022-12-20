@@ -8,7 +8,7 @@ mixin promo-presentations-slider-box(key, title, href)
                     each item in arrayPhilosophySlider
                         .swiper-slide.promo-presentations-slider-box__slide
                             .promo-presentations-slider-box__slide-content(:class='{isDesctop, isTablet, isLaptop}')
-                                img.promo-presentations-slider-box__slide-img(src="img/promo-presentations-slider-box/1.png", alt="")
+                                img.swiper-lazy.promo-presentations-slider-box__slide-img(data-src="img/promo-presentations-slider-box/1.png", alt="")
 
 
             .promo-presentations-slider-box__hidden-block

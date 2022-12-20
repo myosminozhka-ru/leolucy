@@ -1,4 +1,4 @@
-import Swiper, { Pagination, Navigation } from 'swiper';
+import Swiper, { Pagination, Navigation, Lazy } from 'swiper';
 import { stringClassesArray } from '../../../js/utils.js';
 
 export default class FeedSelection {
@@ -21,8 +21,9 @@ export default class FeedSelection {
         if (this.domSlider) {
             setTimeout(() => {
                 this.slider = new Swiper(stringClassesArray(Array.from(this.domSlider.classList)), {
-                    modules: [Pagination, Navigation],
+                    modules: [Pagination, Navigation, Lazy],
                     speed: 1000,
+                    lazy: true,
                     loop: false,
                     slidesPerView: 2,
                     spaceBetween: 20,

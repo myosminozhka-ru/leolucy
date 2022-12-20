@@ -1,4 +1,4 @@
-import Swiper, { Navigation } from "swiper";
+import Swiper, { Navigation, Lazy } from "swiper";
 import { stringClassesArray } from "../../../js/utils.js";
 
 export default class PromoPresentationsSliderBox {
@@ -42,9 +42,10 @@ export default class PromoPresentationsSliderBox {
                     this.sliders[index] = new Swiper(
                         stringClassesArray(Array.from(domSwiper?.classList)),
                         {
-                            modules: [Navigation],
+                            modules: [Navigation, Lazy],
                             speed: 1000,
                             slidesPerView: 1,
+                            lazy: true,
                             autoHeight: true,
                             navigation: {
                                 prevEl: stringClassesArray(Array.from(domPrev?.classList)),

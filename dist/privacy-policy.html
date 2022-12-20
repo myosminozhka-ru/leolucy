@@ -21,8 +21,9 @@
     <div class="header app__header header--black" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
       <div class="header__content"> 
         <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
-          <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"> </span></div>
+          <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"></span></div>
         </button>
+        <div class="cashback-logo header__cashback-logo" :class="{isDesctop, isTablet, isLaptop}"><a class="cashback-logo__link" href="https://club.leolucy.ru/?utm_source=pack&amp;utm_medium=qrcode&amp;utm_campaign=cashback" target="_blank"><img class="cashback-logo__img" src="img/logo.svg"></a></div>
         <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
         <div class="s header__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">

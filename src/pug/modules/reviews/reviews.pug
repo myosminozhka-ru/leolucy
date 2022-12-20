@@ -1,6 +1,7 @@
-section.section.reviews(style={'background-image': 'url(img/section/5.png)'}, :class='{isDesctop, isTablet, isLaptop}')
-    img.reviews__decor.reviews__decor--bottom(src="img/reviews/1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
-    img.reviews__decor.reviews__decor--top(src="img/reviews/2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+//section.section.reviews(style={'background-image': 'url(img/section/5.png)'}, :class='{isDesctop, isTablet, isLaptop}')
+section.b-lazy.section.reviews(data-src="img/section/5.png", :class='{isDesctop, isTablet, isLaptop}')
+    img.b-lazy.reviews__decor.reviews__decor--bottom(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/reviews/1.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
+    img.b-lazy.reviews__decor.reviews__decor--top(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src="img/reviews/2.png", alt="", :class='{isDesctop, isTablet, isLaptop}')
     +container
         .reviews__content 
             h2.title.reviews__title(:class='{isDesctop, isTablet, isLaptop}') Отзывы
@@ -12,7 +13,7 @@ section.section.reviews(style={'background-image': 'url(img/section/5.png)'}, :c
                             .review-card__content 
                                 .review-card__top(:class='{isDesctop, isTablet, isLaptop}') 
                                     .review-card__wrapper-img(:class='{isDesctop, isTablet, isLaptop}')  
-                                        img.review-card__img(:src="review.photo", alt="")
+                                        img.swiper-lazy.review-card__img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", :data-src="review.photo", alt="")
                                     .review-card__col 
                                         span.review-card__name(:class='{isDesctop, isTablet, isLaptop}') {{review.name}}
                                         span.review-card__city(:class='{isDesctop, isTablet, isLaptop}') {{review.city}}

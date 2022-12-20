@@ -6,7 +6,7 @@ mixin where-to-buy-slider(items)
                         .where-to-buy-slider__slide-content(:class='{isDesctop, isTablet, isLaptop}')
                             each img in item
                                 .where-to-buy-slider__slide-wrapper-img
-                                    img.where-to-buy-slider__slide-img(src=img.img, alt="")
+                                    img.b-lazy.where-to-buy-slider__slide-img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=img.img, alt="")
 
         .where-to-buy-slider__panel(:class='{isDesctop, isTablet, isLaptop}')
             +btn(null, 'triangle-arrow-left').btn--gold-border-mine-shaft-fill-circle.where-to-buy-slider__arrow.where-to-buy-slider__arrow--prev

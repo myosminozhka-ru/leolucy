@@ -21,8 +21,9 @@
     <div class="header app__header" :class="{isDesctop, isTablet, isLaptop, &quot;header--black&quot;: header.isScroll, &quot;header--scoll&quot;: header.isScroll}">
       <div class="header__content"> 
         <button class="btn btn--burger header__show-menu" :class="{'btn--select': header.isShowMenu}" @click="header.toggleMenu()">
-          <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"> </span></div>
+          <div class="btn__icon"><span class="btn__icon-line btn__icon-line--1"> </span><span class="btn__icon-line btn__icon-line--2"> </span><span class="btn__icon-line btn__icon-line--3"></span></div>
         </button>
+        <div class="cashback-logo header__cashback-logo" :class="{isDesctop, isTablet, isLaptop}"><a class="cashback-logo__link" href="https://club.leolucy.ru/?utm_source=pack&amp;utm_medium=qrcode&amp;utm_campaign=cashback" target="_blank"><img class="cashback-logo__img" src="img/logo.svg"></a></div>
         <div class="logo header__logo" :class="{isDesctop, isTablet, isLaptop}"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/1.svg" alt=""/></a></div>
         <div class="s header__s">
           <div class="s__content"> <a class="btn btn--gold-fill-circle s__item" href="#" :class="{isDesctop, isTablet, isLaptop}">
@@ -58,22 +59,41 @@
       </div>
     </div>
     <main class="main app__main" :class="{isDesctop, isTablet, isLaptop}">
-      <section class="first-screen" style="background-image:url(img/section/1.png);">
+      <!--section.b-lazy.first-screen(style={'background-image': 'url(img/section/1.png)'})-->
+      <section class="b-lazy first-screen" data-src="img/section/1.png">
         <div class="first-screen__content" :class="{isDesctop, isTablet, isLaptop}">
           <div class="first-screen__left"> 
-            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="img/first-screen/group-1/1-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-1/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="img/first-screen/group-1/1.png" alt=""></div>
-            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="img/first-screen/group-2/1-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-2/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="img/first-screen/group-2/1.png" alt=""></div>
-            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="first-screen__animal-food first-screen__animal-food--left" src="img/first-screen/group-3/1-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-3/1.png" alt=""><img class="first-screen__animal first-screen__animal--left" src="img/first-screen/group-3/1.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/1-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/1.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/1.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/1-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/1.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/1.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('dog')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'dog'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/1-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/1.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--left" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/1.png" alt=""></div>
           </div>
-          <div class="first-screen__center"> 
-            <h1 class="title first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Полнорационное сбалансированное питание для кошек и собак</h1><span class="subtitle first-screen__subtitle" :class="{isDesctop, isTablet, isLaptop}">Выберите питомца для которого подбираете корм</span>
-            <button class="btn btn--gold-border-rounded first-screen__btn" :class="{isDesctop, isTablet, isLaptop}" @click="onScrollToBlock"><span class="btn__text">подобрать</span>
-            </button>
+          <div class="first-screen__center">
+            <div class="swiper first-screen-slider first-screen__slider">
+              <div class="swiper-wrapper first-screen-slider__swiper-wrapper">
+                <div class="swiper-slide first-screen-slider__slide">
+                  <div class="first-screen-slider__slide-content">
+                    <h1 class="title first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Полнорационное сбалансированное питание для кошек и собак</h1><span class="subtitle first-screen__subtitle" :class="{isDesctop, isTablet, isLaptop}">Выберите питомца для которого подбираете корм</span>
+                    <button class="btn btn--gold-border-rounded first-screen__btn" :class="{isDesctop, isTablet, isLaptop}" @click="onScrollToBlock"><span class="btn__text">подобрать</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-slide first-screen-slider__slide">
+                  <div class="first-screen-slider__slide-content">
+                    <h1 class="title first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Полнорационное сбалансированное питание для кошек и собак 2</h1><span class="subtitle first-screen__subtitle" :class="{isDesctop, isTablet, isLaptop}">Выберите питомца для которого подбираете корм</span>
+                  </div>
+                </div>
+                <div class="swiper-slide first-screen-slider__slide">
+                  <div class="first-screen-slider__slide-content">
+                    <h1 class="title first-screen__title" :class="{isDesctop, isTablet, isLaptop}">Полнорационное сбалансированное питание для кошек и собак 3</h1><a class="btn btn--gold-border-rounded first-screen__btn" href="#" :class="{isDesctop, isTablet, isLaptop}"><span class="btn__text">подобрать 2</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="first-screen__right"> 
-            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="img/first-screen/group-1/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-1/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="img/first-screen/group-1/2.png" alt=""></div>
-            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="img/first-screen/group-2/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-2/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="img/first-screen/group-2/2.png" alt=""></div>
-            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="first-screen__animal-food first-screen__animal-food--right" src="img/first-screen/group-3/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="first-screen__animal first-screen__animal--hidden" src="img/first-screen/group-3/2.png" alt=""><img class="first-screen__animal first-screen__animal--right" src="img/first-screen/group-3/2.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 1" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/2.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-1/2.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 2" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/2.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-2/2.png" alt=""></div>
+            <div class="first-screen__select" @click="onSelectMainAnimal('cat')" v-show="firstScreen.randomGroup === 3" :class="{'first-screen__select--active': mainSelectAnimal === 'cat'}"><img class="b-lazy first-screen__animal-food first-screen__animal-food--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/2-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy first-screen__animal first-screen__animal--hidden" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/2.png" alt=""><img class="b-lazy first-screen__animal first-screen__animal--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/first-screen/group-3/2.png" alt=""></div>
           </div>
         </div>
       </section>
@@ -82,21 +102,21 @@
           <div class="swiper philosophy-slider__swiper">
             <div class="swiper-wrapper philosophy-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
               <div class="swiper-slide philosophy-slider__slide"> 
-                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="https://leolucy.fvds.ru/upload/iblock/4cb/ypt6a3ldi6wmn7usanmp5kijnt2tweia.png" alt="">
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy philosophy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://leolucy.fvds.ru/upload/iblock/b9e/wym3ujzomuaxxb0sba3kzxnv26rqiy0f.jpeg" alt="">
                   <div class="philosophy-slider__slide-blur"><span class="philosophy-slider__slide-title" :class="{isDesctop, isTablet, isLaptop}">Наша философия</span>
                     <p class="philosophy-slider__slide-description" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide philosophy-slider__slide"> 
-                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="https://leolucy.fvds.ru/upload/iblock/2c8/wpbhi042jtxw8qjc8qmcwgslrhifhb50.png" alt="">
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy philosophy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://leolucy.fvds.ru/upload/iblock/163/6wdn0ma3i12100uvxgv3v55mt0dkxe2w.jpeg" alt="">
                   <div class="philosophy-slider__slide-blur"><span class="philosophy-slider__slide-title" :class="{isDesctop, isTablet, isLaptop}">Наша философия</span>
                     <p class="philosophy-slider__slide-description" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide philosophy-slider__slide"> 
-                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="philosophy-slider__slide-img" src="https://leolucy.fvds.ru/upload/iblock/015/ttytiwrv5g0nyoxxetk7l1emrb425t10.png" alt="">
+                <div class="philosophy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy philosophy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://leolucy.fvds.ru/upload/iblock/bff/68r0cu5lccark77idoc8e0o0goq4jf9p.png" alt="">
                   <div class="philosophy-slider__slide-blur"><span class="philosophy-slider__slide-title" :class="{isDesctop, isTablet, isLaptop}">Наша философия</span>
                     <p class="philosophy-slider__slide-description" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
                   </div>
@@ -119,7 +139,8 @@
           <div class="philosophy-slider__dots" :class="{isDesctop, isTablet, isLaptop}"></div>
         </div>
       </section>
-      <section class="section ingredients" id="link2" style="background-image:url(img/section/2.png);"><img class="ingredients__decoration ingredients__decoration--right" src="img/ingredients/3.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <!--section.section.ingredients#link2(style={'background-image': 'url(img/section/2.png)'})-->
+      <section class="b-lazy section ingredients" id="link2" data-src="img/section/2.png"><img class="b-lazy ingredients__decoration ingredients__decoration--right" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/3.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}"> 
           <div class="ingredients__content" :class="{isDesctop, isTablet, isLaptop}">
             <h2 class="title ingredients__title" :class="{isDesctop, isTablet, isLaptop}">Ингредиенты</h2>
@@ -127,20 +148,20 @@
               <div class="swiper ingredients-img-slider__swiper">
                 <div class="swiper-wrapper ingredients-img-slider__swiper-wrapper"> 
                   <div class="swiper-slide ingredients-img-slider__slide"> 
-                    <div class="ingredients-img-slider__slide-content"><img class="ingredients-img-slider__slide-food" src="img/ingredients/slide1/1.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/2.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/3.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/4.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/5.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/6.png" alt="">
+                    <div class="ingredients-img-slider__slide-content"><img class="b-lazy ingredients-img-slider__slide-food" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/1.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/2.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/3.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/4.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/5.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/6.png" alt="">
                     </div>
                   </div>
                   <div class="swiper-slide ingredients-img-slider__slide"> 
-                    <div class="ingredients-img-slider__slide-content"><img class="ingredients-img-slider__slide-food" src="img/ingredients/slide1/1.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/3.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/2.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/5.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/4.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/3.png" alt="">
+                    <div class="ingredients-img-slider__slide-content"><img class="b-lazy ingredients-img-slider__slide-food" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/1.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/3.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/2.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/5.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/4.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/3.png" alt="">
                     </div>
                   </div>
                   <div class="swiper-slide ingredients-img-slider__slide"> 
-                    <div class="ingredients-img-slider__slide-content"><img class="ingredients-img-slider__slide-food" src="img/ingredients/slide1/1.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/2.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/3.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/4.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/5.png" alt=""><img class="ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/slide1/6.png" alt="">
+                    <div class="ingredients-img-slider__slide-content"><img class="b-lazy ingredients-img-slider__slide-food" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/1.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--1" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/2.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--2" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/3.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--3" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/4.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--4" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/5.png" alt=""><img class="b-lazy ingredients-img-slider__slide-decoration ingredients-img-slider__slide-decoration--5" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/slide1/6.png" alt="">
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="ingredients__static"><img class="ingredients__dish" src="img/ingredients/4.png" alt=""></div>
+              <div class="ingredients__static"><img class="b-lazy ingredients__dish" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/4.png" alt=""></div>
             </div>
             <div class="ingredients-text-slider ingredients__text-slider" :class="{isDesctop, isTablet, isLaptop}">
               <div class="swiper ingredients-text-slider__swiper" :class="{isDesctop, isTablet, isLaptop}">
@@ -197,98 +218,98 @@
               <div class="swiper-wrapper feed-selection__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}">
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
                 </div>
                 <div class="swiper-slide feed-selection__slide" :class="{isDesctop, isTablet, isLaptop}">
                   <div class="feed-selection__slide-content">
-                    <div class="feed-selection__slide-wrapper-img"><img class="feed-selection__slide-img" src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
+                    <div class="feed-selection__slide-wrapper-img"><img class="b-lazy feed-selection__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/feed-selection/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"></div><span class="feed-selection__slide-description" :class="{isDesctop, isTablet, isLaptop}">Premium By Nature консервы с говядиной и сердцем</span>
                     <button class="btn btn--moon-mist-border-rounded feed-selection__slide-btn" :class="{isDesctop, isTablet, isLaptop}" @click="modals.loadProduct(5)"><span class="btn__text">Подробнее</span>
                     </button>
                   </div>
@@ -311,7 +332,8 @@
           </div>
         </div>
       </section>
-      <section class="section calculator" style="background-image:url(img/section/3.png);" :class="{isDesctop, isTablet, isLaptop}"><img class="calculator__decoration calculator__decoration--top" src="img/calculator/4.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="calculator__decoration calculator__decoration--bottom" src="img/calculator/5.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <!--section.section.calculator(style={'background-image': 'url(img/section/3.png)'}, :class='{isDesctop, isTablet, isLaptop}')-->
+      <section class="b-lazy section calculator" data-src="img/section/3.png" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy calculator__decoration calculator__decoration--top" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/calculator/4.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy calculator__decoration calculator__decoration--bottom" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/calculator/5.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}"> 
           <div class="calculator__content" :class="{isDesctop, isTablet, isLaptop}"> 
             <h2 class="title calculator__title" :class="{isDesctop, isTablet, isLaptop}">Калькулятор дневной порции для вашего питомца</h2>
@@ -364,11 +386,11 @@
               </div>
             </div>
             <div class="calculator__right" :class="{isDesctop, isTablet, isLaptop}"> 
-              <div class="calculator__box" :class="{isDesctop, isTablet, isLaptop}" style="background-image:url(img/calculator/1.png);">
+              <div class="b-lazy calculator__box" :class="{isDesctop, isTablet, isLaptop}" data-src="img/calculator/1.png">
                 <div class="calculator__box-content"><span class="subtitle calculator__box-title" :class="{isDesctop, isTablet, isLaptop}">Рекомендации</span>
                   <p class="calculator__box-description" :class="{isDesctop, isTablet, isLaptop}">Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач. В рамках спецификации современных стандартов, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, объединены в целые кластеры себе подобных.</p>
                   <div class="calculator__block" :class="{isDesctop, isTablet, isLaptop}"> 
-                    <div class="calculator__block-content" :class="{isDesctop, isTablet, isLaptop}"> <img class="calculator__block-food" :class="{isDesctop, isTablet, isLaptop}" src="img/calculator/2.png" alt=""><img class="calculator__block-dish" :class="{isDesctop, isTablet, isLaptop}" src="img/ingredients/4.png" alt=""></div>
+                    <div class="calculator__block-content" :class="{isDesctop, isTablet, isLaptop}"> <img class="b-lazy calculator__block-food" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/calculator/2.png" alt=""><img class="b-lazy calculator__block-dish" :class="{isDesctop, isTablet, isLaptop}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ingredients/4.png" alt=""></div>
                   </div>
                 </div>
               </div>
@@ -376,7 +398,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--white quiz" :class="{isDesctop, isTablet, isLaptop}"><img class="quiz__decor quiz__decor--top" src="img/quiz/decor-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <section class="section section--white quiz" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy quiz__decor quiz__decor--top" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/quiz/decor-1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <h2 class="title title--black quiz__title" :class="{isDesctop, isTablet, isLaptop}">Отгадайте из чего состоит корм</h2>
           <div class="quiz__steps" :class="{isDesctop, isTablet, isLaptop}"> 
@@ -403,7 +425,7 @@
                               </svg>
                             </div>
                           </div>
-                        </div><img class="quiz-radio__img" :src="answer.img">
+                        </div><img class="b-lazy quiz-radio__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" :data-src="answer.img">
                       </div><span class="quiz-radio__text">{{ answer.title }}</span>
                     </div>
                   </div>
@@ -417,9 +439,10 @@
             <button class="btn btn--gold-border-rounded btn--black-text quiz__next" :class="{isDesctop, isTablet, isLaptop}" :disabled="quiz.isDisabledNext()" @click="quiz.onClickNext()"><span class="btn__text">Далее</span>
             </button>
           </div>
-        </div><img class="quiz__decor quiz__decor--bottom" src="img/quiz/decor-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+        </div><img class="b-lazy quiz__decor quiz__decor--bottom" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/quiz/decor-2.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
       </section>
-      <section class="section how-to-switch" style="background-image:url(img/section/4.png);" :class="{isDesctop, isTablet, isLaptop}"><img class="how-to-switch__decor" src="img/how-to-switch/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <!--section.section.how-to-switch(style={'background-image': 'url(img/section/4.png)'}, :class='{isDesctop, isTablet, isLaptop}')-->
+      <section class="b-lazy section how-to-switch" data-src="img/section/4.png" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy how-to-switch__decor" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/how-to-switch/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="how-to-switch__content" :class="{isDesctop, isTablet, isLaptop}">
           <h2 class="title how-to-switch__title" :class="{isDesctop, isTablet, isLaptop}">Как перейти на этот корм</h2>
           <div class="how-to-switch__list" :class="{isDesctop, isTablet, isLaptop}">
@@ -467,7 +490,8 @@
           <app-accordion class="answers-to-questions__accordion" title="В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей представляют собой не что иное." description="Господа, социально-экономическое развитие не оставляет шанса для новых предложений. Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании поставленных обществом задач." :resize-class="{isDesctop, isTablet, isLaptop}"></app-accordion>
         </div>
       </section>
-      <section class="section reviews" style="background-image:url(img/section/5.png);" :class="{isDesctop, isTablet, isLaptop}"><img class="reviews__decor reviews__decor--bottom" src="img/reviews/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="reviews__decor reviews__decor--top" src="img/reviews/2.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
+      <!--section.section.reviews(style={'background-image': 'url(img/section/5.png)'}, :class='{isDesctop, isTablet, isLaptop}')-->
+      <section class="b-lazy section reviews" data-src="img/section/5.png" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy reviews__decor reviews__decor--bottom" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/reviews/1.png" alt="" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy reviews__decor reviews__decor--top" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/reviews/2.png" alt="" :class="{isDesctop, isTablet, isLaptop}">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <div class="reviews__content"> 
             <h2 class="title reviews__title" :class="{isDesctop, isTablet, isLaptop}">Отзывы</h2>
@@ -519,7 +543,7 @@
                   <div class="swiper-slide review-card" v-for="review in filterReviews.filteredList" :key="review.id">
                     <div class="review-card__content"> 
                       <div class="review-card__top" :class="{isDesctop, isTablet, isLaptop}"> 
-                        <div class="review-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"> <img class="review-card__img" :src="review.photo" alt=""></div>
+                        <div class="review-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"> <img class="swiper-lazy review-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" :data-src="review.photo" alt=""></div>
                         <div class="review-card__col"> <span class="review-card__name" :class="{isDesctop, isTablet, isLaptop}">{{review.name}}</span><span class="review-card__city" :class="{isDesctop, isTablet, isLaptop}">{{review.city}}</span></div>
                       </div>
                       <div class="review-card__bottom"> 
@@ -557,32 +581,38 @@
                 <div class="swiper-wrapper our-articles__swiper-wrapper">
                   <div class="img-card swiper-slide our-articles__slide" @click="modals.loadArticle(8)">
                     <div class="img-card__content">
-                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=1" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/452/600/600.jpg?hmac=5DZWKlOwFANqp0DdSQfgbEvo5MD0ex8m-BsIbH050-s" alt=""/>
+                      </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                     </div>
                   </div>
                   <div class="img-card swiper-slide our-articles__slide" @click="modals.loadArticle(8)">
                     <div class="img-card__content">
-                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=2" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/841/600/600.jpg?hmac=Avxv8kmo4rBHjKm808R2yzOhX6aZsEAHeH1f8RCOyow" alt=""/>
+                      </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                     </div>
                   </div>
                   <div class="img-card swiper-slide our-articles__slide" @click="modals.loadArticle(8)">
                     <div class="img-card__content">
-                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=3" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/736/600/600.jpg?hmac=qqhoBYrcb9w6Z6eocu96RnK-G0OwLAvAbgV8lHGM5us" alt=""/>
+                      </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                     </div>
                   </div>
                   <div class="img-card swiper-slide our-articles__slide" @click="modals.loadArticle(8)">
                     <div class="img-card__content">
-                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=4" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/682/600/600.jpg?hmac=tDq-ylRy-BQ25NkwLSB__uQ3QoYGkZcJZk0aMJOuWY0" alt=""/>
+                      </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                     </div>
                   </div>
                   <div class="img-card swiper-slide our-articles__slide" @click="modals.loadArticle(8)">
                     <div class="img-card__content">
-                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=5" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/396/600/600.jpg?hmac=VsBnz3iEeiLhu2qQet2m8cthZvumtgNrgqt9F-yeRg0" alt=""/>
+                      </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                     </div>
                   </div>
                   <div class="img-card swiper-slide our-articles__slide" @click="modals.loadArticle(8)">
                     <div class="img-card__content">
-                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=6" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                      <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="b-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/85/600/600.jpg?hmac=6B-TXxIC1d3EwIFE8Lzjda4dvacvKaSDcJ1WmYIZltA" alt=""/>
+                      </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                     </div>
                   </div>
                 </div>
@@ -605,39 +635,46 @@
             <div class="our-articles__grid" :class="{isDesctop, isTablet, isLaptop}" v-else>
               <div class="img-card our-articles__item" @click="modals.showModals('our-articles-modals')">
                 <div class="img-card__content">
-                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=1" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://i.picsum.photos/id/452/600/600.jpg?hmac=5DZWKlOwFANqp0DdSQfgbEvo5MD0ex8m-BsIbH050-s" alt=""/>
+                  </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                 </div>
               </div>
               <div class="img-card our-articles__item" @click="modals.showModals('our-articles-modals')">
                 <div class="img-card__content">
-                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=2" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://i.picsum.photos/id/841/600/600.jpg?hmac=Avxv8kmo4rBHjKm808R2yzOhX6aZsEAHeH1f8RCOyow" alt=""/>
+                  </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                 </div>
               </div>
               <div class="img-card our-articles__item" @click="modals.showModals('our-articles-modals')">
                 <div class="img-card__content">
-                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=3" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://i.picsum.photos/id/736/600/600.jpg?hmac=qqhoBYrcb9w6Z6eocu96RnK-G0OwLAvAbgV8lHGM5us" alt=""/>
+                  </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                 </div>
               </div>
               <div class="img-card our-articles__item" @click="modals.showModals('our-articles-modals')">
                 <div class="img-card__content">
-                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=4" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://i.picsum.photos/id/682/600/600.jpg?hmac=tDq-ylRy-BQ25NkwLSB__uQ3QoYGkZcJZk0aMJOuWY0" alt=""/>
+                  </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                 </div>
               </div>
               <div class="img-card our-articles__item" @click="modals.showModals('our-articles-modals')">
                 <div class="img-card__content">
-                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=5" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://i.picsum.photos/id/396/600/600.jpg?hmac=VsBnz3iEeiLhu2qQet2m8cthZvumtgNrgqt9F-yeRg0" alt=""/>
+                  </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                 </div>
               </div>
               <div class="img-card our-articles__item" @click="modals.showModals('our-articles-modals')">
                 <div class="img-card__content">
-                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=6" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                  <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://i.picsum.photos/id/85/600/600.jpg?hmac=6B-TXxIC1d3EwIFE8Lzjda4dvacvKaSDcJ1WmYIZltA" alt=""/>
+                  </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section where-to-buy" id="link5" style="background-image:url(img/section/6.png);">
+      <!--section.section.where-to-buy#link5(style={'background-image': 'url(img/section/6.png)'})-->
+      <section class="b-lazy section where-to-buy" id="link5" data-src="img/section/6.png">
         <div class="container" :class="{isDesctop, isTablet, isLaptop}">
           <div class="where-to-buy__content"> 
             <h2 class="title where-to-buy__title" :class="{isDesctop, isTablet, isLaptop}">Где купить</h2>
@@ -645,50 +682,50 @@
               <div class="swiper-wrapper where-to-buy-slider__swiper-wrapper" :class="{isDesctop, isTablet, isLaptop}"> 
                 <div class="swiper-slide where-to-buy-slider__slide">
                   <div class="where-to-buy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}">
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
                   <div class="where-to-buy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}">
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
                   <div class="where-to-buy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}">
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
                   <div class="where-to-buy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}">
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
                   <div class="where-to-buy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}">
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
                   <div class="where-to-buy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}">
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/1.png" alt=""/></div>
                   </div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
                   <div class="where-to-buy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}">
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/1.png" alt=""/></div>
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/1.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/2.png" alt=""/></div>
                   </div>
                 </div>
                 <div class="swiper-slide where-to-buy-slider__slide">
                   <div class="where-to-buy-slider__slide-content" :class="{isDesctop, isTablet, isLaptop}">
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="img/where-to-buy-slider/2.png" alt=""/></div>
-                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="where-to-buy-slider__slide-img" src="https://picsum.photos/600/600?random=3" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/where-to-buy-slider/2.png" alt=""/></div>
+                    <div class="where-to-buy-slider__slide-wrapper-img"><img class="b-lazy where-to-buy-slider__slide-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/805/600/600.jpg?hmac=HHttHmXVsB7dhFuTQT7UCSMXMHNUGnTqZG0KnNvVyjY" alt=""/></div>
                   </div>
                 </div>
               </div>
@@ -770,27 +807,34 @@
             </button>
           </div>
           <div class="modals__bottom where-to-buy-modals__bottom" :class="{isDesctop, isTablet, isLaptop}"> <span class="modals__title where-to-buy-modals__title" :class="{isDesctop, isTablet, isLaptop}"> Где купить</span>
-            <div class="where-to-buy-modals__box" style="background-image:url(img/section/6.png);" :class="{isDesctop, isTablet, isLaptop}">
+            <!--.where-to-buy-modals__box(style={'background-image': 'url(img/section/6.png)'}, :class='{isDesctop, isTablet, isLaptop}')-->
+            <div class="b-lazy where-to-buy-modals__box" data-src="img/section/6.png" :class="{isDesctop, isTablet, isLaptop}">
               <div class="where-to-buy-modals-slider__slider">
                 <div class="swiper where-to-buy-modals-slider__swiper">
                   <div class="swiper-wrapper where-to-buy-modals-slider__swiper-wrapper"><a class="img-card swiper-slide where-to-buy-modals-slider__slide" href="https://leolucy.fvds.ru/" target="_blank">
                       <div class="img-card__content">
-                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=1" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/554/600/600.jpg?hmac=XUNg4E33h2op5iN4mYpGAu0vg3UEw9aU0vD40lSyL-o" alt=""/>
+                        </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                       </div></a><a class="img-card swiper-slide where-to-buy-modals-slider__slide" href="https://leolucy.fvds.ru/" target="_blank">
                       <div class="img-card__content">
-                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=2" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/889/600/600.jpg?hmac=zYL0e4kerdzG21RnFQzVjVZWhG-7OMiFVnw-x_pga60" alt=""/>
+                        </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                       </div></a><a class="img-card swiper-slide where-to-buy-modals-slider__slide" href="https://leolucy.fvds.ru/" target="_blank">
                       <div class="img-card__content">
-                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=3" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/122/600/600.jpg?hmac=1oA93YbjYVt96DcJcGQ5PLthzjUsdtrnBQaM0USBozI" alt=""/>
+                        </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                       </div></a><a class="img-card swiper-slide where-to-buy-modals-slider__slide" href="https://leolucy.fvds.ru/" target="_blank">
                       <div class="img-card__content">
-                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=4" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/584/600/600.jpg?hmac=Qpyi9POyox2VNvqaUUYkXDTN41TKwKLPF9-NhVS331s" alt=""/>
+                        </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                       </div></a><a class="img-card swiper-slide where-to-buy-modals-slider__slide" href="https://leolucy.fvds.ru/" target="_blank">
                       <div class="img-card__content">
-                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=5" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/236/600/600.jpg?hmac=myC_lz0SVSNInuZ6SX-c_l1uclqK6ua3Epf7idG2zbc" alt=""/>
+                        </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                       </div></a><a class="img-card swiper-slide where-to-buy-modals-slider__slide" href="https://leolucy.fvds.ru/" target="_blank">
                       <div class="img-card__content">
-                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="img-card__img" src="https://picsum.photos/600/600?random=6" alt=""/></div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
+                        <div class="img-card__wrapper-img" :class="{isDesctop, isTablet, isLaptop}"><img class="swiper-lazy img-card__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://i.picsum.photos/id/200/600/600.jpg?hmac=5vWrMNBeBRddgj3sQ0cVlgNer86pzuPajuJbhPodX_s" alt=""/>
+                        </div><span class="img-card__title" :class="{isDesctop, isTablet, isLaptop}">Умывание. Каприз или природный инстинкт?</span>
                       </div></a>
                   </div>
                 </div>
@@ -900,7 +944,7 @@
                     <div class="input create-review-modals__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
                       <div class="input__box">
                         <input class="input__field" type="text" name="name" placeholder="Ваше имя" required @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
-                        <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
+                        <div class="input__icons"><img class="b-lazy input__icon input__icon--error" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/icons/error.png"></div>
                       </div>
                     </div>
                   </div>
@@ -909,7 +953,7 @@
                     <div class="input create-review-modals__input" :class="{isDesctop, isTablet, isLaptop}"><span class="input__info"></span>
                       <div class="input__box">
                         <input class="input__field" type="text" name="city" placeholder="Ваш город" required @focus="onFocusInput($event.target)" @blur="onBlurInput($event.target)">
-                        <div class="input__icons"><img class="input__icon input__icon--error" src="/img/icons/error.png"></div>
+                        <div class="input__icons"><img class="b-lazy input__icon input__icon--error" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/icons/error.png"></div>
                       </div>
                     </div>
                   </div>

@@ -3,7 +3,7 @@ mixin promo-input(type, placeholder, name, infoMessage)
     .promo-input(:class='{isDesctop, isTablet, isLaptop}')&attributes(attributes)
         .promo-input__box
             .promo-input__icons
-                img.promo-input__icon.promo-input__icon--error(src="img/icons/promo-input-error.png", :class='{isDesctop, isTablet, isLaptop}')
+                img.b-lazy.promo-input__icon.promo-input__icon--error(src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', data-src="img/icons/promo-input-error.png", :class='{isDesctop, isTablet, isLaptop}')
             if type !== 'tel'
                 input.promo-input__field(type=type, placeholder=placeholder name=name, :class='{isDesctop, isTablet, isLaptop}', @focus="promoInput.onFocus", @blur="promoInput.onBlur")
             else
