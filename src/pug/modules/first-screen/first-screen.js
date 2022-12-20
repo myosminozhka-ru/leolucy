@@ -23,6 +23,12 @@ export default class FirstScreen {
                     slidesPerView: 1,
                     loop: true,
                     autoHeight: true,
+                    pagination: {
+                        el: '.first-screen-slider__dots',
+                        bulletClass: "first-screen-slider__dot",
+                        bulletActiveClass: "first-screen-slider__dot--active",
+                        clickable: true,
+                    },
                 }
             );
         },0)
