@@ -1,4 +1,4 @@
-import Swiper, {Lazy, Navigation, Pagination} from "swiper";
+import Swiper, {Lazy, Pagination, Autoplay} from "swiper";
 import {stringClassesArray} from "../../../js/utils.js";
 
 export default class FirstScreen {
@@ -17,10 +17,13 @@ export default class FirstScreen {
         setTimeout(() => {
             new Swiper('.first-screen-slider',
                 {
-                    modules: [Navigation, Pagination, Lazy],
+                    modules: [Pagination, Lazy, Autoplay],
                     speed: 1000,
                     lazy: true,
                     slidesPerView: 1,
+                    autoplay: {
+                        delay: 5000,
+                    },
                     loop: true,
                     autoHeight: true,
                     pagination: {
