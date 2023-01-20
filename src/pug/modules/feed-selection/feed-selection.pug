@@ -12,7 +12,7 @@ section.section.section--white.feed-selection#link1
                         .swiper-slide.feed-selection__slide(:class='{isDesctop, isTablet, isLaptop}')
                             .feed-selection__slide-content
                                 .feed-selection__slide-wrapper-img
-                                    img.b-lazy.feed-selection__slide-img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=item.img, alt="", :class='{isDesctop, isTablet, isLaptop}')
+                                    img.b-lazy.feed-selection__slide-img(src=item.img ? item.img : "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", data-src=item.img, alt="", :class='{isDesctop, isTablet, isLaptop}')
                                 span.feed-selection__slide-description(:class='{isDesctop, isTablet, isLaptop}')= item.description
                                 +btn('Подробнее')(@click="modals.loadProduct(5)").btn--moon-mist-border-rounded.feed-selection__slide-btn
                 .feed-selection__panel(:class='{isDesctop, isTablet, isLaptop}')
