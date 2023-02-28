@@ -35,13 +35,13 @@ Vue.directive('mask', {
   inserted: function (el, binding) {
 
     const mask = binding.value,
-        first = mask.indexOf('_'),
-        fieldsL = mask.replace(/[^_]/gm, '').length,
-        clean = mask.replace(/[^0-9_]/gm, ''),
-        indexes = []
+      first = mask.indexOf('_'),
+      fieldsL = mask.replace(/[^_]/gm, '').length,
+      clean = mask.replace(/[^0-9_]/gm, ''),
+      indexes = []
 
-    for(let i = 0; i < clean.length; i++){
-      if(!isNaN(clean[i])){
+    for (let i = 0; i < clean.length; i++) {
+      if (!isNaN(clean[i])) {
         indexes.push(i)
       }
     }
@@ -51,18 +51,18 @@ Vue.directive('mask', {
       el.clean = mask.replace(/[^0-9]/gm, '')
     }
 
-    function maskIt(event, start){
+    function maskIt(event, start) {
       let value = el.value,
-          filtred = value.replace(/[^0-9]/gm, ''),
-          result = ''
+        filtred = value.replace(/[^0-9]/gm, ''),
+        result = ''
 
-      if(value.length < first){
+      if (value.length < first) {
         value = mask + value
         filtred = value.replace(/[^0-9]/gm, '')
       }
 
-      for(let i = 0; i < filtred.length; i++){
-        if(indexes.indexOf(i) == -1){
+      for (let i = 0; i < filtred.length; i++) {
+        if (indexes.indexOf(i) == -1) {
           result += filtred[i]
         }
       }
@@ -70,18 +70,18 @@ Vue.directive('mask', {
       value = ''
       let cursor = 0
 
-      for(let i = 0; i < mask.length; i++){
-        if(mask[i] == '_' && result){
+      for (let i = 0; i < mask.length; i++) {
+        if (mask[i] == '_' && result) {
           value += result[0]
           result = result.slice(1)
           cursor = i + 1
 
-        }else{
+        } else {
           value += mask[i]
         }
       }
 
-      if(cursor < first){
+      if (cursor < first) {
         cursor = first
       }
 
@@ -89,10 +89,10 @@ Vue.directive('mask', {
 
       el.clean = el.value.replace(/[^0-9]/gm, '')
 
-      el.setSelectionRange(cursor,cursor)
+      el.setSelectionRange(cursor, cursor)
     }
 
-    el.addEventListener('focus', function(event){
+    el.addEventListener('focus', function (event) {
       if (el.classList.contains('promo-input__field')) {
         el.value = mask
         el.clean = mask.replace(/[^0-9]/gm, '')
@@ -101,32 +101,32 @@ Vue.directive('mask', {
     })
 
     el.addEventListener('blur', function (event) {
-      if(el.classList.contains('promo-input__field') && el.value.indexOf('_') !== -1) {
+      if (el.classList.contains('promo-input__field') && el.value.indexOf('_') !== -1) {
         el.value = ''
       }
     })
 
-    el.addEventListener('click', function(event){
+    el.addEventListener('click', function (event) {
       event.preventDefault()
       let start = el.value.indexOf('_')
 
-      if(start == -1){
+      if (start == -1) {
         start = el.value.length
       }
 
-      el.setSelectionRange(start,start)
+      el.setSelectionRange(start, start)
 
     })
 
-    el.addEventListener('paste', function(event){
+    el.addEventListener('paste', function (event) {
       const start = el.selectionStart
 
-      if(start < first){
+      if (start < first) {
         el.value = '_' + el.value
       }
     })
 
-    el.addEventListener('input', function(event){
+    el.addEventListener('input', function (event) {
       const start = el.selectionStart
       maskIt(event, start)
     })
@@ -211,11 +211,11 @@ window.app = new Vue({
       }
       this.feedSelection.initSlider();
     },
-    showModalOnClickLink(){
+    showModalOnClickLink() {
       const menuShowModalWhereToBuy = document.querySelectorAll('.menu__show-modal-where-to-buy')
       const modals = this.modals
       menuShowModalWhereToBuy.forEach(item => {
-        item.querySelector('a').addEventListener('click', function(event) {
+        item.querySelector('a').addEventListener('click', function (event) {
           event.preventDefault();
 
           modals.showModals('where-to-buy-modals')
@@ -225,7 +225,7 @@ window.app = new Vue({
     onScrollToBlock() {
       const scrollTarget = document.querySelector(".feed-selection");
       const topOffset = 0;
-      if(scrollTarget) {
+      if (scrollTarget) {
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
 
@@ -269,12 +269,12 @@ window.app = new Vue({
             });
 
             if (
-                document
-                    .querySelector(".header")
-                    .classList.contains("header--scoll")
+              document
+                .querySelector(".header")
+                .classList.contains("header--scoll")
             ) {
               headerHeight =
-                  document.querySelector(".header--scoll").clientHeight;
+                document.querySelector(".header--scoll").clientHeight;
 
               window.scrollBy({
                 top: offsetPosition,
@@ -326,8 +326,9 @@ window.app = new Vue({
               document
                 .querySelector(".promo-success")
                 ?.classList.add("promo-success--visible");
-              document.querySelector(".hidden-section--2").classList.remove("hidden-section--hidden");
-              document.querySelector(".hidden-section--3").classList.remove("hidden-section--hidden");
+              document.querySelectorAll(".hidden-section--qrcode").forEach(i => {
+                i.classList.remove("hidden-section--hidden")
+              });
             } else {
               if ("error" in obj) {
                 for (let errorItem in obj.error) {

@@ -12,7 +12,7 @@ export default class PhilosophySlider {
   }
 
   initSlider() {
-    if (this.domSlider) {
+    if (this.domSlider.length) {
       setTimeout(() => {
         this.domSlider.forEach((element, index) => {
           const domSliderSwiper = element?.querySelector(
